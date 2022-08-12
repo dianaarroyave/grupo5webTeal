@@ -1,6 +1,6 @@
 # Sitio Web TEAL
 
-## ¿Por qué estamos desarrollando este proyecto?
+## ¿Por qué estamos desarrollando este proyecto? 👩‍💻👨‍💻
 
 Actualmente estamos realizando un curso de Programación Web Full Stack con Digital House por medio de SUMANTI, un fondo de financiación para la educación del talento especializado que tiene como fin el desarrollo integral de los habitantes del Valle de Aburrá, de cara a los retos que trae la Cuarta Revolución Industrial.
 
@@ -25,6 +25,8 @@ Apasionada por las nuevas tecnologías, con capacidad de integrar las necesidade
 
 Su experiencia de más de 17 años en comunicaciones, relaciones públicas, mercadeo, social media, marketing digital y ventas, le ha permitido tener un entendimiento integral de las necesidades de las empresas, lo cual aplica actualmente al desarrollo web.
 
+Disfruta de la naturaleza, los animales, pasar tiempo en familia, disfrutar con amigos, leer y vivir la vida como un aprendizaje constante tanto para su crecimiento profesional como espiritual.
+
 ### Sthefania Echeverry:
 Descripción
 
@@ -37,6 +39,7 @@ Descripción
 ## Nuestra inspiración
 
 Teniendo en cuenta el ADN de la marca, los requerimientos del proyecto integrador y lo que queremos mostrar como desarrolladores, buscamos inspiración en los siguientes sitios web:
-Sitio 1: reseña
-Sitio 2: reseña
-Sitio 3: reseña
+
+* Sitio 1: reseña
+* Sitio 2: reseña
+* Sitio 3: reseña
