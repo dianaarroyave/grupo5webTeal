@@ -1,4 +1,4 @@
-# Sitio Web Teal
+# Sitio Web TEAL
 
 ## ¿Por qué estamos desarrollando este proyecto?
 
@@ -16,7 +16,7 @@ Ofrece productos...
 
 Su público objetivo es ...
 
-## Equipo de trabajo Web Teal
+## Equipo de trabajo Web TEAL
 
 Somos unos apacionados por el desarrollo y por este motivo nos capacitamos constantemente. Compartimos el amor por las nuevas tecnologías y nos sentimos afortunados de poder compartir juntos esta experiencia enriquecedora de aprendizaje junto a Digital House, Sumanti y Protección.
 
