@@ -31,7 +31,10 @@ Disfruta de la naturaleza, los animales, pasar tiempo en familia, disfrutar con 
 Descripción
 
 ### William Serna:
-Descripción
+Estudiante de desarrollo Full Stack e inglés, me gusta la tecnología y los autos.
+Actualmente tengo conocimientos básicos en (JavaScript, Node JS, HTML5, CSS, React, Git, GitHub).
+Me desempeñaba como escolta VIP, pero esta profesión representaba muchos riesgos y estar mucho tiempo lejos de mi familia.
+Me gusta disfrutar tiempo en familia y conocer nuevos lugares.
 
 ### Sergio Escobar:
 Descripción
