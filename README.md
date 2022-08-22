@@ -48,14 +48,27 @@ Descripción
 
 Teniendo en cuenta el ADN de la marca, los requerimientos del proyecto integrador y lo que queremos mostrar como desarrolladores, buscamos inspiración en los siguientes sitios web:
 
-* Sitio 1:Nombre de la página: Garmin
-página :https://garmin.com.co/
+* Sitio 1:Garmin
+Página :https://garmin.com.co/
 Razón del por qué es un referente:
 -Me gusta por que es una página básica y limpia.
-* Sitio 2: Nombre de la página: Lamborghini
+* Sitio 2:Lamborghini
 página Automobili Lamborghini - Web Official | Lamborghini.com
 Razón del por qué es un referente:
 -Por su estética y elegancia.
-* Sitio 3:
-* Sitio 4:
-* Sitio 5:
+* Sitio 3:Animalista
+Enlace de la página: https://animalista.com.co/
+Razón del por qué es un referente:
+-Por la estética que presenta, ya que cumple con esa sencillez y elegancia que se busca en la página
+-Por la funcionalidad y experiencia de usuario, ya que es muy diciente e intuitiva
+-Por el público al que apunta, ya que se alinea a nuestro público objetivo
+* Sitio 4:Patprimo
+Enlace de la página: https://www.patprimo.com/ 
+Razón del por qué es un referente:
+-Por la funcionalidad y experiencia de usuario
+-Por el diseño del home
+* Sitio 5:Beppy
+Enlace de la página: https://beppy.co/ 
+Razón del por qué es un referente:
+-Por la estética que presenta
+-Por el diseño de algunas secciones
