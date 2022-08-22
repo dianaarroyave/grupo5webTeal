@@ -44,6 +44,12 @@ Descripción
 
 Teniendo en cuenta el ADN de la marca, los requerimientos del proyecto integrador y lo que queremos mostrar como desarrolladores, buscamos inspiración en los siguientes sitios web:
 
-* Sitio 1: Automobili Lamborghini - Web Official | Lamborghini.com
+* Sitio 1:Nombre de la página: Garmin
+página :https://garmin.com.co/
+Razón del por qué es un referente:
+-Me gusta por que es una página básica y limpia.
 * Sitio 2: [reseña](https://garmin.com.co/)
-* Sitio 3: reseña
+* Sitio 3:Nombre de la página: Lamborghini
+página Automobili Lamborghini - Web Official | Lamborghini.com
+Razón del por qué es un referente:
+-Por su estética y elegancia.
