@@ -28,7 +28,11 @@ Su experiencia de más de 17 años en comunicaciones, relaciones públicas, merc
 Disfruta de la naturaleza, los animales, pasar tiempo en familia, disfrutar con amigos, leer y vivir la vida como un aprendizaje constante tanto para su crecimiento profesional como espiritual.
 
 ### Sthefania Echeverry:
-Descripción
+Desarrolladora Full Stack y Pedagoga en formación, apasionada por la educación, nuevos enfoques de aprendizaje y las nuevas tecnologías.
+
+Tiene experiencia en procesos educativos y formativos, y conocimientos básicos en (JavaScript, Node JS, HTML5, CSS, React, Git, GitHub). Todo esto le ha permitido ver las necesidades de los clientes de una manera integral, favoreciendo el desarrollo de proyectos tecnológicos desde diferentes aspectos.
+
+Disfruta del campo, los animales, la música, la lectura, el juego, el tiempo de calidad con sus seres amados y el estudio de contenidos para su crecimiento personal y espiritual.
 
 ### William Serna:
 Estudiante de desarrollo Full Stack e inglés, me gusta la tecnología y los autos.
@@ -53,3 +57,5 @@ página Automobili Lamborghini - Web Official | Lamborghini.com
 Razón del por qué es un referente:
 -Por su estética y elegancia.
 * Sitio 3:
+* Sitio 4:
+* Sitio 5:
