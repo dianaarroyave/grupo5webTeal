@@ -36,6 +36,7 @@ Actualmente tengo conocimientos básicos en (JavaScript, Node JS, HTML5, CSS, Re
 Me desempeñaba como escolta VIP, pero esta profesión representaba muchos riesgos y estar mucho tiempo lejos de mi familia.
 Me gusta disfrutar tiempo en familia y conocer nuevos lugares.
 
+
 ### Sergio Escobar:
 Descripción
 
@@ -43,6 +44,6 @@ Descripción
 
 Teniendo en cuenta el ADN de la marca, los requerimientos del proyecto integrador y lo que queremos mostrar como desarrolladores, buscamos inspiración en los siguientes sitios web:
 
-* Sitio 1: reseña
-* Sitio 2: reseña
+* Sitio 1: Automobili Lamborghini - Web Official | Lamborghini.com
+* Sitio 2: [reseña](https://garmin.com.co/)
 * Sitio 3: reseña
