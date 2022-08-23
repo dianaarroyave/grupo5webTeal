@@ -16,7 +16,7 @@ La misión de Teal está enfocada en la calidad y servicio, dándole a cada uno 
 
 Su objetovo es consolidarse como grupo y poder estar presentes en ectores como el textil, la construcción, la educación, los alimentos, entre otros, apuntando siempre a la innovación en el diseño, calidad y altos estándares de servicio.
 
-###Productos que ofrece
+### Productos que ofrece
 
 Teal, pretende ser un Grupo Empresarial con diferentes líneas de negocio, altualmente cuentan con dos líneas ya consolidadas en el mercado
 
@@ -28,7 +28,7 @@ Esta se identifica por sus diseños, formas y colores extravagantes. En Teal Ori
 
 Cada colección integra distintas temáticas, con las cuales nos inspiramos para crear conjuntos que representen dicha temática desde nuestra perspectiva de marca.
 
-#####Su público objetivo es:
+##### Su público objetivo es:
 Edad: 18 - 25 años
 Lugar: Medellín, Cali, Bogotá,
 Marcas de interés: Adidas, Nike, Supreme, Gucci, Undergold, True, Off-white, Louis Vuitton, Prada, Jordan
@@ -44,7 +44,7 @@ Es la primera bifurcación de Teal, en la cual queremos reflejar el minimalismo 
 
 Todos los diseños de Teal Basics son la representación fundamental de nuestras prendas, centrando mayormente el diseño de la moldería, la ubicación de las marcaciones y un color sólido.
 
-#####Su público objetivo es:
+##### Su público objetivo es:
 Edad: 18 - 25 años
 Lugar: Medellín, Cali, Bogotá,
 Marcas de interés: Adidas, Nike, Supreme, Nike Air Force 1 , Undergold, True, Off-white, Jordan
@@ -95,42 +95,70 @@ Por otro lado, en su tiempo libre disfruta de el ejercicio, el fútbol y la lite
 
 Teniendo en cuenta el ADN de la marca, los requerimientos del proyecto integrador y lo que queremos mostrar como desarrolladores, buscamos inspiración en los siguientes sitios web:
 
-* Sitio 1:Garmin
+##### * Sitio 1: Garmin
 Página :https://garmin.com.co/
 Razón del por qué es un referente:
 -Me gusta por que es una página básica y limpia.
-* Sitio 2:Lamborghini
+##### * Sitio 2:Lamborghini
 página Automobili Lamborghini - Web Official | Lamborghini.com
 Razón del por qué es un referente:
 -Por su estética y elegancia.
-* Sitio 3:Animalista
+##### * Sitio 3:Animalista
 Enlace de la página: https://animalista.com.co/
 Razón del por qué es un referente:
 -Por la estética que presenta, ya que cumple con esa sencillez y elegancia que se busca en la página
 -Por la funcionalidad y experiencia de usuario, ya que es muy diciente e intuitiva
 -Por el público al que apunta, ya que se alinea a nuestro público objetivo
-* Sitio 4:Patprimo
+##### * Sitio 4:Patprimo
 Enlace de la página: https://www.patprimo.com/ 
 Razón del por qué es un referente:
 -Por la funcionalidad y experiencia de usuario
 -Por el diseño del home
-* Sitio 5:Beppy
+##### * Sitio 5:Beppy
 Enlace de la página: https://beppy.co/ 
 Razón del por qué es un referente:
 -Por la estética que presenta
 -Por el diseño de algunas secciones
-* Sitio 6:Tres Trigos
+##### * Sitio 6:Tres Trigos
 Enlace de la página:  https://trestrigos.com/?variant=34681254510756
 Razón del por qué es un referente: 
 - De uso simple y minimalista
 -Con una experiencia más allá de un Ecommerce, transmitiendo la escencia de la marca.
-* Sitio 7:Mattelsa
+###### * Sitio 7:Mattelsa
 Enlace de la página:  https://www.mattelsa.net
 Razón del por qué es un referente:
 - Página fresca y juvenil que se adapta bastante a las características de Teal.
 -Facil de usar y minimalista. Además de atractiva visualmente.
-* Sitio 8:Adidas Col.
+##### * Sitio 8:Adidas Col.
 Enlace de la página:  https://www.adidas.co
 Razón del por qué es un referente:
 - Deportiva y con buena publicidad.
 -Sencilla y estética.
+##### * Sitio 9: Nikifilini
+Enlace de la página:  https://nikifilini.com
+Razón del por qué es un referente:
+- Distribución de los productos en la web
+- Se puede ver rápidamente los productos de interés
+##### * Sitio 11: Fear Of Good
+Enlace de la página:  https://fearofgod.com
+Razón del por qué es un referente:
+- La forma en que se subdividen las marcas
+- Es una página minimalista
+- Imagen o video como banner princiapal el ingreso que ocupa toda la pantalla
+##### * Sitio 11: Racer Worldwide
+Enlace de la página:  https://www.racerworldwide.net
+Razón del por qué es un referente:
+- La distribución de los productos en formato mobile
+- El manejo de las fotografías de los productos sin recuadros
+##### * Sitio 12: Ambush
+Enlace de la página:  https://www.ambushdesign.com/
+Razón del por qué es un referente:
+- Distribución de los productos en la web
+- La estructura general del sitio
+- Imagen o video como banner princiapal el ingreso que ocupa toda la pantalla
+##### * Sitio 13: Ambush
+Enlace de la página:  https://www.yeezygap.com/
+Razón del por qué es un referente:
+- La distribución de los productos en formato mobile
+- El manejo de las fotografías de los productos sin recuadros
+
