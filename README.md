@@ -29,14 +29,14 @@ Esta se identifica por sus diseños, formas y colores extravagantes. En Teal Ori
 Cada colección integra distintas temáticas, con las cuales nos inspiramos para crear conjuntos que representen dicha temática desde nuestra perspectiva de marca.
 
 ##### Su público objetivo es:
-Edad: 18 - 25 años
-Lugar: Medellín, Cali, Bogotá,
-Marcas de interés: Adidas, Nike, Supreme, Gucci, Undergold, True, Off-white, Louis Vuitton, Prada, Jordan
-Sitios de interés: Bares, restaurantes, centros comerciales, fiestas, conciertos
-Interés particular: Streetwear
-Géneros musicales: Reggaeton, Trap, Rap, Hip-hop, Pop
-Estrato economico: 4 - 5
-¿Por que compran? Compran principalmente porque tienen la necesidad o el deseo de verse atractivos y diferentes de los demás, o identificarse con una tribu en particular.
+- Edad: 18 - 25 años
+- Lugar: Medellín, Cali, Bogotá,
+- Marcas de interés: Adidas, Nike, Supreme, Gucci, Undergold, True, Off-white, Louis Vuitton, Prada, Jordan
+- Sitios de interés: Bares, restaurantes, centros comerciales, fiestas, conciertos
+- Interés particular: Streetwear
+- Géneros musicales: Reggaeton, Trap, Rap, Hip-hop, Pop
+- Estrato economico: 4 - 5
+- ¿Por que compran? Compran principalmente porque tienen la necesidad o el deseo de verse atractivos y diferentes de los demás, o identificarse con una tribu en particular.
 
 #### TEAL BASICS
 
@@ -45,14 +45,14 @@ Es la primera bifurcación de Teal, en la cual queremos reflejar el minimalismo 
 Todos los diseños de Teal Basics son la representación fundamental de nuestras prendas, centrando mayormente el diseño de la moldería, la ubicación de las marcaciones y un color sólido.
 
 ##### Su público objetivo es:
-Edad: 18 - 25 años
-Lugar: Medellín, Cali, Bogotá,
-Marcas de interés: Adidas, Nike, Supreme, Nike Air Force 1 , Undergold, True, Off-white, Jordan
-Sitios de interés: Bares, restaurantes, centros comerciales, universidad, casa
-Interés particular: Streetwear y loungewear
-Géneros musicales: Reggaeton, Trap, Rap, Hip-hop, Pop
-Estrato economico: 3 - 4
-¿Por que compran? Compran principalmente porque tienen la necesidad o el deseo de verse atractivos y estar cómodos.
+- Edad: 18 - 25 años
+- Lugar: Medellín, Cali, Bogotá,
+- Marcas de interés: Adidas, Nike, Supreme, Nike Air Force 1 , Undergold, True, Off-white, Jordan
+- Sitios de interés: Bares, restaurantes, centros comerciales, universidad, casa
+- Interés particular: Streetwear y loungewear
+- Géneros musicales: Reggaeton, Trap, Rap, Hip-hop, Pop
+- Estrato economico: 3 - 4
+- ¿Por que compran? Compran principalmente porque tienen la necesidad o el deseo de verse atractivos y estar cómodos.
 
 ## Equipo de trabajo Web TEAL
 
