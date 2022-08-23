@@ -42,7 +42,7 @@ Me gusta disfrutar tiempo en familia y conocer nuevos lugares.
 
 
 ### Sergio Escobar:
-Descripción
+Estudiante de Desarrollo Full stack  con conocimientos en Java, Python, Matlab, JavaScript, Node JS, HTML5, CSS, React, Git, GitHub y apasionado por la programación, los algoritmos y la lógica. Es también Ingeniero civil con enfasis en diseño estructural y conocimientos en logica matemática, fisica y programación enfocada al ámbito de la ingeniería y el diseño. Adémás, habiendo trabajado tambien en el sector de la construcción, más especificamente en la supervición de la ejecución de cimentaciones profundas, anclajes activos y control de calidad del concretro. Asimismo, es apasionado por los idimoas, contando con un nivel avanzado en Inglés y principiante en francés. Por otro lado, en su tiempo libre disfruta de el ejercicio, el Fútbol y la literatura, especialmente el realismo mágico y en general el Boom latinoamericano.
 
 ## Nuestra inspiración
 
@@ -72,3 +72,18 @@ Enlace de la página: https://beppy.co/
 Razón del por qué es un referente:
 -Por la estética que presenta
 -Por el diseño de algunas secciones
+* Sitio 6:Tres Trigos
+Enlace de la página:  https://trestrigos.com/?variant=34681254510756
+Razón del por qué es un referente: 
+- De uso simple y minimalista
+-Con una experiencia más allá de un Ecommerce, transmitiendo la escencia de la marca.
+* Sitio 7:Mattelsa
+Enlace de la página:  https://www.mattelsa.net
+Razón del por qué es un referente:
+- Página fresca y juvenil que se adapta bastante a las características de Teal.
+-Facil de usar y minimalista. Además de atractiva visualmente.
+* Sitio 8:Adidas Col.
+Enlace de la página:  https://www.adidas.co
+Razón del por qué es un referente:
+- Deportiva y con buena publicidad.
+-Sencilla y estética.
