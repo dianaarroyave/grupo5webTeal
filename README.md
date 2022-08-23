@@ -10,21 +10,21 @@ Este curso de Programación Web Full Stack lo estamos realizando como parte de u
 
 ## Hablemos un poco de la marca TEAL
 
-TEAL es una marca que nació en la ciudad de Medellín gracias a un jovén visionario que desde que estaba en el colegio soñaba con crear "algo" que lo apacionara.  El nombre "Teal" sonaba en su cabezá y sabía quedebía enfocarse en él para crear ese algo que soñaba.  Siguiendo sus instintos, sus deseos y dejando de lado el miedo, emprendió el camino para construir esta gran marca de ropa, y en el 2019 lanza su primera colección.
+TEAL es una marca que nació en la ciudad de Medellín gracias a un jovén visionario que desde que estaba en el colegio soñaba con crear "algo" que lo apasionara.  El nombre "Teal" sonaba en su cabeza y sabía quedebía enfocarse en él para crear ese algo que soñaba.  Siguiendo sus instintos, sus deseos y dejando de lado el miedo, emprendió el camino para construir esta gran marca de ropa, y en el 2019 lanza su primera colección.
 
 La misión de Teal está enfocada en la calidad y servicio, dándole a cada uno de sus clientes diseños únicos, realizados con las mejores materias primas, procesos y cuidados ambientales.
 
-Su objetovo es consolidarse como grupo y poder estar presentes en ectores como el textil, la construcción, la educación, los alimentos, entre otros, apuntando siempre a la innovación en el diseño, calidad y altos estándares de servicio.
+Su objetivo es consolidarse como grupo y poder estar presente en sectores como el textil, la construcción, la educación, los alimentos, entre otros, apuntando siempre a la innovación en el diseño, calidad y altos estándares de servicio.
 
 ### Productos que ofrece
 
-Teal, pretende ser un Grupo Empresarial con diferentes líneas de negocio, altualmente cuentan con dos líneas ya consolidadas en el mercado
+Teal, pretende ser un Grupo Empresarial con diferentes líneas de negocio, actualmente cuentan con dos líneas ya consolidadas en el mercado.
 
 #### TEAL ORIGIAL
 
 Fue la primera marca creada, esta se enfoca en el segmento del Streetwear y posee los colores primarios de Teal, siendo la marca con más tiempo y recorrido.
 
-Esta se identifica por sus diseños, formas y colores extravagantes. En Teal Original queremos ser lo más llamativos posibles, integrandoa la vez toda la esencia de marca que se pueda a los productos.
+Esta se identifica por sus diseños, formas y colores extravagantes. En Teal Original queremos ser lo más llamativos posibles, integrando a la vez toda la esencia de marca que se pueda a los productos.
 
 Cada colección integra distintas temáticas, con las cuales nos inspiramos para crear conjuntos que representen dicha temática desde nuestra perspectiva de marca.
 
@@ -36,7 +36,7 @@ Cada colección integra distintas temáticas, con las cuales nos inspiramos para
 - Interés particular: Streetwear
 - Géneros musicales: Reggaeton, Trap, Rap, Hip-hop, Pop
 - Estrato economico: 4 - 5
-- ¿Por que compran? Compran principalmente porque tienen la necesidad o el deseo de verse atractivos y diferentes de los demás, o identificarse con una tribu en particular.
+- ¿Por qué compran? Compran principalmente porque tienen la necesidad o el deseo de verse atractivos y diferentes de los demás, o identificarse con una tribu en particular.
 
 #### TEAL BASICS
 
@@ -52,13 +52,13 @@ Todos los diseños de Teal Basics son la representación fundamental de nuestras
 - Interés particular: Streetwear y loungewear
 - Géneros musicales: Reggaeton, Trap, Rap, Hip-hop, Pop
 - Estrato economico: 3 - 4
-- ¿Por que compran? Compran principalmente porque tienen la necesidad o el deseo de verse atractivos y estar cómodos.
+- ¿Por qué compran? Compran principalmente porque tienen la necesidad o el deseo de verse atractivos y estar cómodos.
 
 ## Equipo de trabajo Web TEAL
 
-Como mensionamos anteriormente, dentro de nuestro proyecto integrador, debemos desarrollar una web para un e-comerce, es el proceso de escoger sobre qué íbamos a trabajar le preguntamos a los fundadores de Teal si ellos les interesaba realizar este proceso de aprendizaje con nosotros, donde ellos nos suministran la marca y nosotros nos encargamos de realizar el sitio web para Grupo Teal.
+Como mensionamos anteriormente, dentro de nuestro proyecto integrador, debemos desarrollar una web para un e-comerce, en el proceso de escoger sobre qué íbamos a trabajar, le preguntamos a los fundadores de Teal si a ellos les interesaba realizar este proceso de aprendizaje con nosotros, donde ellos nos suministran la marca y nosotros nos encargamos de realizar el sitio web para Grupo Teal.
 
-Somos unos apacionados por el desarrollo y por este motivo nos capacitamos constantemente. Compartimos el amor por las nuevas tecnologías y nos sentimos afortunados de poder compartir juntos esta experiencia enriquecedora de aprendizaje junto a Digital House, Sumanti y Protección.
+Somos unos apasionados por el desarrollo y por este motivo nos capacitamos constantemente. Compartimos el amor por las nuevas tecnologías y nos sentimos afortunados de poder compartir juntos esta experiencia enriquecedora de aprendizaje junto a Digital House, Sumanti y Protección.
 
 ### Diana Arroyave: 
 Apasionada por las nuevas tecnologías, con capacidad de integrar las necesidades del cliente con el desarrollo Full Stack (JavaScrip, NodeJS, HTML5, CSS, React, Git, GitHub, Express, MySQL, Sequelize, APIs)
@@ -79,7 +79,7 @@ Estudiante de desarrollo Full Stack e inglés, le gusta la tecnología y los aut
 
 Actualmente tiene conocimientos básicos en (JavaScript, Node JS, HTML5, CSS, React, Git, GitHub).
 
-Anteriormente, se desempeñaba como escolta VIP, pero esta profesión representaba muchos riesgos y estar mucho tiempo lejos de mi familia.
+Anteriormente, se desempeñaba como escolta VIP, pero esta profesión representaba muchos riesgos y estar mucho tiempo lejos de su familia.
 
 Le gusta disfrutar tiempo en familia y conocer nuevos lugares.
 
@@ -96,44 +96,44 @@ Por otro lado, en su tiempo libre disfruta de el ejercicio, el fútbol y la lite
 Teniendo en cuenta el ADN de la marca, los requerimientos del proyecto integrador y lo que queremos mostrar como desarrolladores, buscamos inspiración en los siguientes sitios web:
 
 ##### * Sitio 1: Garmin
-Página :https://garmin.com.co/
+Enlace de la página :https://garmin.com.co/
 Razón del por qué es un referente:
--Me gusta por que es una página básica y limpia.
-##### * Sitio 2:Lamborghini
-página Automobili Lamborghini - Web Official | Lamborghini.com
+- Porque es una página básica y limpia
+##### * Sitio 2: Lamborghini
+Enlace de la página: https://www.lamborghini.com/es-en 
 Razón del por qué es un referente:
--Por su estética y elegancia.
-##### * Sitio 3:Animalista
+- Por su estética y elegancia
+##### * Sitio 3: Animalista
 Enlace de la página: https://animalista.com.co/
 Razón del por qué es un referente:
--Por la estética que presenta, ya que cumple con esa sencillez y elegancia que se busca en la página
--Por la funcionalidad y experiencia de usuario, ya que es muy diciente e intuitiva
--Por el público al que apunta, ya que se alinea a nuestro público objetivo
-##### * Sitio 4:Patprimo
+- Por la estética que presenta, ya que cumple con esa sencillez y elegancia que se busca en la página
+- Por la funcionalidad y experiencia de usuario, ya que es muy diciente e intuitiva
+- Por el público al que apunta, ya que se alinea a nuestro público objetivo
+##### * Sitio 4: Patprimo
 Enlace de la página: https://www.patprimo.com/ 
 Razón del por qué es un referente:
--Por la funcionalidad y experiencia de usuario
--Por el diseño del home
-##### * Sitio 5:Beppy
+- Por la funcionalidad y experiencia de usuario
+- Por el diseño del home
+##### * Sitio 5: Beppy
 Enlace de la página: https://beppy.co/ 
 Razón del por qué es un referente:
--Por la estética que presenta
--Por el diseño de algunas secciones
-##### * Sitio 6:Tres Trigos
+- Por la estética que presenta
+- Por el diseño de algunas secciones
+##### * Sitio 6: Tres Trigos
 Enlace de la página:  https://trestrigos.com/?variant=34681254510756
 Razón del por qué es un referente: 
 - De uso simple y minimalista
--Con una experiencia más allá de un Ecommerce, transmitiendo la escencia de la marca.
-###### * Sitio 7:Mattelsa
+- Con una experiencia más allá de un Ecommerce, transmitiendo la escencia de la marca.
+###### * Sitio 7: Mattelsa
 Enlace de la página:  https://www.mattelsa.net
 Razón del por qué es un referente:
 - Página fresca y juvenil que se adapta bastante a las características de Teal.
--Facil de usar y minimalista. Además de atractiva visualmente.
-##### * Sitio 8:Adidas Col.
+- Fácil de usar y minimalista. Además de atractiva visualmente.
+##### * Sitio 8: Adidas Col.
 Enlace de la página:  https://www.adidas.co
 Razón del por qué es un referente:
 - Deportiva y con buena publicidad.
--Sencilla y estética.
+- Sencilla y estética.
 ##### * Sitio 9: Nikifilini
 Enlace de la página:  https://nikifilini.com
 Razón del por qué es un referente:
@@ -144,7 +144,7 @@ Enlace de la página:  https://fearofgod.com
 Razón del por qué es un referente:
 - La forma en que se subdividen las marcas
 - Es una página minimalista
-- Imagen o video como banner princiapal el ingreso que ocupa toda la pantalla
+- Imagen o video como banner principal en el ingreso que ocupa toda la pantalla
 ##### * Sitio 11: Racer Worldwide
 Enlace de la página:  https://www.racerworldwide.net
 Razón del por qué es un referente:
@@ -156,9 +156,8 @@ Razón del por qué es un referente:
 - Distribución de los productos en la web
 - La estructura general del sitio
 - Imagen o video como banner princiapal el ingreso que ocupa toda la pantalla
-##### * Sitio 13: Ambush
+##### * Sitio 13: YEEZY GAP
 Enlace de la página:  https://www.yeezygap.com/
 Razón del por qué es un referente:
 - La distribución de los productos en formato mobile
 - El manejo de las fotografías de los productos sin recuadros
-
