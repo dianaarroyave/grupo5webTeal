@@ -10,13 +10,53 @@ Este curso de Programación Web Full Stack lo estamos realizando como parte de u
 
 ## Hablemos un poco de la marca TEAL
 
-TEAL es una marca que nació en la ciudad de Medellín....
+TEAL es una marca que nació en la ciudad de Medellín gracias a un jovén visionario que desde que estaba en el colegio soñaba con crear "algo" que lo apacionara.  El nombre "Teal" sonaba en su cabezá y sabía quedebía enfocarse en él para crear ese algo que soñaba.  Siguiendo sus instintos, sus deseos y dejando de lado el miedo, emprendió el camino para construir esta gran marca de ropa, y en el 2019 lanza su primera colección.
 
-Ofrece productos...
+La misión de Teal está enfocada en la calidad y servicio, dándole a cada uno de sus clientes diseños únicos, realizados con las mejores materias primas, procesos y cuidados ambientales.
 
-Su público objetivo es ...
+Su objetovo es consolidarse como grupo y poder estar presentes en ectores como el textil, la construcción, la educación, los alimentos, entre otros, apuntando siempre a la innovación en el diseño, calidad y altos estándares de servicio.
+
+###Productos que ofrece
+
+Teal, pretende ser un Grupo Empresarial con diferentes líneas de negocio, altualmente cuentan con dos líneas ya consolidadas en el mercado
+
+#### TEAL ORIGIAL
+
+Fue la primera marca creada, esta se enfoca en el segmento del Streetwear y posee los colores primarios de Teal, siendo la marca con más tiempo y recorrido.
+
+Esta se identifica por sus diseños, formas y colores extravagantes. En Teal Original queremos ser lo más llamativos posibles, integrandoa la vez toda la esencia de marca que se pueda a los productos.
+
+Cada colección integra distintas temáticas, con las cuales nos inspiramos para crear conjuntos que representen dicha temática desde nuestra perspectiva de marca.
+
+#####Su público objetivo es:
+Edad: 18 - 25 años
+Lugar: Medellín, Cali, Bogotá,
+Marcas de interés: Adidas, Nike, Supreme, Gucci, Undergold, True, Off-white, Louis Vuitton, Prada, Jordan
+Sitios de interés: Bares, restaurantes, centros comerciales, fiestas, conciertos
+Interés particular: Streetwear
+Géneros musicales: Reggaeton, Trap, Rap, Hip-hop, Pop
+Estrato economico: 4 - 5
+¿Por que compran? Compran principalmente porque tienen la necesidad o el deseo de verse atractivos y diferentes de los demás, o identificarse con una tribu en particular.
+
+#### TEAL BASICS
+
+Es la primera bifurcación de Teal, en la cual queremos reflejar el minimalismo de la marca. Elegimos una paleta de colores básica para representarla, usando solo blanco y negro en su identidad corporativa.
+
+Todos los diseños de Teal Basics son la representación fundamental de nuestras prendas, centrando mayormente el diseño de la moldería, la ubicación de las marcaciones y un color sólido.
+
+#####Su público objetivo es:
+Edad: 18 - 25 años
+Lugar: Medellín, Cali, Bogotá,
+Marcas de interés: Adidas, Nike, Supreme, Nike Air Force 1 , Undergold, True, Off-white, Jordan
+Sitios de interés: Bares, restaurantes, centros comerciales, universidad, casa
+Interés particular: Streetwear y loungewear
+Géneros musicales: Reggaeton, Trap, Rap, Hip-hop, Pop
+Estrato economico: 3 - 4
+¿Por que compran? Compran principalmente porque tienen la necesidad o el deseo de verse atractivos y estar cómodos.
 
 ## Equipo de trabajo Web TEAL
+
+Como mensionamos anteriormente, dentro de nuestro proyecto integrador, debemos desarrollar una web para un e-comerce, es el proceso de escoger sobre qué íbamos a trabajar le preguntamos a los fundadores de Teal si ellos les interesaba realizar este proceso de aprendizaje con nosotros, donde ellos nos suministran la marca y nosotros nos encargamos de realizar el sitio web para Grupo Teal.
 
 Somos unos apacionados por el desarrollo y por este motivo nos capacitamos constantemente. Compartimos el amor por las nuevas tecnologías y nos sentimos afortunados de poder compartir juntos esta experiencia enriquecedora de aprendizaje junto a Digital House, Sumanti y Protección.
 
@@ -35,14 +75,21 @@ Tiene experiencia en procesos educativos y formativos, y conocimientos básicos 
 Disfruta del campo, los animales, la música, la lectura, el juego, el tiempo de calidad con sus seres amados y el estudio de contenidos para su crecimiento personal y espiritual.
 
 ### William Serna:
-Estudiante de desarrollo Full Stack e inglés, me gusta la tecnología y los autos.
-Actualmente tengo conocimientos básicos en (JavaScript, Node JS, HTML5, CSS, React, Git, GitHub).
-Me desempeñaba como escolta VIP, pero esta profesión representaba muchos riesgos y estar mucho tiempo lejos de mi familia.
-Me gusta disfrutar tiempo en familia y conocer nuevos lugares.
+Estudiante de desarrollo Full Stack e inglés, le gusta la tecnología y los autos.
+
+Actualmente tiene conocimientos básicos en (JavaScript, Node JS, HTML5, CSS, React, Git, GitHub).
+
+Anteriormente, se desempeñaba como escolta VIP, pero esta profesión representaba muchos riesgos y estar mucho tiempo lejos de mi familia.
+
+Le gusta disfrutar tiempo en familia y conocer nuevos lugares.
 
 
 ### Sergio Escobar:
-Estudiante de Desarrollo Full stack  con conocimientos en Java, Python, Matlab, JavaScript, Node JS, HTML5, CSS, React, Git, GitHub y apasionado por la programación, los algoritmos y la lógica. Es también Ingeniero civil con enfasis en diseño estructural y conocimientos en logica matemática, fisica y programación enfocada al ámbito de la ingeniería y el diseño. Adémás, habiendo trabajado tambien en el sector de la construcción, más especificamente en la supervición de la ejecución de cimentaciones profundas, anclajes activos y control de calidad del concretro. Asimismo, es apasionado por los idimoas, contando con un nivel avanzado en Inglés y principiante en francés. Por otro lado, en su tiempo libre disfruta de el ejercicio, el Fútbol y la literatura, especialmente el realismo mágico y en general el Boom latinoamericano.
+Estudiante de Desarrollo Full stack  con conocimientos en Java, Python, Matlab, JavaScript, Node JS, HTML5, CSS, React, Git, GitHub y apasionado por la programación, los algoritmos y la lógica. 
+
+Es también Ingeniero civil con enfasis en diseño estructural y conocimientos en logica matemática, fisica y programación enfocada al ámbito de la ingeniería y el diseño. Adémás, habiendo trabajado tambien en el sector de la construcción, más especificamente en la supervición de la ejecución de cimentaciones profundas, anclajes activos y control de calidad del concretro. Asimismo, es apasionado por los idimoas, contando con un nivel avanzado en Inglés y principiante en francés. 
+
+Por otro lado, en su tiempo libre disfruta de el ejercicio, el fútbol y la literatura, especialmente el realismo mágico y en general el Boom latinoamericano.
 
 ## Nuestra inspiración
 
