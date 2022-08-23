@@ -161,3 +161,6 @@ Enlace de la página:  https://www.yeezygap.com/
 Razón del por qué es un referente:
 - La distribución de los productos en formato mobile
 - El manejo de las fotografías de los productos sin recuadros
+
+## Wireframes
+- https://miro.com/app/board/uXjVPe-qrDQ=/?share_link_id=456992226411 
