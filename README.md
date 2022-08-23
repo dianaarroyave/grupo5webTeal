@@ -20,7 +20,7 @@ Su objetivo es consolidarse como grupo y poder estar presente en sectores como e
 
 Teal, pretende ser un Grupo Empresarial con diferentes líneas de negocio, actualmente cuentan con dos líneas ya consolidadas en el mercado.
 
-#### TEAL ORIGIAL
+#### TEAL ORIGINAL
 
 Fue la primera marca creada, esta se enfoca en el segmento del Streetwear y posee los colores primarios de Teal, siendo la marca con más tiempo y recorrido.
 
@@ -35,7 +35,7 @@ Cada colección integra distintas temáticas, con las cuales nos inspiramos para
 - Sitios de interés: Bares, restaurantes, centros comerciales, fiestas, conciertos
 - Interés particular: Streetwear
 - Géneros musicales: Reggaeton, Trap, Rap, Hip-hop, Pop
-- Estrato economico: 4 - 5
+- Estrato económico: 4 - 5
 - ¿Por qué compran? Compran principalmente porque tienen la necesidad o el deseo de verse atractivos y diferentes de los demás, o identificarse con una tribu en particular.
 
 #### TEAL BASICS
@@ -51,7 +51,7 @@ Todos los diseños de Teal Basics son la representación fundamental de nuestras
 - Sitios de interés: Bares, restaurantes, centros comerciales, universidad, casa
 - Interés particular: Streetwear y loungewear
 - Géneros musicales: Reggaeton, Trap, Rap, Hip-hop, Pop
-- Estrato economico: 3 - 4
+- Estrato económico: 3 - 4
 - ¿Por qué compran? Compran principalmente porque tienen la necesidad o el deseo de verse atractivos y estar cómodos.
 
 ## Equipo de trabajo Web TEAL
