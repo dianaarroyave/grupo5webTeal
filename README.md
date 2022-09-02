@@ -164,3 +164,6 @@ Razón del por qué es un referente:
 
 ## Wireframes
 - https://miro.com/app/board/uXjVPe-qrDQ=/?share_link_id=456992226411 
+
+## Tablero de Trello
+https://trello.com/invite/b/jWKrG5Bd/71c8ad5a325cd8f62a361ec678338ed5/proyecto-teal-sprint-2
