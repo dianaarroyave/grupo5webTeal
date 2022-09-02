@@ -1,0 +1,23 @@
+{
+  "name": "grupo5webteal",
+  "version": "1.0.0",
+  "description": "## ¿Por qué estamos desarrollando este proyecto? 👩‍💻👨‍💻",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dianaarroyave/grupo5webTeal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dianaarroyave/grupo5webTeal/issues"
+  },
+  "homepage": "https://github.com/dianaarroyave/grupo5webTeal#readme",
+  "dependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
