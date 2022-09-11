@@ -7,20 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/338760936c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/public/css/header.css">
-    <link rel="stylesheet" href="/public/css/footer.css">
-    <link rel="stylesheet" href="/public/css/formularioLogin.css">
+    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="../public/css/header.css">
+    <link rel="stylesheet" href="../public/css/footer.css">
+    <link rel="stylesheet" href="../public/css/formularioLogin.css">
 </head>
 
 <body>
     <!-- ------------HEADER-------------- -->
     <header class="header">
-        <img class="menu" src="/public/images/isotipoMenu.png" alt="Isotipo con función de menú">
-        <img class="logo" src="/public/images/logoTeal.png" alt="Logo marca TEAL">
+        <img class="menu" src="../public/images/isotipoMenu.png" alt="Isotipo con función de menú">
+        <img class="logo" src="../public/images/logoTeal.png" alt="Logo marca TEAL">
         <div class="container-icons">
-            <img class="outstanding" src="/public/images/destacado.jpg" alt="Destacado">
-            <img class="bag" src="/public/images/bolsa.png" alt="Bolsa de compra">
-            <img class="profile" src="/public/images/user.png" alt="Perfil usuario">
+            <img class="outstanding" src="../public/images/destacado.jpg" alt="Destacado">
+            <img class="bag" src="../public/images/bolsa.png" alt="Bolsa de compra">
+            <img class="profile" src="../public/images/user.png" alt="Perfil usuario">
         </div>
     </header>
      <!-- ------------MAIN-------------- -->
@@ -29,35 +30,32 @@
             <h2 class="title">Iniciar sesión</h2>
             <div class="container-email">
                 <i class="fa-solid fa-envelope"></i>
-                <input type="email" name="email" placeholder="Correo electrónico">
-                <!-- requerid -->
+                <input type="email" id="email" placeholder="Correo electrónico" required>
             </div>
             <div class="container-password">
                 <i class="fa-solid fa-eye-slash"></i>
-                <input type="password" name="password" placeholder="Contraseña">
+                <input type="password" id="password" placeholder="Contraseña" required>
             </div>
                 <p class="recover-password">Olvidé mi contraseña</p>
             <div>
-                <button class="enter-btn">
+                <button class="enter-btn" type="submit" id="enter">
                     <i class="fa-solid fa-right-to-bracket"></i>
                     Ingresar
                 </button>
             </div>
             <div>
-                <button class="enter-facebook">
+                <button class="enter-facebook" type="submit" id="facebook">
                     <i class="fa-brands fa-facebook"></i>
                     Ingresar con Facebook
                 </button>
             </div>
             <div>
-                <button class="enter-google">
+                <button class="enter-google" type="submit" id="google">
                     <i class="fa-brands fa-google"></i>
                     Ingresar con Google
                 </button>
             </div>
         </form>
-        <!-- <form action=""></form> -->
-        <!-- <fieldset></fieldset> -->
 
     </main>
     <!-- ------------FOOTER-------------- -->
@@ -79,7 +77,7 @@
                 <li><i class="fa-solid fa-comment-dots"></i></li>
                 <li><i class="fa-brands fa-whatsapp"></i></li>
             </ul>
-            <input class="contact__suggestion" type="text" placeholder="Déjanos tu sugerencia">
+                <textarea class="contact__suggestion" name="" id="" cols="30" rows="2" placeholder="Déjanos tu sugerencia"></textarea> </textarea>
         </div>
         <div class="container-us-brands">
             <div class="us">

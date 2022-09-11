@@ -1,13 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-/* :root{
-
-} */
-
 .footer {
     padding: 10px;
     display: flex;
@@ -46,11 +36,12 @@
 }
 
 .contact__suggestion {
-   margin-top: 10px;
+   margin-top: 15px;
 }
 
 .contact__suggestion::placeholder{
     text-align: center;
+    font-size: 0.8rem;
 }
 
 .container-us-brands {
@@ -70,6 +61,10 @@
     padding-bottom: 10px;
 }
 
+.us p{
+    font-size: 0.9rem;
+}
+
 .brands {
     display: flex;
     flex-direction: column;
@@ -82,7 +77,12 @@
     padding-bottom: 10px;
 }
 
+.brands p{
+    font-size: 0.9rem;
+}
+
 .copyright {
     padding-top: 20px;
     text-align: center;
+    font-size: 0.8rem;
 }
