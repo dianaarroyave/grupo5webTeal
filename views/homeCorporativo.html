@@ -1,12 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Corporativo</title>
+    <script src="https://kit.fontawesome.com/338760936c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="/public/css/header.css">
+    <link rel="stylesheet" href="/public/css/footer.css">
+    <link rel="stylesheet" href="/public/css/homeCorporativo.css">
 </head>
+
 <body>
-    
+    <!-- ------------HEADER-------------- -->
+    <header class="header">
+        <img class="menu" src="../public/images/isotipoMenu.png" alt="Isotipo con función de menú">
+        <img class="logo" src="../public/images/logoTeal.png" alt="Logo marca TEAL">
+        <div class="container-icons">
+            <img class="outstanding" src="../public/images/destacado.jpg" alt="Destacado">
+            <img class="bag" src="../public/images/bolsa.png" alt="Bolsa de compra">
+            <img class="profile" src="../public/images/user.png" alt="Perfil usuario">
+        </div>
+    </header>
+
+    <!-- --------------MAIN--------------- -->
+    <main class="main">
+        <img class="banner-video" src="../public/images/banner.JPG" alt="">
+        <div class="description-teal">
+            <h2 class="description-teal__title">¿Quiénes somos?</h2>
+            <p class="description-teal__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+                architecto voluptates quod hic
+                voluptas illo accusantium odio labore, aliquid doloremque nulla ipsa atque quae eligendi nisi iste odit
+                doloribus quam!</p>
+            <img class="description-teal__img-team" src="../public/images/imagenCualquiera.png" alt="">
+        </div>
+        <h2 class="brands-title">Nuestras marcas</h2>
+        <div class="brands__container">
+            <input class="checkbox1" type="checkbox" id="brands__original">
+            <label for="brands__original">
+                <img class="brands__original" src="../public/images/tealOriginal.jpg" alt="logo marca TEAL ORIGINAL">
+            </label>
+            <p class="brand_description1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, earum
+                tempora. Id in culpa voluptatum
+                omnis voluptas optio odio et possimus nobis cupiditate, facere hic perspiciatis consequuntur reiciendis
+                ipsa eos.</p>
+            <input class="checkbox2" type="checkbox" id="brands__basics">
+            <label for="brands__basics">
+                <img class="brands__basics" src="../public/images/tealBasics.jpg" alt="logo marca TEAL BASICS">
+            </label>
+            <p class="brand_description2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, earum
+                tempora. Id in culpa voluptatum
+                omnis voluptas optio odio et possimus nobis cupiditate, facere hic perspiciatis consequuntur reiciendis
+                ipsa eos.</p>
+        </div>
+    </main>
+
+    <!-- ------------FOOTER-------------- -->
+    <footer class="footer">
+        <!-- Este div con clase follow-me, es para cuando tengamos que trabajar en desktop -->
+        <div class="follow-me">
+            <h4 class="follow-me__title">Síguenos</h4>
+            <ul class="follow-me__icon">
+                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><i class="fa-brands fa-facebook"></i></li>
+                <li><i class="fa-brands fa-spotify"></i></li>
+                <li><i class="fa-brands fa-youtube"></i></li>
+            </ul>
+        </div>
+        <!-- Este div con clase contact, es para cuando tengamos que trabajar en desktop -->
+        <div class="contact">
+            <h4 class="contact__title">Contáctanos</h4>
+            <ul class="contact__icon">
+                <li><i class="fa-solid fa-comment-dots"></i></li>
+                <li><i class="fa-brands fa-whatsapp"></i></li>
+            </ul>
+            <textarea class="contact__suggestion" name="" id="" cols="30" rows="2"
+                placeholder="Déjanos tu sugerencia"></textarea> </textarea>
+        </div>
+        <div class="container-us-brands">
+            <div class="us">
+                <h4 class="us__title">Sobre nosotros</h4>
+                <p>TEAL GROUP</p>
+                <p>Cultura</p>
+                <p>Trabaja con nosotros</p>
+            </div>
+            <div class="brands">
+                <h4 class="brands__title">Marcas</h4>
+                <p>ORIGINAL</p>
+                <p>BASICS</p>
+                <p>CLASSICS</p>
+                <p>SKETCHES</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>©Copyright 2022 TEAL all rights reserved</p>
+            <p>TEAL SAS | NUM-NUM</p>
+        </div>
+    </footer>
 </body>
+
 </html>
