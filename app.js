@@ -1,5 +1,5 @@
 const express = require("express");
-const path = require('path')
+const path = require('path');
 const app = express();
 
 const publicPath = path.resolve(__dirname, "./public");
@@ -9,4 +9,7 @@ app.listen(3030, () => console.log("servidor corriendo"));
 
 app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname, "./views/homeSombrilla.html"));
-})
+});
+app.get("/homesubmarcas", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "./views/homeSubmarcas.html"));
+});

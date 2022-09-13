@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primaryFont: 'helvetica';
+    --sizeTitle: 1.5rem;
+    --sizeBody: 1rem;
+    --negro: #000000;
+    --blanco: #fff;
+    --gris: #d9d9d6;
+    --teal: #008080;
+    --tealOriginal: #d8fffc;
+    --tealBasics: #f9f9f9;
+}
+.gender{
+    display: flex;
+    flex-wrap: wrap;
+    height: 25px;
+}
+.btn-man{
+    width: 50%;
+}
+.btn-man:hover{
+    background-color:black;
+    color: white;
+}
+.btn-women{
+    width: 50%;
+}
+.btn-women:hover{
+    background-color:black;
+    color: white;
+}
+.cards{
+    
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.card{
+    width: 50%;
+    position: relative;
+    
+}
+
+.description{
+    padding-bottom: 15px;
+   
+}
+.filter-products{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+.filter-price{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    
+}
+.name{
+    width:30%;
+    border-radius: 5px;
+    background-color:dimgray;
+    color:white;
+    box-shadow: 0 0 5px #008080 ;
+   
+}
+.filter-price-less{
+    width:30%;
+    border-radius: 5px;
+    background-color:dimgray;
+    color:white;
+    box-shadow: 0 0 5px #008080 ;
+
+}
+.filter-price-more{
+    width:30%;
+    background-color:dimgray;
+    color:white;
+    box-shadow: 0 0 5px #008080 ;
+
+}
+.img-icon{       
+    width: 20px;
+    float:right;
+        
+}
+.price{
+    display: flex; 
+    position: relative;   
+    justify-content: center;
+    font-weight: bolder;
+}
+.product{
+    display: flex;
+    justify-content: center;
+    color:var(--tealOriginal);
+}
