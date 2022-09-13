@@ -13,13 +13,12 @@
   }
 
 .menu {
-    width: 3rem;
-    height: 3rem;
-    animation: menu 3s linear infinite
+    width: 2rem;
+    animation: menu 6s linear infinite
 }
 
 .logo {
-    width: 8rem;
+    width: 6rem;
     margin: 0 auto;
     align-items: center;
 }
