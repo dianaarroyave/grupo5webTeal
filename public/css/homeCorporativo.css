@@ -1,5 +1,5 @@
 .main{
-    font-family: var(--primaryFont)
+    padding-bottom: 3rem;
 }
 
 .banner-video {
@@ -12,16 +12,22 @@
 }
 
 .description-teal__paragraph {
-    width: 80%;
+    width: 90%;
     padding: 1.25rem;
     margin: 0 auto;
     font-size: var(--sizeBody);
 }
 
 .description-teal__img-team {
-    width: 12.5rem;
+    width: 14rem;
     display: block;
     margin: 0 auto;
+    transition: all 400ms;
+}
+
+.description-teal__img-team:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 0.5rem var(--negro);
 }
 
 .brands-title {
@@ -43,7 +49,21 @@
     border-left: solid 4rem var(--negro);
     border-right: solid 4rem var(--negro);
     border-top: solid 1rem var(--negro);
-    border-bottom: solid 1rem var(--negro);  
+    border-bottom: solid 2rem var(--negro);  
+}
+
+.container-img{
+    position: relative;
+}
+
+.down-arrow-original{
+    position: absolute;
+    color: var(--blanco);
+    bottom: 9px;
+    right: calc(50% - 8px);
+    font-size: 1.2rem;
+    text-shadow: 0 0 0.5rem var(--blanco);
+    transition: all 400ms;
 }
 
 .brands__basics {
@@ -51,8 +71,24 @@
     border-left: solid 4rem var(--blanco);
     border-right: solid 4rem var(--blanco);
     border-top: solid 1rem var(--blanco);
-    border-bottom: solid 1rem var(--blanco); 
+    border-bottom: solid 2rem var(--blanco); 
     margin-top: 2rem;
+    position: relative;
+}
+
+.down-arrow-basics{
+    position: absolute;
+    color: var(--negro);
+    bottom: 9px;
+    right: calc(50% - 8px);
+    font-size: 1.2rem;
+    text-shadow: 0 0 0.5rem var(--negro);
+    transition: all 400ms;
+}
+
+.down-arrow-basics:hover,
+.down-arrow-original:hover {
+    transform: scale(1.5);
 }
 
 .brand_description1, 
