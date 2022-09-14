@@ -1,0 +1,72 @@
+.main{
+    font-family: var(--primaryFont)
+}
+
+.banner-video {
+    width: 100%;
+}
+
+.description-teal__title {
+    text-align: center;
+    padding-top: 2.5rem;
+}
+
+.description-teal__paragraph {
+    width: 80%;
+    padding: 1.25rem;
+    margin: 0 auto;
+    font-size: var(--sizeBody);
+}
+
+.description-teal__img-team {
+    width: 12.5rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.brands-title {
+    text-align: center;
+    padding-top: 2.5rem;
+    font-size: var(--sizeTitle);
+}
+
+.checkbox1, .checkbox2{
+    display: none;
+}
+
+.brands__container {
+    margin-top: 1rem;
+}
+
+.brands__original {
+    width: 100%;
+    border-left: solid 4rem var(--negro);
+    border-right: solid 4rem var(--negro);
+    border-top: solid 1rem var(--negro);
+    border-bottom: solid 1rem var(--negro);  
+}
+
+.brands__basics {
+    width: 100%;
+    border-left: solid 4rem var(--blanco);
+    border-right: solid 4rem var(--blanco);
+    border-top: solid 1rem var(--blanco);
+    border-bottom: solid 1rem var(--blanco); 
+    margin-top: 2rem;
+}
+
+.brand_description1, 
+.brand_description2{
+    display: none;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: var(--sizeBody);
+}
+
+.checkbox1:checked ~ .brand_description1,
+.checkbox2:checked ~ .brand_description2{
+    display: block;
+}
+
+
