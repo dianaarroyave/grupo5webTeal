@@ -7,6 +7,10 @@ app.use( express.static(publicPath) );
 
 app.listen(3000, () => console.log("servidor corriendo"));
 
+// app.get("/", (req, res) => {
+//     res.sendFile(path.resolve(__dirname, "./views/homeSombrilla.html"));
+// })
+
 app.get("/", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "./views/homeSombrilla.html"));
+    res.sendFile(path.resolve(__dirname, "./views/descripcionProducto.html"));
 })
