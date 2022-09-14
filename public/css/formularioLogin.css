@@ -1,91 +1,104 @@
 .form {
-    margin-top: 10px;
+    margin-top: 0.625rem;
+    margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: Helvetica;
-    /* background-color: rgba(0, 128, 128, 0.5); */
 }
 
 .title {
-    margin-top: 30px;
-    text-shadow: 0 0 2px black;
+    margin-top: 1.875rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 0.1rem var(--negro);
 }
 
-.container-email {
-    width: 18rem;
-    margin-top: 30px;
-    /* padding: 1px 5px; */
-    padding: 5px;
-    border: solid 1px black;
-    border-radius: 2px;
-    box-shadow: 0 0 3px black;
+.container-email:hover,
+.container-password:hover {
+    transform: scale(1.1);
 }
 
-.container-email input {
-    border: none;
-    outline: none;
+.icon-email:hover,
+.icon-password:hover {
+    transform: scale(1.1);
+    transition: all 400ms;
+    color: var(--teal);
 }
 
-.container-email input::placeholder {
-    font-size: 0.9rem;
-    font-family: Helvetica;
-}
-
+.container-email,
 .container-password {
     width: 18rem;
-    margin-top: 10px;
-    /* padding: 1px 5px; */
-    padding: 5px;
-    border: solid 1px black;
-    box-shadow: 0 0 3px black;
-    border-radius: 2px;
+    padding: 0.313rem;
+    margin-top: 0.8rem;
+    border: solid 0.063rem var(--negro);
+    border-radius: 0.125rem;
+    box-shadow: 0 0 0.188rem var(--negro);
+    transition: all 600ms;
 }
 
+.container-email input,
 .container-password input {
     border: none;
     outline: none;
 }
 
+.container-email input::placeholder,
 .container-password input::placeholder {
     font-size: 0.9rem;
-    font-family: Helvetica;
+}
+
+.recover-password:hover {
+    transform: scale(1.1);
+    transition: all 400ms;
+    color: var(--teal);
 }
 
 .recover-password {
-    margin-top: 10px;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
     text-decoration: underline;
     font-size: 0.8rem;
 }
 
+.enter-btn:hover {
+    background-color: var(--teal);
+    border: solid 0.2rem var(--blanco);
+    transform: scale(1.1);
+}
+
 .enter-btn {
-    width: 5rem;
-    padding: 4px;
-    margin-top: 10px;
-    background-color: black;
-    box-shadow: 0 0 5px black;
-    color: white;
-    font-size: 0.8rem;
-    font-family: Helvetica;
+    width: 6rem;
+    padding: 0.4rem;
+    margin-top: 0.7rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    background-color: var(--negro);
+    color: var(--blanco);
+    transition: all 400ms;
 }
 
-.enter-facebook {
-    width: 12rem;
-    padding: 4px;
-    margin-top: 20px;
-    background-color: white;
-    color: black;
-    box-shadow: 0 0 5px black;
-    font-family: Helvetica;
+.enter-facebook:hover,
+.enter-google:hover {
+    border: none;
+    color: var(--blanco);
+    background-color: var(--teal);
+    transform: scale(1.1);
 }
 
+.enter-facebook,
 .enter-google {
-    width: 12rem;
-    padding: 4px;
-    margin-top: 10px;
-    margin-bottom: 100px;
+    width: 13rem;
+    padding: 0.3rem;
+    margin-top: 0.8rem;
     background-color: white;
     color: black;
-    box-shadow: 0 0 5px black;
-    font-family: Helvetica;
+    box-shadow: 0 0 0.3rem black;
+    transition: all 400ms;
+}
+
+.line {
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--negro);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
