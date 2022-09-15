@@ -15,3 +15,7 @@
     --tealOriginal: #d8fffc;
     --tealBasics: #f9f9f9;
 }
+
+html{
+    font-family: var(--primaryFont);
+}
