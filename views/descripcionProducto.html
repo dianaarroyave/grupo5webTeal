@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="../public/css/carritoCompras.css">
+    <link rel="stylesheet" href="/css/descripcionProducto.css">
 </head>
 
 <body>
@@ -26,58 +26,38 @@
     </header>
     <!-- ------------MAIN-------------- -->
     <main>
-        <section class="section">
-            <div class="titles">
-                <h2>Producto</h2>
-                <h2>Precio</h2>
-            </div>
-            <div class="container-card">
-                <img class="container-card__img" src="../public/images/img.png" alt="Producto">
-                <div class="container-card__caracteristics">
-                    <p>Tipo de producto</p>
-                    <p>Talla M</p>
-                    <i class="fa-solid fa-trash-can"></i>
-                </div>
-                <div class="container-card__price-amount">
-                    <p>CO$100.000</p>
-                    <div class="container-card__amount">
-                        <i class="fa-solid fa-chevron-left"></i>
-                        <p>1</p>
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="container-card">
-                <img class="container-card__img" src="../public/images/img.png" alt="Producto">
-                <div class="container-card__caracteristics">
-                    <p>Tipo de producto</p>
-                    <p>Talla M</p>
-                    <i class="fa-solid fa-trash-can"></i>
-                </div>
-                <div class="container-card__price-amount">
-                    <p>CO$100.000</p>
-                    <div class="container-card__amount">
-                        <i class="fa-solid fa-chevron-left"></i>
-                        <p>1</p>
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="container-shipping">
-                <h4>Envío</h4>
-                <h4>$0</h4>
-            </div>
-            <div class="container-subtotal">
-                <h4>Subtotal</h4>
-                <h4>$200.000</h4>
-            </div>
-            <hr class="line">
-            <button class="btn-pay">PAGAR</button>
-            <button class="btn-buy">
-                <i class="fa-solid fa-bag-shopping"></i>
-                Seguir comprando
-            </button>
+        <div class="route">
+            <ul class="productRoute">
+                <li><a href="#">Home</a></li>
+                <li>/</li>
+                <li><a href="#">Marca</a></li>
+                <li>/</li>
+                <li><a href="#">Mujer</a></li>
+                <li>/</li>
+                <li><a href="#">Camiseta Thermal</a></li>
+            </ul>
+        </div>
+
+        <section class="productDescription">
+            <img src="/images/camisetaThermal.png" alt="Camiseta Thermal">
+            <h2 class="productTittle">Camiseta Thermal</h2>
+            <h3 class="price">$80.000</h3>
+            <h3 class="description">Descripción del producto</h3>
+            <p class="textDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit porro recusandae a quis sapiente ut, nihil mollitia quos. Est corrupti quod voluptatum voluptatem illo velit eveniet ullam accusamus ab atque?</p>
+            <h3 class="size">Talla</h3>
+            <ul class="productSize">
+                <li>XS</li>
+                <li class="circle">S</li>
+                <li class="circle">M</li>
+                <li class="circle">L</li>
+                <li>XL</li>
+            </ul>
+            <h3>Cantidad</h3>
+            <button>Agregar al carrito</button>
+            <img src="" alt="">
+            <h3>Arma tu look perfecto</h3>
         </section>
+    </main>
         <!-- ------------FOOTER-------------- -->
         <footer class="footer">
             <!-- Este div con clase follow-me, es para cuando tengamos que trabajar en desktop -->
