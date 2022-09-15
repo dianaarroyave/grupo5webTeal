@@ -1,2 +1,4 @@
-/node_modules
-/.vscode/
+<<<<<<< HEAD
+# dependencies
+*node_modules*
+*package-lock.json*
