@@ -6,35 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teal Home</title>
 <!---links CSS-->
-<link rel="stylesheet" href="../public/css/header.css">
-<link rel="stylesheet" href="../public/css/footer.css">
-<link rel="stylesheet" href="../public/css/home.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/home.css">
 
 
 </head>
 <body>
+    <!-- ------------aquí está contenida la imagen principal-------------- -->
     <section class="ImageContainer">
-      <header class="header">
-        <img class="menu" src="../public/images/isotipoMenu.png" alt="Isotipo con función de menú">
-        <img class="logo" src="../public/images/logoTeal.png" alt="Logo marca TEAL">
+          <!-- ------------HEADER-------------- -->
+    <header class="header">
+        <img class="menu" src="/images/isotipo-menu.png" alt="Isotipo con función de menú">
+        <img class="logo" src="/images/logoTeal.png" alt="Logo marca TEAL">
         <div class="container-icons">
-            <img class="outstanding" src="../public/images/destacado.jpg" alt="Destacado">
-            <img class="bag" src="../images/bolsa.png" alt="Bolsa de compra">
-            <img class="profile" src="../public/images/user.png" alt="Perfil usuario">
+            <img class="outstanding" src="/images/destacado-negro.png" alt="Destacado">
+            <img class="bag" src="/images/bolsa.png" alt="Bolsa de compra">
+            <img class="profile" src="/images/user.png" alt="Perfil usuario">
         </div>
-      </header>
+    </header>
       <div class="image">
-
+        <nav classs="principal" >
+            <ul class="ChooseCollection">
+                <li ><a class="collections" href="#">TEAL <br> ORIGINAL</a></li>
+                <li ><a class="collections" href="css\homeCorporativo.html">TEAL <br> GROUP</a></li>
+                <li ><a class="collections" href="#">TEAL <br> BASICS</a></li>
+            </ul>
+        </nav>
       </div>
     </section>
-    <nav classs="principal" >
-        <ul >
-            <li ><a class="collections" href="#">TEAL ORIGINAL</a></li>
-            <li ><a class="collections" href="#">TEAL GROUP</a></li>
-            <li ><a class="collections" href="#">TEAL BASICS</a></li>
-        </ul>
-    </nav>
+    
 </body>
+<!-- ------------FOOTER-------------- -->
 <footer class="footer">
     <!-- Este div con clase follow-me, es para cuando tengamos que trabajar en desktop -->
     <div class="follow-me">
@@ -53,7 +56,8 @@
             <li><i class="fa-solid fa-comment-dots"></i></li>
             <li><i class="fa-brands fa-whatsapp"></i></li>
         </ul>
-        <input class="contact__suggestion" type="text" placeholder="Déjanos tu sugerencia">
+        <textarea class="contact__suggestion" name="" id="" cols="30" rows="2"
+            placeholder="Déjanos tu sugerencia"></textarea> </textarea>
     </div>
     <div class="container-us-brands">
         <div class="us">

@@ -1,52 +1,88 @@
+:root{
+    --primaryFont: 'helvetica';
+    --lgMobile: 1.2rem;
+    --mdMobile: 1rem;
+    --smMobile: 0.9rem;
+    --ssmMobile: 0.8rem;
+    --negro: #000000;
+    --blanco: #fff;
+    --gris: #d9d9d6;
+    --teal: #008080;
+    --tealOriginal: #d8fffc;
+    --tealBasics: #f9f9f9;
+}
 
+/* Globales */
 * {
     margin: 0 px ;
     padding: 0 px ;
     box-sizing: border-box ;
+    font-family: var(--primaryFont);
+}
+
+/* Etiquetas */
+
+header{
+    border:2px solid;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+/* 
+footer{
+    border:2px solid;
+    background-color: rgba(255, 255, 255, 0.4); 
+}
+*/
+/* Clases */
+.ChooseCollection{
+    width: 96vw;
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px 0px;
+    justify-content:space-between;
+    align-items: center;
+    list-style: none;
+    position: absolute;
+    bottom: 0px;
+    position: fixed;
+
+
 }
 
 .collections{
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 40px;
-    line-height: 50px;
-    color: white;
+    font-size: var(--lgMobile);
+    line-height: 20px;
+    color:var(--teal);
     text-decoration: none;
     font-weight: bold;
-    background-color: black;
+    padding: 5px;
 }
+
 
 
 
 .ImageContainer{
     background-color: white;
-    background-image:url(../images/PortadaOpcion.JPG);
+    background-image:url(../images/fondomobile.JPG);
     background-size: 100vw;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center top;
 
 }
 
 .image{
-    height: 70vh;
+    height: 100vh;
 
 }
 
-header{
-    background-color: transparent;
-    border:2px solid;
-    background-color: rgba(255, 255, 255, 0.4);
-}
-footer{
-    background-color: transparent;
-    border:2px solid;
-    background-color: rgba(255, 255, 255, 0.4); 
-}
 
 .collections:hover{
-    font-size: 60px;
-    line-height: 60px;
-    color: rgb(255, 255, 255);
+    font-size: 1.5em;
     text-decoration: line-through;
 }
+
+
+/* @medias */
+
