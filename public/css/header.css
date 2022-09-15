@@ -1,7 +1,6 @@
 .header {
-    width: 100%;    
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 100%;
+    padding: 10px;
     display: flex;
     align-items: center;
     font-family: Helvetica;
@@ -13,8 +12,7 @@
   }
 
 .menu {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
     animation: menu 6s linear infinite
 }
 

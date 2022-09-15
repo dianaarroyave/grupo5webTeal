@@ -5,23 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrito-Teal</title>
     <script src="https://kit.fontawesome.com/338760936c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../public/css/index.css">
-    <link rel="stylesheet" href="../public/css/header.css">
-    <link rel="stylesheet" href="../public/css/footer.css">
-    <link rel="stylesheet" href="../public/css/carritoCompras.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/carritoCompras.css">
 </head>
 
 <body>
     <!-- ------------HEADER-------------- -->
     <header class="header">
-        <img class="menu" src="../public/images/isotipoMenu.png" alt="Isotipo con función de menú">
-        <img class="logo" src="../public/images/logoTeal.png" alt="Logo marca TEAL">
+        <img class="menu" src="/images/isotipo-menu.png" alt="Isotipo con función de menú">
+        <img class="logo" src="/images/logoTeal.png" alt="Logo marca TEAL">
         <div class="container-icons">
-            <img class="outstanding" src="../public/images/destacado.jpg" alt="Destacado">
-            <img class="bag" src="../public/images/bolsa.png" alt="Bolsa de compra">
-            <img class="profile" src="../public/images/user.png" alt="Perfil usuario">
+            <img class="outstanding" src="/images/destacado-negro.png" alt="Destacado">
+            <img class="bag" src="/images/bolsa.png" alt="Bolsa de compra">
+            <img class="profile" src="/images/user.png" alt="Perfil usuario">
         </div>
     </header>
     <!-- ------------MAIN-------------- -->
@@ -32,11 +32,13 @@
                 <h2>Precio</h2>
             </div>
             <div class="container-card">
-                <img class="container-card__img" src="../public/images/img.png" alt="Producto">
+                <img class="container-card__img" src="/images/img.png" alt="Producto">
                 <div class="container-card__caracteristics">
                     <p>Tipo de producto</p>
                     <p>Talla M</p>
-                    <i class="fa-solid fa-trash-can"></i>
+                    <div>
+                        <i class="fa-solid fa-trash-can trash-can"></i>
+                    </div>
                 </div>
                 <div class="container-card__price-amount">
                     <p>CO$100.000</p>
@@ -48,11 +50,13 @@
                 </div>
             </div>
             <div class="container-card">
-                <img class="container-card__img" src="../public/images/img.png" alt="Producto">
+                <img class="container-card__img" src="/images/img.png" alt="Producto">
                 <div class="container-card__caracteristics">
                     <p>Tipo de producto</p>
                     <p>Talla M</p>
-                    <i class="fa-solid fa-trash-can"></i>
+                    <div>
+                        <i class="fa-solid fa-trash-can trash-can"></i>
+                    </div>
                 </div>
                 <div class="container-card__price-amount">
                     <p>CO$100.000</p>
@@ -77,49 +81,51 @@
                 <i class="fa-solid fa-bag-shopping"></i>
                 Seguir comprando
             </button>
+            <hr class="line">
         </section>
-        <!-- ------------FOOTER-------------- -->
-        <footer class="footer">
-            <!-- Este div con clase follow-me, es para cuando tengamos que trabajar en desktop -->
-            <div class="follow-me">
-                <h4 class="follow-me__title">Síguenos</h4>
-                <ul class="follow-me__icon">
-                    <li><i class="fa-brands fa-instagram"></i></li>
-                    <li><i class="fa-brands fa-facebook"></i></li>
-                    <li><i class="fa-brands fa-spotify"></i></li>
-                    <li><i class="fa-brands fa-youtube"></i></li>
-                </ul>
+    </main>
+    <!-- ------------FOOTER-------------- -->
+    <footer class="footer">
+        <!-- Este div con clase follow-me, es para cuando tengamos que trabajar en desktop -->
+        <div class="follow-me">
+            <h4 class="follow-me__title">Síguenos</h4>
+            <ul class="follow-me__icon">
+                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><i class="fa-brands fa-facebook"></i></li>
+                <li><i class="fa-brands fa-spotify"></i></li>
+                <li><i class="fa-brands fa-youtube"></i></li>
+            </ul>
+        </div>
+        <!-- Este div con clase contact, es para cuando tengamos que trabajar en desktop -->
+        <div class="contact">
+            <h4 class="contact__title">Contáctanos</h4>
+            <ul class="contact__icon">
+                <li><i class="fa-solid fa-comment-dots"></i></li>
+                <li><i class="fa-brands fa-whatsapp"></i></li>
+            </ul>
+            <textarea class="contact__suggestion" name="" id="" cols="30" rows="2"
+                placeholder="Déjanos tu sugerencia"></textarea> </textarea>
+        </div>
+        <div class="container-us-brands">
+            <div class="us">
+                <h4 class="us__title">Sobre nosotros</h4>
+                <p>TEAL GROUP</p>
+                <p>Cultura</p>
+                <p>Trabaja con nosotros</p>
             </div>
-            <!-- Este div con clase contact, es para cuando tengamos que trabajar en desktop -->
-            <div class="contact">
-                <h4 class="contact__title">Contáctanos</h4>
-                <ul class="contact__icon">
-                    <li><i class="fa-solid fa-comment-dots"></i></li>
-                    <li><i class="fa-brands fa-whatsapp"></i></li>
-                </ul>
-                <textarea class="contact__suggestion" name="" id="" cols="30" rows="2"
-                    placeholder="Déjanos tu sugerencia"></textarea> </textarea>
+            <div class="brands">
+                <h4 class="brands__title">Marcas</h4>
+                <p>ORIGINAL</p>
+                <p>BASICS</p>
+                <p>CLASSICS</p>
+                <p>SKETCHES</p>
             </div>
-            <div class="container-us-brands">
-                <div class="us">
-                    <h4 class="us__title">Sobre nosotros</h4>
-                    <p>TEAL GROUP</p>
-                    <p>Cultura</p>
-                    <p>Trabaja con nosotros</p>
-                </div>
-                <div class="brands">
-                    <h4 class="brands__title">Marcas</h4>
-                    <p>ORIGINAL</p>
-                    <p>BASICS</p>
-                    <p>CLASSICS</p>
-                    <p>SKETCHES</p>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>©Copyright 2022 TEAL all rights reserved</p>
-                <p>TEAL SAS | NUM-NUM</p>
-            </div>
-        </footer>
+        </div>
+        <div class="copyright">
+            <p>©Copyright 2022 TEAL all rights reserved</p>
+            <p>TEAL SAS | NUM-NUM</p>
+        </div>
+    </footer>
 </body>
 
 </html>
