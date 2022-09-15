@@ -7,15 +7,19 @@ app.use( express.static(publicPath) );
 
 app.listen(3000, () => console.log("servidor corriendo"));
 
-// app.get("/", (req, res) => {
-//     res.sendFile(path.resolve(__dirname, "./views/homeSombrilla.html"));
-// })
+
+//Paths:
 
 app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname, "./views/home.html"));
 })
 
-app.get("/", (req, res) => {
+app.get("/css/homeCorporativo.html", (req, res) => {
     res.sendFile(path.resolve(__dirname, "./views/homeCorporativo.html"));
+    
+})
+
+app.get("/css/homeSubmarcas.html", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "./views/homeSubmarcas.html"));
     
 })

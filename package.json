@@ -4,13 +4,8 @@
   "description": "## ¿Por qué estamos desarrollando este proyecto? 👩‍💻👨‍💻",
   "main": "app.js",
   "scripts": {
-<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
-=======
-    "start": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
->>>>>>> submarcas
   },
   "repository": {
     "type": "git",
@@ -24,13 +19,7 @@
   },
   "homepage": "https://github.com/dianaarroyave/grupo5webTeal#readme",
   "dependencies": {
-<<<<<<< HEAD
     "express": "^4.18.1",
-=======
-    "express": "^4.18.1"
-  },
-  "devDependencies": {
->>>>>>> submarcas
     "nodemon": "^2.0.19"
   }
 }

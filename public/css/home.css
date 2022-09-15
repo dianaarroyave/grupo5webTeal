@@ -43,9 +43,9 @@ footer{
     justify-content:space-between;
     align-items: center;
     list-style: none;
-    position: absolute;
-    bottom: 0px;
     position: fixed;
+    top: 600px;
+    z-index: 100;
 
 
 }
@@ -77,12 +77,30 @@ footer{
 
 }
 
+.FeaturedProducts{
+    width: 100vw;
+}
+.TitleContainer{
+    display: flex;
+    justify-content: center;
+    padding: 15px 0px;
+    margin-bottom: 20px;
+}
+.SectionTitle{
+    color: var(--teal);
+    font-size: var(--mdMobile);
+}
+/* Necesario para conservar concepto de prendas */
+.img-card{
+    width: 90%;
+}
 
 .collections:hover{
     font-size: 1.5em;
     text-decoration: line-through;
 }
 
+/* hover */
 
 /* @medias */
 
