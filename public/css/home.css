@@ -1,52 +1,144 @@
+:root{
+    --primaryFont: 'helvetica';
+    --lgMobile: 1.2rem;
+    --mdMobile: 1rem;
+    --smMobile: 0.9rem;
+    --ssmMobile: 0.8rem;
+    --negro: #000000;
+    --blanco: #fff;
+    --gris: #d9d9d6;
+    --teal: #008080;
+    --tealOriginal: #d8fffc;
+    --tealBasics: #f9f9f9;
+}
 
+/* Globales */
 * {
     margin: 0 px ;
     padding: 0 px ;
     box-sizing: border-box ;
+    font-family: var(--primaryFont);
+}
+
+/* Etiquetas */
+
+header{
+    border:2px solid;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+footer{
+    border:2px solid;
+    position: relative;
+    z-index: 100;
+    background-color: white;
+}
+
+/* Clases */
+.ChooseCollection{
+    width: 100vw;
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px 0px;
+    justify-content:space-between;
+    align-items: center;
+    list-style: none;
+    position: fixed;
+    bottom: 5vw;
+    z-index: 100;
+
+
 }
 
 .collections{
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 40px;
-    line-height: 50px;
-    color: white;
+    font-size: var(--mdMobile);
+    line-height: 20px;
+    color:var(--teal);
     text-decoration: none;
     font-weight: bold;
-    background-color: black;
+    padding: 5px;
 }
+
 
 
 
 .ImageContainer{
     background-color: white;
-    background-image:url(../images/PortadaOpcion.JPG);
+    background-image:url(../images/fondomobile.JPG);
     background-size: 100vw;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center top;
 
 }
 
 .image{
-    height: 70vh;
+    height: 100vh;
 
 }
 
-header{
-    background-color: transparent;
-    border:2px solid;
-    background-color: rgba(255, 255, 255, 0.4);
+.FeaturedProducts{
+    width: 100vw;
 }
-footer{
-    background-color: transparent;
-    border:2px solid;
-    background-color: rgba(255, 255, 255, 0.4); 
+.TitleContainer{
+    display: flex;
+    justify-content: center;
+    padding: 15px 0px;
+    margin-bottom: 20px;
+}
+.SectionTitle{
+    color: var(--teal);
+    font-size: var(--mdMobile);
+}
+/* Necesario para conservar concepto de prendas */
+.img-card{
+    width: 90%;
 }
 
 .collections:hover{
-    font-size: 60px;
-    line-height: 60px;
-    color: rgb(255, 255, 255);
+    font-size: 1.5em;
     text-decoration: line-through;
 }
+
+/* hover */
+
+/* @medias */
+/* @medias especial */
+@media (max-width: 410px){
+    .image{
+        height: 70vh;
+    }
+    .ChooseCollection{
+        position: fixed;
+        bottom: 45vw;
+        z-index: 100;
+}
+}
+@media (min-width: 768px){
+    .ImageContainer{
+        background-image:url(../images/team.JPG);
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .collections{
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .ChooseCollection{
+
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 0px;
+        justify-content:space-around;
+}
+
+}
+
+
+/*@media (min-width: 1024px){
+
+} */
