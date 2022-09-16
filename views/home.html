@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teal Home</title>
 <!---links CSS-->
-<link rel="stylesheet" href="css/header.css">
-<link rel="stylesheet" href="css/footer.css">
-<link rel="stylesheet" href="css/home.css">
-<link rel="stylesheet" href="css/homeSubmarcas.css">
-<link rel="stylesheet" href="css/index.css">
-
+<link rel="stylesheet" href="/css/header.css">
+<link rel="stylesheet" href="/css/footer.css">
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/submarcas.css">
+<link rel="stylesheet" href="/css/index.css">
 
 </head>
 <body >
@@ -19,21 +18,53 @@
     <section class="ImageContainer">
 
           <!-- ------------HEADER-------------- -->
-    <header class="header">
-        <img class="menu" src="/images/isotipo-menu.png" alt="Isotipo con función de menú">
-        <img class="logo" src="/images/logoTeal.png" alt="Logo marca TEAL">
-        <div class="container-icons">
-            <img class="outstanding" src="/images/destacado-negro.png" alt="Destacado">
-            <img class="bag" src="/images/bolsa.png" alt="Bolsa de compra">
-            <img class="profile" src="/images/user.png" alt="Perfil usuario">
-        </div>
-    </header>
+          <header class="header">
+            <input class="menu-isotipo" type="checkbox" id="menu-isotipo">
+            <label for="menu-isotipo">
+                <img class="menu" src="/images/isotipo-menu.png" alt="Isotipo con función de menú">
+            </label>
+            <ul class="menu-isotipo__dropdown">
+                <li>
+                    <a href="/nosotros" class="menu-isotipo__option">SOBRE NOSOTROS</a>
+                </li>
+                <li>
+                    <a href="/submarcas" class="menu-isotipo__option">ORIGINAL</a>
+                </li>
+                <li>
+                    <a href="/submarcas" class="menu-isotipo__option">BASICS</a>
+                </li>
+            </ul>
+    
+            <a href="/" class="logo">
+                <img class="logo-img" src="/images/logoTeal.png" alt="Logo marca TEAL">
+            </a>
+            <div class="container-icons">
+                <a href="#">
+                    <img class="outstanding" src="/images/destacado-negro.png" alt="Destacado">
+                </a>
+                <a href="/carrito">
+                    <img class="bag" src="/images/bolsa.png" alt="Bolsa de compra">
+                </a>
+            </div>
+            <input class="menu-profile" type="checkbox" id="menu-profile">
+            <label for="menu-profile">
+                <img class="profile" src="/images/user.png" alt="Perfil usuario">
+            </label>
+            <ul class="menu-profile__dropdown">
+                <li>
+                    <a href="/ingresar" class="menu-profile__option">INGRESAR</a>
+                </li>
+                <li>
+                    <a href="/registro" class="menu-profile__option">CREAR CUENTA</a>
+                </li>
+            </ul>
+        </header>
       <div class="image">
         <nav classs="principal" >
             <ul class="ChooseCollection">
-                <li ><a class="collections" href="css/homeSubmarcas.html">TEAL <br> ORIGINAL</a></li>
-                <li ><a class="collections" href="css\homeCorporativo.html">TEAL <br> GROUP</a></li>
-                <li ><a class="collections" href="css/homeSubmarcas.html">TEAL <br> BASICS</a></li>
+                <li ><a class="collections" href="/submarcas">TEAL <br> ORIGINAL</a></li>
+                <li ><a class="collections" href="/nosotros">TEAL <br> GROUP</a></li>
+                <li ><a class="collections" href="/submarcas">TEAL <br> BASICS</a></li>
             </ul>
         </nav>
       </div>
