@@ -170,3 +170,15 @@ a {
     margin-bottom: 0.8rem;
     font-size: var(--lgMobile);
 }
+
+
+
+
+
+.img-card{
+    width: 90%;
+}
+.EndImage{
+    width: 100%;
+}
+
