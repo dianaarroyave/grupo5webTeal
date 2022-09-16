@@ -1,3 +1,7 @@
+main {
+    font-family: var(--primaryFont);
+}
+
 .footer {
     padding: 10px;
     display: flex;
@@ -8,6 +12,8 @@
 
 .follow-me__title {
     text-align: center;
+    font-size: var(--smMobile);
+    padding-bottom: 0.2rem;
 }
 
 .follow-me__icon {
@@ -22,7 +28,9 @@
 
 .contact__title {
     text-align: center;
+    font-size: var(--smMobile);
     padding-top: 20px;
+    padding-bottom: 0.2rem;
 }
 
 .contact__icon {
@@ -36,7 +44,8 @@
 }
 
 .contact__suggestion {
-   margin-top: 15px;
+    margin-top: 15px;
+    padding-bottom: 2rem;
 }
 
 .contact__suggestion::placeholder{
@@ -46,7 +55,7 @@
 
 .container-us-brands {
     display: flex;
-    gap: 50px;
+    gap: 40px;
 }
 
 .us {
@@ -59,10 +68,11 @@
 .us__title {
     padding-top: 20px;
     padding-bottom: 10px;
+    font-size: var(--smMobile);
 }
 
 .us p{
-    font-size: 0.9rem;
+    font-size: var(--ssmMobile);
 }
 
 .brands {
@@ -75,14 +85,15 @@
 .brands__title {
     padding-top: 20px;
     padding-bottom: 10px;
+    ont-size: var(--smMobile);
 }
 
 .brands p{
-    font-size: 0.9rem;
+    font-size: var(--ssmMobile);
 }
 
 .copyright {
     padding-top: 20px;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: var(--ssmMobile);
 }
