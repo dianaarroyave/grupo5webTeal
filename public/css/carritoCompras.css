@@ -6,7 +6,7 @@
 .titles {
     display: flex;
     justify-content: space-between;
-    font-size: 0.8rem;
+    font-size: var(--lgMobile);
 }
 
 .container-card {
@@ -15,9 +15,9 @@
     margin-top: 1.5rem;
 }
 
-.container-card__img:hover{
-    transform: scale(1.1);
-    box-shadow: 0 0 0.5rem var(--negro);
+.container-card_img-description{
+    display: flex;
+    gap: 1rem;
 }
 
 .container-card__img {
@@ -25,10 +25,17 @@
     transition: all 400ms;
 }
 
+.container-card__img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 0.5rem var(--negro);
+}
+
 .container-card__caracteristics {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content:flex-end;
+    gap: 1rem;
+    font-size: var(--mdMobile);
 }
 
 .trash-can:hover{
@@ -40,7 +47,10 @@
 .container-card__price-amount {
     display: flex;
     flex-direction: column;
+    justify-content:center;
     gap: 1rem;
+    padding-bottom: 1rem;
+    font-size: var(--mdMobile);
 }
 
 .container-card__amount {
@@ -53,12 +63,14 @@
     justify-content: space-between;
     padding: 0.5rem;
     margin-top: 1rem;
+    font-size: var(--mdMobile);
 }
 
 .container-subtotal {
     display: flex;
     justify-content: space-between;
     padding: 0.5rem;
+    font-size: var(--mdMobile);
 }
 
 .line {
@@ -81,6 +93,7 @@
     margin: 0 auto;
     width: 18rem;
     border-radius: 1rem;
+    font-size: var(--mdMobile);
     background-color: var(--negro);
     color: white;
     padding: 0.8rem;
@@ -88,4 +101,62 @@
     transition: all 400ms;
 }
 
-/* @media (min-width: 768px) */
+@media (min-width: 768px){
+    .section {
+        margin: 5rem;
+    }
+
+    .container-card__img {
+        width: 10rem;
+    }
+    
+    .container-card__caracteristics {
+        gap: 1.3rem;
+        font-size: var(--lgMobile);
+    }
+    
+    .container-card__price-amount {
+        gap: 1.5rem;
+        padding-top: 1.8rem;
+        font-size: var(--lgMobile);
+    }
+    
+    
+    .container-shipping {
+        font-size: var(--lgMobile);
+    }
+    
+    .container-subtotal {
+        font-size: var(--lgMobile);
+    }
+  
+    .btn-pay, 
+    .btn-buy {
+        font-size: var(--lgMobile);
+    }
+}
+
+@media (min-width: 1024px){
+    .section {
+        margin: 5rem 12rem;
+    }
+
+    .container-card__img {
+        width: 15rem;
+    }
+    
+    .container-card__price-amount {
+        padding-top: 7rem;
+    }
+    
+    .container-shipping{
+        padding-top: 3rem;
+    }
+
+    .container-btn{
+        display: flex;
+        padding: 2rem;
+        gap: 3rem;
+    }
+    
+}

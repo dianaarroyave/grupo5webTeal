@@ -1,49 +1,102 @@
 .header {
-    width: 100%;
-    padding: 10px;
+    padding: 0.6rem;
     display: flex;
     align-items: center;
-    font-family: Helvetica;
 }
 
-@keyframes menu {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+.menu-isotipo,
+.menu-profile {
+    display: none;
+}
 
 .menu {
     width: 2rem;
-    animation: menu 6s linear infinite
+    animation: menu 6s linear infinite;
+}
+
+.menu:hover {
+    transform: scale(1.3);
+    animation: none;
+}
+
+@keyframes menu {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.menu-isotipo__dropdown,
+.menu-profile__dropdown {
+    width: 100%;
+    display: none;
+}
+
+.menu-isotipo__option,
+.menu-profile__option {
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+.menu-isotipo__option:hover,
+.menu-profile__option:hover {
+    color: var(--teal);
+}
+
+.menu-isotipo__dropdown li:hover,
+.menu-profile__dropdown li:hover {
+    transform: scale(1.1);
+    font-weight: 700;
+}
+
+.menu-isotipo:checked~.menu-isotipo__dropdown,
+.menu-profile:checked~.menu-profile__dropdown{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    position: absolute;
+    padding: 0.8rem;
+    top: 3.5rem;
+    left: 0;
+    font-size: var(--smMobile);
+    background-color: var(--negro);
+    transition: all 400s;
 }
 
 .logo {
-    width: 6rem;
     margin: 0 auto;
     align-items: center;
+}
+
+.logo-img {
+    width: 6rem;
+    transition: all 400ms;
 }
 
 .container-icons {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 15px;
+    position: relative;
+    gap: 0.9rem;
 }
 
-.outstanding {
-    width: 1.3rem;
-}
-
-.bag {
-    width: 1.3rem;
-}
-
+.outstanding,
+.bag,
 .profile {
     width: 1.3rem;
-    height: 1.3rem;
-    border: solid 0.1rem black;
-    border-radius: 50%;
+    transition: all 400ms;
 }
 
-main img {
-    width: 100%;
+.profile{
+    margin-left: 0.9rem;
+}
+
+.logo-img:hover,
+.outstanding:hover,
+.bag:hover,
+.profile:hover {
+    transform: scale(1.3);
 }
