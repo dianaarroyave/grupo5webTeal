@@ -26,15 +26,17 @@ header{
     border:2px solid;
     background-color: rgba(255, 255, 255, 0.4);
 }
-/* 
+
 footer{
     border:2px solid;
-    background-color: rgba(255, 255, 255, 0.4); 
+    position: relative;
+    z-index: 100;
+    background-color: white;
 }
-*/
+
 /* Clases */
 .ChooseCollection{
-    width: 96vw;
+    width: 100vw;
     display: block;
     display: flex;
     flex-wrap: wrap;
@@ -44,14 +46,14 @@ footer{
     align-items: center;
     list-style: none;
     position: fixed;
-    top: 600px;
+    bottom: 5vw;
     z-index: 100;
 
 
 }
 
 .collections{
-    font-size: var(--lgMobile);
+    font-size: var(--mdMobile);
     line-height: 20px;
     color:var(--teal);
     text-decoration: none;
@@ -103,4 +105,40 @@ footer{
 /* hover */
 
 /* @medias */
+/* @medias especial */
+@media (max-width: 410px){
+    .image{
+        height: 70vh;
+    }
+    .ChooseCollection{
+        position: fixed;
+        bottom: 45vw;
+        z-index: 100;
+}
+}
+@media (min-width: 768px){
+    .ImageContainer{
+        background-image:url(../images/team.JPG);
+        background-size: cover;
+        height: 100vh;
+    }
 
+    .collections{
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .ChooseCollection{
+
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 0px;
+        justify-content:space-around;
+}
+
+}
+
+
+/*@media (min-width: 1024px){
+
+} */
