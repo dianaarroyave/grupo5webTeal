@@ -15,7 +15,7 @@
     width: 90%;
     padding: 1.25rem;
     margin: 0 auto;
-    font-size: var(--sizeBody);
+    font-size: var(--mdMobile);
 }
 
 .description-teal__img-team {
@@ -26,14 +26,13 @@
 }
 
 .description-teal__img-team:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     box-shadow: 0 0 0.5rem var(--negro);
 }
 
 .brands-title {
     text-align: center;
     padding-top: 2.5rem;
-    font-size: var(--sizeTitle);
 }
 
 .checkbox1, .checkbox2{
@@ -97,7 +96,8 @@
     width: 80%;
     margin: 0 auto;
     padding: 1rem;
-    font-size: var(--sizeBody);
+    text-align: center;
+    font-size: var(--mdMobile);
 }
 
 .checkbox1:checked ~ .brand_description1,
@@ -105,4 +105,88 @@
     display: block;
 }
 
+@media(min-width: 700px){
+    .description-teal__title {
+        font-size: 2rem;
+    }
+    
+    .description-teal__paragraph {
+        width: 80%;
+        font-size: var(--lgMobile);
+    }
+    
+    .description-teal__img-team {
+        margin-top: 2rem;
+        width: 30rem;
+    }
+    
+    .description-teal__img-team:hover{
+        transform: scale(1.2);
+    }
 
+    .brands-title {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+        font-size: 2rem;
+    }
+    
+    .brands__container {
+        margin-top: 1rem;
+        display: flex;
+    }
+    
+    .brands__original {
+        border: solid 2rem var(--negro);
+        padding: 0;
+        margin: 0;
+    }
+
+    .brands__basics {
+        border: solid 2rem var(--blanco);
+        padding: 0;
+        margin: 0;
+    }
+    
+    .brand_description1, 
+    .brand_description2{
+        width: 100%;
+        padding: 2rem;
+        font-size: var(--lgMobile);
+    }
+    
+}
+
+@media(min-width: 1024px){
+        .description-teal__title {
+            font-size: 3rem;
+            padding-bottom: 2rem;
+        }
+        
+        .description-teal__paragraph {
+            width: 70%;
+            font-size: 1.5rem;
+        }
+        
+        .description-teal__img-team {
+            margin-top: 3rem;
+            width: 40rem;
+        }
+    
+        .brands-title {
+            padding-top: 7rem;
+            padding-bottom: 3rem;
+            font-size: 3rem;
+        }
+
+        .brands__original {
+            border: solid 6rem var(--negro);
+            padding: 0;
+            margin: 0;
+        }
+    
+        .brands__basics {
+            border: solid 6rem var(--blanco);
+            padding: 0;
+            margin: 0;
+        }
+}

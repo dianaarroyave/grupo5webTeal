@@ -102,3 +102,15 @@
     justify-content: center;
     color:var(--tealOriginal);
 }
+
+
+
+
+
+
+.img-card{
+    width: 90%;
+}
+.EndImage{
+    width: 100%;
+}

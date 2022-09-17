@@ -1,5 +1,5 @@
 .form {
-    margin-top: 0.625rem;
+    margin-top: 0.6rem;
     margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
@@ -7,8 +7,9 @@
 }
 
 .title {
-    margin-top: 1.875rem;
+    margin-top: 1.8rem;
     margin-bottom: 1rem;
+    font-size: var( --lgMobile);
     text-shadow: 0 0 0.1rem var(--negro);
 }
 
@@ -27,11 +28,11 @@
 .container-email,
 .container-password {
     width: 18rem;
-    padding: 0.313rem;
+    padding: 0.3rem;
     margin-top: 0.8rem;
-    border: solid 0.063rem var(--negro);
-    border-radius: 0.125rem;
-    box-shadow: 0 0 0.188rem var(--negro);
+    border: solid 0.06rem var(--negro);
+    border-radius: 0.1rem;
+    box-shadow: 0 0 0.18rem var(--negro);
     transition: all 600ms;
 }
 
@@ -43,7 +44,7 @@
 
 .container-email input::placeholder,
 .container-password input::placeholder {
-    font-size: 0.9rem;
+     font-size: var(--smMobile);
 }
 
 .recover-password:hover {
@@ -53,10 +54,10 @@
 }
 
 .recover-password {
-    margin-top: 0.625rem;
+    margin-top: 0.62rem;
     margin-bottom: 0.625rem;
     text-decoration: underline;
-    font-size: 0.8rem;
+    font-size: var(--ssmMobile);
 }
 
 .enter-btn:hover {
@@ -72,6 +73,8 @@
     margin-bottom: 1rem;
     border-radius: 1rem;
     background-color: var(--negro);
+    font-size: var(--smMobile);
+    font-family: var(--primaryFont);
     color: var(--blanco);
     transition: all 400ms;
 }
@@ -89,9 +92,11 @@
     width: 13rem;
     padding: 0.3rem;
     margin-top: 0.8rem;
-    background-color: white;
-    color: black;
-    box-shadow: 0 0 0.3rem black;
+    font-size: var(--smMobile);
+    font-family: var(--primaryFont);
+    background-color: var(--blanco);
+    color: var(--negro);
+    box-shadow: 0 0 0.3rem var(--negro);
     transition: all 400ms;
 }
 
@@ -101,4 +106,62 @@
     background-color: var(--negro);
     margin-top: 1rem;
     margin-bottom: 1rem;
+}
+
+@media(min-width: 768px){
+    .title {
+        margin-top: 1.8rem;
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+    }
+    
+    .container-email:hover,
+    .container-password:hover {
+        transform: scale(1.2);
+    }
+    
+    .container-email,
+    .container-password {
+        width: 23rem;
+        padding: 0.5rem;
+        margin-top: 1rem;
+        box-shadow: 0 0 0.50rem var(--negro);
+    }
+    
+    .container-email input::placeholder,
+    .container-password input::placeholder {
+         font-size: var(--mdMobile);
+    }
+    
+    .recover-password:hover {
+        transform: scale(1.2);
+    }
+   
+    .enter-btn:hover {
+        transform: scale(1.2);
+    }
+    
+    .enter-btn {
+        width: 7rem;
+    }
+    
+    .enter-facebook:hover,
+    .enter-google:hover {
+        transform: scale(1.2);
+    }
+    
+    .enter-facebook,
+    .enter-google {
+        width: 15rem;
+        margin-top: 1rem;
+        font-size: var(--mdMobile);
+    }
+    
+    .line {
+        width: 90%;
+        margin: 0 auto;
+        background-color: var(--negro);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
 }

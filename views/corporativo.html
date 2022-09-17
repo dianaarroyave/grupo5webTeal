@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito-Teal</title>
+    <title>Corporativo</title>
     <script src="https://kit.fontawesome.com/338760936c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/carritoCompras.css">
+    <link rel="stylesheet" href="/css/homeCorporativo.css">
 </head>
 
 <body>
@@ -56,72 +56,56 @@
             </li>
         </ul>
     </header>
-    <!-- ------------MAIN-------------- -->
-    <main>
-        <section class="section">
-            <div class="titles">
-                <h2>Producto</h2>
-                <h2>Precio</h2>
-            </div>
-            <div class="container-card">
-                <div class="container-card_img-description">
-                    <img class="container-card__img" src="/images/img.png" alt="Producto">
-                    <div class="container-card__caracteristics">
-                        <p>Tipo de producto</p>
-                        <p>Talla M</p>
+    <!-- --------------MAIN--------------- -->
+    <main class="main">
+        <img class="banner-video" src="/images/banner.JPG" alt="">
+        <div class="description-teal">
+            <h2 class="description-teal__title">¿Quiénes somos?</h2>
+            <p class="description-teal__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+                architecto voluptates quod hic
+                voluptas illo accusantium odio labore, aliquid doloremque nulla ipsa atque quae eligendi nisi iste odit
+                doloribus quam!</p>
+            <img class="description-teal__img-team" src="/images/team.JPG" alt="">
+        </div>
+        <h2 class="brands-title">Nuestras marcas</h2>
+        <section class="brands__container">
+            <div>
+                <input class="checkbox1" type="checkbox" id="brands__original">
+                <label for="brands__original">
+                    <div class="container-img">
+                        <img class="brands__original" src="/images/tealOriginal.jpg" alt="logo marca TEAL ORIGINAL">
                         <div>
-                            <i class="fa-solid fa-trash-can trash-can"></i>
+                            <i class="fa-solid fa-chevron-down down-arrow-original"></i>
+                        </div>
+
+                    </div>
+                </label>
+                <p class="brand_description1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, earum
+                    tempora. Id in culpa voluptatum
+                    omnis voluptas optio odio et possimus nobis cupiditate, facere hic perspiciatis consequuntur
+                    reiciendis
+                    ipsa eos.
+                </p>
+            </div>
+            <div>
+                <input class="checkbox2" type="checkbox" id="brands__basics">
+                <label for="brands__basics">
+                    <div class="container-img">
+                        <img class="brands__basics" src="/images/tealBasics.jpg" alt="logo marca TEAL ORIGINAL">
+                        <div>
+                            <i class="fa-solid fa-chevron-down down-arrow-basics"></i>
                         </div>
                     </div>
-                </div>
-                <div class="container-card__price-amount">
-                    <p>CO$100.000</p>
-                    <div class="container-card__amount">
-                        <i class="fa-solid fa-chevron-left"></i>
-                        <p>1</p>
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </div>
-                </div>
+                </label>
+                <p class="brand_description2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, earum
+                    tempora. Id in culpa voluptatum
+                    omnis voluptas optio odio et possimus nobis cupiditate, facere hic perspiciatis consequuntur
+                    reiciendis
+                    ipsa eos.</p>
             </div>
-            <div class="container-card">
-                <div class="container-card_img-description">
-                    <img class="container-card__img" src="/images/img.png" alt="Producto">
-                    <div class="container-card__caracteristics">
-                        <p>Tipo de producto</p>
-                        <p>Talla M</p>
-                        <div>
-                            <i class="fa-solid fa-trash-can trash-can"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-card__price-amount">
-                    <p>CO$100.000</p>
-                    <div class="container-card__amount">
-                        <i class="fa-solid fa-chevron-left"></i>
-                        <p>1</p>
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="container-shipping">
-                <h4>Envío</h4>
-                <h4>$0</h4>
-            </div>
-            <div class="container-subtotal">
-                <h4>Subtotal</h4>
-                <h4>$200.000</h4>
-            </div>
-            <hr class="line">
-            <div class="container-btn">
-                <button class="btn-pay">PAGAR</button>
-                <button class="btn-buy">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                    Seguir comprando
-                </button>
-            </div>
-            <hr class="line">
         </section>
     </main>
+
     <!-- ------------FOOTER-------------- -->
     <footer class="footer">
         <!-- Este div con clase follow-me, es para cuando tengamos que trabajar en desktop -->

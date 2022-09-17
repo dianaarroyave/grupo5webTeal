@@ -19,13 +19,9 @@
   },
   "homepage": "https://github.com/dianaarroyave/grupo5webTeal#readme",
   "dependencies": {
-<<<<<<< HEAD
-    "express": "^4.18.1",
-=======
     "express": "^4.18.1"
   },
   "devDependencies": {
->>>>>>> submarcas
     "nodemon": "^2.0.19"
   }
 }

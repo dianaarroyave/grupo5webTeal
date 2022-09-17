@@ -10,19 +10,52 @@
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/submarcas.css">
     <link rel="stylesheet" href="/css/descripcionProducto.css">
 </head>
 
 <body>
     <!-- ------------HEADER-------------- -->
     <header class="header">
-        <img class="menu" src="/images/isotipoMenu.png" alt="Isotipo con función de menú">
-        <img class="logo" src="/images/logoTeal.png" alt="Logo marca TEAL">
+        <input class="menu-isotipo" type="checkbox" id="menu-isotipo">
+        <label for="menu-isotipo">
+            <img class="menu" src="/images/isotipo-menu.png" alt="Isotipo con función de menú">
+        </label>
+        <ul class="menu-isotipo__dropdown">
+            <li>
+                <a href="/nosotros" class="menu-isotipo__option">SOBRE NOSOTROS</a>
+            </li>
+            <li>
+                <a href="/submarcas" class="menu-isotipo__option">ORIGINAL</a>
+            </li>
+            <li>
+                <a href="/submarcas" class="menu-isotipo__option">BASICS</a>
+            </li>
+        </ul>
+
+        <a href="/" class="logo">
+            <img class="logo-img" src="/images/logoTeal.png" alt="Logo marca TEAL">
+        </a>
         <div class="container-icons">
-            <img class="outstanding" src="/images/destacado.jpg" alt="Destacado">
-            <img class="bag" src="/images/bolsa.png" alt="Bolsa de compra">
-            <img class="profile" src="/images/user.png" alt="Perfil usuario">
+            <a href="#">
+                <img class="outstanding" src="/images/destacado-negro.png" alt="Destacado">
+            </a>
+            <a href="/carrito">
+                <img class="bag" src="/images/bolsa.png" alt="Bolsa de compra">
+            </a>
         </div>
+        <input class="menu-profile" type="checkbox" id="menu-profile">
+        <label for="menu-profile">
+            <img class="profile" src="/images/user.png" alt="Perfil usuario">
+        </label>
+        <ul class="menu-profile__dropdown">
+            <li>
+                <a href="/ingresar" class="menu-profile__option">INGRESAR</a>
+            </li>
+            <li>
+                <a href="/registro" class="menu-profile__option">CREAR CUENTA</a>
+            </li>
+        </ul>
     </header>
     <!-- ------------MAIN-------------- -->
     <main>
@@ -38,24 +71,82 @@
             </ul>
         </div>
 
+<!-- ------------Información de producto-------------- -->
+
         <section class="productDescription">
-            <img src="/images/camisetaThermal.png" alt="Camiseta Thermal">
-            <h2 class="productTittle">Camiseta Thermal</h2>
-            <h3 class="price">$80.000</h3>
-            <h3 class="description">Descripción del producto</h3>
-            <p class="textDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit porro recusandae a quis sapiente ut, nihil mollitia quos. Est corrupti quod voluptatum voluptatem illo velit eveniet ullam accusamus ab atque?</p>
-            <h3 class="size">Talla</h3>
-            <ul class="productSize">
-                <li>XS</li>
-                <li class="circle">S</li>
-                <li class="circle">M</li>
-                <li class="circle">L</li>
-                <li>XL</li>
-            </ul>
-            <h3>Cantidad</h3>
-            <button>Agregar al carrito</button>
-            <img src="" alt="">
-            <h3>Arma tu look perfecto</h3>
+            <!-- <div class="carousel">
+                <div class="big">
+                    <img src="/images/camisetaThermal.png" alt="image1" class="img">
+                    <img src="/images/back.png" alt="image2" class="img">
+                    <img src="/images/front.png" alt="image3" class="img">
+                    <img src="/images/side.png" alt="image4" class="img">
+                    <img src="/images/tealFront.png" alt="image5" class="img">
+                </div>
+
+                <ul class="points">
+                    <li class="point"></li>
+                    <li class="point"></li>
+                    <li class="point"></li>
+                    <li class="point"></li>
+                    <li class="point"></li>
+                </ul>
+            </div> -->
+            <div class="productsImages">
+                <img class="productImage1" src="/images/camisetaThermal.png" alt="Camiseta Thermal">
+                <img class="productImage2" src="/images/front.png" alt="Thermal front">
+                <img class="productImage3" src="/images/back.png" alt="Thermal back">
+                <img class="productImage4" src="/images/side.png" alt="Thermal side">
+            </div>
+            
+            <div class="descriptionSection">
+                <h2 class="productTittle">Camiseta Thermal</h2>
+                <h3 class="price">$80.000</h3>
+                <h3 class="description">Descripción del producto</h3>
+                <p class="textDescription">Camiseta en algodón peruano, con estampado delantero y detalles SIDE BACK FRONT</p>
+                <div class="color">
+                    <p class="color1">PP</p>
+                    <p class="color2">PP</p>
+                </div>
+                <h3 class="size">Talla</h3>
+                <ul class="productSize">
+                    <li>XS</li>
+                    <li>S</li>
+                    <li>M</li>
+                    <li>L</li>
+                    <li>XL</li>
+                </ul>
+                <h3 class="amount">Cantidad</h3>
+                <button class="buttonCar">Agregar al carrito</button>
+                <br>
+                <hr class="line">
+                <h3 class="collectionInformation">Acerca de esta colección</h3>
+                <p class="textCollection">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi iste obcaecati omnis excepturi tempore. Incidunt quas laudantium quasi autem! Placeat, reprehenderit unde quae assumenda aperiam voluptatibus labore enim exercitationem neque?</p>
+            </div>
+        </section>
+
+<!-- ------------Productos relacionados-------------- -->
+
+        <section>
+            <h3 class="perfectLook">Arma tu look perfecto</h3>
+            <div class="cards">
+                <div class="card">
+                    <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado"> 
+                    <img class="img-card" src="/images/2.png" alt="Prenda Vestir">
+                </div>
+                <div class="card">
+                    <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
+                    <img class="img-card" src="/images/3.png" alt="Prenda Vestir">
+                </div>
+                <div class="card">
+                    <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
+                    <img class="img-card"src="/images/4.png" alt="Prenda Vestir">
+                </div>
+                <div class="card">
+                    <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
+                    <img class="img-card"src="/images/5.png" alt="Prenda Vestir">
+                </div>
+            </div>
+            <img class="EndImage" src="images/lookCompletoMujer.JPG" alt="Look Mujer">
         </section>
     </main>
         <!-- ------------FOOTER-------------- -->
