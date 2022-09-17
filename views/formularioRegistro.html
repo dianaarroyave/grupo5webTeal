@@ -17,34 +17,75 @@
   <body>
     <!-- ------------HEADER-------------- -->
     <header class="header">
-      <img
-        class="menu"
-        src="/images/isotipoMenu.png"
-        alt="Isotipo con función de menú"
-      />
-      <img class="logo" src="/images/logoTeal.png" alt="Logo marca TEAL" />
+      <input class="menu-isotipo" type="checkbox" id="menu-isotipo" />
+      <div for="menu-isotipo">
+        <img
+          class="menu"
+          src="/images/isotipo-menu.png"
+          alt="Isotipo con función de menú"
+        />
+      </div>
+      <ul class="menu-isotipo__dropdown">
+        <li>
+          <a href="/nosotros" class="menu-isotipo__option">SOBRE NOSOTROS</a>
+        </li>
+        <li>
+          <a href="/submarcas" class="menu-isotipo__option">ORIGINAL</a>
+        </li>
+        <li>
+          <a href="/submarcas" class="menu-isotipo__option">BASICS</a>
+        </li>
+      </ul>
+
+      <a href="/" class="logo">
+        <img
+          class="logo-img"
+          src="/images/logoTeal.png"
+          alt="Logo marca TEAL"
+        />
+      </a>
       <div class="container-icons">
-        <img class="outstanding" src="/images/destacado.jpg" alt="Destacado" />
-        <img class="bag" src="/images/bolsa.png" alt="Bolsa de compra" />
+        <a href="#">
+          <img
+            class="outstanding"
+            src="/images/destacado-negro.png"
+            alt="Destacado"
+          />
+        </a>
+        <a href="/carrito">
+          <img class="bag" src="/images/bolsa.png" alt="Bolsa de compra" />
+        </a>
+      </div>
+      <input class="menu-profile" type="checkbox" id="menu-profile" />
+      <div for="menu-profile">
         <img class="profile" src="/images/user.png" alt="Perfil usuario" />
       </div>
+      <ul class="menu-profile__dropdown">
+        <li>
+          <a href="/ingresar" class="menu-profile__option">INGRESAR</a>
+        </li>
+        <li>
+          <a href="/registro" class="menu-profile__option">CREAR CUENTA</a>
+        </li>
+      </ul>
     </header>
     <!-- ------------MAIN-------------- -->
-    <main>
+    <main class="register-main">
       <form class="form" action="#">
         <h2 class="title">Crear cuenta</h2>
         <div class="campo">
           <input
+            class="register_input"
             type="text"
             minlength="8"
             id="nombre"
             name="name"
             required
           /><span class="barra"></span>
-          <label>Nombre y apellido</label>
+          <label class="register-label">Nombre y apellido</label>
         </div>
         <div class="campo">
-          <select name="tipoDocumento">
+          <select name="tipoDocumento" class="register_document-select">
             <option>Tipo de documento</option>
             <option value="cedulaCiudadania">Cédula de ciudadanía</option>
             <option value="cedulaExtrajeria">Cédula de extranjería</option>
@@ -53,35 +94,54 @@
           </select>
         </div>
         <div class="campo">
-          <input type="number" id="document" name="document" required /><span
-            class="barra"
-          ></span>
-          <label>Documento</label>
-        </div>
-        <div class="campo">
-          <input type="email" id="email" name="email" required /><span
-            class="barra"
-          ></span>
-          <label>Correo electronico</label>
-        </div>
-        <div class="campo">
-          <input type="number" id="phone" name="phone" required /><span
-            class="barra"
-          ></span>
-          <label>Telefono</label>
-        </div>
-        <div class="campo">
-          <input type="date" id="fecha" name="fDnacimiento" required />
+          <input
+            type="number"
+            id="document"
+            name="document"
+            required
+            class="register_input"
+          /><span class="barra"></span>
+          <label class="register-label">Documento</label>
         </div>
         <div class="campo">
           <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="register_input"
+          /><span class="barra"></span>
+          <label class="register-label">Correo electronico</label>
+        </div>
+        <div class="campo">
+          <input
+            type="number"
+            id="phone"
+            name="phone"
+            required
+            class="register_input"
+          /><span class="barra"></span>
+          <label class="register-label">Telefono</label>
+        </div>
+        <div class="campo">
+          <input
+            class="register_input"
+            type="date"
+            id="fecha"
+            name="fDnacimiento"
+            required
+          />
+        </div>
+        <div class="campo">
+          <input
+            class="register_input"
             type="password"
             minlength="8"
             id="nombre"
             name="name"
             required
           /><span class="barra"></span>
-          <label>Contraseña</label>
+          <label class="register-label">Contraseña</label>
         </div>
         <button class="enter-btn" type="submit" id="enter">Ingresar</button>
         <button class="enter-facebook" type="submit" id="enter">
