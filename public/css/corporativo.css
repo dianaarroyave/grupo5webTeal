@@ -161,15 +161,23 @@
             font-size: 3rem;
             padding-bottom: 2rem;
         }
-        
-        .description-teal__paragraph {
-            width: 70%;
-            font-size: 1.5rem;
+
+        .container-img-paragraph{
+            display: flex;
+            margin: 10%;
+        }
+
+        .description-teal__img-team {
+            padding: 0;
+            width: 50%;
         }
         
-        .description-teal__img-team {
-            margin-top: 3rem;
-            width: 40rem;
+        .description-teal__paragraph {
+            order: 1;
+            width: 50%;
+            padding: 0;
+            padding-left: 5.5rem;
+            font-size: 1.5rem;
         }
     
         .brands-title {
