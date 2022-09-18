@@ -16,6 +16,9 @@
     --tealBasics: #f9f9f9;
 }
 
+.mainSubmarcas{
+    padding-bottom: 50px;
+}
 .gender {
     display: flex;
     flex-wrap: wrap;
@@ -116,14 +119,32 @@
 .product {
     display: flex;
     justify-content: center;
-    color: #000000;
+    color: var(--teal);
+    font-weight: bold;
 }
 
-.img-card {
+/* Necesario para conservar concepto de prendas */
+.img-card{
     width: 90%;
-
 }
-
+.plink{
+    width: 50%;
+    position: relative;
+    text-decoration: none !important;
+}
+.card{
+    width: 100% !important;
+    height: 100% !important;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* hover */
+.collections:hover{
+    font-size: 1.5em;
+    text-decoration: line-through;
+}
 .EndImage {
     width: 100%;
 }
@@ -141,5 +162,16 @@
     .filter-price-less,
     .filter-price-more{
         font-size: var(--mdMobile);
-    } 
+    }
+    .SectionTitle{
+        font-size:2rem;
+    }
+    .plink{
+        width: 25% !important;
+        font-size: 1.5rem !important;
+    }
 }
+
+
+
+

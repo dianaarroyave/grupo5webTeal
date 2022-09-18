@@ -164,6 +164,7 @@
         .container-img-paragraph{
             display: flex;
             margin: 10%;
+            margin-top: 0;
         }
 
         .description-teal__img-team {

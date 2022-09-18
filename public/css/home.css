@@ -7,8 +7,6 @@ header{
 footer{
     position: relative;
     z-index: 100;
-    background-color:white;
-    border-top: 1px solid black;
 }
 
 /* Clases */
@@ -59,6 +57,7 @@ footer{
 
 .FeaturedProducts{
     width: 100vw;
+    padding-bottom: 50px;
 }
 .TitleContainer{
     display: flex;
