@@ -96,8 +96,16 @@ form .campo {
     font-size: var(--mdMobile);
     font-family: var(--primaryFont);
     cursor: pointer;
+    transition: all 400ms;
 }
 
+.enter-btn:hover,
+.enter-facebook:hover,
+.enter-google:hover{
+    /* background-color: var(--teal);
+    border: solid 0.2rem var(--blanco); */
+    transform: scale(1.1);
+}
 @media (min-width: 768px) {
     form {
         width: 60%;
