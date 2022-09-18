@@ -3,7 +3,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 :root{
     --primaryFont: 'helvetica';
     --sizeTitle: 1.5rem;
@@ -18,38 +17,37 @@
 .gender{
     display: flex;
     flex-wrap: wrap;
-    height: 25px;
+    height: 5vh;
+    
 }
 .btn-man{
     width: 50%;
+    background-color: #000000;
+    color: white;
 }
 .btn-man:hover{
-    background-color:black;
+    background-color:var(--teal);
     color: white;
 }
 .btn-women{
     width: 50%;
-}
-.btn-women:hover{
-    background-color:black;
+    background-color: #000000;
     color: white;
 }
-.cards{
-    
-    display: flex;
-    flex-wrap: wrap;
-    
+.btn-women:hover{
+    background-color:var(--teal);
+    color: white;
 }
-
+.cards{    
+    display: flex;
+    flex-wrap: wrap;    
+}
 .card{
     width: 50%;
-    position: relative;
-    
+    position: relative;    
 }
-
 .description{
-    padding-bottom: 15px;
-   
+    padding-bottom: 15px;   
 }
 .filter-products{
     display: flex;
@@ -58,13 +56,14 @@
 }
 .filter-price{
     display: flex;
+    height: 5vh;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content:space-around;
     padding-bottom: 15px;
     
 }
 .name{
-    width:30%;
+    width:25%;
     border-radius: 5px;
     background-color:dimgray;
     color:white;
@@ -72,7 +71,7 @@
    
 }
 .filter-price-less{
-    width:30%;
+    width:25%;
     border-radius: 5px;
     background-color:dimgray;
     color:white;
@@ -80,7 +79,8 @@
 
 }
 .filter-price-more{
-    width:30%;
+    width:25%;
+    border-radius: 5px;
     background-color:dimgray;
     color:white;
     box-shadow: 0 0 5px #008080 ;
@@ -88,7 +88,10 @@
 }
 .img-icon{       
     width: 20px;
-    float:right;
+    position: absolute;
+    right: 15%;
+    top: 5%;
+    /* float:right; */
         
 }
 .price{
@@ -100,16 +103,11 @@
 .product{
     display: flex;
     justify-content: center;
-    color:var(--tealOriginal);
+    color:#000000;
 }
-
-
-
-
-
-
 .img-card{
     width: 90%;
+    
 }
 .EndImage{
     width: 100%;
