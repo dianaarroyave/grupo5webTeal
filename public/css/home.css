@@ -136,9 +136,23 @@ footer{
         justify-content:space-around;
 }
 
+    .SectionTitle{
+        font-size: var(--lgMobile);
+    }
+
 }
 
 
-/*@media (min-width: 1024px){
+@media (min-width: 1024px){
+    .SectionTitle{
+        font-size:1.5rem;
+    }
+    .ChooseCollection{
+        position: fixed;
+        bottom: 1vw;
+        z-index: 100;
+    
+    
+    }
 
-} */
+} 
