@@ -93,10 +93,9 @@
 .brand_description1, 
 .brand_description2{
     display: none;
-    width: 80%;
     margin: 0 auto;
+    width: 80%;
     padding: 1rem;
-    text-align: center;
     font-size: var(--mdMobile);
 }
 
@@ -161,31 +160,45 @@
             font-size: 3rem;
             padding-bottom: 2rem;
         }
-        
-        .description-teal__paragraph {
-            width: 70%;
-            font-size: 1.5rem;
+
+        .container-img-paragraph{
+            display: flex;
+            margin: 10%;
+        }
+
+        .description-teal__img-team {
+            padding: 0;
+            width: 50%;
+            height: 50%;
         }
         
-        .description-teal__img-team {
-            margin-top: 3rem;
-            width: 40rem;
+        .description-teal__paragraph {
+            order: 1;
+            width: 50%;
+            padding: 0;
+            padding-top: 1.8rem;
+            padding-left: 5.5rem;
+            font-size: 1.5rem;
         }
     
         .brands-title {
-            padding-top: 7rem;
+            padding-top: 0;
             padding-bottom: 3rem;
             font-size: 3rem;
         }
 
         .brands__original {
-            border: solid 6rem var(--negro);
+            border-top: solid 2rem var(--negro);
+            border-left: solid 6rem var(--negro);
+            border-right: solid 6rem var(--negro);
             padding: 0;
             margin: 0;
         }
     
         .brands__basics {
-            border: solid 6rem var(--blanco);
+            border-top: solid 2rem var(--blanco);
+            border-left: solid 6rem var(--blanco);
+            border-right: solid 6rem var(--blanco);
             padding: 0;
             margin: 0;
         }

@@ -14,8 +14,8 @@
 </head>
 
 <body>
-     <!-- ------------HEADER-------------- -->
-     <header class="header">
+    <!-- ------------HEADER-------------- -->
+    <header class="header">
         <input class="menu-isotipo" type="checkbox" id="menu-isotipo">
         <label for="menu-isotipo">
             <img class="menu" src="/images/isotipo-menu.png" alt="Isotipo con función de menú">
@@ -56,86 +56,75 @@
             </li>
         </ul>
     </header>
-     <!-- ------------MAIN-------------- -->
-    <main>
-        <form class="form" action="/" method="post">
-            <h2 class="title">Iniciar sesión</h2>
-            <div class="container-email">
-                <label for="email">
-                    <i class="fa-solid fa-envelope icon-email"></i>
-                    <input type="email" id="email" placeholder="Correo electrónico" required>
-                </label>
-            </div>
-            <div class="container-password">
-                <label for="password">
-                    <i class="fa-solid fa-eye-slash icon-password"></i>
-                    <input type="password" id="password" placeholder="Contraseña" required>
-                </label>
-            </div>
-                <p class="recover-password">Olvidé mi contraseña</p>
-            <div>
-                <button class="enter-btn" type="submit" id="enter">
-                    <i class="fa-solid fa-right-to-bracket"></i>
-                    Ingresar
-                </button>
-            </div>
-            <div>
-                <button class="enter-facebook" type="submit" id="facebook">
-                    <i class="fa-brands fa-facebook"></i>
-                    Ingresar con Facebook
-                </button>
-            </div>
-            <div>
-                <button class="enter-google" type="submit" id="google">
-                    <i class="fa-brands fa-google"></i>
-                    Ingresar con Google
-                </button>
-            </div>
-        </form>
-        <hr class="line">
+    <!-- ------------MAIN-------------- -->
 
+    <main class="login-main">
+        <form class="form" action="/" method="post">
+            <h2 class="title">Inisiar sesión</h2>
+            <div class="campo">
+                <input class="login_input" type="email" minlength="8" id="nombre" name="name" required /><span
+                    class="barra"></span>
+                <label class="login-label">Correo electrónico</label>
+            </div>
+            <div class="campo">
+                <input class="login_input" type="password" minlength="8" id="nombre" name="name" required /><span
+                    class="barra"></span>
+                <label class="login-label">Contraseña</label>
+            </div>
+            <button class="enter-btn" type="submit" id="enter">Ingresar</button>
+            <button class="enter-facebook" type="submit" id="enter">
+                Ingresar con Facebook
+            </button>
+            <button class="enter-google" type="submit" id="enter">
+                Ingresar con Google
+            </button>
+        </form>
     </main>
     <!-- ------------FOOTER-------------- -->
     <footer class="footer">
         <!-- Este div con clase follow-me, es para cuando tengamos que trabajar en desktop -->
-        <div class="follow-me">
-            <h4 class="follow-me__title">Síguenos</h4>
-            <ul class="follow-me__icon">
-                <li><i class="fa-brands fa-instagram"></i></li>
-                <li><i class="fa-brands fa-facebook"></i></li>
-                <li><i class="fa-brands fa-spotify"></i></li>
-                <li><i class="fa-brands fa-youtube"></i></li>
-            </ul>
-        </div>
-        <!-- Este div con clase contact, es para cuando tengamos que trabajar en desktop -->
-        <div class="contact">
-            <h4 class="contact__title">Contáctanos</h4>
-            <ul class="contact__icon">
-                <li><i class="fa-solid fa-comment-dots"></i></li>
-                <li><i class="fa-brands fa-whatsapp"></i></li>
-            </ul>
-                <textarea class="contact__suggestion" name="" id="" cols="30" rows="2" placeholder="Déjanos tu sugerencia"></textarea> </textarea>
-        </div>
-        <div class="container-us-brands">
-            <div class="us">
-                <h4 class="us__title">Sobre nosotros</h4>
-                <p>TEAL GROUP</p>
-                <p>Cultura</p>
-                <p>Trabaja con nosotros</p>
+        <div class="footerInformation">
+            <div class="follow-me">
+                <h4 class="follow-me__title">Síguenos</h4>
+                <ul class="follow-me__icon">
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-spotify"></i></li>
+                    <li><i class="fa-brands fa-youtube"></i></li>
+                </ul>
             </div>
-            <div class="brands">
-                <h4 class="brands__title">Marcas</h4>
-                <p>ORIGINAL</p>
-                <p>BASICS</p>
-                <p>CLASSICS</p>
-                <p>SKETCHES</p>
+            <!-- Este div con clase contact, es para cuando tengamos que trabajar en desktop -->
+            <div class="contact">
+                <h4 class="contact__title">Contáctanos</h4>
+                <ul class="contact__icon">
+                    <li><i class="fa-solid fa-comment-dots"></i></li>
+                    <li><i class="fa-brands fa-whatsapp"></i></li>
+                </ul>
+                <textarea class="contact__suggestion" name="" id="" cols="30" rows="2"
+                    placeholder="Déjanos tu sugerencia"></textarea> </textarea>
+            </div>
+            <div class="container-us-brands">
+                <div class="us">
+                    <h4 class="us__title">Sobre nosotros</h4>
+                    <p>TEAL GROUP</p>
+                    <p>Cultura</p>
+                    <p>Trabaja con nosotros</p>
+                </div>
+                <div class="brands">
+                    <h4 class="brands__title">Marcas</h4>
+                    <p>ORIGINAL</p>
+                    <p>BASICS</p>
+                    <p>CLASSICS</p>
+                    <p>SKETCHES</p>
+                </div>
             </div>
         </div>
+       
         <div class="copyright">
             <p>©Copyright 2022 TEAL all rights reserved</p>
             <p>TEAL SAS | NUM-NUM</p>
         </div>
-    </footer>
+    </footer> 
 </body>
 
 </html>

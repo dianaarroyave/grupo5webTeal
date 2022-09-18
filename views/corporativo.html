@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/homeCorporativo.css">
+    <link rel="stylesheet" href="/css/corporativo.css">
 </head>
 
 <body>
@@ -61,11 +61,13 @@
         <img class="banner-video" src="/images/banner.JPG" alt="">
         <div class="description-teal">
             <h2 class="description-teal__title">¿Quiénes somos?</h2>
-            <p class="description-teal__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-                architecto voluptates quod hic
-                voluptas illo accusantium odio labore, aliquid doloremque nulla ipsa atque quae eligendi nisi iste odit
-                doloribus quam!</p>
-            <img class="description-teal__img-team" src="/images/team.JPG" alt="">
+            <div class="container-img-paragraph">
+                <p class="description-teal__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+                    architecto voluptates quod hic
+                    voluptas illo accusantium odio labore, aliquid doloremque nulla ipsa atque quae eligendi nisi iste odit
+                    doloribus quam!</p>
+                <img class="description-teal__img-team" src="/images/team.JPG" alt="">
+            </div>
         </div>
         <h2 class="brands-title">Nuestras marcas</h2>
         <section class="brands__container">
@@ -109,45 +111,48 @@
     <!-- ------------FOOTER-------------- -->
     <footer class="footer">
         <!-- Este div con clase follow-me, es para cuando tengamos que trabajar en desktop -->
-        <div class="follow-me">
-            <h4 class="follow-me__title">Síguenos</h4>
-            <ul class="follow-me__icon">
-                <li><i class="fa-brands fa-instagram"></i></li>
-                <li><i class="fa-brands fa-facebook"></i></li>
-                <li><i class="fa-brands fa-spotify"></i></li>
-                <li><i class="fa-brands fa-youtube"></i></li>
-            </ul>
-        </div>
-        <!-- Este div con clase contact, es para cuando tengamos que trabajar en desktop -->
-        <div class="contact">
-            <h4 class="contact__title">Contáctanos</h4>
-            <ul class="contact__icon">
-                <li><i class="fa-solid fa-comment-dots"></i></li>
-                <li><i class="fa-brands fa-whatsapp"></i></li>
-            </ul>
-            <textarea class="contact__suggestion" name="" id="" cols="30" rows="2"
-                placeholder="Déjanos tu sugerencia"></textarea> </textarea>
-        </div>
-        <div class="container-us-brands">
-            <div class="us">
-                <h4 class="us__title">Sobre nosotros</h4>
-                <p>TEAL GROUP</p>
-                <p>Cultura</p>
-                <p>Trabaja con nosotros</p>
+        <div class="footerInformation">
+            <div class="follow-me">
+                <h4 class="follow-me__title">Síguenos</h4>
+                <ul class="follow-me__icon">
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-spotify"></i></li>
+                    <li><i class="fa-brands fa-youtube"></i></li>
+                </ul>
             </div>
-            <div class="brands">
-                <h4 class="brands__title">Marcas</h4>
-                <p>ORIGINAL</p>
-                <p>BASICS</p>
-                <p>CLASSICS</p>
-                <p>SKETCHES</p>
+            <!-- Este div con clase contact, es para cuando tengamos que trabajar en desktop -->
+            <div class="contact">
+                <h4 class="contact__title">Contáctanos</h4>
+                <ul class="contact__icon">
+                    <li><i class="fa-solid fa-comment-dots"></i></li>
+                    <li><i class="fa-brands fa-whatsapp"></i></li>
+                </ul>
+                <textarea class="contact__suggestion" name="" id="" cols="30" rows="2"
+                    placeholder="Déjanos tu sugerencia"></textarea> </textarea>
+            </div>
+            <div class="container-us-brands">
+                <div class="us">
+                    <h4 class="us__title">Sobre nosotros</h4>
+                    <p>TEAL GROUP</p>
+                    <p>Cultura</p>
+                    <p>Trabaja con nosotros</p>
+                </div>
+                <div class="brands">
+                    <h4 class="brands__title">Marcas</h4>
+                    <p>ORIGINAL</p>
+                    <p>BASICS</p>
+                    <p>CLASSICS</p>
+                    <p>SKETCHES</p>
+                </div>
             </div>
         </div>
+       
         <div class="copyright">
             <p>©Copyright 2022 TEAL all rights reserved</p>
             <p>TEAL SAS | NUM-NUM</p>
         </div>
-    </footer>
+    </footer> 
 </body>
 
 </html>
