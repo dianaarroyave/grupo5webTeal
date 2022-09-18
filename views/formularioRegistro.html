@@ -15,60 +15,48 @@
     <link rel="stylesheet" href="/css/footer.css" />
   </head>
   <body>
-    <!-- ------------HEADER-------------- -->
-    <header class="header">
-      <input class="menu-isotipo" type="checkbox" id="menu-isotipo" />
-      <div for="menu-isotipo">
-        <img
-          class="menu"
-          src="/images/isotipo-menu.png"
-          alt="Isotipo con función de menú"
-        />
-      </div>
+     <!-- ------------HEADER-------------- -->
+     <header class="header">
+      <input class="menu-isotipo" type="checkbox" id="menu-isotipo">
+      <label for="menu-isotipo">
+          <img class="menu" src="/images/isotipo-menu.png" alt="Isotipo con función de menú">
+      </label>
       <ul class="menu-isotipo__dropdown">
-        <li>
-          <a href="/nosotros" class="menu-isotipo__option">SOBRE NOSOTROS</a>
-        </li>
-        <li>
-          <a href="/submarcas" class="menu-isotipo__option">ORIGINAL</a>
-        </li>
-        <li>
-          <a href="/submarcas" class="menu-isotipo__option">BASICS</a>
-        </li>
+          <li>
+              <a href="/nosotros" class="menu-isotipo__option">SOBRE NOSOTROS</a>
+          </li>
+          <li>
+              <a href="/submarcas" class="menu-isotipo__option">ORIGINAL</a>
+          </li>
+          <li>
+              <a href="/submarcas" class="menu-isotipo__option">BASICS</a>
+          </li>
       </ul>
 
       <a href="/" class="logo">
-        <img
-          class="logo-img"
-          src="/images/logoTeal.png"
-          alt="Logo marca TEAL"
-        />
+          <img class="logo-img" src="/images/logoTeal.png" alt="Logo marca TEAL">
       </a>
       <div class="container-icons">
-        <a href="#">
-          <img
-            class="outstanding"
-            src="/images/destacado-negro.png"
-            alt="Destacado"
-          />
-        </a>
-        <a href="/carrito">
-          <img class="bag" src="/images/bolsa.png" alt="Bolsa de compra" />
-        </a>
+          <a href="#">
+              <img class="outstanding" src="/images/destacado-negro.png" alt="Destacado">
+          </a>
+          <a href="/carrito">
+              <img class="bag" src="/images/bolsa.png" alt="Bolsa de compra">
+          </a>
       </div>
-      <input class="menu-profile" type="checkbox" id="menu-profile" />
-      <div for="menu-profile">
-        <img class="profile" src="/images/user.png" alt="Perfil usuario" />
-      </div>
+      <input class="menu-profile" type="checkbox" id="menu-profile">
+      <label for="menu-profile">
+          <img class="profile" src="/images/user.png" alt="Perfil usuario">
+      </label>
       <ul class="menu-profile__dropdown">
-        <li>
-          <a href="/ingresar" class="menu-profile__option">INGRESAR</a>
-        </li>
-        <li>
-          <a href="/registro" class="menu-profile__option">CREAR CUENTA</a>
-        </li>
+          <li>
+              <a href="/ingresar" class="menu-profile__option">INGRESAR</a>
+          </li>
+          <li>
+              <a href="/registro" class="menu-profile__option">CREAR CUENTA</a>
+          </li>
       </ul>
-    </header>
+  </header>
     <!-- ------------MAIN-------------- -->
     <main class="register-main">
       <form class="form" action="#">
@@ -156,50 +144,47 @@
     <!-- ------------FOOTER-------------- -->
     <footer class="footer">
       <!-- Este div con clase follow-me, es para cuando tengamos que trabajar en desktop -->
-      <div class="follow-me">
-        <h4 class="follow-me__title">Síguenos</h4>
-        <ul class="follow-me__icon">
-          <li><i class="fa-brands fa-instagram"></i></li>
-          <li><i class="fa-brands fa-facebook"></i></li>
-          <li><i class="fa-brands fa-spotify"></i></li>
-          <li><i class="fa-brands fa-youtube"></i></li>
-        </ul>
+      <div class="footerInformation">
+          <div class="follow-me">
+              <h4 class="follow-me__title">Síguenos</h4>
+              <ul class="follow-me__icon">
+                  <li><i class="fa-brands fa-instagram"></i></li>
+                  <li><i class="fa-brands fa-facebook"></i></li>
+                  <li><i class="fa-brands fa-spotify"></i></li>
+                  <li><i class="fa-brands fa-youtube"></i></li>
+              </ul>
+          </div>
+          <!-- Este div con clase contact, es para cuando tengamos que trabajar en desktop -->
+          <div class="contact">
+              <h4 class="contact__title">Contáctanos</h4>
+              <ul class="contact__icon">
+                  <li><i class="fa-solid fa-comment-dots"></i></li>
+                  <li><i class="fa-brands fa-whatsapp"></i></li>
+              </ul>
+              <textarea class="contact__suggestion" name="" id="" cols="30" rows="2"
+                  placeholder="Déjanos tu sugerencia"></textarea> </textarea>
+          </div>
+          <div class="container-us-brands">
+              <div class="us">
+                  <h4 class="us__title">Sobre nosotros</h4>
+                  <p>TEAL GROUP</p>
+                  <p>Cultura</p>
+                  <p>Trabaja con nosotros</p>
+              </div>
+              <div class="brands">
+                  <h4 class="brands__title">Marcas</h4>
+                  <p>ORIGINAL</p>
+                  <p>BASICS</p>
+                  <p>CLASSICS</p>
+                  <p>SKETCHES</p>
+              </div>
+          </div>
       </div>
-      <!-- Este div con clase contact, es para cuando tengamos que trabajar en desktop -->
-      <div class="contact">
-        <h4 class="contact__title">Contáctanos</h4>
-        <ul class="contact__icon">
-          <li><i class="fa-solid fa-comment-dots"></i></li>
-          <li><i class="fa-brands fa-whatsapp"></i></li>
-        </ul>
-        <textarea
-          class="contact__suggestion"
-          name=""
-          id=""
-          cols="30"
-          rows="2"
-          placeholder="Déjanos tu sugerencia"
-        ></textarea>
-      </div>
-      <div class="container-us-brands">
-        <div class="us">
-          <h4 class="us__title">Sobre nosotros</h4>
-          <p>TEAL GROUP</p>
-          <p>Cultura</p>
-          <p>Trabaja con nosotros</p>
-        </div>
-        <div class="brands">
-          <h4 class="brands__title">Marcas</h4>
-          <p>ORIGINAL</p>
-          <p>BASICS</p>
-          <p>CLASSICS</p>
-          <p>SKETCHES</p>
-        </div>
-      </div>
+     
       <div class="copyright">
-        <p>©Copyright 2022 TEAL all rights reserved</p>
-        <p>TEAL SAS | NUM-NUM</p>
+          <p>©Copyright 2022 TEAL all rights reserved</p>
+          <p>TEAL SAS | NUM-NUM</p>
       </div>
-    </footer>
+  </footer> 
   </body>
 </html>

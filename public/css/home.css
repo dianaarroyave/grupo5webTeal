@@ -1,34 +1,10 @@
-:root{
-    --primaryFont: 'helvetica';
-    --lgMobile: 1.2rem;
-    --mdMobile: 1rem;
-    --smMobile: 0.9rem;
-    --ssmMobile: 0.8rem;
-    --negro: #000000;
-    --blanco: #fff;
-    --gris: #d9d9d6;
-    --teal: #008080;
-    --tealOriginal: #d8fffc;
-    --tealBasics: #f9f9f9;
-}
-
-/* Globales */
-* {
-    margin: 0 px ;
-    padding: 0 px ;
-    box-sizing: border-box ;
-    font-family: var(--primaryFont);
-}
-
 /* Etiquetas */
 
 header{
-    border:2px solid;
     background-color: rgba(255, 255, 255, 0.4);
 }
 
 footer{
-    border:2px solid;
     position: relative;
     z-index: 100;
     background-color: white;
@@ -136,9 +112,23 @@ footer{
         justify-content:space-around;
 }
 
+    .SectionTitle{
+        font-size: var(--lgMobile);
+    }
+
 }
 
 
-/*@media (min-width: 1024px){
+@media (min-width: 1024px){
+    .SectionTitle{
+        font-size:1.5rem;
+    }
+    .ChooseCollection{
+        position: fixed;
+        bottom: 1vw;
+        z-index: 100;
+    
+    
+    }
 
-} */
+} 
