@@ -14,8 +14,8 @@
 </head>
 
 <body>
-     <!-- ------------HEADER-------------- -->
-     <header class="header">
+    <!-- ------------HEADER-------------- -->
+    <header class="header">
         <input class="menu-isotipo" type="checkbox" id="menu-isotipo">
         <label for="menu-isotipo">
             <img class="menu" src="/images/isotipo-menu.png" alt="Isotipo con función de menú">
@@ -56,44 +56,29 @@
             </li>
         </ul>
     </header>
-     <!-- ------------MAIN-------------- -->
-    <main>
-        <form class="form" action="/" method="post">
-            <h2 class="title">Iniciar sesión</h2>
-            <div class="container-email">
-                <label for="email">
-                    <i class="fa-solid fa-envelope icon-email"></i>
-                    <input type="email" id="email" placeholder="Correo electrónico" required>
-                </label>
-            </div>
-            <div class="container-password">
-                <label for="password">
-                    <i class="fa-solid fa-eye-slash icon-password"></i>
-                    <input type="password" id="password" placeholder="Contraseña" required>
-                </label>
-            </div>
-                <p class="recover-password">Olvidé mi contraseña</p>
-            <div>
-                <button class="enter-btn" type="submit" id="enter">
-                    <i class="fa-solid fa-right-to-bracket"></i>
-                    Ingresar
-                </button>
-            </div>
-            <div>
-                <button class="enter-facebook" type="submit" id="facebook">
-                    <i class="fa-brands fa-facebook"></i>
-                    Ingresar con Facebook
-                </button>
-            </div>
-            <div>
-                <button class="enter-google" type="submit" id="google">
-                    <i class="fa-brands fa-google"></i>
-                    Ingresar con Google
-                </button>
-            </div>
-        </form>
-        <hr class="line">
+    <!-- ------------MAIN-------------- -->
 
+    <main class="login-main">
+        <form class="form" action="/" method="post">
+            <h2 class="title">Inisiar sesión</h2>
+            <div class="campo">
+                <input class="login_input" type="email" minlength="8" id="nombre" name="name" required /><span
+                    class="barra"></span>
+                <label class="login-label">Correo electrónico</label>
+            </div>
+            <div class="campo">
+                <input class="login_input" type="password" minlength="8" id="nombre" name="name" required /><span
+                    class="barra"></span>
+                <label class="login-label">Contraseña</label>
+            </div>
+            <button class="enter-btn" type="submit" id="enter">Ingresar</button>
+            <button class="enter-facebook" type="submit" id="enter">
+                Ingresar con Facebook
+            </button>
+            <button class="enter-google" type="submit" id="enter">
+                Ingresar con Google
+            </button>
+        </form>
     </main>
     <!-- ------------FOOTER-------------- -->
     <footer class="footer">
@@ -114,7 +99,8 @@
                 <li><i class="fa-solid fa-comment-dots"></i></li>
                 <li><i class="fa-brands fa-whatsapp"></i></li>
             </ul>
-                <textarea class="contact__suggestion" name="" id="" cols="30" rows="2" placeholder="Déjanos tu sugerencia"></textarea> </textarea>
+            <textarea class="contact__suggestion" name="" id="" cols="30" rows="2"
+                placeholder="Déjanos tu sugerencia"></textarea> </textarea>
         </div>
         <div class="container-us-brands">
             <div class="us">

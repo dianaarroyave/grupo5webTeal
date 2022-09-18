@@ -1,8 +1,4 @@
-body {
-  height: auto;
-}
 .register-main {
-  font-family: "roboto";
   background: var(--teal);
   background: -webkit-linear-gradient(to right, var(--teal), black);
   background: linear-gradient(to right, var(--teal), black);
@@ -77,7 +73,7 @@ form .campo {
 .enter-btn,
 .enter-facebook,
 .enter-google {
-  font-family: "roboto";
+  font-family: var(--primaryFont);
   background: -webkit-linear-gradient(
     to right,
     black,
