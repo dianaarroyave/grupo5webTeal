@@ -1,37 +1,12 @@
-:root{
-    --primaryFont: 'helvetica';
-    --lgMobile: 1.2rem;
-    --mdMobile: 1rem;
-    --smMobile: 0.9rem;
-    --ssmMobile: 0.8rem;
-    --negro: #000000;
-    --blanco: #fff;
-    --gris: #d9d9d6;
-    --teal: #008080;
-    --tealOriginal: #d8fffc;
-    --tealBasics: #f9f9f9;
-}
-
-/* Globales */
-* {
-    margin: 0 px ;
-    padding: 0 px ;
-    box-sizing: border-box ;
-    font-family: var(--primaryFont);
-}
-
 /* Etiquetas */
 
 header{
-    border:2px solid;
     background-color: rgba(255, 255, 255, 0.4);
 }
 
 footer{
-    border:2px solid;
     position: relative;
     z-index: 100;
-    background-color: white;
 }
 
 /* Clases */
@@ -48,10 +23,11 @@ footer{
     position: fixed;
     bottom: 5vw;
     z-index: 100;
-
-
 }
-
+.product{
+    color: var(--teal) !important;
+    font-weight: bold !important;
+}
 .collections{
     font-size: var(--mdMobile);
     line-height: 20px;
@@ -81,6 +57,7 @@ footer{
 
 .FeaturedProducts{
     width: 100vw;
+    padding-bottom: 50px;
 }
 .TitleContainer{
     display: flex;
@@ -96,13 +73,29 @@ footer{
 .img-card{
     width: 90%;
 }
-
+.plink{
+    width: 50%;
+    position: relative;
+    text-decoration: none !important;
+}
+.card{
+    width: 100% !important;
+    height: 100% !important;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* hover */
 .collections:hover{
     font-size: 1.5em;
     text-decoration: line-through;
 }
 
-/* hover */
+.card:hover{
+    box-shadow: var(--teal);
+}
+
 
 /* @medias */
 /* @medias especial */
@@ -136,9 +129,28 @@ footer{
         justify-content:space-around;
 }
 
+    .SectionTitle{
+        font-size: 1.5rem !important;
+    }
+    .plink{
+        font-size: 1.2rem !important;
+    }
+
 }
-
-
-/*@media (min-width: 1024px){
-
-} */
+@media (min-width: 1024px){
+    .SectionTitle{
+        font-size:2rem;
+    }
+    .ChooseCollection{
+        position: fixed;
+        bottom: 1vw;
+        z-index: 100;
+    }
+    .plink{
+        width: 25% !important;
+        font-size: 1.5rem !important;
+    }
+    .collections:hover{
+        font-size: 3em;
+    }
+} 
