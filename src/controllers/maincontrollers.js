@@ -1,9 +1,16 @@
 let mainController = {
-    home: function(req, res){
-        return res.render('home');
+    home: (req, res) => {
+        res.render('products/home');
     },
-    // home: function(){},
-    // home: function(){},
+    corporativo: (req, res) => {
+        res.render('products/corporativo');
+    },
+    login: (req, res) => {
+        res.render('users/login');
+    },
+    registro: (req, res) => {
+        res.render('users/registro');
+    },
 }
 
 
