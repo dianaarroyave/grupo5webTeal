@@ -27,3 +27,27 @@ En caso de no poder asistir a las ceremonias, especialmente a la daily, aviar co
 ## ¿Qué hay que hacer menos?
 
 Por el momento no tenemos nada para escribir en este punto.	
+
+
+# Retrospectiva sprint 2
+
+## ¿Qué se hizo bien?
+
+El 
+
+## ¿Qué se hizo mal?
+
+Debemos 
+
+## ¿Qué hay que dejar de hacer?
+
+Dejar 
+
+## ¿Qué hay que hacer más?
+
+En 
+
+## ¿Qué hay que hacer menos?
+
+Por 
+
