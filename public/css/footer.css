@@ -25,6 +25,12 @@ main {
     padding-top: 5px;
     gap: 20px;
     font-size: 1.5rem;
+    transition: all 400ms;
+}
+
+.follow-me__icon i:hover{
+    transform: scale(1.1);
+    color: var(--teal);
 }
 
 .contact__title {
@@ -42,6 +48,12 @@ main {
     padding-top: 5px;
     gap: 20px;
     font-size: 1.5rem;
+    transition: all 400ms;
+}
+
+.contact__icon i:hover{
+    transform: scale(1.1);
+    color: var(--teal);
 }
 
 .contact__suggestion {

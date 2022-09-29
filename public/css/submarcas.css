@@ -60,6 +60,7 @@
 }
 
 .description {
+    display: block !important; 
     padding-bottom: 15px;
 }
 
@@ -148,13 +149,6 @@
 .EndImage {
     width: 100%;
 }
-<<<<<<< HEAD
-@media (min-width:1024px){
-    
-
-}
-=======
-
 
 @media(min-width: 1024px) {
 
@@ -181,4 +175,3 @@
 
 
 
->>>>>>> d36704321d9eef697d5d5d5cdfe43625a875fe6f
