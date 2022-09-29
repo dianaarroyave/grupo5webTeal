@@ -3,7 +3,8 @@
     margin: 0;
     box-sizing: border-box;
 }
-:root{
+
+:root {
     --primaryFont: 'helvetica';
     --sizeTitle: 1.5rem;
     --sizeBody: 1rem;
@@ -14,105 +15,170 @@
     --tealOriginal: #d8fffc;
     --tealBasics: #f9f9f9;
 }
-.gender{
+
+.mainSubmarcas{
+    padding-bottom: 50px;
+}
+.gender {
     display: flex;
     flex-wrap: wrap;
     height: 5vh;
-    
+
 }
-.btn-man{
+
+.btn-man {
     width: 50%;
     background-color: #000000;
     color: white;
 }
-.btn-man:hover{
-    background-color:var(--teal);
+
+.btn-man:hover {
+    background-color: var(--teal);
     color: white;
+
 }
-.btn-women{
+
+.btn-women {
     width: 50%;
     background-color: #000000;
     color: white;
 }
-.btn-women:hover{
-    background-color:var(--teal);
+
+.btn-women:hover {
+    background-color: var(--teal);
     color: white;
 }
-.cards{    
+
+.cards {
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
 }
-.card{
+
+.card {
     width: 50%;
-    position: relative;    
+    position: relative;
 }
-.description{
-    padding-bottom: 15px;   
+
+.description {
+    padding-bottom: 15px;
 }
-.filter-products{
+
+.filter-products {
     display: flex;
     padding: 10px;
     justify-content: center;
 }
-.filter-price{
+
+.filter-price {
     display: flex;
     height: 5vh;
     flex-wrap: wrap;
-    justify-content:space-around;
+    justify-content: space-around;
     padding-bottom: 15px;
-    
-}
-.name{
-    width:25%;
-    border-radius: 5px;
-    background-color:dimgray;
-    color:white;
-    box-shadow: 0 0 5px #008080 ;
-   
-}
-.filter-price-less{
-    width:25%;
-    border-radius: 5px;
-    background-color:dimgray;
-    color:white;
-    box-shadow: 0 0 5px #008080 ;
 
 }
-.filter-price-more{
-    width:25%;
+
+.name {
+    width: 25%;
     border-radius: 5px;
-    background-color:dimgray;
-    color:white;
-    box-shadow: 0 0 5px #008080 ;
+    background-color: dimgray;
+    color: white;
+}
+
+.filter-price-less {
+    width: 25%;
+    border-radius: 5px;
+    background-color: dimgray;
+    color: white;
+}
+
+.filter-price-more {
+    width: 25%;
+    border-radius: 5px;
+    background-color: dimgray;
+    color: white;
 
 }
-.img-icon{       
-    width: 20px;
+
+.img-icon {
+    width: 25px;
     position: absolute;
     right: 15%;
     top: 5%;
     /* float:right; */
-        
+
 }
-.price{
-    display: flex; 
-    position: relative;   
+
+.price {
+    display: flex;
+    position: relative;
     justify-content: center;
     font-weight: bolder;
 }
-.product{
+
+.product {
     display: flex;
     justify-content: center;
-    color:#000000;
+    color: var(--teal);
+    font-weight: bold;
 }
+
+/* Necesario para conservar concepto de prendas */
 .img-card{
     width: 90%;
-    
 }
-.EndImage{
+.plink{
+    width: 50%;
+    position: relative;
+    text-decoration: none !important;
+}
+.card{
+    width: 100% !important;
+    height: 100% !important;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* hover */
+.collections:hover{
+    font-size: 1.5em;
+    text-decoration: line-through;
+}
+.EndImage {
     width: 100%;
 }
+<<<<<<< HEAD
 @media (min-width:1024px){
     
 
 }
+=======
+
+
+@media(min-width: 1024px) {
+
+    .btn-women,
+    .btn-man {
+        font-size: var(--lgMobile);
+    }
+
+    .filter-products,
+    .name,
+    .filter-price-less,
+    .filter-price-more{
+        font-size: var(--mdMobile);
+    }
+    .SectionTitle{
+        font-size:2rem;
+    }
+    .plink{
+        width: 25% !important;
+        font-size: 1.5rem !important;
+    }
+}
+
+
+
+
+>>>>>>> d36704321d9eef697d5d5d5cdfe43625a875fe6f
