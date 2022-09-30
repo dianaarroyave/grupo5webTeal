@@ -1,0 +1,55 @@
+
+.edicionProductHeader{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--mmMobile);
+    padding: 15px;
+}
+.edicionProduct{
+    display: flex;
+    flex-wrap: wrap;
+}
+.edicionImageCard{
+    width: 30vw;
+    border: 2px solid green;
+}
+.edicionDescrition,.edicionPrice{
+    width: 35vw;
+    border: 2px solid green;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: var(--smMobile);
+}
+
+.edicionImage{
+    width: 100%;
+}
+.edicionB{
+    width: 90%;
+}
+.addZone{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+.addButton{
+    display: block;
+    height: 50px;
+    width: 50%;
+}
+
+
+
+.edicionChooseBrands{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+.rrr{
+    width: 80vw;
+}

@@ -1,21 +1,47 @@
 <%- include('../partials/head') %>
 <body>
     <%- include('../partials/header') %>
-    <form action="">
-        //
-        <label for=""></label>
-        <input type="text">
-        //
-        <label for=""></label>
-        <input type="text">
-        //
-        <label for=""></label>
-        <input type="text">
-        //
-        <label for=""></label>
-        <input type="text">
-    </form>
-    <%- include('../partials/footer') %>
+    <!--Barra desplegable de marcas -->
+    <label class="edicionChooseBrands" for="brands">
+        <select class="rrr" name="brands" id="brands">
+            <option value="ORIGINALS">ORIGINALS</option>
+            <option value="BASICS">BASICS</option>
+        </select>
+        
+    </label>
+
+    <!--sección para mostrar ptoductos-->
+    <main classs="edicionGroupProducts">
+        <!--encabezado zona de productos-->
+        <div class="edicionProductHeader">
+            <h3>PRODUCTO</h3>
+            <h3>PRECIO</h3>
+        </div>
+        <section class="edicionProducts">
+            <article class="edicionProduct">
+                <!---división en 3 secciones distribuidas horizontalmente-->
+                <div class="edicionImageCard">
+                    <img class="edicionImage" src="/images/1.png" alt="Prenda Vestir">
+                </div>
+                <div class="edicionDescrition">
+                    <p class="edicionProduct">Camiseta Thermal</p>
+                    <button class="edicionB"><i class="fa-solid fa-pencil"></i>Editar</button>
+                </div>
+                <div class="edicionPrice">
+                    <p >$80.000</p>
+                    <button class="edicionB"><i class="fa-solid fa-trash-can"></i>Eliminar</button>
+                </div>
+            </article>
+        </section>
+        <!--botón para agregar productos-->
+        <div class="addZone">
+            <button class="addButton"><i class="fa-solid fa-shirt"></i>Agregar Producto</button>
+        </div>
+    </main>
+
     
+    
+    <%- include('../partials/footer') %>
+
 </body>
 </html>
