@@ -52,6 +52,10 @@
     display: block;
     height: 50px;
     width: 50%;
+    background-color:black;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
 }
 .edicionMediaTitle{
     display: none;
@@ -67,7 +71,10 @@
     width: 80vw;
     height: 5vh;
 }
-
+.addButton:hover{
+    transform: scale(1.1);
+    background-color:var(--teal);
+}
 @media (min-width: 768px){
     .edicionProducts{
         display: flex;
