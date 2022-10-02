@@ -1,0 +1,156 @@
+/* Etiquetas */
+
+.header{
+    background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+footer{
+    position: relative;
+    z-index: 100;
+}
+
+/* Clases */
+.ChooseCollection{
+    width: 100vw;
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px 0px;
+    justify-content:space-between;
+    align-items: center;
+    list-style: none;
+    position: fixed;
+    bottom: 5vw;
+    z-index: 100;
+}
+.product{
+    color: var(--teal) !important;
+    font-weight: bold !important;
+}
+.collections{
+    font-size: var(--mdMobile);
+    line-height: 20px;
+    color:var(--teal);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+}
+
+
+
+
+.ImageContainer{
+    background-color: white;
+    background-image:url(../images/fondomobile.JPG);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center top;
+
+}
+
+.image{
+    height: 100vh;
+
+}
+
+.FeaturedProducts{
+    width: 100vw;
+    padding-bottom: 50px;
+}
+.TitleContainer{
+    display: flex;
+    justify-content: center;
+    padding: 15px 0px;
+    margin-bottom: 20px;
+}
+.SectionTitle{
+    color: var(--teal);
+    font-size: var(--mdMobile);
+}
+/* Necesario para conservar concepto de prendas */
+.img-card{
+    width: 90%;
+}
+.plink{
+    width: 50%;
+    position: relative;
+    text-decoration: none !important;
+}
+.card{
+    width: 100% !important;
+    height: 100% !important;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* hover */
+.collections:hover{
+    font-size: 1.5em;
+    text-decoration: line-through;
+}
+
+.card:hover{
+    box-shadow: var(--teal);
+}
+
+
+/* @medias */
+/* @medias especial */
+@media (max-width: 410px){
+    .image{
+        height: 70vh;
+    }
+    .ChooseCollection{
+        position: fixed;
+        bottom: 45vw;
+        z-index: 100;
+}
+}
+@media (min-width: 768px){
+    .ImageContainer{
+        background-image:url(../images/team.JPG);
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .collections{
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .ChooseCollection{
+
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 0px;
+        justify-content:space-around;
+}
+
+    .SectionTitle{
+        font-size: 1.5rem !important;
+    }
+    .plink{
+        font-size: 1.2rem !important;
+    }
+
+}
+@media (min-width: 1024px){
+    .SectionTitle{
+        font-size:2rem;
+    }
+    .ChooseCollection{
+        position: fixed;
+        bottom: 1vw;
+        z-index: 100;
+    }
+    .plink{
+        width: 25% !important;
+        font-size: 1.5rem !important;
+    }
+    .collections:hover{
+        font-size: 3em;
+    }
+} 

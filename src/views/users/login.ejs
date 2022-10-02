@@ -1,0 +1,30 @@
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include('../partials/header') %>
+            <main class="login-main">
+                <form class="form" action="/" method="post">
+                    <h2 class="title">Inisiar sesión</h2>
+                    <div class="campo">
+                        <input class="login_input" type="email" minlength="8" id="nombre" name="name" required /><span
+                            class="barra"></span>
+                        <label class="login-label">Correo electrónico</label>
+                    </div>
+                    <div class="campo">
+                        <input class="login_input" type="password" minlength="8" id="nombre" name="name"
+                            required /><span class="barra"></span>
+                        <label class="login-label">Contraseña</label>
+                    </div>
+                    <button class="enter-btn" type="submit" id="enter">Ingresar</button>
+                    <button class="enter-facebook" type="submit" id="enter">
+                        Ingresar con Facebook
+                    </button>
+                    <button class="enter-google" type="submit" id="enter">
+                        Ingresar con Google
+                    </button>
+                </form>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+    </html>

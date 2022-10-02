@@ -1,0 +1,110 @@
+<%- include('../partials/head') %>
+
+<body>
+  <%- include('../partials/header') %>
+  <main class="template-create-main">
+    <form class="form" action="#">
+      <h2 class="title">Producto</h2>
+      <div class="campo">
+        <input
+          class="create_input"
+          accept="image/png.image/jpeg"
+          type="file"
+          id="create_img"
+          name="name"
+          multiple
+          required
+        /><span class="barra"></span>
+        <div class="container-img">
+          <img
+            class="create_img-form"
+            src="/images/camisetaThermal.png" 
+            alt="icono destacado"
+          />
+          <img
+            class="create_img-form"
+            src="/images/front.png"
+            alt="Prenda Vestir"
+          />
+          <img
+            class="create_img-form"
+            src="/images/side.png"
+            alt="icono destacado"
+          />
+          <img
+            class="create_img-form"
+            src="/images/back.png"
+            alt="Prenda Vestir"
+          />
+        </div>
+      </div>
+
+      <div class="campo">
+        <input
+          type="text"
+          name="NameProduct"
+          required
+          class="create_input"
+        /><span class="barra"></span>
+        <label class="register-label">Nombre del producto</label>
+      </div>
+      <div class="campo">
+        <input type="text" name="price" required class="create_input" /><span
+          class="barra"
+        ></span>
+        <label class="register-label">Precio</label>
+      </div>
+      <div class="campo">
+        <input
+          type="text"
+          name="description"
+          required
+          class="create_input"
+        /><span class="barra"></span>
+        <label class="register-label">Descripción del producto</label>
+      </div>
+      <div class="campo">
+        <select name="category" class="register_document-select">
+          <option>Categoria</option>
+          <option value="men">Hombre</option>
+          <option value="women">Mujer</option>
+        </select>
+      </div>
+      <section class="size_color_quantity">
+        <div class="campo_size">
+          <select name="size" class="register_document-select">
+            <option>Talla</option>
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+            <option value="xl">XL</option>
+          </select>
+        </div>
+        <div class="campo_color">
+          <select name="color" class="register_document-select">
+            <option>Color</option>
+            <option value="black">Negro</option>
+            <option value="white">Blanco</option>
+            <option value="other">Otro</option>
+          </select>
+        </div>
+        <div class="campo_quantity">
+          <input
+            type="number"
+            name="NameProduct"
+            required
+            class="create_input"
+          /><span class="barra"></span>
+          <label class="register-label">Cantidad</label>
+        </div>
+      </section>
+      <div class="checkbox_create">
+        <input type="checkbox" name="prductoDestacado" value="destacado">
+        <label for="productoDestacado">Producto destacado</label>
+      </div>
+      <button class="enter-btn" type="submit" id="enter">Ingresar</button>
+    </form>
+  </main>
+  <%- include('../partials/footer') %>
+</body>
+</html>

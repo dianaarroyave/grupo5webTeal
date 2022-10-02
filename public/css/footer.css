@@ -1,23 +1,20 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+main {
+    font-family: var(--primaryFont);
 }
-
-/* :root{
-
-} */
 
 .footer {
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: Helvetica;
+    color:white;
+    background-color: black;
 }
 
 .follow-me__title {
     text-align: center;
+    font-size: var(--smMobile);
+    padding-bottom: 0.2rem;
 }
 
 .follow-me__icon {
@@ -28,11 +25,19 @@
     padding-top: 5px;
     gap: 20px;
     font-size: 1.5rem;
+    transition: all 400ms;
+}
+
+.follow-me__icon i:hover{
+    transform: scale(1.1);
+    color: var(--teal);
 }
 
 .contact__title {
     text-align: center;
+    font-size: var(--smMobile);
     padding-top: 20px;
+    padding-bottom: 0.2rem;
 }
 
 .contact__icon {
@@ -43,46 +48,138 @@
     padding-top: 5px;
     gap: 20px;
     font-size: 1.5rem;
+    transition: all 400ms;
+}
+
+.contact__icon i:hover{
+    transform: scale(1.1);
+    color: var(--teal);
 }
 
 .contact__suggestion {
-   margin-top: 10px;
+    margin-top: 15px;
+    padding-bottom: 2rem;
 }
 
 .contact__suggestion::placeholder{
     text-align: center;
+    font-size: 0.8rem;
 }
 
 .container-us-brands {
     display: flex;
-    gap: 50px;
+    gap: 40px;
 }
 
 .us {
     display: flex;
     flex-direction: column;
     align-items: center;
-    line-height: 15px;
+    line-height: 20px;
 }
 
 .us__title {
     padding-top: 20px;
     padding-bottom: 10px;
+    font-size: var(--smMobile);
+}
+
+.us p{
+    font-size: var(--ssmMobile);
 }
 
 .brands {
     display: flex;
     flex-direction: column;
     align-items: center;
-    line-height: 15px;
+    line-height: 20px;
 }
 
 .brands__title {
     padding-top: 20px;
     padding-bottom: 10px;
+    font-size: var(--smMobile);
+}
+
+.brands p{
+    font-size: var(--ssmMobile);
 }
 
 .copyright {
     padding-top: 20px;
     text-align: center;
+    font-size: var(--ssmMobile);
+}
+
+/* Media 768 */
+
+@media (min-width: 768px) {
+
+    .footerInformation {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .follow-me {
+        margin-left: 0.5rem;
+    }
+    .follow-me__title {
+        margin-top: 1rem;
+    }
+
+    .contact {
+        margin-right: 0.5rem;
+        margin-left: 1rem;
+    }
+
+    .brands {
+        margin-right: 1rem;
+        margin-left: 0.5rem;
+    }
+
+    .us {
+        margin-right: 0.5rem;
+        margin-left: 1rem;
+    }
+
+    .copyright {
+        margin-top: 1rem;
+    }
+}
+
+/* Media 1024 */
+
+@media (min-width: 1024px) {
+
+    .footerInformation {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .follow-me {
+        margin-left: 2rem;
+    }
+    .follow-me__title {
+        margin-top: 1rem;
+    }
+
+    .contact {
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+
+    .brands {
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+
+    .us {
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+
+    .copyright {
+        margin-top: 2rem;
+    }
+
 }

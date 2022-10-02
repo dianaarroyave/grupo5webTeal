@@ -1,12 +1,15 @@
 const express = require("express");
-const path = require('path')
 const app = express();
+const path = require('path');
+const mainRouter = require('./src/routes/main');
+const productsRouter = require('./src/routes/products')
 
-const publicPath = path.resolve(__dirname, "./public");
-app.use( express.static(publicPath) );
+app.set('views', path.join(__dirname, '/src/views'));
+app.set("view engine", "ejs");
 
-app.listen(3030, () => console.log("servidor corriendo"));
+app.use(express.static('public'));
 
-app.get("/", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "./views/homeSombrilla.html"));
-})
+app.use('/', mainRouter);
+app.use('/products', productsRouter)
+
+app.listen(3000, () => console.log("servidor corriendo"));

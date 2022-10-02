@@ -1,0 +1,131 @@
+.template-create-main {
+  background: var(--teal);
+  background: -webkit-linear-gradient(to right, var(--teal), black);
+  background: linear-gradient(to right, var(--teal), black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  text-align: center;
+  font-weight: 700;
+}
+.form {
+  background: white;
+  padding: 40px 10px 30px 10px;
+  box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  margin: 32px 0;
+}
+.campo {
+  position: relative;
+  margin: 45px;
+}
+.create_input,
+.register_document-select {
+  background: none;
+  color: var(--teal);
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--teal);
+}
+.create_img-form {
+  width: 40%;
+  border: 1px solid var(--teal);
+  border-radius: 5px;
+}
+.create_input:focus {
+  outline: none;
+  color: #5e5d5d;
+}
+.register-label {
+  color: var(--teal);
+  font-size: 16px;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  transition: 0.5s ease-in-out all;
+  pointer-events: none;
+}
+.create_input:focus ~ .register-label,
+.create_input:valid ~ .register-label {
+  top: -14px;
+  font-size: 12px;
+  color: black;
+}
+.barra {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.barra::before {
+  content: "";
+  height: 2px;
+  width: 0%;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(to right, black, var(--teal));
+  transition: 0.3s ease width;
+  left: 0;
+}
+.create_input:focus ~ .barra::before {
+  width: 100%;
+}
+.enter-btn {
+  font-family: var(--primaryFont);
+  background: -webkit-linear-gradient(
+    to right,
+    black,
+    var(--teal)
+  ); 
+  background: linear-gradient(to right, black, var(--teal));
+  border: none;
+  border-radius: 5px;
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  color: white;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 400ms;
+}
+.campo_size,
+.campo_color,
+.campo_quantity {
+  width: 30%;
+  position: relative;
+}
+.size_color_quantity {
+  margin: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+.checkbox_create{
+  color:var(--teal); 
+  justify-content:flex-start ;
+  padding: 40px 10px 30px 10px;  
+  border-radius: 10px;
+  margin-left: 32px ;
+}
+
+.enter-btn:hover {
+  transform: scale(1.1);
+}
+
+.container-img {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 16px;
+  gap: 8px;
+}
+
+@media (min-width: 768px) {
+  form {
+    width: 40%;
+  }
+}

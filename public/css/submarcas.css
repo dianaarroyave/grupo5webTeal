@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primaryFont: 'helvetica';
+    --sizeTitle: 1.5rem;
+    --sizeBody: 1rem;
+    --negro: #000000;
+    --blanco: #fff;
+    --gris: #d9d9d6;
+    --teal: #008080;
+    --tealOriginal: #d8fffc;
+    --tealBasics: #f9f9f9;
+}
+
+.mainSubmarcas{
+    padding-bottom: 50px;
+}
+.gender {
+    display: flex;
+    flex-wrap: wrap;
+    height: 5vh;
+
+}
+
+.btn-man {
+    width: 50%;
+    background-color: #000000;
+    color: white;
+}
+
+.btn-man:hover {
+    background-color: var(--teal);
+    color: white;
+
+}
+
+.btn-women {
+    width: 50%;
+    background-color: #000000;
+    color: white;
+}
+
+.btn-women:hover {
+    background-color: var(--teal);
+    color: white;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 50%;
+    position: relative;
+}
+
+.description {
+    display: block !important; 
+    padding-bottom: 15px;
+}
+
+.filter-products {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+.filter-price {
+    display: flex;
+    height: 5vh;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 15px;
+
+}
+
+.name {
+    width: 25%;
+    border-radius: 5px;
+    background-color: dimgray;
+    color: white;
+}
+
+.filter-price-less {
+    width: 25%;
+    border-radius: 5px;
+    background-color: dimgray;
+    color: white;
+}
+
+.filter-price-more {
+    width: 25%;
+    border-radius: 5px;
+    background-color: dimgray;
+    color: white;
+
+}
+
+.img-icon {
+    width: 25px;
+    position: absolute;
+    right: 15%;
+    top: 5%;
+    /* float:right; */
+
+}
+
+.price {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    font-weight: bolder;
+}
+
+.product {
+    display: flex;
+    justify-content: center;
+    color: var(--teal);
+    font-weight: bold;
+}
+
+/* Necesario para conservar concepto de prendas */
+.img-card{
+    width: 90%;
+}
+.plink{
+    width: 50%;
+    position: relative;
+    text-decoration: none !important;
+}
+.card{
+    width: 100% !important;
+    height: 100% !important;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* hover */
+.collections:hover{
+    font-size: 1.5em;
+    text-decoration: line-through;
+}
+.EndImage {
+    width: 100%;
+}
+
+@media(min-width: 1024px) {
+
+    .btn-women,
+    .btn-man {
+        font-size: var(--lgMobile);
+    }
+
+    .filter-products,
+    .name,
+    .filter-price-less,
+    .filter-price-more{
+        font-size: var(--mdMobile);
+    }
+    .SectionTitle{
+        font-size:2rem;
+    }
+    .plink{
+        width: 25% !important;
+        font-size: 1.5rem !important;
+    }
+}
+
+
+
+

@@ -1,0 +1,99 @@
+
+.edicionProductHeader{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--ssmMobile);
+    padding: 15px;
+}
+.edicionProduct{
+    display: flex;
+    flex-wrap: wrap;
+}
+.edicionImageCard{
+    width: 40vw;
+}
+.edicionDescrition,.edicionPrice{
+    width: 30vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: var(--smMobile);
+}
+
+.edicionImage{
+    width: 100%;
+}
+.edicionBContainer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.edicionB{
+    width: 90%;
+    height: 4vh;
+}
+.addZone{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+.addButtonContainer{
+    width: 100vw;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.addButton{
+    display: block;
+    height: 50px;
+    width: 50%;
+    background-color:black;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.edicionMediaTitle{
+    display: none;
+}
+
+
+.edicionChooseBrands{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+.rrr{
+    width: 80vw;
+    height: 5vh;
+}
+.addButton:hover{
+    transform: scale(1.1);
+    background-color:var(--teal);
+}
+@media (min-width: 768px){
+    .edicionProducts{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .edicionProduct{
+        width: 22vw;
+    }
+    .edicionProductHeader{
+        display: none;
+    }
+    .edicionContainer1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .edicionMediaTitle{
+        display: block;
+    }
+}

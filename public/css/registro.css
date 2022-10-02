@@ -1,0 +1,107 @@
+.register-main {
+  background: var(--teal);
+  background: -webkit-linear-gradient(to right, var(--teal), black);
+  background: linear-gradient(to right, var(--teal), black);
+  /* height: 880px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  text-align: center;
+  font-weight: 700;
+}
+.form {
+  background: white;
+  padding: 40px 10px 30px 10px;
+  box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  margin: 32px 0;
+}
+.campo {
+  position: relative;
+  margin: 45px;
+}
+.register_input,
+.register_document-select {
+  background: none;
+  color: var(--teal);
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--teal);
+}
+.register_input:focus {
+  outline: none;
+  color: #5e5d5d;
+}
+.register-label {
+  color: var(--teal);
+  font-size: 16px;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  transition: 0.5s ease-in-out all;
+  pointer-events: none;
+}
+.register_input:focus ~ .register-label,
+.register_input:valid ~ .register-label {
+  top: -14px;
+  font-size: 12px;
+  color: black;
+}
+.barra {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.barra::before {
+  content: "";
+  height: 2px;
+  width: 0%;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(to right, black, var(--teal));
+  transition: 0.3s ease width;
+  left: 0;
+}
+.register_input:focus ~ .barra::before {
+  width: 100%;
+}
+.enter-btn,
+.enter-facebook,
+.enter-google {
+  font-family: var(--primaryFont);
+  background: -webkit-linear-gradient(
+    to right,
+    black,
+    var(--teal)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, black, var(--teal));
+  border: none;
+  border-radius: 5px;
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  color: white;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 400ms;
+}
+
+.enter-btn:hover,
+.enter-facebook:hover,
+.enter-google:hover{
+    /* background-color: var(--teal);
+    border: solid 0.2rem var(--blanco); */
+    transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  form {
+    width: 40%;
+  }
+}
