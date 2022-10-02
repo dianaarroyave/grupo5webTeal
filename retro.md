@@ -1,3 +1,34 @@
+# Retrospectiva sprint 2
+
+## ¿Qué se hizo bien?
+
+Durante este sprint se reforzó el trabajo en equipo, la comunicación asertiva, el diálogo constructivo, el apoyo mutuo, y la asignación de actividades, lo que permitió al equipo trabajar de manera ágil y aprovechando las fortalezas de cada uno de los miembros del equipo.
+
+Se encontró una forma de trabajo efectiva, que permitía delegar tareas y solucionar inconvenientes, de forma ágil, lo que permitió ahorra tiempo y sacar temas complejos más fácilmente.
+
+## ¿Qué se hizo mal?
+
+Algunas actividades las dejamos para el último minuto, y realmente se debieron haber planeado mejor para no estar corriendo para la implementación de las mismas
+
+Se debe seguir trabajando en el tema de la puntualidad para la entrega de actividades y asistencia a las ceremonias.
+
+No hemos empleado bien los tiempo de las ceremonias, a veces las usamos para temas que se deben trabajar en otros escenarios.  Adicionalmente debemos avisar cuando no podemos asistir y enviar a tiempo el resumen de actividades para que sean tenidas en cuenta por todos los miembros del equipo.
+
+No leer adecuadamente las historias de usuario del sprint, lo que hizo que algunos requerimientos se realizaran en el último minuto.
+
+## ¿Qué hay que dejar de hacer?
+
+Dejar el desarrollo de algunas actividades para el último momento.
+
+## ¿Qué hay que hacer más?
+
+La delegación de tareas aprovechando las fortalezas de cada uno de los miembros del equipo.
+
+## ¿Qué hay que hacer menos?
+
+Dejar actividades para realizar en el último minuto, esto implica hacer una planeación estratégica del sprint mucho más efectiva.
+
+
 # Retrospectiva sprint 1
 
 ## ¿Qué se hizo bien?
@@ -29,25 +60,4 @@ En caso de no poder asistir a las ceremonias, especialmente a la daily, aviar co
 Por el momento no tenemos nada para escribir en este punto.	
 
 
-# Retrospectiva sprint 2
-
-## ¿Qué se hizo bien?
-
-El 
-
-## ¿Qué se hizo mal?
-
-Debemos 
-
-## ¿Qué hay que dejar de hacer?
-
-Dejar 
-
-## ¿Qué hay que hacer más?
-
-En 
-
-## ¿Qué hay que hacer menos?
-
-Por 
 

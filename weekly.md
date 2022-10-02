@@ -18,9 +18,9 @@ Habiendo evacuado los temas más complejos, y realizado en conjunto los wirefram
 
 Las tareas las dividimos de la siguiente forma:
 
-- Sthefanía: terminar de organizar las rutas, carpetas y conección de las vistas con los partials.
-- Sergio:
-- William:
+- Sthefanía: terminar de organizar las rutas, carpetas y conexión de las vistas con los partials.
+- Sergio: realizar vista de plantillaEditar
+- William: realizar vista de plantillaCrear
 - Diana: se encargará de la redacción de los archivos de la weekly y la retrospectiva.
 
-
+Cuando todos tuvimos las tareas terminadas, nos reunimos para revisar toda la información, hacer pruebas y reaqlizar el merge de la rama develop a main para hacer la entrega del sprint.
