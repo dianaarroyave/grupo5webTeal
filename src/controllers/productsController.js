@@ -13,6 +13,9 @@ let productsController = {
     },
     edicion: (req, res) => {
         res.render('products/edicion');
+    },
+    crear: (req, res) => {
+        res.render('products/crear');
     }
 }
 

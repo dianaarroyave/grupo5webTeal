@@ -1,8 +1,7 @@
-.register-main {
+.template-create-main {
   background: var(--teal);
   background: -webkit-linear-gradient(to right, var(--teal), black);
   background: linear-gradient(to right, var(--teal), black);
-  /* height: 880px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +21,7 @@
   position: relative;
   margin: 45px;
 }
-.register_input,
+.create_input,
 .register_document-select {
   background: none;
   color: var(--teal);
@@ -33,7 +32,12 @@
   border: none;
   border-bottom: 1px solid var(--teal);
 }
-.register_input:focus {
+.create_img-form {
+  width: 40%;
+  border: 1px solid var(--teal);
+  border-radius: 5px;
+}
+.create_input:focus {
   outline: none;
   color: #5e5d5d;
 }
@@ -46,8 +50,8 @@
   transition: 0.5s ease-in-out all;
   pointer-events: none;
 }
-.register_input:focus ~ .register-label,
-.register_input:valid ~ .register-label {
+.create_input:focus ~ .register-label,
+.create_input:valid ~ .register-label {
   top: -14px;
   font-size: 12px;
   color: black;
@@ -67,18 +71,16 @@
   transition: 0.3s ease width;
   left: 0;
 }
-.register_input:focus ~ .barra::before {
+.create_input:focus ~ .barra::before {
   width: 100%;
 }
-.enter-btn,
-.enter-facebook,
-.enter-google {
+.enter-btn {
   font-family: var(--primaryFont);
   background: -webkit-linear-gradient(
     to right,
     black,
     var(--teal)
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(to right, black, var(--teal));
   border: none;
   border-radius: 5px;
@@ -91,13 +93,28 @@
   cursor: pointer;
   transition: all 400ms;
 }
+.campo_size,
+.campo_color,
+.campo_quantity {
+  width: 30%;
+  position: relative;
+}
+.size_color_quantity {
+  margin: 45px;
+  display: flex;
+  justify-content: space-between;
+}
 
-.enter-btn:hover,
-.enter-facebook:hover,
-.enter-google:hover{
-    /* background-color: var(--teal);
-    border: solid 0.2rem var(--blanco); */
-    transform: scale(1.1);
+.enter-btn:hover {
+  transform: scale(1.1);
+}
+
+.container-img {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 16px;
+  gap: 8px;
 }
 
 @media (min-width: 768px) {
