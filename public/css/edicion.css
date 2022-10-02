@@ -27,6 +27,12 @@
 .edicionImage{
     width: 100%;
 }
+.edicionBContainer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .edicionB{
     width: 90%;
     height: 4vh;
@@ -36,12 +42,20 @@
     display: flex;
     justify-content: center;
 }
+.addButtonContainer{
+    width: 100vw;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .addButton{
     display: block;
     height: 50px;
     width: 50%;
 }
-
+.edicionMediaTitle{
+    display: none;
+}
 
 
 .edicionChooseBrands{
@@ -52,4 +66,27 @@
 .rrr{
     width: 80vw;
     height: 5vh;
+}
+
+@media (min-width: 768px){
+    .edicionProducts{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .edicionProduct{
+        width: 22vw;
+    }
+    .edicionProductHeader{
+        display: none;
+    }
+    .edicionContainer1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .edicionMediaTitle{
+        display: block;
+    }
 }
