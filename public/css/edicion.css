@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    font-size: var(--mmMobile);
+    font-size: var(--ssmMobile);
     padding: 15px;
 }
 .edicionProduct{
@@ -12,12 +12,10 @@
     flex-wrap: wrap;
 }
 .edicionImageCard{
-    width: 30vw;
-    border: 2px solid green;
+    width: 40vw;
 }
 .edicionDescrition,.edicionPrice{
-    width: 35vw;
-    border: 2px solid green;
+    width: 30vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -31,6 +29,7 @@
 }
 .edicionB{
     width: 90%;
+    height: 4vh;
 }
 .addZone{
     padding: 15px;
@@ -52,4 +51,5 @@
 }
 .rrr{
     width: 80vw;
+    height: 5vh;
 }
