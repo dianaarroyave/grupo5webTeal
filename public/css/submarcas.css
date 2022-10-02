@@ -60,6 +60,7 @@
 }
 
 .description {
+    display: block !important; 
     padding-bottom: 15px;
 }
 
@@ -148,7 +149,6 @@
 .EndImage {
     width: 100%;
 }
-
 
 @media(min-width: 1024px) {
 
