@@ -1,3 +1,16 @@
+# weekly sprint 4
+
+## Semana 1
+
+Realizamos la reunión de retrospectiva, con el find de no volver a cometer el error del sprint anterior.
+
+Teniendo en cuenta las buenas prácticas del sprint 3, realizamos una reunión de planeación del srint donde estudiamos detalladamente cada uno de los puntos a realizar, evaluamos el nivel de dificultad de cada uno de los requerimientos y definimos la metodología de trabajo y responsables.
+
+Cada uno de los integrantes se comprometión a buscar fuentes de estudio para ahondar en los temas que nos están causando dificultad antes de la primera reunión de trabajo en grupo, ya que definimos inialmente que los temas se van a trabajar en equipo, inicialmente, como en el sprint anterior.
+
+Adcionalmente, se propuso desarrollar de nuevo un diagrama de flujo para tener una metodología y orden más claro para implementar este sprint.
+
+
 # weekly sprint 3
 
 ## Semana 1
