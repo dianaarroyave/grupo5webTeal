@@ -4,6 +4,9 @@ const path = require('path');
 const mainRouter = require('./src/routes/main');
 const productsRouter = require('./src/routes/products')
 
+//metodo override-------------------------------------------------
+app.use(methodOverride('_method'));
+//----------------------------------------------------------------
 app.set('views', path.join(__dirname, '/src/views'));
 app.set("view engine", "ejs");
 
