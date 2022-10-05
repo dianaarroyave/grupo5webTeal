@@ -3,8 +3,8 @@ const app = express();
 const path = require('path');
 const mainRouter = require('./src/routes/main');
 const productsRouter = require('./src/routes/products')
-
 //metodo override-------------------------------------------------
+const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 //----------------------------------------------------------------
 app.set('views', path.join(__dirname, '/src/views'));
