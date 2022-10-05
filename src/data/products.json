@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Camiseta Thermal",
+    "price": 80000,
+    "description": "Camiseta Thermal Teal Original",
+    "colectionDescription": "lorem",
+    "categories": "Camiseta",
+    "featured": false
+  },
+  {
+    "id": 2,
+    "name": "Sudadera Thermal",
+    "price": 115000,
+    "description": "Sudadera Thermal Teal Basics",
+    "colectionDescription": "lorem",
+    "categories": "Sudadera",
+    "featured": false
+  },
+  {
+    "id": 3,
+    "name": "Hoddie Thermal",
+    "price": 100000,
+    "description": "Hoodie Thermal Teal Original",
+    "colectionDescription": "lorem",
+    "categories": "Buzo con chompa",
+    "featured": false
+  },
+  {
+    "id": 4,
+    "name": "Crewneck Thermal",
+    "price": 100000,
+    "description": "Crewneck Thermal Teal Original",
+    "colectionDescription": "lorem",
+    "categories": "Buzo",
+    "featured": false
+  }
+]
