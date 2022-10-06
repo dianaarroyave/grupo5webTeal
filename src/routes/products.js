@@ -5,17 +5,17 @@ const multer = require('multer');
 const productsController = require('../controllers/productsController');
 
 //multer
-let multerDiskStorage = multer.multerDiskStorage({
-    destination:(req,file,callback)=>{
-        let folder = path.join(__dirname,'../src/data');
-        callback(null,folder);
-    },
-    filename:(req,file,callback)=>{{
-        let imageName = Date.now() + path.extname(file.originalname);
-        callback(null,imageName);
-    }
+//let multerDiskStorage = multer.multerDiskStorage({
+   // destination:(req,file,callback)=>{
+    //    let folder = path.join(__dirname,'../src/data');
+    //    callback(null,folder);
+  //  },
+   // filename:(req,file,callback)=>{{
+   //     let imageName = Date.now() + path.extname(file.originalname);
+    //    callback(null,imageName);
+   // }
 
-})
+//})
 
 
 
