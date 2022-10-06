@@ -1,3 +1,7 @@
+//requerir fs y path
+let fs = require('fs');
+let path = require('path');
+
 let productsController = {
     // ESTATIC
     carrito: (req, res) => {
@@ -20,11 +24,12 @@ let productsController = {
     crear: (req, res) => {
         res.render('products/crear');
     },
+    //nuevos para sprint 4
     listar: (req, res) => {
-        
+        let productsJSON = fs.readFileSync('products.json', {encoding: 'utf8'});
+        let productsObject=JSON.parse(productsJSON);
     },
 }
-
 
 module.exports = productsController;
 
