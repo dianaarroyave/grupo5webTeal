@@ -25,10 +25,10 @@ let productsController = {
         res.render('products/crear');
     },
     //nuevos para sprint 4
-    listar: (req, res) => {
-        let productsJSON = fs.readFileSync('products.json', {encoding: 'utf8'});
-        let productsObject=JSON.parse(productsJSON);
-    },
+    //listar: (req, res) => {
+        //let productsJSON = fs.readFileSync('products.json', {encoding: 'utf8'});
+        //let productsObject=JSON.parse(productsJSON);
+   // },
 }
 
 module.exports = productsController;

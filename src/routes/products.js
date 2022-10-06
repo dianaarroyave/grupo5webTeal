@@ -29,5 +29,5 @@ router.get('/edicion',productsController.edicion);
 router.get('/crear',productsController.crear); //acceder
 router.post('/crear', productsController.crear); //crear-producto  
 //sprint 4
-router.get('/listar', productsController.listarproductos);
+//router.get('/listar', productsController.listarproductos);
 module.exports = router;
