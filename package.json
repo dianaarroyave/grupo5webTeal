@@ -4,8 +4,9 @@
   "description": "## ¿Por qué estamos desarrollando este proyecto? 👩‍💻👨‍💻",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
