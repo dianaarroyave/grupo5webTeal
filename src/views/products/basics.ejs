@@ -16,19 +16,22 @@
                 </div>
                 <div class="cards">
                     <!--editando para sprint 4------------------------------------------------------------->
+                    <%for(let i=0;i<original.length;i++){%>
                     <a class="plink" href="/products/producto">
                         <div class="card">
                             <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
                             <img class="img-card" src="/images/1.png" alt="Prenda Vestir">
                             <div class="description">
-                                <p class="price"<%=  productsObject[1].price  %>  $80.000</p>
-                                <p class="product">Camiseta Thermal</p>
+                              <p class="price"><%= original[i].price %></p>
+                                <p class="product"><%=original[i].name%></p>
                             </div>
                         </div>
                     </a>
+                    <%}%>
+
                     <!--editando para sprint 4------------------------------------------------------------->
 
-                    <a class="plink" href="/products/producto">
+                    <!-- <a class="plink" href="/products/producto">
                         <div class="card">
                             <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
                             <img class="img-card" src="/images/2.png" alt="Prenda Vestir">
@@ -103,7 +106,7 @@
                                 <p class="product">Camiseta Negra</p>
                             </div>
                         </div>
-                    </a>
+                    </a> -->
                 </div>
             </main>
             <%- include('../partials/footer') %>

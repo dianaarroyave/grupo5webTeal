@@ -2,33 +2,44 @@
 let fs = require('fs');
 let path = require('path');
 
+//inicialización de array brand
+//let brand = [];
+//-------------------------------
+
+//requerir archivo JSON de productos
+const productsFilePath = path.join(__dirname,'../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
+
 let productsController = {
     // ESTATIC
     carrito: (req, res) => {
         res.render('products/carrito');
     },
     // DINAMICS
+    //se trabajará inicialmente basics (página dinámica)
     basics: (req, res) => {
-        res.render('products/basics');
+      //unica vista para todas las marcas se separa con caracterización de cada prenda para que muestre unicamente la marca seleccionada
+      //basics
+      let original =  products.filter(product =>(product.marca=="basics"));
+
+        res.render('products/basics',{original}); //el segundo parámetro comparte la variable con la
     },
+    //---------------------------------------------------
     original: (req, res) => {
-        res.render('products/original');
+      let original = products.filter(product =>(product.marca=="original"));
+      res.render('products/original',{original});
     },
+    //----------------------------------------------------
     producto: (req, res) => {
         res.render('products/producto');
     },
-    
+
     edicion: (req, res) => {
         res.render('products/edicion');
     },
     crear: (req, res) => {
         res.render('products/crear');
     },
-    //nuevos para sprint 4
-    //listar: (req, res) => {
-        //let productsJSON = fs.readFileSync('products.json', {encoding: 'utf8'});
-        //let productsObject=JSON.parse(productsJSON);
-   // },
 }
 
 module.exports = productsController;
@@ -46,3 +57,4 @@ module.exports = productsController;
 //       }
 //     ]);
 //   });
+

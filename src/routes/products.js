@@ -21,13 +21,13 @@ const productsController = require('../controllers/productsController');
 
 //Rutas
 router.get('/basics', productsController.basics);
-router.get('/original', productsController.basics);
+router.get('/original', productsController.original);
 router.get('/producto', productsController.producto);
 router.get('/carrito', productsController.carrito);
 router.get('/edicion',productsController.edicion);
 //admin-crear
 router.get('/crear',productsController.crear); //acceder
-router.post('/crear', productsController.crear); //crear-producto  
+//router.post('/crear', productsController.crear); //crear-producto
 //sprint 4
 //router.get('/listar', productsController.listarproductos);
 module.exports = router;
