@@ -25,7 +25,7 @@
     "price": "100000",
     "description": "Hoodie Thermal Teal Original",
     "colectionDescription": "lorem",
-    "categories": "Buzo con chompa",
+    "categories": "Buso con chompa",
     "featured": false,
     "marca": "original"
   },
@@ -35,8 +35,112 @@
     "price": "100000",
     "description": "Crewneck Thermal Teal Original",
     "colectionDescription": "lorem",
-    "categories": "Buzo",
+    "categories": "Buso",
     "featured": false,
     "marca": "original"
+  },
+  {
+    "id": 5,
+    "name": "Pañoleta Thermal",
+    "price": "45000",
+    "description": "Pañoleta Thermal Teal Original",
+    "colectionDescription": "lorem",
+    "categories": "Accesorios",
+    "featured": false,
+    "marca": "original"
+  },
+  {
+    "id": 6,
+    "name": "Crewneck Ethereal",
+    "price": "135000",
+    "description": "Crewneck Ethereal Teal Original",
+    "colectionDescription": "lorem",
+    "categories": "Buso",
+    "featured": false,
+    "marca": "original"
+  },
+  {
+    "id": 7,
+    "name": "Hoddie Ethereal",
+    "price": "145000",
+    "description": "Hoddie Ethereal Teal Original",
+    "colectionDescription": "lorem",
+    "categories": "Buso con chompa",
+    "featured": false,
+    "marca": "original"
+  },
+  {
+    "id": 8,
+    "name": "Camiseta Ethereal",
+    "price": "80000",
+    "description": "Camiseta Ethereal Teal Original",
+    "colectionDescription": "lorem",
+    "categories": "Camiseta",
+    "featured": false,
+    "marca": "original"
+  },
+
+
+
+
+  {
+    "id": 9,
+    "name": "Camiseta Oversize",
+    "price": "60000",
+    "description": "Camiseta Oversize Teal Basics",
+    "colectionDescription": "lorem",
+    "categories": "Camiseta",
+    "featured": false,
+    "marca": "basics"
+  },
+  {
+    "id": 10,
+    "name": "Camibuso básico",
+    "price": "75000",
+    "description": "Camibuso básico Teal Basics",
+    "colectionDescription": "lorem",
+    "categories": "Camibuso",
+    "featured": false,
+    "marca": "basics"
+  },
+  {
+    "id": 11,
+    "name": "Short básico",
+    "price": "65000",
+    "description": "Short básico Teal Basics",
+    "colectionDescription": "lorem",
+    "categories": "Short",
+    "featured": false,
+    "marca": "basics"
+  },
+  {
+    "id": 12,
+    "name": "Hoddie básico",
+    "price": "105000",
+    "description": "Hoddie básico Teal Basics",
+    "colectionDescription": "lorem",
+    "categories": "Buso",
+    "featured": false,
+    "marca": "basics"
+  },
+  {
+    "id": 13,
+    "name": "Sudadera básica",
+    "price": "110000",
+    "description": "Sudadera básica Teal Basics",
+    "colectionDescription": "lorem",
+    "categories": "Sudadera",
+    "featured": false,
+    "marca": "basics"
+  },
+  {
+    "id": 14,
+    "name": "Crop top básico",
+    "price": "55000",
+    "description": "Crop top básico Teal Basics",
+    "colectionDescription": "lorem",
+    "categories": "Crop top",
+    "featured": false,
+    "marca": "basics"
   }
 ]
