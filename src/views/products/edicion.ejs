@@ -1,171 +1,59 @@
 <%- include('../partials/head') %>
-<body>
-    <%- include('../partials/header') %>
-    <!--Barra desplegable de marcas -->
-    <label class="edicionChooseBrands" for="brands">
-        <select class="rrr" name="brands" id="brands">
-            <option value="ORIGINALS">ORIGINALS</option>
-            <option value="BASICS">BASICS</option>
-        </select>
-        
-    </label>
 
-    <!--sección para mostrar ptoductos-->
-    <main classs="edicionGroupProducts">
-        <!--encabezado zona de productos-->
-        <div class="edicionContainer1">
-            <h2 class="edicionMediaTitle">
-                PRODUCTOS
-            </h2>
-        </div>
+    <body>
+        <%- include('../partials/header') %>
+            <!--Barra desplegable de marcas -->
+            <label class="edicionChooseBrands" for="brands">
+                <select class="rrr" name="brands" id="brands">
+                    <option value="ORIGINALS">ORIGINALS</option>
+                    <option value="BASICS">BASICS</option>
+                </select>
+            </label>
 
-        <div class="edicionProductHeader">
-            <h3>PRODUCTO</h3>
-            <h3>PRECIO</h3>
-        </div>
-        <section class="edicionProducts">
-            <article class="edicionProduct">
-                <!---división en 3 secciones distribuidas horizontalmente-->
-                <div class="edicionImageCard">
-                    <img class="img-card" src="/images/1.png" alt="Prenda Vestir">
+            <!--sección para mostrar ptoductos-->
+            <main classs="edicionGroupProducts">
+                <!--encabezado zona de productos-->
+                <div class="edicionContainer1">
+                    <h2 class="edicionMediaTitle">
+                        PRODUCTOS
+                    </h2>
                 </div>
-                <div class="edicionDescrition">
-                    <p class="product">Camiseta Thermal</p>
-                    <a class="edicionBContainer" href="/products/crear">
-                        <button class="edicionB"><i class="fa-solid fa-pencil"></i> Editar</button>
-                    </a>
-                    
-                </div>
-                <div class="edicionPrice">
-                    <p class="price">$80.000</p>
-                    <button class="edicionB"><i class="fa-solid fa-trash-can"></i> Eliminar</button>
-                </div>
-            </article>
-            <article class="edicionProduct">
-                <!---división en 3 secciones distribuidas horizontalmente-->
-                <div class="edicionImageCard">
-                    <img class="img-card" src="/images/2.png" alt="Prenda Vestir">
-                </div>
-                <div class="edicionDescrition">
-                    <p class="product">Sudadera Thermal</p>
-                    <a class="edicionBContainer" href="/products/crear">
-                        <button class="edicionB"><i class="fa-solid fa-pencil"></i> Editar</button>
-                    </a>
-                </div>
-                <div class="edicionPrice">
-                    <p class="price">$115.000</p>
-                    <button class="edicionB"><i class="fa-solid fa-trash-can"></i> Eliminar</button>
-                </div>
-            </article>
-            <article class="edicionProduct">
-                <!---división en 3 secciones distribuidas horizontalmente-->
-                <div class="edicionImageCard">
-                    <img class="img-card" src="/images/3.png" alt="Prenda Vestir">
-                </div>
-                <div class="edicionDescrition">
-                    <p class="product">Hoodie Thermal</p>
-                    <a class="edicionBContainer" href="/products/crear">
-                        <button class="edicionB"><i class="fa-solid fa-pencil"></i> Editar</button>
-                    </a>
-                </div>
-                <div class="edicionPrice">
-                    <p class="price">$100.000</p>
-                    <button class="edicionB"><i class="fa-solid fa-trash-can"></i> Eliminar</button>
-                </div>
-            </article>
-            <article class="edicionProduct">
-                <!---división en 3 secciones distribuidas horizontalmente-->
-                <div class="edicionImageCard">
-                    <img class="img-card" src="/images/4.png" alt="Prenda Vestir">
-                </div>
-                <div class="edicionDescrition">
-                    <p class="product">Crewneck Thermal</p>
-                    <a class="edicionBContainer" href="/products/crear">
-                        <button class="edicionB"><i class="fa-solid fa-pencil"></i> Editar</button>
-                    </a>
-                </div>
-                <div class="edicionPrice">
-                    <p class="price">$100.000</p>
-                    <button class="edicionB"><i class="fa-solid fa-trash-can"></i> Eliminar</button>
-                </div>
-            </article>
-            <article class="edicionProduct">
-                <!---división en 3 secciones distribuidas horizontalmente-->
-                <div class="edicionImageCard">
-                    <img class="img-card" src="/images/5.png" alt="Prenda Vestir">
-                </div>
-                <div class="edicionDescrition">
-                    <p class="product">Pañoleta Thermal</p>
-                    <a class="edicionBContainer" href="/products/crear">
-                        <button class="edicionB"><i class="fa-solid fa-pencil"></i> Editar</button>
-                    </a>
-                </div>
-                <div class="edicionPrice">
-                    <p class="price">$100.000</p>
-                    <button class="edicionB"><i class="fa-solid fa-trash-can"></i> Eliminar</button>
-                </div>
-            </article>
-            <article class="edicionProduct">
-                <!---división en 3 secciones distribuidas horizontalmente-->
-                <div class="edicionImageCard">
-                    <img class="img-card" src="/images/6.png" alt="Prenda Vestir">
-                </div>
-                <div class="edicionDescrition">
-                    <p class="product">Camiseta Negra</p>
-                    <a class="edicionBContainer" href="/products/crear">
-                        <button class="edicionB"><i class="fa-solid fa-pencil"></i> Editar</button>
-                    </a>
-                </div>
-                <div class="edicionPrice">
-                    <p class="price">$100.000</p>
-                    <button class="edicionB"><i class="fa-solid fa-trash-can"></i> Eliminar</button>
-                </div>
-            </article>
-            <article class="edicionProduct">
-                <!---división en 3 secciones distribuidas horizontalmente-->
-                <div class="edicionImageCard">
-                    <img class="img-card" src="/images/7.png" alt="Prenda Vestir">
-                </div>
-                <div class="edicionDescrition">
-                    <p class="product">Camiseta Negra</p>
-                    <a class="edicionBContainer" href="/products/crear">
-                        <button class="edicionB"><i class="fa-solid fa-pencil"></i> Editar</button>
-                    </a>
-                </div>
-                <div class="edicionPrice">
-                    <p class="price">$100.000</p>
-                    <button class="edicionB"><i class="fa-solid fa-trash-can"></i> Eliminar</button>
-                </div>
-            </article>
-            <article class="edicionProduct">
-                <!---división en 3 secciones distribuidas horizontalmente-->
-                <div class="edicionImageCard">
-                    <img class="img-card" src="/images/8.png" alt="Prenda Vestir">
-                </div>
-                <div class="edicionDescrition">
-                    <p class="product">Camiseta Negra</p>
-                    <a class="edicionBContainer" href="/products/crear">
-                        <button class="edicionB"><i class="fa-solid fa-pencil"></i> Editar</button>
-                    </a>
-                </div>
-                <div class="edicionPrice">
-                    <p class="price">$100.000</p>
-                    <button class="edicionB"><i class="fa-solid fa-trash-can"></i> Eliminar</button>
-                </div>
-            </article>
-        </section>
-        <!--botón para agregar productos-->
-        <div class="addZone">
-            <a class="addButtonContainer" href="/products/crear">
-                <button class="addButton"><i class="fa-solid fa-shirt"></i> Agregar Producto</button>
-            </a>
-            
-        </div>
-    </main>
 
-    
-    
-    <%- include('../partials/footer') %>
+                <div class="edicionProductHeader">
+                    <h3>PRODUCTO</h3>
+                    <h3>PRECIO</h3>
+                </div>
 
-</body>
-</html>
+                <section class="edicionProducts">
+                    <%for(let i=0;i<original.length;i++){%>
+                        <article class="edicionProduct">
+                            <div class="edicionImageCard">
+                                <img class="img-card" src="/images/<%=original[i].image%>" alt="Prenda Vestir">
+                            </div>
+                            <div class="edicionDescrition">
+                                <p class="product">
+                                    <%=original[i].name%>
+                                </p>
+                                <a class="edicionBContainer" href="/products/crear">
+                                    <button class="edicionB"><i class="fa-solid fa-pencil"></i>Editar</button>
+                                </a>
+                            </div>
+                            <div class="edicionPrice">
+                                <p class="price">$<%= original[i].price %>
+                                </p>
+                                <button class="edicionB"><i class="fa-solid fa-trash-can"></i> Eliminar</button>
+                            </div>
+                        </article>
+                        <%}%>
+                </section>
+                <!--botón para agregar productos-->
+                <div class="addZone">
+                    <a class="addButtonContainer" href="/products/crear">
+                        <button class="addButton"><i class="fa-solid fa-shirt"></i> Agregar Producto</button>
+                    </a>
+                </div>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+    </html>
