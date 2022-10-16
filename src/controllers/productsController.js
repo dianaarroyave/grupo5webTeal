@@ -38,10 +38,12 @@ let productsController = {
     producto: (req, res) => {
         res.render('products/producto');
     },
-
+    //---------------------------------------------------
     edicion: (req, res) => {
-        res.render('products/edicion');
+        let original =  products.filter(product =>(product.marca=="original"));
+        res.render('products/edicion', {original});
     },
+    //---------------------------------------------------
     crear: (req, res) => {
         res.render('products/crear');
     },
