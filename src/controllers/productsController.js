@@ -17,6 +17,11 @@ let productsController = {
     },
     // DINAMICS
     //se trabajará inicialmente basics (página dinámica)
+    brands: (req, res) => {
+      //aqui traer products
+      res.render('products/brands');
+
+    },
     basics: (req, res) => {
       //unica vista para todas las marcas se separa con caracterización de cada prenda para que muestre unicamente la marca seleccionada
       //basics

@@ -20,6 +20,7 @@ const productsController = require('../controllers/productsController');
 
 
 //Rutas
+router.get('/brands',productsController.brands);
 router.get('/basics', productsController.basics);
 router.get('/original', productsController.original);
 router.get('/producto', productsController.producto);
