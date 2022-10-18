@@ -18,13 +18,11 @@ const productsController = require('../controllers/productsController');
 //})
 
 //Rutas
-//prueba----------------------------------------------------
 router.get('/brandOriginal',productsController.brandOriginal);
 router.get('/brandBasics',productsController.brandBasics);
-//--------------------------------------------------------
 router.get('/producto', productsController.producto);
 router.get('/carrito', productsController.carrito);
-router.get('/edicion',productsController.edicion);
+router.get('/edicion',productsController.edicionTodos);
 //admin-crear
 router.get('/crear',productsController.crear); //acceder
 //router.post('/crear', productsController.crear); //crear-producto

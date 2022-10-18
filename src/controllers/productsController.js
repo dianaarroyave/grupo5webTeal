@@ -15,13 +15,14 @@ let productsController = {
       //aqui traer products
       let brand =  products.filter(product =>(product.marca=="original"));
       res.render('products/brands',{brand});
-      //res.render('products/brands');
     },
     brandBasics: (req, res) => {
       //aqui traer products
       let brand =  products.filter(product =>(product.marca=="basics"));
       res.render('products/brands',{brand});
-      //res.render('products/brands');
+    },
+    edicionTodos: (req,res) => {
+      res.render('products/edicion',{products});
     },
     //----------------------------------------------------
     producto: (req, res) => {

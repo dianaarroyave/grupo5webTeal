@@ -5,8 +5,9 @@
             <!--Barra desplegable de marcas -->
             <label class="edicionChooseBrands" for="brands">
                 <select class="rrr" name="brands" id="brands">
-                    <option value="ORIGINALS">ORIGINALS</option>
-                    <option value="BASICS">BASICS</option>
+                    <!-- <option value="ORIGINALS">ORIGINALS</option>
+                    <option value="BASICS">BASICS</option> -->
+                    <option value="TODAS">TODAS LAS MARCAS</option>
                 </select>
             </label>
 
@@ -25,21 +26,21 @@
                 </div>
 
                 <section class="edicionProducts">
-                    <%for(let i=0;i<original.length;i++){%>
+                    <%for(let i=0;i<products.length;i++){%>
                         <article class="edicionProduct">
                             <div class="edicionImageCard">
-                                <img class="img-card" src="/images/<%=original[i].image%>" alt="Prenda Vestir">
+                                <img class="img-card" src="/images/<%=products[i].image%>" alt="Prenda Vestir">
                             </div>
                             <div class="edicionDescrition">
                                 <p class="product">
-                                    <%=original[i].name%>
+                                    <%=products[i].name%>
                                 </p>
                                 <a class="edicionBContainer" href="/products/crear">
                                     <button class="edicionB"><i class="fa-solid fa-pencil"></i>Editar</button>
                                 </a>
                             </div>
                             <div class="edicionPrice">
-                                <p class="price">$<%= original[i].price %>
+                                <p class="price">$<%= products[i].price %>
                                 </p>
                                 <button class="edicionB"><i class="fa-solid fa-trash-can"></i> Eliminar</button>
                             </div>
