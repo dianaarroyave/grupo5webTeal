@@ -20,7 +20,7 @@ const productsController = require('../controllers/productsController');
 //Rutas
 router.get('/brandOriginal',productsController.brandOriginal);
 router.get('/brandBasics',productsController.brandBasics);
-router.get('/producto', productsController.producto);
+router.get('/producto/:id', productsController.producto);
 router.get('/carrito', productsController.carrito);
 router.get('/edicion',productsController.edicionTodos);
 //admin-crear

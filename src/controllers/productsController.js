@@ -26,7 +26,9 @@ let productsController = {
     },
     //----------------------------------------------------
     producto: (req, res) => {
-        res.render('products/producto');
+      let idProducto = req.params.id;
+      let productDetail =  products.filter(product =>(product.id==idProducto));
+        res.render('products/producto',{productDetail});
     },
     //---------------------------------------------------
     edicion: (req, res) => {
