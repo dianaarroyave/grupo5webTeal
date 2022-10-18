@@ -6,7 +6,7 @@
     "description": "Camiseta Thermal Teal Original",
     "colectionDescription": "lorem",
     "categories": "Camiseta",
-    "featured": false,
+    "featured": true,
     "marca": "original",
     "image": "1.png"
   },
@@ -17,7 +17,7 @@
     "description": "Sudadera Thermal Teal Basics",
     "colectionDescription": "lorem",
     "categories": "Sudadera",
-    "featured": false,
+    "featured": true,
     "marca": "original",
     "image": "2.png"
   },
@@ -109,7 +109,7 @@
     "description": "Camibuso básico Teal Basics",
     "colectionDescription": "lorem",
     "categories": "Camibuso",
-    "featured": false,
+    "featured": true,
     "marca": "basics",
     "image": "10.jpg"
   },
@@ -153,7 +153,7 @@
     "description": "Crop top básico Teal Basics",
     "colectionDescription": "lorem",
     "categories": "Crop top",
-    "featured": false,
+    "featured": true,
     "marca": "basics",
     "image": "14.jpg"
   }

@@ -1,6 +1,14 @@
+//requerir fs y path
+let fs = require('fs');
+let path = require('path');
+//requerir archivo JSON de productos
+const productsFilePath = path.join(__dirname,'../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
+
 let mainController = {
     home: (req, res) => {
-        res.render('products/home');
+      let featuredProducts =  products.filter(product =>(product.featured==true));
+        res.render('products/home',{featuredProducts});
     },
     corporativo: (req, res) => {
         res.render('products/corporativo');
