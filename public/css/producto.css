@@ -198,10 +198,6 @@ a {
     margin-bottom: 0.8rem;
     font-size: var(--lgMobile);
 }
-
-.img-card{
-    width: 90%;
-}
 .EndImage{
     width: 100%;
 }
@@ -233,7 +229,6 @@ a {
         margin-left: 3.5rem;
         margin-right: 3.5rem;
     }
-
 }
 
 /* Media 768 */
@@ -336,7 +331,7 @@ a {
     }
 
     .productImage1 {
-        width: 60%;
+        width: 40vw !important;
         margin: auto;
     }
 
@@ -368,5 +363,4 @@ a {
         margin-left: 3rem;
         margin-right: 9rem;
     }
-
-}
+  }
