@@ -25,6 +25,7 @@ router.get('/carrito', productsController.carrito);
 router.get('/edicion',productsController.edicionTodos);
 //admin-crear
 router.get('/crear',productsController.crear); //acceder
+router.get('/editar/:id',productsController.editar);
 //router.post('/crear', productsController.crear); //crear-producto
 //sprint 4
 //router.get('/listar', productsController.listarproductos);

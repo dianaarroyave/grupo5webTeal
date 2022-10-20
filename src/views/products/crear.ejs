@@ -18,10 +18,10 @@
         <div class="container-img">
           <img
             class="create_img-form"
-            src="/images/camisetaThermal.png" 
+            src="/images/<%=productDetail[0].image%>"
             alt="icono destacado"
           />
-          <img
+          <!-- <img
             class="create_img-form"
             src="/images/front.png"
             alt="Prenda Vestir"
@@ -35,7 +35,7 @@
             class="create_img-form"
             src="/images/back.png"
             alt="Prenda Vestir"
-          />
+          /> -->
         </div>
       </div>
 
@@ -45,11 +45,12 @@
           name="NameProduct"
           required
           class="create_input"
+          value="<%=productDetail[0].name%>"
         /><span class="barra"></span>
         <label class="register-label">Nombre del producto</label>
       </div>
       <div class="campo">
-        <input type="text" name="price" required class="create_input" /><span
+        <input type="text" name="price" required class="create_input" value="<%=productDetail[0].price%>" /><span
           class="barra"
         ></span>
         <label class="register-label">Precio</label>
@@ -60,6 +61,7 @@
           name="description"
           required
           class="create_input"
+          value="<%=productDetail[0].description%>"
         /><span class="barra"></span>
         <label class="register-label">Descripción del producto</label>
       </div>
@@ -99,7 +101,10 @@
         </div>
       </section>
       <div class="checkbox_create">
-        <input type="checkbox" name="prductoDestacado" value="destacado">
+        <input type="checkbox" name="prductoDestacado" value="destacado" <%if(productDetail[0].featured==true){%>checked <%}%>
+
+
+        >
         <label for="productoDestacado">Producto destacado</label>
       </div>
       <button class="enter-btn" type="submit" id="enter">Ingresar</button>

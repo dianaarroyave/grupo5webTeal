@@ -21,23 +21,25 @@ let productsController = {
       let brand =  products.filter(product =>(product.marca=="basics"));
       res.render('products/brands',{brand});
     },
+    //3 metodos para editar (1)todas las marcas (2)original (3)basicas-----
     edicionTodos: (req,res) => {
       res.render('products/edicion',{products});
     },
-    //----------------------------------------------------
+    //---------------------------------------------------------------------
     producto: (req, res) => {
       let idProducto = req.params.id;
       let productDetail =  products.filter(product =>(product.id==idProducto));
         res.render('products/producto',{productDetail});
     },
     //---------------------------------------------------
-    edicion: (req, res) => {
-        let original =  products.filter(product =>(product.marca=="original"));
-        res.render('products/edicion', {original});
-    },
     //---------------------------------------------------
-    crear: (req, res) => {
+    crear: (req, res) => { //vista crear - para crear producto nuevo.
         res.render('products/crear');
+    },
+    editar: (req, res) => { //vista crear - para editar producto existente.
+      let idProducto = req.params.id;
+      let productDetail =  products.filter(product =>(product.id==idProducto));
+        res.render('products/crear',{productDetail});
     },
 }
 
