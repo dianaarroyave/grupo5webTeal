@@ -38,7 +38,7 @@ let productsController = {
         res.render('products/crear',{productDetail});
     },
     crearProducto: (req, res) => {
-      let newProduct = {
+       let newProduct = {
         "id": req.body.id,
         "image": req.body.image,
         "name": req.body.name,
@@ -49,8 +49,11 @@ let productsController = {
         "featured": req.body.featured,
         "marca": req.body.marca,
         "categories": req.body.categories
-      };
+       };
+       console.log(newProduct);
       //guardarla
+      let newProductJSON = JSON.stringify(newProduct);
+      fs.appendFileSync('products.json', newProductJSON);
 
       res.redirect("/products/edicion");
 
