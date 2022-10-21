@@ -10,6 +10,18 @@ Cada uno de los integrantes se comprometión a buscar fuentes de estudio para ah
 
 Adcionalmente, se propuso desarrollar de nuevo un diagrama de flujo para tener una metodología y orden más claro para implementar este sprint.
 
+## Semana 2
+
+Se estuvo avanzando conjuntamente en cada una de las entregas, pero realmente se han tenido varias dificultades en el proceso, algunos han tenido inconvenientes personales que les ha impedido avanzar como se debería, también se han tenido inconvenientes en los temas que se deben desarrollar, ya que este tema ha sido complejo de entender.  Cada uno de los integrantes del equipo se ha comprometido a repasar los temas y buscar otros medios para entenderlos.
+
+## Semana 3
+
+Las dificultades en los temas persiste, el equipo se ha estado reuniendo para avanzar en el proyecto de forma conjunta, pero esto hace que no se avance de la manera deseada, ya que se están cargando la mayor parte de las responsabilidades a las personas que más entienden el tema.
+
+Al final se decidió tratar de avanzar con los que se puedan reunir, que avacen en lo que se pueda y en caso de dificultades buscar ayuda externa.
+
+Este sprint ha permitido trabajar más en equipo y reconocer las fortalezas y debilidades de cada uno.
+
 
 # weekly sprint 3
 
