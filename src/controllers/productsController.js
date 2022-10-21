@@ -37,6 +37,27 @@ let productsController = {
       let productDetail = [{"image": "empty.png"}];
         res.render('products/crear',{productDetail});
     },
+    crearProducto: (req, res) => {
+       let newProduct = {
+        "id": req.body.id,
+        "image": req.body.image,
+        "name": req.body.name,
+        "price": req.body.price,
+        "description": req.body.description,
+        "collection": req.body.collection,
+        "collectionDescription": req.body.collectionDescription,
+        "featured": req.body.featured,
+        "marca": req.body.marca,
+        "categories": req.body.categories
+       };
+       console.log(newProduct);
+      //guardarla
+      let newProductJSON = JSON.stringify(newProduct);
+      fs.appendFileSync('products.json', newProductJSON);
+
+      res.redirect("/products/edicion");
+
+    },
     editar: (req, res) => { //vista crear - para editar producto existente.
       let idProducto = req.params.id;
       let productDetail =  products.filter(product =>(product.id==idProducto));
