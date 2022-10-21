@@ -31,6 +31,12 @@ let productsController = {
       let productDetail =  products.filter(product =>(product.id==idProducto));
         res.render('products/producto',{productDetail});
     },
+    // thermal: (req, res) => {
+    //   // let collectionName =  products.filter(product =>(product.collection==collection));
+    //   // res.render('products/producto',{collectionName});
+    //   let brand =  products.filter(product =>(product.marca=="Thermal"));
+    //   res.render('products/brands',{brand});
+    // },
     //---------------------------------------------------
     //---------------------------------------------------
     crear: (req, res) => { //vista crear - para crear producto nuevo.
@@ -50,13 +56,33 @@ let productsController = {
         "marca": req.body.marca,
         "categories": req.body.categories
        };
-       console.log(newProduct);
+
       //guardarla
-      // let newProductJSON = JSON.stringify(newProduct);
-      products.push(newProduct);
-      let productsJson = JSON.stringify(products);
-      fs.writeFileSync('products.json', productsJson);
+      //leer lo que ya hay
+      let productsJson = fs.readFileSync('products.json',{encoding: 'utf-8'});
+      let newProducts; 
+      //se valida si tiene o no info
+      if(productsJson == ""){
+        newProducts = [];
+      }else{
+        newProducts = JSON.parse(productsJson);//Se descomprime
+      }
+
+      newProducts.push(newProduct);//Se agrega la información
+
+      //Volver a convertir a archivo JSON
+      productsJSON = JSON.stringify(newProducts);
+      //Se vuelve a guardar la info-se sobrescribe
+      fs.writeFileSync('products.json', productsJSON)
+
       res.redirect("/products/edicion");
+
+      // let newProductJSON = JSON.stringify(newProduct);
+      // products.push(newProduct);
+      // let productsJson = JSON.stringify(products);
+      // fs.appendFileSync('products.json', productsJson);
+      // fs.readFileSync('products.json',{encoding: 'utf-8'})//leer
+      // res.redirect("/products/edicion");
 
     },
     editar: (req, res) => { //vista crear - para editar producto existente.
