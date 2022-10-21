@@ -57,7 +57,7 @@
     "collectionDescription": "lorem",
     "featured": false,
     "marca": "original",
-    "categories": "Unisex" 
+    "categories": "Unisex"
   },
 
 
@@ -98,10 +98,10 @@
     "categories": "Unisex"
   },
 
-  
+
   {
     "id": 9,
-    "image": "9.jpg",
+    "image": "9.png",
     "name": "Camiseta Oversize",
     "price": "60000",
     "description": "Camiseta Oversize Teal Basics",
@@ -113,7 +113,7 @@
   },
   {
     "id": 10,
-    "image": "10.jpg",
+    "image": "10.png",
     "name": "Camibuso básico",
     "price": "75000",
     "description": "Camibuso básico Teal Basics",
@@ -125,7 +125,7 @@
   },
   {
     "id": 11,
-    "image": "11.jpg",
+    "image": "11.png",
     "name": "Short básico",
     "price": "65000",
     "description": "Short básico Teal Basics",
@@ -137,7 +137,7 @@
   },
   {
     "id": 12,
-    "image": "12.jpg",
+    "image": "12.png",
     "name": "Hoddie básico",
     "price": "105000",
     "description": "Hoddie básico Teal Basics",
@@ -149,7 +149,7 @@
   },
   {
     "id": 13,
-    "image": "13.jpg",
+    "image": "13.png",
     "name": "Sudadera básica",
     "price": "110000",
     "description": "Sudadera básica Teal Basics",
@@ -161,7 +161,7 @@
   },
   {
     "id": 14,
-    "image": "14.jpg",
+    "image": "14.png",
     "name": "Crop top básico",
     "price": "55000",
     "description": "Crop top básico Teal Basics",
