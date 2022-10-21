@@ -34,24 +34,13 @@ let productsController = {
     //---------------------------------------------------
     //---------------------------------------------------
     crear: (req, res) => { //vista crear - para crear producto nuevo.
-      let productDetail = [
-        {"id": null,
-    "name": null,
-    "price": null,
-    "description": null,
-    "colectionDescription": null,
-    "categories": null,
-    "featured": false,
-    "marca": null,
-    "image": "empty.png"
-      }
-      ];
+      let productDetail = [{"image": "empty.png"}];
         res.render('products/crear',{productDetail});
     },
     editar: (req, res) => { //vista crear - para editar producto existente.
       let idProducto = req.params.id;
       let productDetail =  products.filter(product =>(product.id==idProducto));
-        res.render('products/crear',{productDetail});
+        res.render('products/editar',{productDetail});
     },
 }
 

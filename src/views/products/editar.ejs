@@ -45,6 +45,7 @@
           name="NameProduct"
           required
           class="create_input"
+          value="<%=productDetail[0].name%>"
         /><span class="barra"></span>
         <label class="register-label">Nombre del producto</label>
       </div>
@@ -60,6 +61,7 @@
           name="description"
           required
           class="create_input"
+          value="<%=productDetail[0].description%>"
         /><span class="barra"></span>
         <label class="register-label">Descripción del producto</label>
       </div>
@@ -69,6 +71,7 @@
           name="collection"
           required
           class="create_input"
+          value="<%=productDetail[0].collection%>"
         /><span class="barra"></span>
         <label class="register-label">Colección</label>
       </div>
@@ -78,6 +81,7 @@
           name="collectionDescription"
           required
           class="create_input"
+          value="<%=productDetail[0].collectionDescription%>"
         /><span class="barra"></span>
         <label class="register-label">Descripción de la colección</label>
       </div>
@@ -87,6 +91,7 @@
           name="marca"
           required
           class="create_input"
+          value="<%=productDetail[0].marca%>"
         /><span class="barra"></span>
         <label class="register-label">Marca</label>
       </div>
@@ -128,7 +133,10 @@
         </div>
       </section>
       <div class="checkbox_create">
-        <input type="checkbox" name="prductoDestacado">
+        <input type="checkbox" name="prductoDestacado" value="destacado" <%if(productDetail[0].featured==true){%>checked <%}%>
+
+
+        >
         <label for="productoDestacado">Producto destacado</label>
       </div>
       <button class="enter-btn" type="submit" id="enter">Agregar producto</button>
