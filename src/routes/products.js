@@ -29,6 +29,7 @@ router.get('/edicion',productsController.edicionTodos);
 router.get('/crear',productsController.crear); //acceder
 router.post('/crear',productsController.crearProducto);
 router.get('/editar/:id',productsController.editar);
+router.delete('/delete/:id',productsController.delete)
 //router.put('/editar/:id',productsController.editar);
 //router.post('/crear', productsController.crear); //crear-producto
 //sprint 4

@@ -52,9 +52,10 @@ let productsController = {
        };
        console.log(newProduct);
       //guardarla
-      let newProductJSON = JSON.stringify(newProduct);
-      fs.appendFileSync('products.json', newProductJSON);
-
+      // let newProductJSON = JSON.stringify(newProduct);
+      products.push(newProduct);
+      let productsJson = JSON.stringify(products);
+      fs.writeFileSync('products.json', productsJson);
       res.redirect("/products/edicion");
 
     },
@@ -63,6 +64,13 @@ let productsController = {
       let productDetail =  products.filter(product =>(product.id==idProducto));
         res.render('products/editar',{productDetail});
     },
+    delete:(req, res) =>{
+      let idProducto = req.params.id;
+      let newProducts =  products.filter(product =>(product.id!=idProducto));
+      let productsJson = JSON.stringify(newProducts);
+      fs.writeFileSync('products.json', productsJson);
+      res.render('products/edicion', {products:newProducts});
+    }
 }
 
 module.exports = productsController;
