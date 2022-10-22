@@ -45,7 +45,7 @@ let productsController = {
     },
     crearProducto: (req, res) => {
        let newProduct = {
-        "id": req.body.id || products.length+1 ,
+        "id": req.body.id || products.length+2 ,
         "image": req.body.image,
         "name": req.body.name,
         "price": req.body.price,
@@ -71,9 +71,9 @@ let productsController = {
       products.push(newProduct);//Se agrega la información
 
       //Volver a convertir a archivo JSON
-        productsJSON = JSON.stringify(products);
+      //  productsJSON = JSON.stringify(products);
       //Se vuelve a guardar la info-se sobrescribe
-        fs.writeFileSync('products.json', productsJSON)
+      //  fs.writeFileSync('products.json', productsJSON)
 
         res.render('products/edicion', {products});
         // res.redirect("/products/edicion");
