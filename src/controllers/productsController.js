@@ -45,7 +45,7 @@ let productsController = {
     },
     crearProducto: (req, res) => {
        let newProduct = {
-        "id": req.body.id,
+        "id": req.body.id || products.length+1 ,
         "image": req.body.image,
         "name": req.body.name,
         "price": req.body.price,
@@ -59,23 +59,24 @@ let productsController = {
 
       //guardarla
       //leer lo que ya hay
-      let productsJson = fs.readFileSync('products.json',{encoding: 'utf-8'});
-      let newProducts; 
-      //se valida si tiene o no info
-      if(productsJson == ""){
-        newProducts = [];
-      }else{
-        newProducts = JSON.parse(productsJson);//Se descomprime
-      }
+      // let productsJson = fs.readFileSync('products.json',{encoding: 'utf-8'});
+      // let newProducts;
+      // //se valida si tiene o no info
+      // if(productsJson == ""){
+      //   newProducts = [];
+      // }else{
+      //   newProducts = JSON.parse(productsJson);//Se descomprime
+      // }
 
-      newProducts.push(newProduct);//Se agrega la información
+      products.push(newProduct);//Se agrega la información
 
       //Volver a convertir a archivo JSON
-      productsJSON = JSON.stringify(newProducts);
+        productsJSON = JSON.stringify(products);
       //Se vuelve a guardar la info-se sobrescribe
-      fs.writeFileSync('products.json', productsJSON)
+        fs.writeFileSync('products.json', productsJSON)
 
-      res.redirect("/products/edicion");
+        res.render('products/edicion', {products});
+        // res.redirect("/products/edicion");
 
       // let newProductJSON = JSON.stringify(newProduct);
       // products.push(newProduct);
@@ -92,10 +93,12 @@ let productsController = {
     },
     delete:(req, res) =>{
       let idProducto = req.params.id;
-      let newProducts =  products.filter(product =>(product.id!=idProducto));
-      let productsJson = JSON.stringify(newProducts);
-      fs.writeFileSync('products.json', productsJson);
-      res.render('products/edicion', {products:newProducts});
+      let product =  products.find(product =>product.id==idProducto);
+      let indexProduct = products.indexOf(product);
+      products.splice(indexProduct, 1)
+      // let productsJson = JSON.stringify(products);
+      // fs.writeFileSync('products.json', productsJson);
+        res.render('products/edicion', {products});
     }
 }
 

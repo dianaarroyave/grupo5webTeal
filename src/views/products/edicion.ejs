@@ -42,8 +42,8 @@
                             <div class="edicionPrice">
                                 <p class="price">$<%= products[i].price %>
                                 </p>
-                                <form action="/products/delete/<%=products[i].id%>?_method=DELETE" method="POST">
-                                    <button class="edicionB"><i class="fa-solid fa-trash-can"></i> Eliminar</button>
+                                <form action="/products/delete/<%=products[i].id%>?_method=DELETE" method="POST" >
+                                    <button class="edicionB" type="submit"><i class="fa-solid fa-trash-can"></i> Eliminar</button>
                                 </form>
                             </div>
                         </article>
