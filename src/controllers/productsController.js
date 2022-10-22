@@ -88,8 +88,37 @@ let productsController = {
     },
     editar: (req, res) => { //vista crear - para editar producto existente.
       let idProducto = req.params.id;
-      let productDetail =  products.filter(product =>(product.id==idProducto));
+      let productDetail =  products.filter(product =>(product.id == idProducto));
         res.render('products/editar',{productDetail});
+    },
+    editarProducto: (req, res) => {
+
+      // console.info(productDetail);
+      let idProducto = req.params.id;
+      let productDetail =  products.find(product =>(product.id == idProducto));
+      console.info(productDetail);
+
+      let indexProduct = products.indexOf(productDetail);
+      console.info(idProducto);
+      console.info(indexProduct);
+
+      products[0].name = req.body.name;
+      products[0].price = req.body.price;
+
+      //res.redirect('/products/edicion');
+      res.render('products/edicion',{products})
+
+
+      // "image": req.body.image,
+      // "name": req.body.name,
+      // "price": req.body.price,
+      // "description": req.body.description,
+      // "collection": req.body.collection,
+      // "collectionDescription": req.body.collectionDescription,
+      // "featured": req.body.featured,
+      // "marca": req.body.marca,
+      // "categories": req.body.categories
+
     },
     delete:(req, res) =>{
       let idProducto = req.params.id;
@@ -98,7 +127,9 @@ let productsController = {
       products.splice(indexProduct, 1)
       // let productsJson = JSON.stringify(products);
       // fs.writeFileSync('products.json', productsJson);
-        res.render('products/edicion', {products});
+      //se realizó el cambio (res.render(ruta, {products}))--------
+        res.redirect('../edicion');
+        //--------------------------
     }
 }
 

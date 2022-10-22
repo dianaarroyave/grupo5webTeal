@@ -3,7 +3,7 @@
 <body>
   <%- include('../partials/header') %>
   <main class="template-create-main">
-    <form class="form" action="/src/data/products.json?_method=PUT" method="POST">
+    <form class="form" method="POST" action="/products/editar?_method=PUT">
       <h2 class="title">Producto</h2>
       <div class="campo">
         <input
@@ -13,7 +13,6 @@
           id="create_img"
           name="name"
           multiple
-          required
         /><span class="barra"></span>
         <div class="container-img">
           <img
@@ -42,7 +41,7 @@
       <div class="campo">
         <input
           type="text"
-          name="NameProduct"
+          name="name"
           required
           class="create_input"
           value="<%=productDetail[0].name%>"
