@@ -7,7 +7,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
 
 let mainController = {
     home: (req, res) => {
-      let featuredProducts =  products.filter(product =>(product.featured==true));
+      let featuredProducts =  products.filter(product =>((product.featured==true) || (product.featured=="on")));
         res.render('products/home',{featuredProducts});
     },
     corporativo: (req, res) => {

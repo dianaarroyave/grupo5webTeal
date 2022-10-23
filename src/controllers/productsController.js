@@ -28,6 +28,9 @@ let productsController = {
     },
     //3 metodos para editar (1)todas las marcas (2)original (3)basicas-----
     edicionTodos: (req,res) => {
+      //linea para refrescar y ver los productos que están en el json y no en la memoria temporal---
+      const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
+      //--------------------------------------------------------------------------------------------
       res.render('products/edicion',{products});
     },
     //---------------------------------------------------------------------
@@ -80,7 +83,12 @@ let productsController = {
       //Se vuelve a guardar la info-se sobrescribe
       //  fs.writeFileSync('products.json', productsJSON)
 
-        res.render('products/edicion', {products});
+      //sobreescritura del JSON
+      let productsJSON = JSON.stringify(products);
+      fs.writeFileSync(productsFilePath,productsJSON);
+      res.redirect('/products/edicion');
+
+      //res.render('products/edicion', {products});
         // res.redirect("/products/edicion");
 
       // let newProductJSON = JSON.stringify(newProduct);
@@ -100,12 +108,14 @@ let productsController = {
     editarProducto: (req, res) => {
       let idProducto = idIndex;
       let productDetail =  products.find(product =>(product.id == idProducto));
-      console.info(productDetail);
       let indexProduct = products.indexOf(productDetail);
       products[indexProduct].name = req.body.name;
       products[indexProduct].price = req.body.price;
-      //res.redirect('/products/edicion');
-      res.render('products/edicion',{products})
+      //sobreescritura del JSON
+      let productsJSON = JSON.stringify(products);
+      fs.writeFileSync(productsFilePath,productsJSON);
+      res.redirect('/products/edicion');
+      //res.render('products/edicion',{products})
       // "image": req.body.image,
       // "name": req.body.name,
       // "price": req.body.price,
@@ -124,7 +134,14 @@ let productsController = {
       // let productsJson = JSON.stringify(products);
       // fs.writeFileSync('products.json', productsJson);
       //se realizó el cambio (res.render(ruta, {products}))--------
-        res.redirect('../edicion');
+
+      //sobreescritura del JSON
+      let productsJSON = JSON.stringify(products);
+      fs.writeFileSync(productsFilePath,productsJSON);
+      res.redirect('/products/edicion');
+
+
+        //res.redirect('../edicion');
         //--------------------------
     }
 }
