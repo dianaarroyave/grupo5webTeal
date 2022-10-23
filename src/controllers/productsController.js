@@ -109,8 +109,10 @@ let productsController = {
       let idProducto = idIndex;
       let productDetail =  products.find(product =>(product.id == idProducto));
       let indexProduct = products.indexOf(productDetail);
+      //edicion de producto-----------------------------
       products[indexProduct].name = req.body.name;
       products[indexProduct].price = req.body.price;
+      //------------------------------------------------
       //sobreescritura del JSON
       let productsJSON = JSON.stringify(products);
       fs.writeFileSync(productsFilePath,productsJSON);
