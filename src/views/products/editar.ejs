@@ -3,7 +3,8 @@
 <body>
   <%- include('../partials/header') %>
   <main class="template-create-main">
-    <form class="form" method="POST" action="/products/editar?_method=PUT">
+    <form class="form" method="POST" action="/products/editar?_method=PUT" enctype="multipart/form-data"
+    >
       <h2 class="title">Producto</h2>
       <div class="campo">
         <input
@@ -11,7 +12,7 @@
           accept="image/png.image/jpeg"
           type="file"
           id="create_img"
-          name="image"
+          name="productImage"
           multiple
         /><span class="barra"></span>
         <div class="container-img">
@@ -125,7 +126,6 @@
           <input
             type="number"
             name="NameProduct"
-            required
             class="create_input"
           /><span class="barra"></span>
           <label class="register-label">Cantidad</label>

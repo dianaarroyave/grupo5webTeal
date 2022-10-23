@@ -1,6 +1,7 @@
 //requerir fs y path
 let fs = require('fs');
 let path = require('path');
+
 //requerir archivo JSON de productos
 const productsFilePath = path.join(__dirname,'../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
@@ -54,7 +55,7 @@ let productsController = {
     crearProducto: (req, res) => {
        let newProduct = {
         "id": req.body.id || products.length+2 ,
-        "image": req.body.image,
+        "image": req.file.filename,
         "name": req.body.name,
         "price": req.body.price,
         "description": req.body.description,
@@ -110,6 +111,7 @@ let productsController = {
       let productDetail =  products.find(product =>(product.id == idProducto));
       let indexProduct = products.indexOf(productDetail);
       //edicion de producto-----------------------------
+      products[indexProduct].image = req.file.filename;
       products[indexProduct].name = req.body.name;
       products[indexProduct].price = req.body.price;
       products[indexProduct].description = req.body.description;

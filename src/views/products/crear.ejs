@@ -3,7 +3,8 @@
 <body>
   <%- include('../partials/header') %>
   <main class="template-create-main">
-    <form class="form" action="/products/crear" method="POST" >
+    <form class="form" action="/products/crear" method="POST" enctype="multipart/form-data"
+    >
       <h2 class="title">Producto</h2>
       <div class="campo">
         <input
@@ -11,7 +12,7 @@
           accept="image/png.image/jpeg"
           type="file"
           id="create_img"
-          name="image"
+          name="productImage"
           multiple
           required
         /><span class="barra"></span>
@@ -67,7 +68,7 @@
       <div class="campo">
         <input
           type="text"
-          name="colletion"
+          name="collection"
           required
           class="create_input"
         /><span class="barra"></span>
@@ -93,9 +94,9 @@
       </div>
 
       <div class="campo">
-        <select name="category" class="register_document-select">
+        <select name="categories" class="register_document-select">
           <option>Categoría</option>
-          <option value="men">Unisex</option>
+          <option value="Unisex">Unisex</option>
           <option value="men">Hombre</option>
           <option value="women">Mujer</option>
         </select>
@@ -121,8 +122,6 @@
         <div class="campo_quantity">
           <input
             type="number"
-
-            required
             class="create_input"
           /><span class="barra"></span>
           <label class="register-label">Cantidad</label>
