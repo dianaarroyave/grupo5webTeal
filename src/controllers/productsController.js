@@ -40,14 +40,6 @@ let productsController = {
       let productDetail =  products.filter(product =>(product.id==idProducto));
         res.render('products/producto',{productDetail});
     },
-    // thermal: (req, res) => {
-    //   // let collectionName =  products.filter(product =>(product.collection==collection));
-    //   // res.render('products/producto',{collectionName});
-    //   let brand =  products.filter(product =>(product.marca=="Thermal"));
-    //   res.render('products/brands',{brand});
-    // },
-    //---------------------------------------------------
-    //---------------------------------------------------
     crear: (req, res) => { //vista crear - para crear producto nuevo.
       let productDetail = [{"image": "empty.png"}];
         res.render('products/crear',{productDetail});
@@ -65,40 +57,11 @@ let productsController = {
         "marca": req.body.marca,
         "categories": req.body.categories
        };
-
-      //guardarla
-      //leer lo que ya hay
-      // let productsJson = fs.readFileSync('products.json',{encoding: 'utf-8'});
-      // let newProducts;
-      // //se valida si tiene o no info
-      // if(productsJson == ""){
-      //   newProducts = [];
-      // }else{
-      //   newProducts = JSON.parse(productsJson);//Se descomprime
-      // }
-
       products.push(newProduct);//Se agrega la información
-
-      //Volver a convertir a archivo JSON
-      //  productsJSON = JSON.stringify(products);
-      //Se vuelve a guardar la info-se sobrescribe
-      //  fs.writeFileSync('products.json', productsJSON)
-
       //sobreescritura del JSON
       let productsJSON = JSON.stringify(products);
       fs.writeFileSync(productsFilePath,productsJSON);
       res.redirect('/products/edicion');
-
-      //res.render('products/edicion', {products});
-        // res.redirect("/products/edicion");
-
-      // let newProductJSON = JSON.stringify(newProduct);
-      // products.push(newProduct);
-      // let productsJson = JSON.stringify(products);
-      // fs.appendFileSync('products.json', productsJson);
-      // fs.readFileSync('products.json',{encoding: 'utf-8'})//leer
-      // res.redirect("/products/edicion");
-
     },
     editar: (req, res) => { //vista crear - para editar producto existente.
       let idProducto = req.params.id;
@@ -111,7 +74,9 @@ let productsController = {
       let productDetail =  products.find(product =>(product.id == idProducto));
       let indexProduct = products.indexOf(productDetail);
       //edicion de producto-----------------------------
-      products[indexProduct].image = req.file.filename;
+      if(req.file!==undefined){
+        products[indexProduct].image = req.file.filename;
+      };
       products[indexProduct].name = req.body.name;
       products[indexProduct].price = req.body.price;
       products[indexProduct].description = req.body.description;
@@ -125,34 +90,17 @@ let productsController = {
       let productsJSON = JSON.stringify(products);
       fs.writeFileSync(productsFilePath,productsJSON);
       res.redirect('/products/edicion');
-      //res.render('products/edicion',{products})
-      // "image": req.body.image,
-      // "name": req.body.name,
-      // "price": req.body.price,
-      // "description": req.body.description,
-      // "collection": req.body.collection,
-      // "collectionDescription": req.body.collectionDescription,
-      // "featured": req.body.featured,
-      // "marca": req.body.marca,
-      // "categories": req.body.categories
     },
     delete:(req, res) =>{
       let idProducto = req.params.id;
       let product =  products.find(product =>product.id==idProducto);
       let indexProduct = products.indexOf(product);
       products.splice(indexProduct, 1)
-      // let productsJson = JSON.stringify(products);
-      // fs.writeFileSync('products.json', productsJson);
-      //se realizó el cambio (res.render(ruta, {products}))--------
 
       //sobreescritura del JSON
       let productsJSON = JSON.stringify(products);
       fs.writeFileSync(productsFilePath,productsJSON);
       res.redirect('/products/edicion');
-
-
-        //res.redirect('../edicion');
-        //--------------------------
     }
 }
 
