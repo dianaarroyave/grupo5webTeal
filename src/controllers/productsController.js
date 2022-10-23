@@ -112,6 +112,12 @@ let productsController = {
       //edicion de producto-----------------------------
       products[indexProduct].name = req.body.name;
       products[indexProduct].price = req.body.price;
+      products[indexProduct].description = req.body.description;
+      products[indexProduct].collection = req.body.collection;
+      products[indexProduct].collectionDescription = req.body.collectionDescription;
+      products[indexProduct].featured = req.body.featured;
+      products[indexProduct].marca = req.body.marca;
+      products[indexProduct].categories = req.body.categories;
       //------------------------------------------------
       //sobreescritura del JSON
       let productsJSON = JSON.stringify(products);
