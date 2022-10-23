@@ -17,38 +17,19 @@
 
                 <!-- ------------Información de producto-------------- -->
 
-                <section class="productDescription">
-                    <!-- <div class="carousel">
-                <div class="big">
-                    <img src="/images/camisetaThermal.png" alt="image1" class="img">
-                    <img src="/images/back.png" alt="image2" class="img">
-                    <img src="/images/front.png" alt="image3" class="img">
-                    <img src="/images/side.png" alt="image4" class="img">
-                    <img src="/images/tealFront.png" alt="image5" class="img">
-                </div>
-
-                <ul class="points">
-                    <li class="point"></li>
-                    <li class="point"></li>
-                    <li class="point"></li>
-                    <li class="point"></li>
-                    <li class="point"></li>
-                </ul>
-            </div> -->
+                <div class="productDescription">
                     <div class="productsImages">
-                        <img class="productImage1" src="/images/camisetaThermal.png" alt="Camiseta Thermal">
-                        <img class="productImage2" src="/images/front.png" alt="Thermal front">
+                        <img class="productImage1" src="/images/<%=productDetail[0].image%>" alt="producto detalle">
+                        <!-- <img class="productImage2" src="/images/front.png" alt="Thermal front">
                         <img class="productImage3" src="/images/back.png" alt="Thermal back">
-                        <img class="productImage4" src="/images/side.png" alt="Thermal side">
+                        <img class="productImage4" src="/images/side.png" alt="Thermal side"> -->
                     </div>
 
                     <div class="descriptionSection">
-                        <h2 class="productTittle">Camiseta Thermal</h2>
-                        <h3 class="price">$80.000</h3>
+                        <h2 class="productTittle"><%= productDetail[0].name %></h2>
+                        <h3 class="price">$<%= productDetail[0].price %></h3>
                         <h3 class="description">Descripción del producto</h3>
-                        <p class="textDescription">Camiseta en algodón peruano, con estampado delantero y detalles SIDE
-                            BACK
-                            FRONT</p>
+                        <p class="textDescription"><%= productDetail[0].description %></p>
                         <div class="color">
                             <p class="color1">PP</p>
                             <p class="color2">PP</p>
@@ -66,13 +47,9 @@
                         <br>
                         <hr class="line">
                         <h3 class="collectionInformation">Acerca de esta colección</h3>
-                        <p class="textCollection">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi iste
-                            obcaecati
-                            omnis excepturi tempore. Incidunt quas laudantium quasi autem! Placeat, reprehenderit unde
-                            quae
-                            assumenda aperiam voluptatibus labore enim exercitationem neque?</p>
+                        <p class="textCollection"><%= productDetail[0].collectionDescription %></p>
                     </div>
-                </section>
+                </div>
 
                 <!-- ------------Productos relacionados-------------- -->
 

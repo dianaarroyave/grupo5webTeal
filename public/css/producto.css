@@ -39,8 +39,25 @@ main {
 a {
     color: var(--negro);
 }
+
+.productDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.productsImages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+
 .productImage1 {
-    width: 100%;
+    width: 90vw !important;
 }
 
 .productImage2 {
@@ -53,54 +70,6 @@ a {
 
 .productImage4 {
     display:none;
-}
-
-/* 
-.carousel {
-    width: 90%;
-    background-color: lightblue;
-}
-
-.carousel .big{
-    width: 200%;
-    background-color: orange;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.carousel .img {
-    width: calc(100% / 5);
-    background-color: lime;
-}
-
-.carousel .points {
-    width: 100%;
-    background-color: red;
-    padding: 1em;
-    list-style: none;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.carousel .point {
-    width: 1em;
-    height: 1em;
-    background-color: blue;
-    margin: 1em;
-} */
-
-.productDescription {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 2rem;
-    margin-right: 2rem;
 }
 
 .productTittle {
@@ -229,10 +198,6 @@ a {
     margin-bottom: 0.8rem;
     font-size: var(--lgMobile);
 }
-
-.img-card{
-    width: 90%;
-}
 .EndImage{
     width: 100%;
 }
@@ -243,8 +208,8 @@ a {
 @media (min-width: 500px){
 
     .productRoute {
-        margin-left: 25%;
-        margin-right: 25%;
+        margin-left: 20%;
+        margin-right: 20%;
         margin-top: 1.5rem;
     }
 
@@ -253,6 +218,10 @@ a {
         margin: auto;
     }
 
+    .productImage1 {
+      width: 70vw !important;
+  }
+
     .productDescription {
         display: flex;
         flex-direction: column;
@@ -260,7 +229,6 @@ a {
         margin-left: 3.5rem;
         margin-right: 3.5rem;
     }
-
 }
 
 /* Media 768 */
@@ -281,10 +249,10 @@ a {
         display: flex;
         flex-direction: column;
         align-content: space-between;
-        
+
     }
     .productImage1 {
-        width: 70%;
+        width: 50vw !important;
         margin: auto;
     }
 
@@ -294,14 +262,14 @@ a {
         margin: auto;
         margin-bottom: 0.5rem;
     }
-    
+
     .productImage3 {
         display: flex;
         width: 40%;
         margin: auto;
         margin-bottom: 0.5rem;
     }
-    
+
     .productImage4 {
         display: flex;
         width: 40%;
@@ -363,7 +331,7 @@ a {
     }
 
     .productImage1 {
-        width: 60%;
+        width: 40vw !important;
         margin: auto;
     }
 
@@ -373,14 +341,14 @@ a {
         margin: auto;
         margin-bottom: 0.5rem;
     }
-    
+
     .productImage3 {
         display: flex;
         width: 30%;
         margin: auto;
         margin-bottom: 0.5rem;
     }
-    
+
     .productImage4 {
         display: flex;
         width: 30%;
@@ -395,5 +363,4 @@ a {
         margin-left: 3rem;
         margin-right: 9rem;
     }
-
-}
+  }

@@ -1,16 +1,16 @@
 <%- include('../partials/head') %>
 <link rel="stylesheet" href="/public/css/home.css">
     <body>
-        
+
             <!-- ------------aquí está contenida la imagen principal-------------- -->
             <section class="ImageContainer">
                 <%- include('../partials/header') %>
                 <div class="image">
                     <nav classs="principal">
                         <ul class="ChooseCollection">
-                            <li><a class="collections" href="/products/original">TEAL <br> ORIGINAL</a></li>
+                            <li><a class="collections" href="/products/brandOriginal">TEAL <br> ORIGINAL</a></li>
                             <li><a class="collections" href="/corporativo">TEAL <br> GROUP</a></li>
-                            <li><a class="collections" href="/products/basics">TEAL <br> BASICS</a></li>
+                            <li><a class="collections" href="/products/brandBasics">TEAL <br> BASICS</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -24,94 +24,18 @@
                     </h2>
                 </div>
                 <div class="cards">
-                    <a class="plink" href="/products/producto">
+                  <%for(let i=0;i<featuredProducts.length;i++){%>
+                    <a class="plink" href="/products/producto/<%=featuredProducts[i].id%>">
                         <div class="card">
                             <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
-                            <img class="img-card" src="/images/1.png" alt="Prenda Vestir">
+                            <img class="img-card" src="/images/<%=featuredProducts[i].image%>" alt="Prenda Vestir">
                             <div class="description">
-                                <p class="price">$80.000</p>
-                                <p class="product">Camiseta Thermal</p>
+                              <p class="price">$<%= featuredProducts[i].price %></p>
+                                <p class="product"><%=featuredProducts[i].name%></p>
                             </div>
                         </div>
                     </a>
-
-                    <a class="plink" href="/products/producto">
-                        <div class="card">
-                            <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
-                            <img class="img-card" src="/images/2.png" alt="Prenda Vestir">
-                            <div class="description">
-                                <p class="price">$115.000</p>
-                                <p class="product">Sudadera Thermal</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a class="plink" href="/products/producto">
-                        <div class="card">
-                            <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
-                            <img class="img-card" src="/images/3.png" alt="Prenda Vestir">
-                            <div class="description">
-                                <p class="price">$100.000</p>
-                                <p class="product">Hoodie Thermal</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a class="plink" href="/products/producto">
-                        <div class="card">
-                            <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
-                            <img class="img-card" src="/images/4.png" alt="Prenda Vestir">
-                            <div class="description">
-                                <p class="price">$100.000</p>
-                                <p class="product">Crewneck Thermal</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a class="plink" href="/products/producto">
-                        <div class="card">
-                            <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
-                            <img class="img-card" src="/images/5.png" alt="Prenda Vestir">
-                            <div class="description">
-                                <p class="price">$100.000</p>
-                                <p class="product">Pañoleta Thermal</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a class="plink" href="/products/producto">
-                        <div class="card">
-                            <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
-                            <img class="img-card" src="/images/6.png" alt="Prenda Vestir">
-                            <div class="description">
-                                <p class="price">$100.000</p>
-                                <p class="product">Camiseta Negra</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a class="plink" href="/products/producto">
-                        <div class="card">
-                            <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
-                            <img class="img-card" src="/images/7.png" alt="Prenda Vestir">
-                            <div class="description">
-                                <p class="price">$100.000</p>
-                                <p class="product">Camiseta Negra</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a class="plink" href="/products/producto">
-                        <div class="card">
-                            <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
-                            <img class="img-card" src="/images/8.png" alt="Prenda Vestir">
-                            <div class="description">
-                                <p class="price">$100.000</p>
-                                <p class="product">Camiseta Negra</p>
-                            </div>
-                        </div>
-                    </a>
-
+                    <%}%>
                 </div>
             </section>
             <%- include('../partials/footerHome') %>
