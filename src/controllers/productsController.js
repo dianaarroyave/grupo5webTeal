@@ -5,6 +5,11 @@ let path = require('path');
 const productsFilePath = path.join(__dirname,'../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
 
+
+//inicializar variable indice para la edicion de produtos--------
+let idIndex = 0;
+//---------------------------------------------------------------
+
 let productsController = {
     // ESTATIC
     carrito: (req, res) => {
@@ -88,27 +93,19 @@ let productsController = {
     },
     editar: (req, res) => { //vista crear - para editar producto existente.
       let idProducto = req.params.id;
+      idIndex = idProducto; //para compartir el ID del producto que se va a editar  Y CONSEGUIR EL INDICE DEL ARRAY en (editarProducto)
       let productDetail =  products.filter(product =>(product.id == idProducto));
         res.render('products/editar',{productDetail});
     },
     editarProducto: (req, res) => {
-
-      // console.info(productDetail);
-      let idProducto = req.params.id;
+      let idProducto = idIndex;
       let productDetail =  products.find(product =>(product.id == idProducto));
       console.info(productDetail);
-
       let indexProduct = products.indexOf(productDetail);
-      console.info(idProducto);
-      console.info(indexProduct);
-
-      products[0].name = req.body.name;
-      products[0].price = req.body.price;
-
+      products[indexProduct].name = req.body.name;
+      products[indexProduct].price = req.body.price;
       //res.redirect('/products/edicion');
       res.render('products/edicion',{products})
-
-
       // "image": req.body.image,
       // "name": req.body.name,
       // "price": req.body.price,
@@ -118,7 +115,6 @@ let productsController = {
       // "featured": req.body.featured,
       // "marca": req.body.marca,
       // "categories": req.body.categories
-
     },
     delete:(req, res) =>{
       let idProducto = req.params.id;
