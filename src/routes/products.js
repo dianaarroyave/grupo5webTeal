@@ -6,7 +6,7 @@ const productsController = require('../controllers/productsController');
 
 //implementación de multer para subida de archivos:---------------------
 const storage = multer.diskStorage({
-  destination:(req,file,cb) => {cb(null,path.join(__dirname,'../../public/images'));//areglar ruta
+  destination:(req,file,cb) => {cb(null,path.join(__dirname,'../../public/productImages'));//areglar ruta
   },
   filename: (req,file,cb)=> {
     const newFileName= "product_" + Date.now() + path.extname(file.originalname);
