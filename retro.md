@@ -1,3 +1,34 @@
+# Retrospectiva sprint 4
+
+## ¿Qué se hizo bien?
+
+Se mantuvo la sinergia, el trabajo en equipo y la buena comunicación, que han sido características importantes y consistentes durante todos los sprints. Es un equipo que está presente y dispuesto en todo momento.
+
+A pesar de tener dificultades en el entendimiento de las diferentes temáticas del sprint, para solucionarlo, se buscó ayuda y orientación de personas externos cuando se necesitó.
+
+## ¿Qué se hizo mal?
+
+Se sobrecargó a uno de los compañeros que era el que más entendía del tema, debido a que los demás miembros del equipo no entendían mucho, y eso hizo que esta persona se sintiera cansada y sin tiempo para él mismo.
+
+Se debieron dejar algunas responsabilidades, microtareas, por cada uno de los compañeros, ya que se esperaba resolver en las reuniones grupales y ese fue un error.
+
+Se deben priorizar las actividades, para poder alcanzar los tiempos
+
+## ¿Qué hay que dejar de hacer?
+
+Cargar a un solo compañero con las actividades, realizar únicamente el sprint en reuniones sin microtareas a cada miembro del equipo.
+
+## ¿Qué hay que hacer más?
+
+Se debieron dejar algunas responsabilidades, microtareas, por cada uno de los compañeros.
+
+Planificar mejor el sprint desde el inicio con actividades y fechas claras.
+
+## ¿Qué hay que hacer menos?
+
+Ser menos pasivos y más proactivos, cuando no entendemos un tema.
+
+
 # Retrospectiva sprint 3
 
 ## ¿Qué se hizo bien?
