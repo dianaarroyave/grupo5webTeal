@@ -35,16 +35,16 @@ let productsController = {
       res.render('products/adminProducts',{products});
     },
     //---------------------------------------------------------------------
-    producto: (req, res) => {
+    productDetail: (req, res) => {
       let idProducto = req.params.id;
       let productDetail =  products.filter(product =>(product.id==idProducto));
-        res.render('products/producto',{productDetail});
+        res.render('products/productDetail',{productDetail});
     },
-    crear: (req, res) => { //vista crear - para crear producto nuevo.
+    newProduct: (req, res) => { //vista newProduct - para newProduct producto nuevo.
       let productDetail = [{"image": "empty.png"}];
-        res.render('products/crear',{productDetail});
+        res.render('products/newProduct',{productDetail});
     },
-    crearProducto: (req, res) => {
+    createProduct: (req, res) => {
        let newProduct = {
         "id": req.body.id || products.length+2 ,
         "image": req.file.filename,
@@ -63,13 +63,13 @@ let productsController = {
       fs.writeFileSync(productsFilePath,productsJSON);
       res.redirect('/products/adminProducts');
     },
-    editar: (req, res) => { //vista crear - para editar producto existente.
+    productEdition: (req, res) => { //vista crear - para productEdition producto existente.
       let idProducto = req.params.id;
-      idIndex = idProducto; //para compartir el ID del producto que se va a editar  Y CONSEGUIR EL INDICE DEL ARRAY en (editarProducto)
+      idIndex = idProducto; //para compartir el ID del producto que se va a productEdition  Y CONSEGUIR EL INDICE DEL ARRAY en (editarProducto)
       let productDetail =  products.filter(product =>(product.id == idProducto));
-        res.render('products/editar',{productDetail});
+        res.render('products/productEdition',{productDetail});
     },
-    editarProducto: (req, res) => {
+    editProduct: (req, res) => {
       let idProducto = idIndex;
       let productDetail =  products.find(product =>(product.id == idProducto));
       let indexProduct = products.indexOf(productDetail);

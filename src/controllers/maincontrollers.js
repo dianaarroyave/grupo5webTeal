@@ -16,8 +16,8 @@ let mainController = {
     login: (req, res) => {
         res.render('users/login');
     },
-    registro: (req, res) => {
-        res.render('users/registro');
+    register: (req, res) => {
+        res.render('users/register');
     },
 }
 

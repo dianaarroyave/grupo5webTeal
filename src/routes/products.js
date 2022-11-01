@@ -16,39 +16,18 @@ const storage = multer.diskStorage({
 
 //ejecución de multer
 const upload = multer({storage})
-//----------------------------------------------------------------------
-
-
-//definicion de luharpara almacenar archivos nuevos
-// const storage = multer.diskStorage({
-//   destination:(req,file,cb) => {
-//     cb(null,path.join(__dirname,'/'));//areglar ruta
-//   },
-// filename: (req,file,cb)=> {
-//   const newFileName= date.now + path.extname(file.originalname);
-//   cb(null,newFileName);
-// }
-
-// });
-// //ejecución de multer
-// const upload = multer({storage})
-
 
 //Rutas
 router.get('/brandOriginal',productsController.brandOriginal);
 router.get('/brandBasics',productsController.brandBasics);
-router.get('/producto/:id', productsController.producto);
+router.get('/productDetail/:id', productsController.productDetail);
 router.get('/bag', productsController.bag);
 router.get('/adminProducts',productsController.adminProductsAll);
 //admin-crear
-router.get('/crear',productsController.crear); //acceder
-router.post('/crear',upload.single("productImage"),productsController.crearProducto);
-router.get('/editar/:id',productsController.editar);
-router.put('/editar',upload.single("productImage"),productsController.editarProducto);
-
+router.get('/newProduct',productsController.newProduct); //acceder
+router.post('/newProduct',upload.single("productImage"),productsController.createProduct);
+router.get('/productEdition/:id',productsController.productEdition);
+router.put('/productEdition',upload.single("productImage"),productsController.editProduct);
 router.delete('/delete/:id',productsController.delete)
 
-//router.post('/crear', productsController.crear); //crear-producto
-//sprint 4
-//router.get('/listar', productsController.listarproductos);
 module.exports = router;
