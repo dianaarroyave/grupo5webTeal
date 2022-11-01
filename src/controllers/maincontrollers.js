@@ -10,8 +10,8 @@ let mainController = {
       let featuredProducts =  products.filter(product =>((product.featured==true) || (product.featured=="on")));
         res.render('products/home',{featuredProducts});
     },
-    corporativo: (req, res) => {
-        res.render('products/corporativo');
+    aboutUs: (req, res) => {
+        res.render('products/aboutUs');
     },
     login: (req, res) => {
         res.render('users/login');

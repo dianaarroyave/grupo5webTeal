@@ -38,8 +38,8 @@ const upload = multer({storage})
 router.get('/brandOriginal',productsController.brandOriginal);
 router.get('/brandBasics',productsController.brandBasics);
 router.get('/producto/:id', productsController.producto);
-router.get('/carrito', productsController.carrito);
-router.get('/edicion',productsController.edicionTodos);
+router.get('/bag', productsController.bag);
+router.get('/adminProducts',productsController.adminProductsAll);
 //admin-crear
 router.get('/crear',productsController.crear); //acceder
 router.post('/crear',upload.single("productImage"),productsController.crearProducto);

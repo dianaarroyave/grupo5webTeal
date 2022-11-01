@@ -13,8 +13,8 @@ let idIndex = 0;
 
 let productsController = {
     // ESTATIC
-    carrito: (req, res) => {
-        res.render('products/carrito');
+    bag: (req, res) => {
+        res.render('products/bag');
     },
     // DINAMICS
     brandOriginal: (req, res) => {
@@ -28,11 +28,11 @@ let productsController = {
       res.render('products/brands',{brand});
     },
     //3 metodos para editar (1)todas las marcas (2)original (3)basicas-----
-    edicionTodos: (req,res) => {
+    adminProductsAll: (req,res) => {
       //linea para refrescar y ver los productos que están en el json y no en la memoria temporal---
       const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
       //--------------------------------------------------------------------------------------------
-      res.render('products/edicion',{products});
+      res.render('products/adminProducts',{products});
     },
     //---------------------------------------------------------------------
     producto: (req, res) => {
@@ -61,7 +61,7 @@ let productsController = {
       //sobreescritura del JSON
       let productsJSON = JSON.stringify(products);
       fs.writeFileSync(productsFilePath,productsJSON);
-      res.redirect('/products/edicion');
+      res.redirect('/products/adminProducts');
     },
     editar: (req, res) => { //vista crear - para editar producto existente.
       let idProducto = req.params.id;
@@ -89,7 +89,7 @@ let productsController = {
       //sobreescritura del JSON
       let productsJSON = JSON.stringify(products);
       fs.writeFileSync(productsFilePath,productsJSON);
-      res.redirect('/products/edicion');
+      res.redirect('/products/adminProducts');
     },
     delete:(req, res) =>{
       let idProducto = req.params.id;
@@ -100,7 +100,7 @@ let productsController = {
       //sobreescritura del JSON
       let productsJSON = JSON.stringify(products);
       fs.writeFileSync(productsFilePath,productsJSON);
-      res.redirect('/products/edicion');
+      res.redirect('/products/adminProducts');
     }
 }
 
