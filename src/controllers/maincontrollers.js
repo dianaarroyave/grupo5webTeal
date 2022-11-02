@@ -19,6 +19,9 @@ let mainController = {
     register: (req, res) => {
         res.render('users/register');
     },
+    user: (req, res) => {
+      res.render('register/user');
+  },
 }
 
 
