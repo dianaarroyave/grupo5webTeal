@@ -19,6 +19,18 @@ let mainController = {
     register: (req, res) => {
         res.render('users/register');
     },
+    createUser:(req, res) => {
+      let newUser = {
+        "image": req.file.productImage,
+        "fullName": req.body.name,
+        "documentType": req.body.documentType,
+        "document": req.body.document,
+        "email": req.body.email,
+        "phoneNumber": req.body.phone,
+        "birthDate": req.body.birthDate,
+        "password": req.body.password
+    };
+    },
     user: (req, res) => {
       res.render('register/user');
   },
