@@ -22,6 +22,13 @@ let mainController = {
     register: (req, res) => {
         res.render('users/register');
     },
+
+    userDetail: (req, res) => {
+      let idUser = req.params.id;
+      let userDetail =  users.filter(user =>(user.id==idUser));
+        res.render('users/userDetail',{userDetail});
+    },
+
     newUser: (req, res) => { //vista newUser - para newUser producto nuevo.
       let userDetail = [{"image": "empty.png"}];
         res.render('users/newUser',{userDetail});
