@@ -5,6 +5,9 @@ let path = require('path');
 const productsFilePath = path.join(__dirname,'../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
 
+const usersFilePath = path.join(__dirname,'../data/users.json');
+const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf8'));
+
 let mainController = {
     home: (req, res) => {
       let featuredProducts =  products.filter(product =>((product.featured==true) || (product.featured=="on")));
@@ -19,9 +22,9 @@ let mainController = {
     register: (req, res) => {
         res.render('users/register');
     },
-    createUser:(req, res) => {
+    createUser: (req, res) => {
       let newUser = {
-        "image": req.file.productImage,
+        // "image": req.file.userImage,
         "fullName": req.body.name,
         "documentType": req.body.documentType,
         "document": req.body.document,
@@ -30,6 +33,12 @@ let mainController = {
         "birthDate": req.body.birthDate,
         "password": req.body.password
     };
+    users.push(newUser);//Se agrega la información
+    console.info(users);
+      //sobreescritura del JSON
+      let usersJSON = JSON.stringify(users);
+      fs.writeFileSync(usersFilePath,usersJSON);
+      res.redirect('/');
     },
     user: (req, res) => {
       res.render('register/user');

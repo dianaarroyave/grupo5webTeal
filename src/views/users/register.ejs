@@ -3,10 +3,10 @@
   <body>
     <%- include('../partials/header') %>
       <main class="register-main">
-        <form class="form" action="#">
+        <form class="form" action="/main/register" method="POST" enctype="multipart/form-data">
           <h2 class="title">Crear cuenta</h2>
           <div class="campo">
-            <input class="create_input" accept="image/png.image/jpeg" type="file" id="create_img" name="productImage"
+            <input class="create_input" accept="image/png.image/jpeg" type="file" id="create_img" name="userImage"
               multiple /><span class="barra"></span>
             <div class="container-img">
               <img class="create_img-form" src="/images/user.png" alt="icono destacado" />
@@ -18,7 +18,7 @@
             <label class="register-label">Nombre y apellido</label>
           </div>
           <div class="campo">
-            <select name="tipoDocumento" class="register_document-select">
+            <select name="documentType" class="register_document-select">
               <option>Tipo de documento</option>
               <option value="cedulaCiudadania">Cédula de ciudadanía</option>
               <option value="cedulaExtrajeria">Cédula de extranjería</option>
@@ -40,10 +40,10 @@
             <label class="register-label">Telefono</label>
           </div>
           <div class="campo">
-            <input class="register_input" type="date" id="fecha" name="fDnacimiento" required />
+            <input class="register_input" type="date" id="fecha" name="birthDate" required />
           </div>
           <div class="campo">
-            <input class="register_input" type="password" minlength="8" id="nombre" name="name" required /><span
+            <input class="register_input" type="password" minlength="8" id="nombre" name="password" required /><span
               class="barra"></span>
             <label class="register-label">Contraseña</label>
           </div>
