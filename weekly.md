@@ -4,7 +4,7 @@
 
 Se definió mejorar la planificación del sprint desde el inicio, asignando tareas claras por duplas y fechas de entrega definidas, con el fin de que cada uno de los participantes tengan claros los tiempos de entrega y las actividades que debe realizar.
 
-Se divió el srint en varias etapas y al equipo en dos duplas, cada una con actividades definidas
+Se divió el sprint en varias etapas y al equipo en dos duplas, cada una con actividades definidas
 
 Sergio y Sthefania van a trabajar en la funcionalidad del registro donde van a:
  - Implementar MULTER

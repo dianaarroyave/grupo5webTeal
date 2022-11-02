@@ -7,10 +7,10 @@ router.get('/', mainController.home);
 router.get('/aboutUs', mainController.aboutUs);
 router.get('/login', mainController.login);
 router.get('/register', mainController.register);
-router.post('/register', mainController.createUser);
+router.get('/userDetail', mainController.userDetail);
 
 
 
-router.post('/user', mainController.user);
+// router.post('/user', mainController.user);
 
 module.exports = router;
