@@ -1,0 +1,13 @@
+.profile {
+  display: flex;
+}
+
+.formProfile
+{
+  width: 60%;
+  background: white;
+  padding: 40px 10px 30px 10px;
+  box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  margin: 32px 0;
+}
