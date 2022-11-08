@@ -51,7 +51,7 @@ let mainController = {
       //sobreescritura del JSON
       let usersJSON = JSON.stringify(users);
       fs.writeFileSync(usersFilePath,usersJSON);
-      res.redirect('/');
+      res.redirect('/userDetail');
     },
 
     userEdition: (req, res) => { //vista crear - para userEdition usuario existente.
