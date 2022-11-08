@@ -2,7 +2,6 @@
   background: var(--teal);
   background: -webkit-linear-gradient(to right, var(--teal), black);
   background: linear-gradient(to right, var(--teal), black);
-  /* height: 880px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,8 +94,8 @@
 .enter-btn:hover,
 .enter-facebook:hover,
 .enter-google:hover{
-    /* background-color: var(--teal);
-    border: solid 0.2rem var(--blanco); */
+    background-color: var(--teal);
+    border: solid 0.2rem var(--blanco);
     transform: scale(1.1);
 }
 
