@@ -35,7 +35,7 @@ let mainController = {
     },
     createUser: (req, res) => {
       let newUser = {
-        // "image": req.file.userImage,
+        "image": req.file.filename,
         "id": req.body.id || users.length+2 ,
         "fullName": req.body.name,
         "documentType": req.body.documentType,
