@@ -4,6 +4,7 @@ let path = require('path');
 const multer = require('multer');
 const mainController = require('../controllers/mainController');
 
+//implementación de multer para subida de archivos:---------------------
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, path.join(__dirname, '../../public/userImages')); //areglar ruta, el destino

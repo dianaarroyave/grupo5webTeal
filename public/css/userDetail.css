@@ -2,14 +2,49 @@
   display: flex;
 }
 
+.titleProfile {
+  text-align: center;
+  font-weight: 700;
+  margin-top: 5%;
+}
+
 .formProfile
 {
   width: 70%;
   background: white;
-  padding: 40px 10px 30px 10px;
+  padding: 10px 10px 10px 10px;
   box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   margin: 32px 0;
   transition: none;
   transform: none;
+}
+
+.create_img-user {
+  width: 100%;
+}
+
+.informationProfile {
+  width: 60%;
+  align-items: center;
+}
+
+.save-btn {
+  font-family: var(--primaryFont);
+  background: -webkit-linear-gradient(
+    to right,
+    black,
+    var(--teal)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, black, var(--teal));
+  border: none;
+  border-radius: 5px;
+  display: block;
+  width: 25%;
+  margin: 10px auto;
+  color: white;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 400ms;
 }
