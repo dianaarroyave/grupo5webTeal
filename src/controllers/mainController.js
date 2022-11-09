@@ -61,7 +61,7 @@ let mainController = {
         res.render('users/userEdition',{userDetail});
     },
 
-    editProduct: (req, res) => {
+    editUser: (req, res) => {
       let idUser = idIndex;
       let userDetail =  users.find(user =>(user.id == idUser));
       let indexUser = users.indexOf(userDetail);

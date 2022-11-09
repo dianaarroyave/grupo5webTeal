@@ -15,7 +15,6 @@ const storage = multer.diskStorage({
     cb(null, newFileName);
   },
 });
-
 //ejecución de multer
 const upload = multer({ storage });
 
@@ -27,7 +26,9 @@ router.get('/register', mainController.register);
 router.post('/register',upload.single("userImage"),mainController.createUser);
 //admin-crear
 router.get('/userDetail', mainController.userDetail);
-// router.post('/userDetail',upload.single("productImage"),mainController.createUser);
+router.post('/userDetail',upload.single("userImage"),mainController.createUser);
+router.get('/userDetail/:id',mainController.userEdition);
+router.put('/userDetail',upload.single("usertImage"),mainController.editUser);
 router.delete('/delete/:id',mainController.delete)
 
 module.exports = router;
