@@ -4,6 +4,9 @@ const path = require('path');
 const mainRouter = require('./src/routes/main');
 const productsRouter = require('./src/routes/products');
 
+//procedimiento para login----------------------------------------
+const session = require('express-session');
+app.use(session({secret: 'secret'}));
 //metodo override-------------------------------------------------
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));

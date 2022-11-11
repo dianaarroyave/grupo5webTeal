@@ -21,7 +21,10 @@ const upload = multer({ storage });
 //Rutas
 router.get('/', mainController.home);
 router.get('/aboutUs', mainController.aboutUs);
-router.get('/login', mainController.login);
+router.get('/login', mainController.viewLogin);
+//------Login----------------------------------
+router.post('/login', mainController.login);
+//---------------------------------------------
 router.get('/register', mainController.register);
 router.post('/register',upload.single("userImage"),mainController.createUser);
 //admin-crear

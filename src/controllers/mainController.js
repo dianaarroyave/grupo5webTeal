@@ -16,9 +16,21 @@ let mainController = {
     aboutUs: (req, res) => {
         res.render('products/aboutUs');
     },
-    login: (req, res) => {
+    viewLogin: (req, res) => {
         res.render('users/login');
     },
+    //---Login--------------------------------------------------------
+    login: (req,res) => {
+      let user = req.body.email;
+      let password = req.body.password;
+      console.info(user,password);
+      if (user){
+
+      };
+
+
+    },
+    //----------------------------------------------------------------
     register: (req, res) => {
         res.render('users/register');
     },

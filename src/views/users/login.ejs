@@ -3,15 +3,15 @@
     <body>
         <%- include('../partials/header') %>
             <main class="login-main">
-                <form class="form" action="/" method="post">
+                <form class="form" action="/login" method="POST">
                     <h2 class="title">Iniciar sesión</h2>
                     <div class="campo">
-                        <input class="login_input" type="email" minlength="8" id="nombre" name="name" required /><span
+                        <input class="login_input" type="email" minlength="8" id="nombre" name="email" required /><span
                             class="barra"></span>
                         <label class="login-label">Correo electrónico</label>
                     </div>
                     <div class="campo">
-                        <input class="login_input" type="password" minlength="8" id="nombre" name="name"
+                        <input class="login_input" type="password" minlength="8" id="nombre" name="pasword"
                             required /><span class="barra"></span>
                         <label class="login-label">Contraseña</label>
                     </div>
