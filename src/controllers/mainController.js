@@ -7,6 +7,9 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
 
 const usersFilePath = path.join(__dirname,'../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf8'));
+//inicializar user-------------
+let userToLogin =[{}]
+//-----------------------------
 
 let mainController = {
     home: (req, res) => {
@@ -20,13 +23,15 @@ let mainController = {
         res.render('users/login');
     },
     //---Login--------------------------------------------------------
+    //impletentar delete userToLogin.password;
     login: (req,res) => {
-      let user = req.body.email;
+      let userEmail = req.body.email;
       let password = req.body.password;
-      console.info(user,password);
-      if (user){
-
-      };
+      console.info(userEmail,password);
+      userToLogin =  users.filter(user =>((user.email==userEmail)));
+      //let userToLogin = users.findByField('email', req.body.email);
+      console.info(userToLogin);
+      res.render('users/userDetail',{userToLogin});
 
 
     },
@@ -38,7 +43,7 @@ let mainController = {
     userDetail: (req, res) => {
       let idUser = req.params.id;
       let userDetail =  users.filter(user =>(user.id==idUser));
-        res.render('users/userDetail',{userDetail});
+        res.render('users/userDetail',{userToLogin});
     },
 
     newUser: (req, res) => { //vista newUser - para newUser producto nuevo.

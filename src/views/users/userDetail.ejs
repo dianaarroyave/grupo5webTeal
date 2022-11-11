@@ -12,19 +12,19 @@
               <input class="create_input" accept="image/png.image/jpeg" type="file" id="create_img" name="productImage"
               multiple /><span class="barra"></span>
               <div class="container-img">
-                <img class="create_img-user" src="/userImages/<%=userDetail[0].image%>" alt="icono destacado" />
+                <img class="create_img-user" src="/userImages/<%=userToLogin[0].image%>" alt="icono destacado" />
               </div>
             </div>
           </div>
           <!-- Imformación usuario -->
           <div class="informationProfile">
             <div class="campo">
-              <input class="register_input" type="text" minlength="8" id="nombre" name="name" value="<%=userDetail[0].name%>" required /><span
+              <input class="register_input" type="text" minlength="8" id="nombre" name="name" value="<%=userToLogin[0].name%>" required /><span
                 class="barra"></span>
               <label class="register-label">Nombre y apellido</label>
             </div>
             <div class="campo">
-              <select name="tipoDocumento" class="register_document-select" value="<%=userDetail[0].documentType%>">
+              <select name="tipoDocumento" class="register_document-select" value="<%=userToLogin[0].documentType%>">
                 <option>Tipo de documento</option>
                 <option value="cedulaCiudadania">Cédula de ciudadanía</option>
                 <option value="cedulaExtrajeria">Cédula de extranjería</option>
@@ -33,23 +33,23 @@
               </select>
             </div>
             <div class="campo">
-              <input type="number" id="document" name="document" value="<%=userDetail[0].document%>" required class="register_input" /><span
+              <input type="number" id="document" name="document" value="<%=userToLogin[0].document%>" required class="register_input" /><span
                 class="barra"></span>
               <label class="register-label">Documento</label>
             </div>
             <div class="campo">
-              <input type="email" id="email" name="email" value="<%=userDetail[0].email%>" required class="register_input" /><span class="barra"></span>
+              <input type="email" id="email" name="email" value="<%=userToLogin[0].email%>" required class="register_input" /><span class="barra"></span>
               <label class="register-label">Correo electrónico</label>
             </div>
             <div class="campo">
-              <input type="number" id="phone" name="phone" value="<%=userDetail[0].phone%>" required class="register_input" /><span class="barra"></span>
+              <input type="number" id="phone" name="phone" value="<%=userToLogin[0].phone%>" required class="register_input" /><span class="barra"></span>
               <label class="register-label">Teléfono</label>
             </div>
             <div class="campo">
-              <input class="register_input" type="date" id="fecha" name="fDnacimiento" value="<%=userDetail[0].birthDate%>"required />
+              <input class="register_input" type="date" id="fecha" name="fDnacimiento" value="<%=userToLogin[0].birthDate%>"required />
             </div>
             <div class="campo">
-              <input class="register_input" type="password" minlength="8" id="nombre" value="<%=userDetail[0].password%>" name="name" required /><span
+              <input class="register_input" type="password" minlength="8" id="nombre" value="<%=userToLogin[0].password%>" name="name" required /><span
                 class="barra"></span>
               <label class="register-label">Contraseña</label>
             </div>

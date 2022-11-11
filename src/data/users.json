@@ -10,26 +10,54 @@
     "birthDate": "1983-03-13",
     "password": "OxgSVzmS00%X"
   },
+
   {
-    "image": "user_1667953650136.jpg",
     "id": 3,
-    "fullName": "Diana  Arroyave",
-    "documentType": "cedulaCiudadania",
-    "document": "32207145",
-    "email": "dianaarroyave4@gmail.com",
-    "phoneNumber": "3104993722",
-    "birthDate": "1983-03-13",
-    "password": "*0V!eNmDlydN"
-  },
-  {
-    "image": "user_1667953822578.jpg",
+    "fullName": "William Serna",
+    "documentType": "cc",
+    "document": 152515635,
+    "email": "William.Serna@gmail.com",
+    "phoneNumber":3015896354,
+    "birthDate": "03/02/1980",
+    "password": "colombia123"
+},
+{
     "id": 4,
-    "fullName": "Diana  Arroyave",
-    "documentType": "cedulaCiudadania",
-    "document": "32207145",
-    "email": "dianaarroyave4@gmail.com",
-    "phoneNumber": "3104993722",
-    "birthDate": "1983-03-13",
-    "password": "&2&8GtMn*IaT"
-  }
+    "fullName": "Julian Sánchez",
+    "documentType": "cc",
+    "document": 155662635,
+    "email": "julianSa@gmail.com",
+    "phoneNumber":3058996354,
+    "birthDate": "05/10/1990",
+    "password": "123456789"
+},
+{
+    "id": 5,
+    "fullName": "Diana Arroyave",
+    "documentType": "cc",
+    "document": 4582135864,
+    "email": "diana123arr@gmail.com",
+    "phoneNumber":3987452189,
+    "birthDate": "09/01/1995",
+    "password": "holamundo"
+},
+{
+    "id": 6,
+    "fullName": "Sthefania Echeverry",
+    "documentType": "cc",
+    "document": 1057896345,
+    "email": "laestefis123@gmail.com",
+    "phoneNumber":3125896347,
+    "birthDate": "22/05/1998",
+    "password": "amoelingles"
+},
+{   "id": 7,
+    "fullName": "Sergio Escobar",
+    "documentType": "cc",
+    "document": 1040757582,
+    "email": "sergioescobar@gmail.com",
+    "phoneNumber":3458961223,
+    "birthDate": "03/11/1998",
+    "password": "esperoregalitos"
+}
 ]
