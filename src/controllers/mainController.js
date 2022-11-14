@@ -1,6 +1,8 @@
 //requerir fs y path
+const { FORMERR } = require('dns');
 let fs = require('fs');
 let path = require('path');
+const bcrypt = require('bcryptjs');
 //requerir archivo JSON de productos
 const productsFilePath = path.join(__dirname,'../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
@@ -9,7 +11,8 @@ const usersFilePath = path.join(__dirname,'../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf8'));
 //inicializar user-------------
 let userToLogin =[{}]
-//-----------------------------
+//----express validations-------------------------
+// const { validationResult } = require('express-valiator');
 
 let mainController = {
     home: (req, res) => {
@@ -25,15 +28,21 @@ let mainController = {
     //---Login--------------------------------------------------------
     //impletentar delete userToLogin.password;
     login: (req,res) => {
+      //PONER LOGIV PARA MOSTRAR ERRORES CON EXPRESS VALIDATOR AQUI
+      //----------------------------------------------------------------
       let userEmail = req.body.email;
       let password = req.body.password;
       console.info(userEmail,password);
       userToLogin =  users.filter(user =>((user.email==userEmail)));
-      //let userToLogin = users.findByField('email', req.body.email);
+      if ((userToLogin!=undefined) && (bcrypt.compareSync(req.body.password , userToLogin[0].password))){
+        //definición de usuario logueado con session-------
+      req.session.loggedUser = userToLogin;
+      //-------------------------------------------------
       console.info(userToLogin);
-      res.render('users/userDetail',{userToLogin});
-
-
+      res.render('users/userDetail',{userToLogin});//
+      } else {
+        res.render('users/login');
+      }
     },
     //----------------------------------------------------------------
     register: (req, res) => {
@@ -51,6 +60,10 @@ let mainController = {
         res.render('users/newUser',{userDetail});
     },
     createUser: (req, res) => {
+      // const resultValidation = validationResult(req);
+      // if (resultValidation.length>0){
+      //   return res.render('users/newUser',{errors: resultValidation.mapped()})
+      // }
       let newUser = {
         "image": req.file.filename,
         "id": req.body.id || users.length+2 ,
@@ -60,7 +73,9 @@ let mainController = {
         "email": req.body.email,
         "phoneNumber": req.body.phone,
         "birthDate": req.body.birthDate,
-        "password": req.body.password
+        //contraseña encriptada:------
+        "password": bcrypt.hashSync(req.body.password)
+        //----------------------------
     };
 
     users.push(newUser);//Se agrega la información

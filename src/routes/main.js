@@ -3,6 +3,15 @@ const router = express.Router();
 let path = require('path');
 const multer = require('multer');
 const mainController = require('../controllers/mainController');
+//---express validation --------------------------------
+// const { body } = require('express-validator');
+// const validations = [
+//   body('email').notEmpty().withMessage('....'),
+//   body('password').notEmpty().withMessage('....'),
+//   //seguir con los otros
+// ];
+
+
 
 //implementación de multer para subida de archivos:---------------------
 const storage = multer.diskStorage({
@@ -26,7 +35,7 @@ router.get('/login', mainController.viewLogin);
 router.post('/login', mainController.login);
 //---------------------------------------------
 router.get('/register', mainController.register);
-router.post('/register',upload.single("userImage"),mainController.createUser);
+router.post('/register',upload.single("userImage"),mainController.createUser);// agregar middleweare validations
 //admin-crear
 router.get('/userDetail', mainController.userDetail);
 router.post('/userDetail',upload.single("userImage"),mainController.createUser);
