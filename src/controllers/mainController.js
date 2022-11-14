@@ -139,6 +139,7 @@ let mainController = {
 
     closeSession: (req, res) =>{
       userToLogin = undefined;
+      console.info(userToLogin)
       req.session.loggedUser = undefined;
       res.redirect('/login');
     }
