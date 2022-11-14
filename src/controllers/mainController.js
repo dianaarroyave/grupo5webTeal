@@ -3,6 +3,7 @@ const { FORMERR } = require('dns');
 let fs = require('fs');
 let path = require('path');
 const bcrypt = require('bcryptjs');
+
 //requerir archivo JSON de productos
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
