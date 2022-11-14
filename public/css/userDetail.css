@@ -1,11 +1,12 @@
-.profileUser {
-  display: flex;
-}
-
 .titleProfile {
   text-align: center;
   font-weight: 700;
   margin-top: 5%;
+}
+
+.register-main {
+  display: flex;
+  flex-direction: column;
 }
 
 .formProfile
@@ -20,6 +21,10 @@
   transform: none;
 }
 
+.formUser {
+  width: 100%;
+}
+
 .create_img-user {
   width: 100%;
 }
@@ -27,6 +32,14 @@
 .informationProfile {
   width: 60%;
   align-items: center;
+}
+
+.save-btn-form {
+  width: 100%;
+}
+
+.delete-btn-form {
+  width: 100%;
 }
 
 .save-btn {
@@ -47,4 +60,13 @@
   font-size: 16px;
   cursor: pointer;
   transition: all 400ms;
+}
+
+
+/* Media 768 */
+
+@media (min-width: 768px){
+  .profileUser {
+    display: flex;
+  }
 }
