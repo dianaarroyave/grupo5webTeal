@@ -33,6 +33,7 @@
 .menu-profile__dropdown {
     width: 100%;
     display: none;
+    margin-right: 0.5rem;
 }
 
 .menu-isotipo__option,
@@ -66,6 +67,10 @@
     transition: all 400s;
 }
 
+.starSesion {
+  margin-left: 5rem;
+}
+
 .logo {
     margin: 0 auto;
     align-items: center;
@@ -93,6 +98,7 @@
 
 .profile {
     margin-left: 0.9rem;
+    margin-right: 0.3rem;
 }
 
 .logo-img:hover,

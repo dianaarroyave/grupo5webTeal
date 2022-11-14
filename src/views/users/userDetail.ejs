@@ -3,55 +3,57 @@
   <body>
     <%- include('../partials/header') %>
       <main class="register-main">
-        <form class="formProfile" action="/userDetail?_method=PUT" method="POST">
-          <h2 class="titleProfile">Perfil de usuario</h2>
-          <div class="profileUser">
-             <!-- imagen de usuario -->
-          <div class="imageProfile">
-            <div class="campo">
-              <input class="create_input" accept="image/png.image/jpeg" type="file" id="create_img" name="productImage"
-              multiple /><span class="barra"></span>
-              <div class="container-img">
-                <img class="create_img-user" src="/userImages/<%=userToLogin[0].image%>" alt="icono destacado" />
+        <div class="formProfile">
+          <form class="formUser" action="/userDetail?_method=PUT" method="POST">
+            <h2 class="titleProfile">Perfil de usuario</h2>
+            <div class="profileUser">
+               <!-- imagen de usuario -->
+            <div class="imageProfile">
+              <div class="campo">
+                <input class="create_input" accept="image/png.image/jpeg" type="file" id="create_img" name="productImage"
+                multiple /><span class="barra"></span>
+                <div class="container-img">
+                  <img class="create_img-user" src="/userImages/<%=userToLogin[0].image%>" alt="icono destacado" />
+                </div>
               </div>
             </div>
-          </div>
-          <!-- Imformación usuario -->
-          <div class="informationProfile">
-            <div class="campo">
-              <input class="register_input" type="text" minlength="8" id="name" name="name" value="<%=userToLogin[0].fullName%>" required /><span
-                class="barra"></span>
-              <label class="register-label">Nombre y apellido</label>
-            </div>
-            <div class="campo">
-              <select name="tipoDocumento" class="register_document-select" value="<%=userToLogin[0].documentType%>" >
-                <option>Tipo de documento</option>
-                <option value="cedulaCiudadania" selected>Cédula de ciudadanía</option>
-                <option value="cedulaExtrajeria">Cédula de extranjería</option>
-                <option value="pasaporte">Pasaporte</option>
-                <option value="tarjetaIdentidad">Tarjeta de identidad</option>
-              </select>
-            </div>
-            <div class="campo">
-              <input type="number" id="document" name="document" value="<%=userToLogin[0].document%>" required class="register_input" /><span
-                class="barra"></span>
-              <label class="register-label">Documento</label>
-            </div>
-            <div class="campo">
-              <input type="email" id="email" name="email" value="<%=userToLogin[0].email%>" required class="register_input" /><span class="barra"></span>
-              <label class="register-label">Correo electrónico</label>
-            </div>
-            <div class="campo">
-              <input type="number" id="phone" name="phone" value="<%=userToLogin[0].phoneNumber%>" required class="register_input" /><span class="barra"></span>
-              <label class="register-label">Teléfono</label>
-            </div>
-            <div class="campo">
-              <input class="register_input" type="date" id="fecha" name="fDnacimiento" value="<%=userToLogin[0].birthDate%>"required />
-            </div>
-            <div class="campo">
-              <input class="register_input" type="password" minlength="8" id="nombre" value="<%=userToLogin[0].password%>" name="name" required /><span
-                class="barra"></span>
-              <label class="register-label">Contraseña</label>
+            <!-- Imformación usuario -->
+            <div class="informationProfile">
+              <div class="campo">
+                <input class="register_input" type="text" minlength="8" id="name" name="name" value="<%=userToLogin[0].fullName%>" required /><span
+                  class="barra"></span>
+                <label class="register-label">Nombre y apellido</label>
+              </div>
+              <div class="campo">
+                <select name="tipoDocumento" class="register_document-select" value="<%=userToLogin[0].documentType%>" >
+                  <option>Tipo de documento</option>
+                  <option value="cedulaCiudadania" selected>Cédula de ciudadanía</option>
+                  <option value="cedulaExtrajeria">Cédula de extranjería</option>
+                  <option value="pasaporte">Pasaporte</option>
+                  <option value="tarjetaIdentidad">Tarjeta de identidad</option>
+                </select>
+              </div>
+              <div class="campo">
+                <input type="number" id="document" name="document" value="<%=userToLogin[0].document%>" required class="register_input" /><span
+                  class="barra"></span>
+                <label class="register-label">Documento</label>
+              </div>
+              <div class="campo">
+                <input type="email" id="email" name="email" value="<%=userToLogin[0].email%>" required class="register_input" /><span class="barra"></span>
+                <label class="register-label">Correo electrónico</label>
+              </div>
+              <div class="campo">
+                <input type="number" id="phone" name="phone" value="<%=userToLogin[0].phoneNumber%>" required class="register_input" /><span class="barra"></span>
+                <label class="register-label">Teléfono</label>
+              </div>
+              <div class="campo">
+                <input class="register_input" type="date" id="fecha" name="fDnacimiento" value="<%=userToLogin[0].birthDate%>"required />
+              </div>
+              <div class="campo">
+                <input class="register_input" type="password" minlength="8" id="nombre" value="<%=userToLogin[0].password%>" name="name" required /><span
+                  class="barra"></span>
+                <label class="register-label">Contraseña</label>
+              </div>
             </div>
           </div>
           </div>
@@ -59,9 +61,6 @@
         </form>
         <form action="/delete/<%=userToLogin[0].id%>?_method=DELETE" method="POST" >
           <button class="save-btn" type="submit">Eliminar Usuario</button>
-        </form>
-        <form action="/closeSession" method="POST">
-          <button class="save-btn" type="submit">Cerrar sesión</button>
         </form>
       </main>
       <%- include('../partials/footer') %>

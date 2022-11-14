@@ -58,6 +58,18 @@ form .campo {
     color: var(--negro);
 }
 
+.newUser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newUser-btn {
+  justify-content: space-between;
+  color: var(--teal);
+  margin-bottom: 1rem;
+}
+
 .barra {
     position: relative;
     display: block;

@@ -6,7 +6,11 @@ const productsRouter = require('./src/routes/products');
 
 //procedimiento para login----------------------------------------
 const session = require('express-session');
-app.use(session({secret: 'secret'}));
+app.use(session({
+  secret: 'secret word!',
+  resave: false,
+  saveUninitialized: true,
+}))
 
 //metodo override-------------------------------------------------
 const methodOverride = require('method-override');
