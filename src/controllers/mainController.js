@@ -121,17 +121,17 @@ let mainController = {
     res.redirect('/users/userDetail');
   },
 
-  delete: (req, res) => {
-    let idUser = req.params.id;
-    let user = users.find((user) => product.id == idUser);
-    let indexUser = users.indexOf(user);
-    users.splice(indexUser, 1);
+    delete:(req, res) =>{
+      let idUser = req.params.id;
+      let user =  users.find(user =>user.id==idUser);
+      let indexUser = users.indexOf(user);
+      users.splice(indexUser, 1)
 
-    //sobreescritura del JSON
-    let usersJSON = JSON.stringify(users);
-    fs.writeFileSync(usersFilePath, usersJSON);
-    res.redirect('/users/userDetail');
-  },
-};
+      //sobreescritura del JSON
+      let usersJSON = JSON.stringify(users);
+      fs.writeFileSync(usersFilePath,usersJSON);
+      res.redirect('/');
+    }
+}
 
 module.exports = mainController;
