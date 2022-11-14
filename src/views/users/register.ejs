@@ -4,6 +4,10 @@
     <%- include('../partials/header') %>
       <main class="register-main">
         <form class="form" action="/register" method="POST" enctype="multipart/form-data">
+          <%if (locals.errors){%>
+          <% errors.forEach(error => {%>
+            <p class="error"> <%=error.msg%> </p>
+          <%});%><%}%>
           <h2 class="title">Crear cuenta</h2>
           <div class="campo">
             <input class="create_input" accept="image/png.image/jpeg" type="file" id="create_img" name="userImage"

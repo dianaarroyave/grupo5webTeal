@@ -6,7 +6,8 @@ const mainController = require('../controllers/mainController');
 //---express validation --------------------------------
 const { body } = require('express-validator');
 const validations = [
-  body('email').notEmpty().isEmail().withMessage('ingrese un email valido'),
+  body('email').notEmpty().withMessage('debe ingresar un email'),
+  body('email').isEmail().withMessage('ingrese un email valido'),
   body('password').notEmpty().withMessage('Ingrese una contraseña valida'),
   //seguir con los otros
 ];

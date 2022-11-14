@@ -66,9 +66,6 @@ let mainController = {
   },
   createUser: (req, res) => {
     const errors = validationResult(req);
-    //res.send(errors);
-    console.info(errors);
-    console.info('esta es la cantidad de errores ' + errors.length);
     if (errors.isEmpty()) {
       let newUser = {
         image: req.file.filename,
@@ -89,7 +86,7 @@ let mainController = {
       fs.writeFileSync(usersFilePath, usersJSON);
       res.redirect('/userDetail');
     } else {
-      res.render('users/register', { errors: errors.mapped() });
+      res.render('users/register', { errors: errors.array() });
     }
   },
 
