@@ -86,7 +86,10 @@ let mainController = {
       fs.writeFileSync(usersFilePath, usersJSON);
       res.redirect('/userDetail');
     } else {
-      res.render('users/register', { errors: errors.array() });
+      res.render('users/register', { 
+        errors: errors.array(),
+        old: req.body
+      });
     }
   },
 
@@ -131,6 +134,12 @@ let mainController = {
       let usersJSON = JSON.stringify(users);
       fs.writeFileSync(usersFilePath,usersJSON);
       res.redirect('/');
+    },
+
+    closeSession: (req, res) =>{
+      userToLogin = undefined;
+      req.session.loggedUser = undefined;
+      res.redirect('/login');
     }
 }
 

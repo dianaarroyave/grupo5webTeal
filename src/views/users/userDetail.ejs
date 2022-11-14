@@ -60,6 +60,9 @@
         <form action="/delete/<%=userToLogin[0].id%>?_method=DELETE" method="POST" >
           <button class="save-btn" type="submit">Eliminar Usuario</button>
         </form>
+        <form action="/closeSession" method="POST">
+          <button class="save-btn" type="submit">Cerrar sesión</button>
+        </form>
       </main>
       <%- include('../partials/footer') %>
   </body>
