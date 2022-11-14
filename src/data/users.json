@@ -1,1 +1,46 @@
-[{"image":"user_1667953328311.jpg","id":2,"fullName":"Diana  Arroyave","documentType":"cedulaCiudadania","document":"32207145","email":"dianaarroyave4@gmail.com","phoneNumber":"3104993722","birthDate":"1983-03-13","password":"OxgSVzmS00%X"},{"id":3,"fullName":"William Serna","documentType":"cc","document":152515635,"email":"William.Serna@gmail.com","phoneNumber":3015896354,"birthDate":"03/02/1980","password":"colombia123"},{"id":4,"fullName":"Julian Sánchez","documentType":"cc","document":155662635,"email":"julianSa@gmail.com","phoneNumber":3058996354,"birthDate":"05/10/1990","password":"123456789"},{"id":5,"fullName":"Diana Arroyave","documentType":"cc","document":4582135864,"email":"diana123arr@gmail.com","phoneNumber":3987452189,"birthDate":"09/01/1995","password":"holamundo"},{"id":6,"fullName":"Sthefania Echeverry","documentType":"cc","document":1057896345,"email":"laestefis123@gmail.com","phoneNumber":3125896347,"birthDate":"22/05/1998","password":"amoelingles"},{"id":7,"fullName":"Sergio Escobar","documentType":"cc","document":1040757582,"email":"sergioescobar@gmail.com","phoneNumber":3458961223,"birthDate":"03/11/1998","password":"esperoregalitos"},{"image":"user_1668400505911.png","id":8,"fullName":"Sergio Escobar","documentType":"cedulaCiudadania","document":"1040757582","email":"sergio.escobar.henao@gmail.com","phoneNumber":"3136246566","birthDate":"1998-11-03","password":"$2a$10$j.6bVYSxdtsRKapLJzuQbOE/kAwMW.J3ga1IFYyQ/h2h0F9qYAOhi"}]
+[
+  {
+    "image": "user_1668400505911.png",
+    "id": 8,
+    "fullName": "Sergio Escobar",
+    "documentType": "cedulaCiudadania",
+    "document": "1040757582",
+    "email": "sergio.escobar.henao@gmail.com",
+    "phoneNumber": "3136246566",
+    "birthDate": "1998-11-03",
+    "password": "$2a$10$j.6bVYSxdtsRKapLJzuQbOE/kAwMW.J3ga1IFYyQ/h2h0F9qYAOhi"
+  },
+  {
+    "image": "user_1668441672519.webp",
+    "id": 10,
+    "fullName": "Rick Sanchez",
+    "documentType": "cedulaExtrajeria",
+    "document": "12345685245",
+    "email": "rick@gmail.com",
+    "phoneNumber": "5247896523",
+    "birthDate": "1960-01-19",
+    "password": "$2a$10$vh3ukKHPM1.qOTSsKAkw6.4UAao4YJZlXf1nJemOKnD0Gq/isTcT."
+  },
+  {
+    "image": "user_1668442073195.webp",
+    "id": 11,
+    "fullName": "Morty Smith",
+    "documentType": "cedulaExtrajeria",
+    "document": "45697895246",
+    "email": "morty@gmail.com",
+    "phoneNumber": "3254685959",
+    "birthDate": "2004-11-23",
+    "password": "$2a$10$fP4dicAz.Gdul39RBjaMg.BNm56Fb941wGol6bDrvsXEgc/Alb4o2"
+  },
+  {
+    "image": "user_1668443011416.jpg",
+    "id": 5,
+    "fullName": "Sparky Echeverry",
+    "documentType": "cedulaCiudadania",
+    "document": "6789878455550",
+    "email": "sparky@gmail.com",
+    "phoneNumber": "3256879654",
+    "birthDate": "2018-12-15",
+    "password": "$2a$10$9P4O69dPxoTD23tb3hjDveapxyICHqlgV64.rzH5EBbAqDvRamjOS"
+  }
+]
