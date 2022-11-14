@@ -3,7 +3,7 @@
   <body>
     <%- include('../partials/header') %>
       <main class="register-main">
-        <form class="formProfile" action="#">
+        <form class="formProfile" action="/userDetail?_method=PUT" method="POST">
           <h2 class="titleProfile">Perfil de usuario</h2>
           <div class="profileUser">
              <!-- imagen de usuario -->
@@ -19,14 +19,14 @@
           <!-- Imformación usuario -->
           <div class="informationProfile">
             <div class="campo">
-              <input class="register_input" type="text" minlength="8" id="nombre" name="name" value="<%=userToLogin[0].name%>" required /><span
+              <input class="register_input" type="text" minlength="8" id="name" name="name" value="<%=userToLogin[0].fullName%>" required /><span
                 class="barra"></span>
               <label class="register-label">Nombre y apellido</label>
             </div>
             <div class="campo">
-              <select name="tipoDocumento" class="register_document-select" value="<%=userToLogin[0].documentType%>">
+              <select name="tipoDocumento" class="register_document-select" value="<%=userToLogin[0].documentType%>" >
                 <option>Tipo de documento</option>
-                <option value="cedulaCiudadania">Cédula de ciudadanía</option>
+                <option value="cedulaCiudadania" selected>Cédula de ciudadanía</option>
                 <option value="cedulaExtrajeria">Cédula de extranjería</option>
                 <option value="pasaporte">Pasaporte</option>
                 <option value="tarjetaIdentidad">Tarjeta de identidad</option>
@@ -42,7 +42,7 @@
               <label class="register-label">Correo electrónico</label>
             </div>
             <div class="campo">
-              <input type="number" id="phone" name="phone" value="<%=userToLogin[0].phone%>" required class="register_input" /><span class="barra"></span>
+              <input type="number" id="phone" name="phone" value="<%=userToLogin[0].phoneNumber%>" required class="register_input" /><span class="barra"></span>
               <label class="register-label">Teléfono</label>
             </div>
             <div class="campo">
@@ -56,7 +56,9 @@
           </div>
           </div>
           <button class="save-btn" type="submit" id="enter">Guardar cambios</button>
-          <button class="save-btn" type="submit" id="enter">Eliminar perfil</button>
+        </form>
+        <form action="/delete/<%=userToLogin[0].id%>?_method=DELETE" method="POST" >
+          <button class="save-btn" type="submit">Eliminar Usuario</button>
         </form>
       </main>
       <%- include('../partials/footer') %>

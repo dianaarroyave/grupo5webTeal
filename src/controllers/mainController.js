@@ -30,9 +30,13 @@ let mainController = {
       console.info(userEmail,password);
       userToLogin =  users.filter(user =>((user.email==userEmail)));
       //let userToLogin = users.findByField('email', req.body.email);
-      console.info(userToLogin);
-      res.render('users/userDetail',{userToLogin});
 
+      if (userToLogin.length!==0) {
+      console.info(userToLogin)
+      res.render('users/userDetail',{userToLogin})
+      } else {
+        console.info(userToLogin)
+      }
 
     },
     //----------------------------------------------------------------
@@ -103,14 +107,14 @@ let mainController = {
 
     delete:(req, res) =>{
       let idUser = req.params.id;
-      let user =  users.find(user =>product.id==idUser);
+      let user =  users.find(user =>user.id==idUser);
       let indexUser = users.indexOf(user);
       users.splice(indexUser, 1)
 
       //sobreescritura del JSON
       let usersJSON = JSON.stringify(users);
       fs.writeFileSync(usersFilePath,usersJSON);
-      res.redirect('/users/userDetail');
+      res.redirect('/');
     }
 }
 
