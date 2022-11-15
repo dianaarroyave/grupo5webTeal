@@ -3,6 +3,7 @@ const { FORMERR } = require('dns');
 let fs = require('fs');
 let path = require('path');
 const bcrypt = require('bcryptjs');
+
 //requerir archivo JSON de productos
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
@@ -40,8 +41,8 @@ let mainController = {
     userToLogin = users.filter((user) => user.email == userEmail);
     if (
       userToLogin != undefined
-      //  &&
-      // bcrypt.compareSync(req.body.password, userToLogin[0].password)
+        &&
+      bcrypt.compareSync(req.body.password, userToLogin[0].password)
     ) {
       //definición de usuario logueado con session-------
       req.session.loggedUser = userToLogin;
@@ -89,7 +90,10 @@ let mainController = {
       fs.writeFileSync(usersFilePath, usersJSON);
       res.redirect('/userDetail');
     } else {
-      res.render('users/register', { errors: errors.array() });
+      res.render('users/register', {
+        errors: errors.array(),
+        old: req.body
+      });
     }
   },
 
@@ -135,6 +139,13 @@ let mainController = {
       let usersJSON = JSON.stringify(users);
       fs.writeFileSync(usersFilePath,usersJSON);
       res.redirect('/');
+    },
+
+    closeSession: (req, res) =>{
+      userToLogin = undefined;
+      console.info(userToLogin)
+      req.session.loggedUser = undefined;
+      res.redirect('/login');
     }
 }
 
