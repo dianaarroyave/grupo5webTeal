@@ -43,7 +43,7 @@ router.post(
   mainController.createUser
 );
 router.get('/userDetail/:id', mainController.userEdition);
-router.put('/userDetail', upload.single('usertImage'), mainController.editUser);
+router.put('/userDetail', upload.single('userDetail'), mainController.editUser);
 router.delete('/delete/:id', mainController.delete);
 
 module.exports = router;

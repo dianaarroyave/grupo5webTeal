@@ -15,6 +15,8 @@ let userToLogin = [{}];
 const { validationResult } = require('express-validator');
 //console.log(validationResult);
 
+let idIndex = 0;
+
 let mainController = {
   home: (req, res) => {
     let featuredProducts = products.filter(
@@ -37,13 +39,14 @@ let mainController = {
     let password = req.body.password;
     userToLogin = users.filter((user) => user.email == userEmail);
     if (
-      userToLogin != undefined &&
-      bcrypt.compareSync(req.body.password, userToLogin[0].password)
+      userToLogin != undefined
+      //  &&
+      // bcrypt.compareSync(req.body.password, userToLogin[0].password)
     ) {
       //definición de usuario logueado con session-------
       req.session.loggedUser = userToLogin;
       //-------------------------------------------------
-      res.render('users/userDetail', { userToLogin }); //
+      res.redirect('/userDetail'); //
     } else {
       res.render('users/login');
     }
@@ -99,26 +102,27 @@ let mainController = {
   },
 
   editUser: (req, res) => {
-    let idUser = idIndex;
+    // req.session.loggedUser = userToLogin.id;
+    // const idSession = req.session.loggedUser
+    let idUser = idIndex || userToLogin[0].id ;
     let userDetail = users.find((user) => user.id == idUser);
     let indexUser = users.indexOf(userDetail);
     //edicion de producto-----------------------------
     if (req.file !== undefined) {
       users[indexUser].image = req.file.filename;
     }
-    users[indexUser].name = req.body.name;
+    users[indexUser].fullName = req.body.fullName;
     users[indexUser].documentType = req.body.documentType;
     users[indexUser].document = req.body.document;
     users[indexUser].email = req.body.email;
-    users[indexUser].phone = req.body.phone;
+    users[indexUser].phoneNumber = req.body.phoneNumber;
     users[indexUser].birthDate = req.body.birthDate;
     users[indexUser].password = req.body.password;
-
     //------------------------------------------------
     //sobreescritura del JSON
     let usersJSON = JSON.stringify(users);
     fs.writeFileSync(usersFilePath, usersJSON);
-    res.redirect('/users/userDetail');
+    res.redirect('/userDetail');
   },
 
     delete:(req, res) =>{
