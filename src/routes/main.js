@@ -7,7 +7,7 @@ const mainController = require('../controllers/mainController');
 const { body } = require('express-validator');
 const validations = [
   body('name').isLength({min: 3}).withMessage('Ingrese su nombre y apellido'),
-  //falta la de tipo de documento
+  body('documentType').notEmpty().withMessage('Seleccione su tipo de documento'),
   body('document').isNumeric().withMessage('Ingrese su número de documento'),
   body('email').isEmail().withMessage('Ingrese un email válido'),
   body('phone').isNumeric().withMessage('Ingrese su número telefónico'),
