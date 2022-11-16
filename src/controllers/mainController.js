@@ -71,8 +71,11 @@ let mainController = {
   createUser: (req, res) => {
     const errors = validationResult(req);
     if (errors.isEmpty()) {
+      //condicional funcionilidad
+      conditional = req.file;
       let newUser = {
-        image: req.file.filename,
+        if (conditional) {
+        image: req.file.filename},
         id: req.body.id || users.length + 2,
         fullName: req.body.name,
         documentType: req.body.documentType,
@@ -88,7 +91,16 @@ let mainController = {
       //sobreescritura del JSON
       let usersJSON = JSON.stringify(users);
       fs.writeFileSync(usersFilePath, usersJSON);
-      res.redirect('/userDetail');
+
+      //loggear automaticamente despues de registrarse------------------
+      userToLogin = users.filter((user) => user.email == newUser.email);
+      console.info(userToLogin);
+
+      req.session.loggedUser = userToLogin
+
+
+      res.render('users/userDetail',{userToLogin});
+      //----------------------------------------------------------------
     } else {
       res.render('users/register', {
         errors: errors.array(),
@@ -146,6 +158,9 @@ let mainController = {
       console.info(userToLogin)
       req.session.loggedUser = undefined;
       res.redirect('/login');
+    },
+    passwordUpdateView: (req, res) =>{
+      res.redirect('/passwordUpdateView');
     }
 }
 

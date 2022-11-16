@@ -49,20 +49,24 @@
               <div class="campo">
                 <input class="register_input" type="date" id="fecha" name="birthDate" value="<%=userToLogin[0].birthDate%>"required />
               </div>
-              <div class="campo">
-                <input class="register_input" type="password" minlength="8" id="nombre" value="<%=userToLogin[0].password%>" name="password" required /><span
-                  class="barra"></span>
-                <label class="register-label">Contraseña</label>
-              </div>
               <button class="save-btn" type="submit" id="enter">Guardar cambios</button>
             </div>
             </div>
+          </form>
+          <form >
+            <a href="/src/views/users/passwordUpdate.ejs">
+              <button type="submit" class="save-btn">
+              Editar contraseña
+            </button>
+          </a>
+
           </form>
           <!-- <form class="save-btn-form" action="">
           </form> -->
           <form class="delete-btn-form" action="/delete/<%=userToLogin[0].id%>?_method=DELETE" method="POST" >
             <button class="save-btn" type="submit">Eliminar Usuario</button>
           </form>
+
         </div>
       </main>
       <%- include('../partials/footer') %>
