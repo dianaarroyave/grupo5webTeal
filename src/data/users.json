@@ -1,205 +1,35 @@
 [
-  {
-    "image": "user_1668400505911.png",
-    "id": 8,
-    "fullName": "Sergio Escobar",
-    "documentType": "cedulaCiudadania",
-    "document": "1040757582",
-    "email": "sergio.escobar.henao@gmail.com",
-    "phoneNumber": "3136246566",
-    "birthDate": "1998-11-03",
-    "password": "$2a$10$j.6bVYSxdtsRKapLJzuQbOE/kAwMW.J3ga1IFYyQ/h2h0F9qYAOhi"
-  },
-  {
-    "image": "user_1668441672519.webp",
-    "id": 10,
-    "fullName": "Rick Sanchez",
-    "documentType": "cedulaExtrajeria",
-    "document": "12345685245",
-    "email": "rick@gmail.com",
-    "phoneNumber": "5247896523",
-    "birthDate": "1960-01-19",
-    "password": "$2a$10$vh3ukKHPM1.qOTSsKAkw6.4UAao4YJZlXf1nJemOKnD0Gq/isTcT."
-  },
-  {
-    "image": "user_1668442073195.webp",
-    "id": 11,
-    "fullName": "Morty Smith",
-    "documentType": "cedulaExtrajeria",
-    "document": "45697895246",
-    "email": "morty@gmail.com",
-    "phoneNumber": "3254685959",
-    "birthDate": "2004-11-23",
-    "password": "$2a$10$fP4dicAz.Gdul39RBjaMg.BNm56Fb941wGol6bDrvsXEgc/Alb4o2"
-  },
-  {
-    "image": "user_1668443011416.jpg",
-    "id": 5,
-    "fullName": "Sparky Echeverry",
-    "documentType": "cedulaCiudadania",
-    "document": "6789878455550",
-    "email": "sparky@gmail.com",
-    "phoneNumber": "3256879654",
-    "birthDate": "2018-12-15",
-    "password": "$2a$10$9P4O69dPxoTD23tb3hjDveapxyICHqlgV64.rzH5EBbAqDvRamjOS"
-  },
-  {
-    "image": "user_1668446452598.JPG",
-    "id": 6,
-    "fullName": "eeeeeeeeeeeeeeeeeee",
-    "documentType": "cedulaCiudadania",
-    "document": "5555555552",
-    "email": "",
-    "phoneNumber": "2222222222222222222",
-    "birthDate": "2022-11-10",
-    "password": "$2a$10$9PF0aIX85r5N3YCN1rSPX.HN8hNDeMOZbxmSUgi/B8mgGFwywP.oO"
-  },
-  {
-    "image": "user_1668446816143.JPG",
-    "id": 7,
-    "fullName": "gggggggggggggggggggggg",
-    "documentType": "cedulaCiudadania",
-    "document": "4555555555555",
-    "email": "",
-    "phoneNumber": "55555555555555",
-    "birthDate": "2022-11-16",
-    "password": "$2a$10$QoZswylHgJdguahpp1ubiOJkrAo/MPdF/F30BCHdML6s.9m9tQYPa"
-  },
-  {
-    "image": "user_1668446912969.JPG",
-    "id": 8,
-    "fullName": "fgggggffffffffffffffffggg",
-    "documentType": "cedulaCiudadania",
-    "document": "4444444444444444",
-    "email": "",
-    "phoneNumber": "55555555555",
-    "birthDate": "2022-11-16",
-    "password": "$2a$10$.LWSa8G/iZWLj8jMcXLbau8VuE3rFVx38IkLTdX6Vi.YDfZx8WXqy"
-  },
-  {
-    "image": "user_1668447107016.JPG",
-    "id": 9,
-    "fullName": "jhhhhhhhhhhhhh",
-    "documentType": "cedulaCiudadania",
-    "document": "555555555555555",
-    "email": "",
-    "phoneNumber": "4544444444",
-    "birthDate": "2022-11-23",
-    "password": "$2a$10$d4UuPngUmWjxjYaXrXnqAuSFb.7PCcm2yrvsinVc4O6fl.b9sm1pq"
-  },
-  {
-    "image": "user_1668447167648.JPG",
-    "id": 10,
-    "fullName": "fvfffffffffffffffffffffffffffffffffffff",
-    "documentType": "cedulaCiudadania",
-    "document": "55555555555555555",
-    "email": "",
-    "phoneNumber": "4444444444444444",
-    "birthDate": "2022-11-23",
-    "password": "$2a$10$oC34oB/8U.Af62yMVeBQ0Od07RhbP1mvC2eltd6AUX/gvyKWk13K2"
-  },
-  {
-    "image": "user_1668449154599.JPG",
-    "id": 11,
-    "fullName": "sgggggggggggg",
-    "documentType": "cedulaCiudadania",
-    "document": "444444444444444444444",
-    "email": "",
-    "phoneNumber": "5555555555555555",
-    "birthDate": "2022-11-02",
-    "password": "$2a$10$Y0WepXwsSzRwo7U9NOAyTOtojRpg0cVmO.8lfhhiWKSGuXkhZtlna"
-  },
-  {
-    "image": "user_1668449154785.JPG",
-    "id": 12,
-    "fullName": "sgggggggggggg",
-    "documentType": "cedulaCiudadania",
-    "document": "444444444444444444444",
-    "email": "",
-    "phoneNumber": "5555555555555555",
-    "birthDate": "2022-11-02",
-    "password": "$2a$10$eNiIib8Mn.GoVzUkXTL2nuNOcxpohShDJ5PLzAdQiA18iV7AIrWPS"
-  },
-  {
-    "image": "user_1668449163655.JPG",
-    "id": 13,
-    "fullName": "sgggggggggggg",
-    "documentType": "cedulaCiudadania",
-    "document": "444444444444444444444",
-    "email": "",
-    "phoneNumber": "5555555555555555",
-    "birthDate": "2022-11-02",
-    "password": "$2a$10$Dqf9Tbg2ClC1qRoheSsDsuwNMjzf3FOTynPzp/NXpKfpKju8hc9WO"
-  },
-  {
-    "image": "user_1668449164524.JPG",
-    "id": 14,
-    "fullName": "sgggggggggggg",
-    "documentType": "cedulaCiudadania",
-    "document": "444444444444444444444",
-    "email": "",
-    "phoneNumber": "5555555555555555",
-    "birthDate": "2022-11-02",
-    "password": "$2a$10$BdVzcx89Xf37HXTL157hOOT0in8yx9KD6rVEjCLNAxKuh.gJtYf/."
-  },
-  {
-    "id": 15,
-    "fullName": "    prueba usuario  ",
-    "documentType": "cedulaExtrajeria",
-    "document": "555555555555555600",
-    "email": "prueba@gmail.com",
-    "phoneNumber": "55555555555555555",
-    "birthDate": "2022-11-30",
-    "password": "$2a$10$tzSvtJXi8Q6wWqB2061cDeCcxWK/FZpsWpqgDYGNl.NstKGVto7T6"
-  },
-  {
-    "id": 16,
-    "fullName": " pruebaa   nuevaaa",
-    "documentType": "cedulaCiudadania",
-    "document": "444444444444444444",
-    "email": "pruebanuevaaaa@gmail.com",
-    "phoneNumber": "777777777777",
-    "birthDate": "2022-11-15",
-    "password": "$2a$10$z1eJbFFF.M/2y6lgVj48H.tVZ62t8dqG5Gqyt3j4o9Bj2Hsmpuhka"
-  },
-  {
-    "id": 17,
-    "fullName": " prueba sthefa",
-    "documentType": "pasaporte",
-    "document": "45521526616",
-    "email": "54654545454@gmail.com",
-    "phoneNumber": "663656539",
-    "birthDate": "2022-11-01",
-    "password": "$2a$10$Y40gQVNtxDcNmOkacXm2Eu65z.CDzBRLpF7W.sYExOtO0cd9JXHci"
-  },
-  {
-    "id": 18,
-    "fullName": " prueba sthefa2.0",
-    "documentType": "pasaporte",
-    "document": "45521526616",
-    "email": "1258@gmail.com",
-    "phoneNumber": "663656539",
-    "birthDate": "2022-11-01",
-    "password": "$2a$10$ySJ6my7ao5OcUh/0VOuYWuKlsR7606OUfoSITSyfXnWWYMQ4aDH16"
-  },
-  {
-    "id": 19,
-    "fullName": "otraveznosotros",
-    "documentType": "cedulaCiudadania",
-    "document": "45456454554",
-    "email": "otraveznosotros@gmail.com",
-    "phoneNumber": "555541541",
-    "birthDate": "2022-11-02",
-    "password": "$2a$10$IrqhonjIrUrfVU8PwO0RROhcOeerwKQhS8ETgc2ITgrTYLEfOjC0S"
-  },
-  {
-    "id": 20,
-    "fullName": " sergio el patron",
-    "documentType": "cedulaExtrajeria",
-    "document": "15454515545",
-    "email": "elpatron@gmail.com",
-    "phoneNumber": "541554568541",
-    "birthDate": "2022-11-28",
-    "password": "$2a$10$VKvq4t1NjIFpa4.L3u4c..x7U3OGbGkbLtYlLKzcDyYIYXaMJfEhO"
-  }
+    {
+        "image": "user_1668400505911.png",
+        "id": 8,
+        "fullName": "Sergio Escobar",
+        "documentType": "cedulaCiudadania",
+        "document": "1040757582",
+        "email": "sergio.escobar.henao@gmail.com",
+        "phoneNumber": "3136246566",
+        "birthDate": "1998-11-03",
+        "password": "$2a$10$j.6bVYSxdtsRKapLJzuQbOE/kAwMW.J3ga1IFYyQ/h2h0F9qYAOhi"
+    },
+    {
+        "image": "user_1668441672519.webp",
+        "id": 10,
+        "fullName": "Rick Sanchez",
+        "documentType": "cedulaExtrajeria",
+        "document": "12345685245",
+        "email": "rick@gmail.com",
+        "phoneNumber": "5247896523",
+        "birthDate": "1960-01-19",
+        "password": "$2a$10$vh3ukKHPM1.qOTSsKAkw6.4UAao4YJZlXf1nJemOKnD0Gq/isTcT."
+    },
+    {
+        "image": "user_1668442073195.webp",
+        "id": 11,
+        "fullName": "Morty Smith",
+        "documentType": "cedulaExtrajeria",
+        "document": "45697895246",
+        "email": "morty@gmail.com",
+        "phoneNumber": "3254685959",
+        "birthDate": "2004-11-23",
+        "password": "$2a$10$fP4dicAz.Gdul39RBjaMg.BNm56Fb941wGol6bDrvsXEgc/Alb4o2"
+    }
 ]

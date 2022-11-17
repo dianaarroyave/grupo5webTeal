@@ -51,5 +51,5 @@ router.delete('/delete/:id', mainController.delete);
 router.post('/closeSession', mainController.closeSession);
 
 router.get('/passwordUpdate', mainController.passwordUpdateView);
-//router.post('/passwordUpdate', mainController.passwordUpdate);
+router.post('/passwordUpdate', mainController.passwordUpdate);
 module.exports = router;

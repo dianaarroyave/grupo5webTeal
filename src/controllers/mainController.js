@@ -41,7 +41,7 @@ let mainController = {
     userToLogin = users.filter((user) => user.email == userEmail);
     if (
       userToLogin != undefined
-        &&
+      &&
       bcrypt.compareSync(req.body.password, userToLogin[0].password)
     ) {
       //definición de usuario logueado con session-------
@@ -74,8 +74,9 @@ let mainController = {
       //condicional funcionilidad
       conditional = req.file;
       let newUser = {
-        if (conditional) {
-        image: req.file.filename},
+        if(conditional) {
+          image: req.file.filename
+        },
         id: req.body.id || users.length + 2,
         fullName: req.body.name,
         documentType: req.body.documentType,
@@ -99,7 +100,7 @@ let mainController = {
       req.session.loggedUser = userToLogin
 
 
-      res.render('users/userDetail',{userToLogin});
+      res.render('users/userDetail', { userToLogin });
       //----------------------------------------------------------------
     } else {
       res.render('users/register', {
@@ -120,7 +121,7 @@ let mainController = {
   editUser: (req, res) => {
     // req.session.loggedUser = userToLogin.id;
     // const idSession = req.session.loggedUser
-    let idUser = idIndex || userToLogin[0].id ;
+    let idUser = idIndex || userToLogin[0].id;
     let userDetail = users.find((user) => user.id == idUser);
     let indexUser = users.indexOf(userDetail);
     //edicion de producto-----------------------------
@@ -141,27 +142,38 @@ let mainController = {
     res.redirect('/userDetail');
   },
 
-    delete:(req, res) =>{
-      let idUser = req.params.id;
-      let user =  users.find(user =>user.id==idUser);
-      let indexUser = users.indexOf(user);
-      users.splice(indexUser, 1)
+  passwordUpdateView: (req, res) => {
+    res.render('users/passwordUpdate');
+  },
 
-      //sobreescritura del JSON
-      let usersJSON = JSON.stringify(users);
-      fs.writeFileSync(usersFilePath,usersJSON);
-      res.redirect('/');
-    },
+  passwordUpdate:(req, res) => {
+    
 
-    closeSession: (req, res) =>{
-      userToLogin = undefined;
-      console.info(userToLogin)
-      req.session.loggedUser = undefined;
-      res.redirect('/login');
-    },
-    passwordUpdateView: (req, res) =>{
-      res.redirect('/passwordUpdateView');
-    }
+    res.redirect('/userDetail');
+  },
+
+  closeSession: (req, res) => {
+    userToLogin = undefined;
+    console.info(userToLogin)
+    req.session.loggedUser = undefined;
+    res.redirect('/login');
+  },
+
+  delete: (req, res) => {
+    let idUser = req.params.id;
+    let user = users.find(user => user.id == idUser);
+    let indexUser = users.indexOf(user);
+    users.splice(indexUser, 1)
+
+    //sobreescritura del JSON
+    let usersJSON = JSON.stringify(users);
+    fs.writeFileSync(usersFilePath, usersJSON);
+    res.redirect('/');
+  },
+
+
+
+
 }
 
 module.exports = mainController;

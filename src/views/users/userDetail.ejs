@@ -4,66 +4,74 @@
     <%- include('../partials/header') %>
       <main class="register-main">
         <div class="formProfile">
-          <form class="formUser" method="POST" action="/userDetail?_method=PUT" >
+          <form class="formUser" method="POST" action="/userDetail?_method=PUT">
             <h2 class="titleProfile">Perfil de usuario</h2>
             <div class="profileUser">
-               <!-- imagen de usuario -->
-            <div class="imageProfile">
-              <div class="campo">
-                <input class="create_input" accept="image/png.image/jpeg" type="file" id="create_img" name="productImage"
-                multiple /><span class="barra"></span>
-                <div class="container-img">
-                  <img class="create_img-user" src="/userImages/<%=userToLogin[0].image%>" alt="icono destacado" />
+              <!-- imagen de usuario -->
+              <div class="imageProfile">
+                <div class="campo">
+                  <input class="create_input" accept="image/png.image/jpeg" type="file" id="create_img"
+                    name="productImage" multiple /><span class="barra"></span>
+                  <div class="container-img">
+                    <img class="create_img-user" src="/userImages/<%=userToLogin[0].image%>" alt="icono destacado" />
+                  </div>
                 </div>
               </div>
+              <!-- Imformación usuario -->
+              <div class="informationProfile">
+                <div class="campo">
+                  <input class="register_input" type="text" minlength="8" id="name" name="fullName"
+                    value="<%=userToLogin[0].fullName%>" required />
+                  <span class="barra"></span>
+                  <label class="register-label">Nombre y apellido</label>
+                </div>
+                <div class="campo">
+                  <select name="documentType" class="register_document-select" value="<%=userToLogin[0].documentType%>">
+                    <option>Tipo de documento</option>
+                    <option value="cedulaCiudadania" selected>Cédula de ciudadanía</option>
+                    <option value="cedulaExtrajeria">Cédula de extranjería</option>
+                    <option value="pasaporte">Pasaporte</option>
+                    <option value="tarjetaIdentidad">Tarjeta de identidad</option>
+                  </select>
+                </div>
+                <div class="campo">
+                  <input type="text" id="document" name="document" value="<%=userToLogin[0].document%>" required
+                    class="register_input" /><span class="barra"></span>
+                  <label class="register-label">Documento</label>
+                </div>
+                <div class="campo">
+                  <input type="email" id="email" name="email" value="<%=userToLogin[0].email%>" required
+                    class="register_input" /><span class="barra"></span>
+                  <label class="register-label">Correo electrónico</label>
+                </div>
+                <div class="campo">
+                  <input type="text" id="phone" name="phoneNumber" value="<%=userToLogin[0].phoneNumber%>" required
+                    class="register_input" /><span class="barra"></span>
+                  <label class="register-label">Teléfono</label>
+                </div>
+                <div class="campo">
+                  <input class="register_input" type="date" id="fecha" name="birthDate"
+                    value="<%=userToLogin[0].birthDate%>" required />
+                </div>
+                <button class="save-btn" type="submit" id="enter">Guardar cambios</button>
+              </div>
             </div>
-            <!-- Imformación usuario -->
-            <div class="informationProfile">
-              <div class="campo">
-                <input class="register_input" type="text" minlength="8" id="name" name="fullName" value="<%=userToLogin[0].fullName%>" required />
-                <span class="barra"></span>
-                <label class="register-label">Nombre y apellido</label>
-              </div>
-              <div class="campo">
-                <select name="documentType" class="register_document-select" value="<%=userToLogin[0].documentType%>" >
-                  <option>Tipo de documento</option>
-                  <option value="cedulaCiudadania" selected>Cédula de ciudadanía</option>
-                  <option value="cedulaExtrajeria">Cédula de extranjería</option>
-                  <option value="pasaporte">Pasaporte</option>
-                  <option value="tarjetaIdentidad">Tarjeta de identidad</option>
-                </select>
-              </div>
-              <div class="campo">
-                <input type="number" id="document" name="document" value="<%=userToLogin[0].document%>" required class="register_input" /><span
-                  class="barra"></span>
-                <label class="register-label">Documento</label>
-              </div>
-              <div class="campo">
-                <input type="email" id="email" name="email" value="<%=userToLogin[0].email%>" required class="register_input" /><span class="barra"></span>
-                <label class="register-label">Correo electrónico</label>
-              </div>
-              <div class="campo">
-                <input type="number" id="phone" name="phoneNumber" value="<%=userToLogin[0].phoneNumber%>" required class="register_input" /><span class="barra"></span>
-                <label class="register-label">Teléfono</label>
-              </div>
-              <div class="campo">
-                <input class="register_input" type="date" id="fecha" name="birthDate" value="<%=userToLogin[0].birthDate%>"required />
-              </div>
-              <button class="save-btn" type="submit" id="enter">Guardar cambios</button>
-            </div>
-            </div>
-          </form>
-          <form >
-            <a href="/src/views/users/passwordUpdate.ejs">
-              <button type="submit" class="save-btn">
-              Editar contraseña
-            </button>
-          </a>
-
           </form>
           <!-- <form class="save-btn-form" action="">
           </form> -->
-          <form class="delete-btn-form" action="/delete/<%=userToLogin[0].id%>?_method=DELETE" method="POST" >
+          <form class="delete-btn-form" action="/passwordUpdate" method="GET">
+            <button type="submit" class="save-btn">
+              Editar contraseña
+            </button>
+          </form>
+
+          <form class="delete-btn-form" action="/closeSession" method="POST">
+            <button type="submit" class="save-btn">
+              Cerrar sesión
+            </button>
+          </form>
+
+          <form class="delete-btn-form" action="/delete/<%=userToLogin[0].id%>?_method=DELETE" method="POST">
             <button class="save-btn" type="submit">Eliminar Usuario</button>
           </form>
 
