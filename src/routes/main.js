@@ -52,4 +52,8 @@ router.post('/closeSession', mainController.closeSession);
 
 router.get('/passwordUpdate', mainController.passwordUpdateView);
 router.post('/passwordUpdate', mainController.passwordUpdate);
+
+//middleweares
+
+
 module.exports = router;
