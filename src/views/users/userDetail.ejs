@@ -59,21 +59,28 @@
           </form>
           <!-- <form class="save-btn-form" action="">
           </form> -->
-          <form class="delete-btn-form" action="/passwordUpdate" method="GET">
-            <button type="submit" class="save-btn">
-              Editar contraseña
-            </button>
-          </form>
+          <div class="buttons">
+            <form class="delete-btn-form" action="/products/adminProducts" >
+              <button class="save-btn" type="submit">Editar productos</button>
+            </form>
+            
+            <form class="delete-btn-form" action="/passwordUpdate" method="GET">
+              <button type="submit" class="save-btn">
+                Editar contraseña
+              </button>
+            </form>
 
-          <form class="delete-btn-form" action="/closeSession" method="POST">
-            <button type="submit" class="save-btn">
-              Cerrar sesión
-            </button>
-          </form>
+            <form class="delete-btn-form" action="/closeSession" method="POST">
+              <button type="submit" class="save-btn">
+                Cerrar sesión
+              </button>
+            </form>
 
-          <form class="delete-btn-form" action="/delete/<%=userToLogin[0].id%>?_method=DELETE" method="POST">
-            <button class="save-btn" type="submit">Eliminar Usuario</button>
-          </form>
+            <form class="delete-btn-form" action="/delete/<%=userToLogin[0].id%>?_method=DELETE" method="POST">
+              <button class="save-btn" type="submit">Eliminar Usuario</button>
+            </form>
+
+          </div>
 
         </div>
       </main>

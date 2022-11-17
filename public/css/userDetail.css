@@ -34,6 +34,11 @@
   align-items: center;
 }
 
+.buttons{
+  display: flex;
+  flex-direction: column;
+}
+
 .save-btn-form {
   width: 100%;
 }
@@ -68,5 +73,17 @@
 @media (min-width: 768px){
   .profileUser {
     display: flex;
+  }
+
+  .buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .save-btn {
+    width: 80%;
   }
 }
