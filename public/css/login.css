@@ -7,12 +7,20 @@
     align-items: center;
 }
 
-.form {
-    background: var(--blanco);
-    padding: 40px 10px 30px 10px;
-    box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    margin: 32px 0;
+.formLogin {
+  width: 50%;
+  background: var(--blanco);
+  box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.8);
+  padding: 40px 10px 30px 10px;
+  border-radius: 10px;
+  margin: 32px 0;
+}
+
+.formLogin-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
 }
 
 .title {
