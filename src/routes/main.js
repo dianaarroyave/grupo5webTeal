@@ -55,9 +55,9 @@ router.post('/passwordUpdate', mainController.passwordUpdate);
 
 //middleweares
 
-router.get('/login', function(req, res, next) {
-  next()
-}, mainController.login);
+// router.get('/login', function(req, res, next) {
+//   next()
+// }, mainController.login);
 
 
 module.exports = router;
