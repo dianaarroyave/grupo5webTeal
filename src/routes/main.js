@@ -5,15 +5,7 @@ const multer = require('multer');
 const mainController = require('../controllers/mainController');
 //---express validation --------------------------------
 const { body } = require('express-validator');
-const validations = [
-  body('name').isLength({min: 3}).withMessage('Ingrese su nombre y apellido'),
-  body('documentType').notEmpty().withMessage('Seleccione su tipo de documento'),
-  body('document').isNumeric().withMessage('Ingrese su número de documento'),
-  body('email').isEmail().withMessage('Ingrese un email válido'),
-  body('phone').isNumeric().withMessage('Ingrese su número telefónico'),
-  body('birthDate').notEmpty().withMessage('Seleccione su fecha de nacimiento'),
-  body('password').isLength({min: 5}).withMessage('Ingrese una contraseña de mínimo 5 caracteres')
-]
+const validations = require('../middlewares/validations')
 
 //implementación de multer para subida de archivos:---------------------
 const storage = multer.diskStorage({
@@ -37,7 +29,7 @@ router.post('/login', mainController.login);
 //---------------------------------------------
 router.get('/register', mainController.register);
 router.post(
-  '/register',upload.single('userImage'),validations,mainController.createUser); // agregar middleweare validations
+  '/register',upload.single('userImage'),validations,mainController.createUser);
 //admin-crear
 router.get('/userDetail', mainController.userDetail);
 router.post(

@@ -1,4 +1,10 @@
 const fs = require('fs');
 
-// function loginLookMiddleware (req, res, next) {
-//   fs.appendFileSync(__dirname
+function loginLookMiddleware (req, res, next) {
+  if (userToLogin==undefined) {
+
+  } else{
+
+  }
+
+}
