@@ -1,33 +1,38 @@
 <%- include('../partials/head') %>
-<body>
-  <%- include('../partials/header') %>
-  <main class="mainSubmarcas">
-    <div class="gender">
-        <button class="btn-man">Hombre</button>
-        <button class="btn-women">Mujer</button>
-    </div>
 
-    <p class="filter-products">Ordenar por</p>
-    <div class="filter-price">
-        <button class="name">Nombre</button>
-        <button class="filter-price-less">Precio menor a mayor</button>
-        <button class="filter-price-more">Precio mayor a menor</button>
-    </div>
-    <div class="cards">
-        <%for(let i=0;i<brand.length;i++){%>
-        <a class="plink" href="/products/productDetail/<%=brand[i].id%>">
-            <div class="card">
+  <body>
+    <%- include('../partials/header') %>
+      <main class="mainSubmarcas">
+        <div class="gender">
+          <button class="btn-man">Hombre</button>
+          <button class="btn-women">Mujer</button>
+        </div>
+
+        <p class="filter-products">Ordenar por</p>
+        <div class="filter-price">
+          <button class="name">Nombre</button>
+          <button class="filter-price-less">Precio menor a mayor</button>
+          <button class="filter-price-more">Precio mayor a menor</button>
+        </div>
+        <div class="cards">
+          <%for(let i=0;i<brand.length;i++){%>
+            <a class="plink" href="/products/productDetail/<%=brand[i].id%>">
+              <div class="card">
                 <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
                 <img class="img-card" src="/productImages/<%=brand[i].image%>" alt="Prenda Vestir">
                 <div class="description">
-                  <p class="price">$<%= brand[i].price %></p>
-                    <p class="product"><%=brand[i].name%></p>
+                  <p class="price">$<%= brand[i].price %>
+                  </p>
+                  <p class="product">
+                    <%=brand[i].name%>
+                  </p>
                 </div>
-            </div>
-        </a>
-        <%}%>
-    </div>
-</main>
-  <%- include('../partials/footer') %>
-</body>
-</html>
+              </div>
+            </a>
+            <%}%>
+        </div>
+      </main>
+      <%- include('../partials/footer') %>
+  </body>
+
+  </html>

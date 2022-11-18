@@ -1,10 +1,9 @@
 const fs = require('fs');
 
-function loginLookMiddleware (req, res, next) {
-  if (userToLogin==undefined) {
+ function loginLookMiddleware (req, res, next) {
+  fs.appendFileSync('logDB.txt', 'Ingreso usuario correctamente' + req.url)
 
-  } else{
+  next();
+ }
 
-  }
-
-}
+ module.exports = loginLookMiddleware;

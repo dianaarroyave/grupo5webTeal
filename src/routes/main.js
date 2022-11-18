@@ -3,6 +3,7 @@ const router = express.Router();
 let path = require('path');
 const multer = require('multer');
 const mainController = require('../controllers/mainController');
+const loginLookMiddleware = require('../middlewares/loginLookMiddleware');
 //---express validation --------------------------------
 const { body } = require('express-validator');
 const validations = require('../middlewares/validations')
@@ -25,7 +26,7 @@ router.get('/', mainController.home);
 router.get('/aboutUs', mainController.aboutUs);
 router.get('/login', mainController.viewLogin);
 //------Login----------------------------------
-router.post('/login', mainController.login);
+router.post('/login', loginLookMiddleware , mainController.login);
 //---------------------------------------------
 router.get('/register', mainController.register);
 router.post(
