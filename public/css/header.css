@@ -54,7 +54,7 @@
 }
 
 .menu-isotipo:checked~.menu-isotipo__dropdown,
-.menu-profile:checked~.menu-profile__dropdown {
+.menu-profile:checked~label .menu-profile__dropdown {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
