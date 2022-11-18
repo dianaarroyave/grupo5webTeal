@@ -5,10 +5,10 @@ let path = require('path');
 const bcrypt = require('bcryptjs');
 
 //----------------------------------------------------------------
-let homeDynamicObject = [[{
+let homeDynamicObject = [{
   image: "/images/user.png",
   logged: false
-}]];
+}];
 
 //----------------------------------------------------------------
 
@@ -31,7 +31,9 @@ let mainController = {
     let featuredProducts = products.filter(
       (product) => product.featured == true || product.featured == 'on'
     );
-    homeDynamicObject.push(featuredProducts);
+    for (let i =0; i<featuredProducts.length;i++) {
+    homeDynamicObject.push(featuredProducts[i]);
+    }
     console.info(homeDynamicObject);
     res.render('products/home' , {homeDynamicObject});
   },

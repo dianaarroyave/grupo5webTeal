@@ -18,9 +18,9 @@
 
             //esto es lo que estamos explotaando------------------------------------------------
             <% let profileImage = homeDynamicObject[0]; %>
-            <% let products = homeDynamicObject[0]; %>
+            <% homeDynamicObject.shift(); %>
             <label for="menu-profile">
-              <img class="profile" src="<%= profileImage[0].image %>" alt="Perfil usuario">
+              <img class="profile" src="<%= profileImage.image %>" alt="Perfil usuario">
           </label>
           <a  href="/login" class="star">INICIAR SESIÓN</a>
           //------------------------------------------------------------------------------------
@@ -33,14 +33,14 @@
                 </h2>
             </div>
             <div class="cards">
-              <%for(let i=0;i<products.length;i++){%>
-                <a class="plink" href="/products/productDetail/<%=products[i].id%>">
+              <%for(let i=0;i<homeDynamicObject.length;i++){%>
+                <a class="plink" href="/products/productDetail/<%=homeDynamicObject[i].id%>">
                     <div class="card">
                         <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
-                        <img class="img-card" src="/productImages/<%=products[i].image%>" alt="Prenda Vestir">
+                        <img class="img-card" src="/productImages/<%=homeDynamicObject[i].image%>" alt="Prenda Vestir">
                         <div class="description">
-                          <p class="price">$<%= products[i].price %></p>
-                            <p class="product"><%=products[i].name%></p>
+                          <p class="price">$<%= homeDynamicObject[i].price %></p>
+                            <p class="product"><%=homeDynamicObject[i].name%></p>
                         </div>
                     </div>
                 </a>
