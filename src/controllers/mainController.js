@@ -7,6 +7,7 @@ const bcrypt = require('bcryptjs');
 //----------------------------------------------------------------
 let homeDynamicObject = [{
   image: "/images/user.png",
+  name:"",
   logged: false
 }];
 
@@ -28,6 +29,7 @@ let idIndex = 0;
 
 let mainController = {
   home: (req, res) => {
+    homeDynamicObject = [homeDynamicObject[0]];
     let featuredProducts = products.filter(
       (product) => product.featured == true || product.featured == 'on'
     );
@@ -58,6 +60,15 @@ let mainController = {
     ) {
       //definición de usuario logueado con session-------
       req.session.loggedUser = userToLogin;
+      //-------------------------------------------------mostrar imagen de perfil dinámica
+      homeDynamicObject = [{
+        image: "/userImages/" + userToLogin[0].image,
+        name:userToLogin[0].fullName,
+        logged: true
+      }];
+      console.info(homeDynamicObject);
+
+
       //-------------------------------------------------
       res.redirect('/userDetail'); //
     } else {
@@ -168,6 +179,11 @@ let mainController = {
     userToLogin = undefined;
     console.info(userToLogin)
     req.session.loggedUser = undefined;
+    homeDynamicObject = [{
+      image: "/images/user.png",
+      name: "",
+      logged: false
+    }];
     res.redirect('/login');
   },
 
