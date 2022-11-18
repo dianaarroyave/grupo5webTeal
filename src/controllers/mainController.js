@@ -4,6 +4,14 @@ let fs = require('fs');
 let path = require('path');
 const bcrypt = require('bcryptjs');
 
+//----------------------------------------------------------------
+let homeDynamicObject = [[{
+  image: "/images/user.png",
+  logged: false
+}]];
+
+//----------------------------------------------------------------
+
 //requerir archivo JSON de productos
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
@@ -23,7 +31,9 @@ let mainController = {
     let featuredProducts = products.filter(
       (product) => product.featured == true || product.featured == 'on'
     );
-    res.render('products/home', { featuredProducts });
+    homeDynamicObject.push(featuredProducts);
+    console.info(homeDynamicObject);
+    res.render('products/home' , {homeDynamicObject});
   },
   aboutUs: (req, res) => {
     res.render('products/aboutUs');
@@ -147,7 +157,7 @@ let mainController = {
   },
 
   passwordUpdate:(req, res) => {
-    
+
 
     res.redirect('/userDetail');
   },
