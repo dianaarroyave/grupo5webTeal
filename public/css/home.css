@@ -37,10 +37,17 @@ footer{
     padding: 5px;
 }
 
-
-
+.homeContainerProfile{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 1.8rem;
+    right: 0.4rem;
+    
+}
 
 .ImageContainer{
+    position: relative;
     background-color: white;
     background-image:url(../images/fondomobile.JPG);
     background-size: 100vw;

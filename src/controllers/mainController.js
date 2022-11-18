@@ -7,7 +7,7 @@ const bcrypt = require('bcryptjs');
 //----------------------------------------------------------------
 let homeDynamicObject = [{
   image: "/images/user.png",
-  name:"",
+  name: "",
   logged: false
 }];
 
@@ -33,11 +33,11 @@ let mainController = {
     let featuredProducts = products.filter(
       (product) => product.featured == true || product.featured == 'on'
     );
-    for (let i =0; i<featuredProducts.length;i++) {
-    homeDynamicObject.push(featuredProducts[i]);
+    for (let i = 0; i < featuredProducts.length; i++) {
+      homeDynamicObject.push(featuredProducts[i]);
     }
     console.info(homeDynamicObject);
-    res.render('products/home' , {homeDynamicObject});
+    res.render('products/home', { homeDynamicObject });
   },
   aboutUs: (req, res) => {
     res.render('products/aboutUs');
@@ -63,11 +63,9 @@ let mainController = {
       //-------------------------------------------------mostrar imagen de perfil dinámica
       homeDynamicObject = [{
         image: "/userImages/" + userToLogin[0].image,
-        name:userToLogin[0].fullName,
+        name: userToLogin[0].fullName,
         logged: true
       }];
-      console.info(homeDynamicObject);
-
 
       //-------------------------------------------------
       res.redirect('/userDetail'); //
@@ -97,9 +95,10 @@ let mainController = {
       //condicional funcionilidad
       conditional = req.file;
       let newUser = {
-        if(conditional) {
-          image: req.file.filename
-        },
+        // if(conditional) {
+        //   image: req.file.filename
+        // },
+        image: req.file.filename,
         id: req.body.id || users.length + 2,
         fullName: req.body.name,
         documentType: req.body.documentType,
@@ -121,7 +120,12 @@ let mainController = {
       console.info(userToLogin);
 
       req.session.loggedUser = userToLogin
-
+      //-------------------------------------------------mostrar imagen de perfil dinámica
+      homeDynamicObject = [{
+        image: "/userImages/" + userToLogin[0].image,
+        name: userToLogin[0].fullName,
+        logged: true
+      }];
 
       res.render('users/userDetail', { userToLogin });
       //----------------------------------------------------------------
@@ -157,7 +161,7 @@ let mainController = {
     users[indexUser].email = req.body.email;
     users[indexUser].phoneNumber = req.body.phoneNumber;
     users[indexUser].birthDate = req.body.birthDate;
-    users[indexUser].password = req.body.password;
+    // users[indexUser].password = req.body.password;
     //------------------------------------------------
     //sobreescritura del JSON
     let usersJSON = JSON.stringify(users);
@@ -169,7 +173,7 @@ let mainController = {
     res.render('users/passwordUpdate');
   },
 
-  passwordUpdate:(req, res) => {
+  passwordUpdate: (req, res) => {
 
 
     res.redirect('/userDetail');
@@ -177,7 +181,6 @@ let mainController = {
 
   closeSession: (req, res) => {
     userToLogin = undefined;
-    console.info(userToLogin)
     req.session.loggedUser = undefined;
     homeDynamicObject = [{
       image: "/images/user.png",

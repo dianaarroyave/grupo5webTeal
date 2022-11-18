@@ -84,7 +84,7 @@
 .container-icons {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    margin-right: 10rem;
     position: relative;
     gap: 0.9rem;
 }

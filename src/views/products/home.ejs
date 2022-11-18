@@ -1,11 +1,27 @@
-
 <%- include('../partials/head') %>
-<link rel="stylesheet" href="/public/css/home.css">
+    <link rel="stylesheet" href="/public/css/home.css">
+
     <body>
 
-            <!-- ------------aquí está contenida la imagen principal-------------- -->
-            <section class="ImageContainer">
-                <%- include('../partials/header') %>
+        <!-- ------------aquí está contenida la imagen principal-------------- -->
+        <section class="ImageContainer">
+
+            <%- include('../partials/header') %>
+                <!--imagen de usuario dinámica------------------------------------------------>
+                <div class="homeContainerProfile">
+                    <input class="menu-profile" type="checkbox" id="menu-profile">
+                    <label for="menu-profile">
+                        <img class="profile"
+                            src="<% if(homeDynamicObject[0].image==undefined){%> /images/user.png <% }else{ %>  <%= homeDynamicObject[0].image %> <% } %> "
+                            alt="Perfil usuario">
+                    </label>
+                    <a href="<% if(homeDynamicObject[0].logged==true){ %> /userDetail <% } else{ %>  /login  <% } %>"
+                        class="star">
+                        <% if(homeDynamicObject[0].logged==true){ %>
+                            <%= homeDynamicObject[0].name %>
+                                <% } else{ %> INICIAR SESIÓN <% } %>
+                    </a>
+                </div>
                 <div class="image">
                     <nav classs="principal">
                         <ul class="ChooseCollection">
@@ -15,19 +31,9 @@
                         </ul>
                     </nav>
                 </div>
-            </section>
+        </section>
 
- <!--imagen de usuario dinámica------------------------------------------------>
-
- <input class="menu-profile" type="checkbox" id="menu-profile">
- <label for="menu-profile">
-   <img class="profile" src="<% if(homeDynamicObject[0].image==undefined){%> /images/user.png <% }else{ %>  <%= homeDynamicObject[0].image %> <% } %> " alt="Perfil usuario">
-</label>
-
-          <a  href="<% if(homeDynamicObject[0].logged==true){ %> /userDetail <% } else{ %>  /login  <% } %>" class="star"> <% if(homeDynamicObject[0].logged==true){ %> <%= homeDynamicObject[0].name %> <% } else{ %> INICIAR SESIÓN <% } %> </a>
-
-
-          <section class="FeaturedProducts">
+        <section class="FeaturedProducts">
             <div class="TitleContainer">
                 <h2 class="SectionTitle">
                     PRODUCTOS DESTACADOS
@@ -35,21 +41,25 @@
             </div>
             <div class="cards">
 
-              <%for(let i=1;i<homeDynamicObject.length;i++){%>
-                <a class="plink" href="/products/productDetail/<%=homeDynamicObject[i].id%>">
-                    <div class="card">
-                        <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
-                        <img class="img-card" src="/productImages/<%=homeDynamicObject[i].image%>" alt="Prenda Vestir">
-                        <div class="description">
-                          <p class="price">$<%= homeDynamicObject[i].price %></p>
-                            <p class="product"><%=homeDynamicObject[i].name%></p>
+                <%for(let i=1;i<homeDynamicObject.length;i++){%>
+                    <a class="plink" href="/products/productDetail/<%=homeDynamicObject[i].id%>">
+                        <div class="card">
+                            <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
+                            <img class="img-card" src="/productImages/<%=homeDynamicObject[i].image%>"
+                                alt="Prenda Vestir">
+                            <div class="description">
+                                <p class="price">$<%= homeDynamicObject[i].price %>
+                                </p>
+                                <p class="product">
+                                    <%=homeDynamicObject[i].name%>
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-                <%}%>
+                    </a>
+                    <%}%>
             </div>
         </section>
-            <%- include('../partials/footerHome') %>
+        <%- include('../partials/footerHome') %>
     </body>
 
 
