@@ -20,6 +20,17 @@ William y Diana van a trabajar en la vista del perfil donde van a:
 
 Cada dupla debe entregar estas actividades el 4 de noviembre 
 
+## Semana 2
+
+Se realizaron los avances de las tareas asignadas, Diana y William solucitaron unos días adicionales para terminar con los pendientes debido a que les ha dado dificultad.
+
+Sergio y Sthefania comenzaron a trabajar en todo el tema de la contraseña del sitio.
+
+## Semana 3
+
+Se terminaron todas las tareas asignadas, se deben ajustar algunos detalles para que la funcionalidad y el CSS sea mejor, pero actualmente está funcional.
+
+
 # weekly sprint 4
 
 ## Semana 1
