@@ -1,3 +1,34 @@
+# Retrospectiva sprint 5
+
+## ¿Qué se hizo bien?
+
+En este sprint se decidió dividir las actividades a realizar en etapas y microtareas, las cuales se asignaron por duplas, donde cada grupo era responsable de una parte del proyecto.  Este cambio nos permitió aprender más, ya que cada miembro del equipo se esforzó por entregar correctamente lo que le correspondía, y eso implicaba estudiar, preguntar, y pedir ayuda.  Teniendo cada uno una participación más activa del proceso, propositiva y proactiva.
+
+Se mejoró la comunicación, ya que al estar más activos y propoitivos, cada miembro expresaba aviertamente cómo iba en el proceso. 
+
+Se buscabaron alternativas para resolver los inconvenientes, ya sea con los miembros del equipo, con miembros de otros equipos, con los profes o externos.
+
+## ¿Qué se hizo mal?
+
+todavía se debe trabajar más en la puntualidad y compromiso con las reuniones.
+
+## ¿Qué hay que dejar de hacer?
+
+Por el momento vamos bien.
+
+## ¿Qué hay que hacer más?
+
+Profudizar más los temas a aplicar en cada uno de los sprints, para llegar mejor preparados.
+
+Seguir con las microtareas, y dividirnos en tareas más pequeñas y personalizadas.  Dividiendo el sprint en etapas claras, con un cronograma de trabajo.
+
+Seguir entregando con tiempo.
+
+## ¿Qué hay que hacer menos?
+
+Por el momento vamos bien.
+
+
 # Retrospectiva sprint 4
 
 ## ¿Qué se hizo bien?

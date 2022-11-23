@@ -14,8 +14,8 @@
     "image": "user_1668441672519.webp",
     "id": 10,
     "fullName": "Rick Sanchez",
-    "documentType": "cedulaExtrajeria",
-    "document": "12345685245",
+    "documentType": "cedulaCiudadania",
+    "document": "111111111111",
     "email": "rick@gmail.com",
     "phoneNumber": "5247896523",
     "birthDate": "1960-01-19",
@@ -53,5 +53,27 @@
     "phoneNumber": "111111111",
     "birthDate": "2022-07-06",
     "password": "$2a$10$2PgJPTqPUD.rX9se8O7fBOa3mABTtdyXeDWwuxI4qHSFlr0fL98HO"
+  },
+  {
+    "image": "user_1668803885820.jpg",
+    "id": 7,
+    "fullName": "Diana  Arroyave",
+    "documentType": "cedulaCiudadania",
+    "document": "32207145",
+    "email": "dianaarroyave4@gmail.com",
+    "phoneNumber": "3104993722",
+    "birthDate": "1983-03-13",
+    "password": "$2a$10$uDb/400968v2pNf93s1M1eA2S72PP2ZUU0CqRuIe8PNcIPPOOPzLi"
+  },
+  {
+    "image": "user_1668803893966.jpg",
+    "id": 8,
+    "fullName": "Diana  Arroyave",
+    "documentType": "cedulaCiudadania",
+    "document": "32207145",
+    "email": "dianaarroyave4@gmail.com",
+    "phoneNumber": "3104993722",
+    "birthDate": "1983-03-13",
+    "password": "$2a$10$pbfnEEbY8vINob19mVedtehTKWpQaeWnPkcOU9888vMRwi1Piw2lu"
   }
 ]

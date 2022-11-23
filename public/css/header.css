@@ -68,7 +68,7 @@
 }
 
 .starSesion {
-  margin-left: 5rem;
+    margin-left: 5rem;
 }
 
 .logo {
@@ -99,6 +99,7 @@
 .profile {
     margin-left: 0.9rem;
     margin-right: 0.3rem;
+    border-radius: 50%;
 }
 
 .logo-img:hover,
