@@ -46,6 +46,11 @@ router.post('/closeSession', mainController.closeSession);
 router.get('/passwordUpdate', mainController.passwordUpdateView);
 router.post('/passwordUpdate', mainController.passwordUpdate);
 
+
+//pruebadb-----------------------------------------------
+router.get('/pruebadb', mainController.pruebadb);
+//-------------------------------------------------------
+
 //middleweares
 
 // router.get('/login', function(req, res, next) {
