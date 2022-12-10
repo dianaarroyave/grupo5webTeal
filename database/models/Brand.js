@@ -10,11 +10,10 @@ module.exports = (sequelize, dataTypes) => {
       autoIncrement: true,
       allowNull: false,
       unsigned: true,
-
     },
     brandDescription: {//objeto con las características del campo
       type: dataTypes.STRING,
-      defaultValue:true,
+      defaultValue: true,
       allowNull: true,
     }
   };
@@ -27,4 +26,11 @@ module.exports = (sequelize, dataTypes) => {
   const Brands = sequelize.define(alias, cols, config);
 
   return Brands;
+}
+
+Brands.associate = function (models) {
+  Brands.hasMany(models.Product, {
+    as: 'brands',
+    foreingKey: 'id_products'
+  })
 }

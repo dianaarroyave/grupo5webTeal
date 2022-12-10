@@ -4,7 +4,7 @@ module.exports = (sequelize, dataTypes) => {
   let cols = {
     //objeto con detalles de la tabla (de las columnas)
     //objeto con las características del campo
-    id: {//objeto con las características del campo
+    id_products: {//objeto con las características del campo
       autoIncrement: true,
       primaryKey: true,
       type: dataTypes.INTEGER,
@@ -22,23 +22,22 @@ module.exports = (sequelize, dataTypes) => {
     productDescription: {//objeto con las características del campo
       type: dataTypes.STRING,
       allowNull: true,
-      defaultValue:true
+      defaultValue: true
     },
     collectionDescription: {//objeto con las características del campo
       type: dataTypes.STRING,
       allowNull: true,
-      defaultValue:true
+      defaultValue: true
     },
     collection: {//objeto con las características del campo
       type: dataTypes.STRING,
       allowNull: true,
-      defaultValue:true
+      defaultValue: true
     },
     id_brands: {//objeto con las características del campo
       type: dataTypes.INTEGER,
-    //preguntar al profe la clave foranea
       allowNull: true,
-      defaultValue:true
+      defaultValue: true
     }
   };
   let config = {
@@ -51,3 +50,16 @@ module.exports = (sequelize, dataTypes) => {
 
   return Products;
 }
+
+Products.associate = function (models) {
+  Products.belongsTo(models.Brand, {
+    as: 'products', // El nombre del modelo pero en plural
+    foreingKey: 'id_brands'
+  }),
+
+  Products.hasMany(models.PurchaseOrder, {
+    as: 'products',
+    foreingKey: 'id_purchaseOrders'
+  })
+}
+
