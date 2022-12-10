@@ -51,15 +51,15 @@ module.exports = (sequelize, dataTypes) => {
   return Products;
 }
 
-Products.associate = function (models) {
-  Products.belongsTo(models.Brand, {
-    as: 'products', // El nombre del modelo pero en plural
-    foreingKey: 'id_brands'
-  }),
+// Products.associate = function (models) {
+//   Products.belongsTo(models.Brand, {
+//     as: 'products', // El nombre del modelo pero en plural
+//     foreingKey: 'id_brands'
+//   }),
 
-  Products.hasMany(models.PurchaseOrder, {
-    as: 'products',
-    foreingKey: 'id_purchaseOrders'
-  })
-}
+//   Products.hasMany(models.PurchaseOrder, {
+//     as: 'products',
+//     foreingKey: 'id_purchaseOrders'
+//   })
+// }
 

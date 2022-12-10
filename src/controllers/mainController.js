@@ -28,6 +28,7 @@ const { validationResult } = require('express-validator');
 
 //requerir base de datos--------
 let db = require("../../database/models");
+const sequelize = db.sequelize;
 let idIndex = 0;
 
 let mainController = {
@@ -206,21 +207,21 @@ let mainController = {
   },
 
   //pruebadb-------------------------------------------
-  pruebadb: (req,res) => {
+  pruebadb: (req, res) => {
 
-    db.Products.findAll().then(function(Products){
+    db.Products.findAll().then(function (Products) {
       res.render("listado");
     })
-
-
     // res.render('products/prueba');
-
   },
+  //EJEMPLO DE OTRO PROYECTO
+  // 'list': (req, res) => {
+  //   db.Genre.findAll()
+  //     .then(genres => {
+  //       res.render('genresList.ejs', { genres })
+  //     })
+  // }
   //---------------------------------------------------
-
-
-
-
 }
 
 module.exports = mainController;

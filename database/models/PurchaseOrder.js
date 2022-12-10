@@ -35,9 +35,9 @@ module.exports = (sequelize, dataTypes) => {
   return PurchaseOrders;
 }
 
-PurchaseOrders.associate = function (models) {
-  PurchaseOrders.belongsTo(models.Product, {
-    as: 'purchaseOrders',
-    foreingKey: 'id_products'
-  })
-}
+// PurchaseOrders.associate = function (models) {
+//   PurchaseOrders.belongsTo(models.Product, {
+//     as: 'purchaseOrders',
+//     foreingKey: 'id_products'
+//   })
+// }

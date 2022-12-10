@@ -28,9 +28,9 @@ module.exports = (sequelize, dataTypes) => {
   return Brands;
 }
 
-Brands.associate = function (models) {
-  Brands.hasMany(models.Product, {
-    as: 'brands',
-    foreingKey: 'id_products'
-  })
-}
+// Brands.associate = function (models) {
+//   Brands.hasMany(models.Product, {
+//     as: 'brands',
+//     foreingKey: 'id_products'
+//   })
+// }
