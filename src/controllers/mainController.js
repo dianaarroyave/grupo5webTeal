@@ -25,6 +25,9 @@ let userToLogin = [{}];
 const { validationResult } = require('express-validator');
 //console.log(validationResult);
 
+
+//requerir base de datos--------
+let db = require("../../database/models");
 let idIndex = 0;
 
 let mainController = {
@@ -201,6 +204,19 @@ let mainController = {
     fs.writeFileSync(usersFilePath, usersJSON);
     res.redirect('/');
   },
+
+  //pruebadb-------------------------------------------
+  pruebadb: (req,res) => {
+
+    db.Products.findAll().then(function(Products){
+      res.render("listado");
+    })
+
+
+    // res.render('products/prueba');
+
+  },
+  //---------------------------------------------------
 
 
 
