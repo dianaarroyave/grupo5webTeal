@@ -3,10 +3,11 @@ const bcrypt = require('bcryptjs');
 const db = require('../config/db.js');
 
 const User = db.define('users', {
-    image: {
+    userImage: {
         type: DataTypes.STRING,
+        allowNull: true
     },
-    fullname: {
+    fullName: {
         type: DataTypes.STRING,
         allowNull: false
     },
@@ -35,10 +36,11 @@ const User = db.define('users', {
         allowNull: false
     }
 }, {
+    //Encriptar contraseña
     hooks: {
-        beforeCreate: async function(User){
+        beforeCreate: async function (User) {
             const salt = await bcrypt.genSalt(10);
-            User.password = await bcrypt.hash( User.password, salt);
+            User.password = await bcrypt.hash(User.password, salt);
         }
     }
 });

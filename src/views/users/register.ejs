@@ -3,68 +3,53 @@
   <body>
     <%- include('../partials/header') %>
       <main class="register-main">
-        <form class="form" action="/register" method="POST" enctype="multipart/form-data">
+        <form class="form" action="/register" method="POST">
 
-          <%if (locals.errors){%>
-            <% errors.forEach(error=> {%>
-              <p class="error">
-                <%=error.msg%>
-              </p>
-              <%});%>
-                <%}%>
-
-                  <h2 class="title">Crear cuenta</h2>
-                  <div class="campo">
-                    <input class="create_input" accept="image/png.image/jpeg" type="file" id="create_img"
-                      name="userImage" multiple /><span class="barra"></span>
-                    <div class="container-img">
-                      <img class="create_img-form" src="/images/user.png" alt="icono destacado" />
-                    </div>
-                  </div>
-                  <div class="campo">
-                    <input class="register_input" type="text" id="name" name="name"
-                      value="<%= locals.old && old.name ? old.name : '' %> " /><span class="barra"></span>
-                    <label class="register-label">Nombre y apellido</label>
-                  </div>
-                  <div class="campo">
-                    <select class="register_document-select" id="documentType" name="documentType">
-                      <option>Tipo de documento</option>
-                      <option value="cedulaCiudadania" <%=locals.old && old.documentType==="cedulaCiudadania"
-                        ? 'selected' : '' %> >Cédula de ciudadanía</option>
-                      <option value="cedulaExtrajeria" <%=locals.old && old.documentType==="cedulaExtrajeria"
-                        ? 'selected' : '' %> >Cédula de extranjería</option>
-                      <option value="pasaporte" <%=locals.old && old.documentType==="pasaporte" ? 'selected' : '' %>
-                        >Pasaporte</option>
-                      <option value="tarjetaIdentidad" <%=locals.old && old.documentType==="tarjetaIdentidad"
-                        ? 'selected' : '' %> >Tarjeta de identidad</option>
-                    </select>
-                  </div>
-                  <div class="campo">
-                    <input class="register_input" type="number" id="document" name="document"
-                      value="<%= locals.old && old.document ? old.document : '' %> " /><span class="barra"></span>
-                    <label class="register-label">Documento</label>
-                  </div>
-                  <div class="campo">
-                    <input class="register_input" type="email" id="email" name="email"
-                      value="<%= locals.old && old.email ? old.email : '' %> " /><span class="barra"></span>
-                    <label class="register-label">Correo electronico</label>
-                  </div>
-                  <div class="campo">
-                    <input class="register_input" type="number" id="phone" name="phone"
-                      value="<%= locals.old && old.phone ? old.phone : '' %> " /><span class="barra"></span>
-                    <label class="register-label">Telefono</label>
-                  </div>
-                  <div class="campo">
-                    <input class="register_input" type="date" id="birthDate" name="birthDate"
-                      value="<%= locals.old && old.birthDate ? old.birthDate : '' %> " />
-                  </div>
-                  <div class="campo">
-                    <input class="register_input" type="password" id="password" name="password"><span
-                      class="barra"></span>
-                    <label class="register-label">Contraseña</label>
-                  </div>
-                  <button class="enter-btn" type="submit" id="enter">Crear cuenta</button>
-                  <!-- <button class="enter-facebook" type="submit" id="enter">
+          <h2 class="title">Crear cuenta</h2>
+          <div class="campo">
+            <input class="create_input" accept="image/png.image/jpeg" type="file" id="userImage" name="userImage"
+              multiple /><span class="barra"></span>
+            <div class="container-img">
+              <img class="create_img-form" src="/images/user.png" alt="icono destacado" />
+            </div>
+          </div>
+          <div class="campo">
+            <input class="register_input" type="text" id="fullName" name="fullName" value="" /><span
+              class="barra"></span>
+            <label class="register-label">Nombre y apellido</label>
+          </div>
+          <div class="campo">
+            <select class="register_document-select" id="documentType" name="documentType">
+              <option>Tipo de documento</option>
+              <option value="cedulaCiudadania">Cédula de ciudadanía</option>
+              <option value="cedulaExtrajeria">Cédula de extranjería</option>
+              <option value="pasaporte">Pasaporte</option>
+              <option value="tarjetaIdentidad">Tarjeta de identidad</option>
+            </select>
+          </div>
+          <div class="campo">
+            <input class="register_input" type="number" id="documentNumber" name="documentNumber" value="" /><span
+              class="barra"></span>
+            <label class="register-label">Documento</label>
+          </div>
+          <div class="campo">
+            <input class="register_input" type="email" id="email" name="email" value="" /><span class="barra"></span>
+            <label class="register-label">Correo electronico</label>
+          </div>
+          <div class="campo">
+            <input class="register_input" type="number" id="phoneNumber" name="phoneNumber" value="" /><span
+              class="barra"></span>
+            <label class="register-label">Telefono</label>
+          </div>
+          <div class="campo">
+            <input class="register_input" type="date" id="dateBirth" name="dateBirth" value="" />
+          </div>
+          <div class="campo">
+            <input class="register_input" type="password" id="password" name="password"><span class="barra"></span>
+            <label class="register-label">Contraseña</label>
+          </div>
+          <button class="enter-btn" type="submit" id="enter">Crear cuenta</button>
+          <!-- <button class="enter-facebook" type="submit" id="enter">
             Ingresar con Facebook
           </button>
           <button class="enter-google" type="submit" id="enter">

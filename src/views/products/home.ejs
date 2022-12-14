@@ -9,38 +9,29 @@
             <%- include('../partials/header') %>
                 <!--imagen de usuario dinámica------------------------------------------------>
                 <div class="homeContainerProfile">
-                  <div>
-                    <input class="menu-profile" type="checkbox" id="menu-profile">
-                    <label for="menu-profile">
-                        <img class="profile"
-                            src="<% if(homeDynamicObject[0].image==undefined){%> /images/user.png <% }else{ %>  <%= homeDynamicObject[0].image %> <% } %> "
-                            alt="Perfil usuario">
-                  </div>
-                  <div>
-                    <a href="<% if(homeDynamicObject[0].logged==true){ %> /userDetail <% }    else{ %>  /login  <% } %>"
-                      class="star">
-                        <% if(homeDynamicObject[0].logged==true){ %>
-                        <%= homeDynamicObject[0].name %>
-                        <% } else{ %> INICIAR SESIÓN <% } %>
-                    </a>
+                    <div>
+                        <input class="menu-profile" type="checkbox" id="menu-profile">
+                        <label for="menu-profile">
+                            <img class="profile" src="<% if(homeDynamicObject[0].image==undefined){%> /images/user.png <% }else{ %>  <%= homeDynamicObject[0].image %> <% } %> " alt="Perfil usuario">
                     </div>
-                        <% if(homeDynamicObject[0].logged){%>
-                            <ul >
-                                <li>
-                                    <a href="/products/adminProducts" class="menu-profile__option">EDITAR PRODUCTOS</a>
-                                </li>
-                                <li>
-                                    <a href="/userDetail" class="menu-profile__option">PERFIL</a>
-                                </li>
-                                <li>
-                                    <a href="/passwordUpdate" class="menu-profile__option">EDITAR CONTRASEÑA</a>
-                                </li>
-                                <li>
-                                    <a href="/closeSession" class="menu-profile__option">CERRAR SESIÓN</a>
-                                </li>
-                            </ul>
-                            <% } %>
-                    </label>
+                    <div>
+                        <a href="" class="star">INICIAR SESIÓN</a>
+                    </div>
+                        <ul>
+                            <li>
+                                <a href="/products/adminProducts" class="menu-profile__option">EDITAR PRODUCTOS</a>
+                            </li>
+                            <li>
+                                <a href="/userDetail" class="menu-profile__option">PERFIL</a>
+                            </li>
+                            <li>
+                                <a href="/passwordUpdate" class="menu-profile__option">EDITAR CONTRASEÑA</a>
+                            </li>
+                            <li>
+                                <a href="/closeSession" class="menu-profile__option">CERRAR SESIÓN</a>
+                            </li>
+                        </ul>
+                            </label>
 
                 </div>
                 <div class="image">
@@ -62,22 +53,17 @@
             </div>
             <div class="cards">
 
-                <%for(let i=1;i<homeDynamicObject.length;i++){%>
-                    <a class="plink" href="/products/productDetail/<%=homeDynamicObject[i].id%>">
+                    <a class="plink" href="">
                         <div class="card">
                             <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
-                            <img class="img-card" src="/productImages/<%=homeDynamicObject[i].image%>"
+                            <img class="img-card" src=""
                                 alt="Prenda Vestir">
                             <div class="description">
-                                <p class="price">$<%= homeDynamicObject[i].price %>
-                                </p>
-                                <p class="product">
-                                    <%=homeDynamicObject[i].name%>
-                                </p>
+                                <p class="price">Precio</p>
+                                <p class="product">Nombre</p>
                             </div>
                         </div>
                     </a>
-                    <%}%>
             </div>
         </section>
         <%- include('../partials/footerHome') %>

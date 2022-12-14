@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const productsRouter = require('./src/routes/products');
 const userRoutes = require('./src/routes/userRoutes.js');
+const main = require('./src/routes/main')
 const db = require('./config/db.js')
 
 //procedimiento para login----------------------------------------
@@ -36,7 +37,8 @@ app.set("view engine", "ejs");
 
 app.use(express.static('public'));
 
-app.use('/', userRoutes)
+app.use('/', userRoutes);
+app.use('/', main);
 app.use('/products', productsRouter);
 
 
