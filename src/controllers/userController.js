@@ -11,9 +11,19 @@ const viewLogin = (req, res) => {
 
 const userCreate = async (req, res) => {
     //Destructuring del registro
-    const { userImage, fullName, documentType, documentNumber, email, phoneNumber, dateBirth, password } = req.body; +
-        //Validaciones
-        await check('fullName').isLength({ min: 5 }).withMessage('Ingrese su nombre completo').run(req);
+    const { userImage, fullName, documentType, documentNumber, email, phoneNumber, dateBirth, password } = req.body;
+    //Validación para ver si el usuario está registrado
+    const userExist = await User.findOne({ where: { email } });
+    if (userExist) {
+        return res.render('users/login', {
+            user: {
+                fullName: req.body.fullName,
+                email: req.body.email
+            }
+        })
+    }
+    //Validaciones
+    await check('fullName').isLength({ min: 5 }).withMessage('Ingrese su nombre completo').run(req);
     await check('documentType').notEmpty().withMessage('Ingrese su tipo de documento').run(req);
     await check('documentNumber').isNumeric().withMessage('Ingrese su número de documento').run(req);
     await check('email').isEmail().withMessage('Ingrese su correo electrónico').run(req);
@@ -48,10 +58,32 @@ const userCreate = async (req, res) => {
         password
     })
     res.redirect('/login')
+};
+
+const userLogin = async (req, res) => {
+    await check('email').isEmail().withMessage('Ingrese su correo electrónico').run(req);
+    await check('password').notEmpty().withMessage('La contraseña es obligatoria').run(req);
+    let resultado = validationResult(req);
+    //Verificar que el resultado no este vacio
+    if (!resultado.isEmpty()) {
+        return res.render('users/login')
+    }
+    const { email, password } = req.body;
+    //Verificación de la existencia del usuario
+    const userExist = await User.findOne({ where: { email } });
+    if (!userExist) {
+        return res.render('users/login')
+    }
+    //Verificación de la contraseña
+    if(!userExist.verificarPassword(password)){
+        return res.render('users/login')
+    }
+    res.render('products/home');
+
 }
 
 
 
 
 
-module.exports = { validationResult, viewRegister, viewLogin, userCreate };
+module.exports = { validationResult, viewRegister, viewLogin, userCreate, userLogin };
