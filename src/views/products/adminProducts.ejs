@@ -26,29 +26,27 @@
                 </div>
 
                 <section class="edicionProducts">
-                    <%for(let i=0;i<products.length;i++){%>
+                    <%productDatabase.forEach(product =>{%>
+                        <% console.log(productDatabase) %> 
                         <article class="edicionProduct">
                             <div class="edicionImageCard">
-                                <img class="img-card" src="/productImages/<%=products[i].image%>" alt="Prenda Vestir">
+                                <img class="img-card" src="/public/productImages/<%=product.productImage%>" alt="Prenda Vestir">
                             </div>
                             <div class="edicionDescrition">
-                                <p class="product">
-                                    <%=products[i].name%>
-                                </p>
-                                <a class="edicionBContainer" href="/products/productEdition/<%=products[i].id%>">
+                                <p class="product"><%=product.name%></p>
+                                <a class="edicionBContainer" href="">
                                     <button class="edicionB"><i class="fa-solid fa-pencil"></i>Editar</button>
                                 </a>
                             </div>
                             <div class="edicionPrice">
-                                <p class="price">$<%= products[i].price %>
-                                </p>
-                                <form action="/products/delete/<%=products[i].id%>?_method=DELETE" method="POST">
+                                <p class="price">$<%=product.price%></p>
+                                <form action="" method="POST">
                                     <button class="edicionB" type="submit"><i class="fa-solid fa-trash-can"></i>
                                         Eliminar</button>
                                 </form>
                             </div>
                         </article>
-                        <%}%>
+                        <%})%>
                 </section>
                 <!--botón para agregar productos-->
                 <div class="addZone">

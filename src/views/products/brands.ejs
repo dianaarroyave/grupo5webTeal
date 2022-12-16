@@ -15,21 +15,16 @@
           <button class="filter-price-more">Precio mayor a menor</button>
         </div>
         <div class="cards">
-          <%for(let i=0;i<brand.length;i++){%>
-            <a class="plink" href="/products/productDetail/<%=brand[i].id%>">
+            <a class="plink" href="">
               <div class="card">
                 <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
-                <img class="img-card" src="/productImages/<%=brand[i].image%>" alt="Prenda Vestir">
+                <img class="img-card" src="" alt="Prenda Vestir">
                 <div class="description">
-                  <p class="price">$<%= brand[i].price %>
-                  </p>
-                  <p class="product">
-                    <%=brand[i].name%>
-                  </p>
+                  <p class="price">$</p>
+                  <p class="product"></p>
                 </div>
               </div>
             </a>
-            <%}%>
         </div>
       </main>
       <%- include('../partials/footer') %>

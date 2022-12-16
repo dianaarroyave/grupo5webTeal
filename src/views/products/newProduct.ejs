@@ -3,14 +3,13 @@
   <body>
     <%- include('../partials/header') %>
       <main class="template-create-main">
-        <form class="form" action="/products/newProduct" method="POST" enctype="multipart/form-data">
+        <form class="form" action="/products/newProduct" method="POST">
           <h2 class="title">Producto</h2>
           <div class="campo">
             <input class="create_input" accept="image/png.image/jpeg" type="file" id="create_img" name="productImage"
               multiple required /><span class="barra"></span>
             <div class="container-img">
-              <img class="create_img-form" src="/productImages/<%=productDetail[0].image%>" alt="icono destacado"
-                name="productImage" />
+              <img class="create_img-form" src="" alt="icono destacado" id="productImage" name="productImage" />
               <!-- <img
             class="create_img-form"
             src="/images/front.png"
@@ -30,32 +29,35 @@
           </div>
 
           <div class="campo">
-            <input type="text" name="name" required class="create_input" /><span class="barra"></span>
+            <input type="text" id="name" name="name" required class="create_input" /><span class="barra"></span>
             <label class="register-label">Nombre del producto</label>
           </div>
           <div class="campo">
-            <input type="text" name="price" required class="create_input" /><span class="barra"></span>
+            <input type="text" id="price" name="price" required class="create_input" /><span class="barra"></span>
             <label class="register-label">Precio</label>
           </div>
           <div class="campo">
-            <input type="text" name="description" required class="create_input" /><span class="barra"></span>
+            <input type="text" id="productDescription" name="productDescription" required class="create_input" /><span
+              class="barra"></span>
             <label class="register-label">Descripción del producto</label>
           </div>
           <div class="campo">
-            <input type="text" name="collection" required class="create_input" /><span class="barra"></span>
+            <input type="text" id="collection" name="collection" required class="create_input" /><span
+              class="barra"></span>
             <label class="register-label">Colección</label>
           </div>
           <div class="campo">
-            <input type="text" name="collectionDescription" required class="create_input" /><span class="barra"></span>
+            <input type="text" id="collectionDescription" name="collectionDescription" required
+              class="create_input" /><span class="barra"></span>
             <label class="register-label">Descripción de la colección</label>
           </div>
           <div class="campo">
-            <input type="text" name="marca" required class="create_input" /><span class="barra"></span>
+            <input type="text" id="brand" name="brand" required class="create_input" /><span class="barra"></span>
             <label class="register-label">Marca</label>
           </div>
 
           <div class="campo">
-            <select name="categories" class="register_document-select">
+            <select id="categories" name="categories" class="register_document-select">
               <option>Categoría</option>
               <option value="Unisex">Unisex</option>
               <option value="men">Hombre</option>
@@ -64,7 +66,7 @@
           </div>
           <section class="size_color_quantity">
             <div class="campo_size">
-              <select name="size" class="register_document-select">
+              <select id="size" name="size" class="register_document-select">
                 <option>Talla</option>
                 <option value="s">S</option>
                 <option value="m">M</option>
@@ -73,7 +75,7 @@
               </select>
             </div>
             <div class="campo_color">
-              <select name="color" class="register_document-select">
+              <select id="color" name="color" class="register_document-select">
                 <option>Color</option>
                 <option value="black">Negro</option>
                 <option value="white">Blanco</option>
@@ -81,12 +83,12 @@
               </select>
             </div>
             <div class="campo_quantity">
-              <input type="number" class="create_input" /><span class="barra"></span>
+              <input type="number" id="quantity" name="quantity" class="create_input" /><span class="barra"></span>
               <label class="register-label">Cantidad</label>
             </div>
           </section>
           <div class="checkbox_create">
-            <input type="checkbox" name="featured">
+            <input type="checkbox" name="featured" name="featured">
             <label for="productoDestacado">Producto destacado</label>
           </div>
           <button class="enter-btn" type="submit" id="enter">Agregar producto</button>

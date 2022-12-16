@@ -3,40 +3,53 @@ const bcrypt = require('bcryptjs');
 const db = require('../config/db.js');
 
 const Product = db.define('products', {
-  id_products: {
-    type: dataTypes.INTEGER,
-    autoIncrement: true,
-    primaryKey: true,
-    unsigned: true,
+  productImage: {
+    type: DataTypes.STRING,
     allowNull: false
   },
   name: {
-    type: dataTypes.STRING,
+    type: DataTypes.STRING,
     allowNull: false
   },
   price: {
-    type: dataTypes.INTEGER,
+    type: DataTypes.INTEGER,
     allowNull: false
   },
   productDescription: {
-    type: dataTypes.STRING,
+    type: DataTypes.STRING,
     allowNull: true,
-    defaultValue: true
-  },
-  collectionDescription: {
-    type: dataTypes.STRING,
-    allowNull: true,
-    defaultValue: true
   },
   collection: {
-    type: dataTypes.STRING,
+    type: DataTypes.STRING,
     allowNull: true,
-    defaultValue: true
   },
-  id_brands: {
-    type: dataTypes.INTEGER,
+  collectionDescription: {
+    type: DataTypes.STRING,
     allowNull: true,
-    defaultValue: true
+  },
+  brand: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  categories: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  size: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  color: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  quantity: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  featured: {
+    type: DataTypes.STRING,
+    allowNull: true,
   }
 });
 
