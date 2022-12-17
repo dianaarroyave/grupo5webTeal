@@ -13,7 +13,7 @@
                   <input class="create_input" accept="image/png.image/jpeg" type="file" id="create_img"
                     name="productImage" multiple /><span class="barra"></span>
                   <div class="container-img">
-                    <img class="create_img-user" src="/userImages/<%=userToLogin[0].image%>" alt="icono destacado" />
+                    <img class="create_img-user" src="" alt="icono destacado" />
                   </div>
                 </div>
               </div>
@@ -21,12 +21,12 @@
               <div class="informationProfile">
                 <div class="campo">
                   <input class="register_input" type="text" minlength="8" id="name" name="fullName"
-                    value="<%=userToLogin[0].fullName%>" required />
+                    value="" required />
                   <span class="barra"></span>
                   <label class="register-label">Nombre y apellido</label>
                 </div>
                 <div class="campo">
-                  <select name="documentType" class="register_document-select" value="<%=userToLogin[0].documentType%>">
+                  <select name="documentType" class="register_document-select" value="">
                     <option>Tipo de documento</option>
                     <option value="cedulaCiudadania" selected>Cédula de ciudadanía</option>
                     <option value="cedulaExtrajeria">Cédula de extranjería</option>
@@ -35,23 +35,23 @@
                   </select>
                 </div>
                 <div class="campo">
-                  <input type="text" id="document" name="document" value="<%=userToLogin[0].document%>" required
+                  <input type="text" id="document" name="document" value="" required
                     class="register_input" /><span class="barra"></span>
                   <label class="register-label">Documento</label>
                 </div>
                 <div class="campo">
-                  <input type="email" id="email" name="email" value="<%=userToLogin[0].email%>" required
+                  <input type="email" id="email" name="email" value="" required
                     class="register_input" /><span class="barra"></span>
                   <label class="register-label">Correo electrónico</label>
                 </div>
                 <div class="campo">
-                  <input type="text" id="phone" name="phoneNumber" value="<%=userToLogin[0].phoneNumber%>" required
+                  <input type="text" id="phone" name="phoneNumber" value="" required
                     class="register_input" /><span class="barra"></span>
                   <label class="register-label">Teléfono</label>
                 </div>
                 <div class="campo">
                   <input class="register_input" type="date" id="fecha" name="birthDate"
-                    value="<%=userToLogin[0].birthDate%>" required />
+                    value="" required />
                 </div>
                 <button class="save-btn" type="submit" id="enter">Guardar cambios</button>
               </div>
@@ -76,7 +76,7 @@
               </button>
             </form>
 
-            <form class="delete-btn-form" action="/delete/<%=userToLogin[0].id%>?_method=DELETE" method="POST">
+            <form class="delete-btn-form" action="" method="POST">
               <button class="save-btn" type="submit">Eliminar Usuario</button>
             </form>
 

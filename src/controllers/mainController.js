@@ -1,5 +1,3 @@
-
-
 const home = (req, res) => {
   res.render('products/home')
 };
@@ -7,8 +5,6 @@ const home = (req, res) => {
 const aboutUs = (req, res) => {
   res.render('products/aboutUs')
 };
-
-
 
 
 module.exports = { home, aboutUs}

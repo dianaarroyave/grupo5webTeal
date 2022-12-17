@@ -5,10 +5,6 @@ const viewRegister = (req, res) => {
     res.render('users/register');
 }
 
-const viewLogin = (req, res) => {
-    res.render('users/login');
-}
-
 const userCreate = async (req, res) => {
     //Destructuring del registro
     const { userImage, fullName, documentType, documentNumber, email, phoneNumber, dateBirth, password } = req.body;
@@ -60,6 +56,10 @@ const userCreate = async (req, res) => {
     res.redirect('/login')
 };
 
+const viewLogin = (req, res) => {
+    res.render('users/login');
+}
+
 const userLogin = async (req, res) => {
     await check('email').isEmail().withMessage('Ingrese su correo electrónico').run(req);
     await check('password').notEmpty().withMessage('La contraseña es obligatoria').run(req);
@@ -75,15 +75,37 @@ const userLogin = async (req, res) => {
         return res.render('users/login')
     }
     //Verificación de la contraseña
-    if(!userExist.verificarPassword(password)){
+    if (!userExist.verificarPassword(password)) {
         return res.render('users/login')
     }
     res.render('products/home');
+};
 
-}
+const viewUserDetail = (req, res) => {
+    res.render('users/userDetail');
+};
+
+const viewPasswordUpdate = (req, res) => {
+    res.render('users/passwordUpdate');
+};
+
+const closeSession = (req, res) => {
+    res.render('products/home');
+};
 
 
 
 
 
-module.exports = { validationResult, viewRegister, viewLogin, userCreate, userLogin };
+
+
+module.exports = {
+    validationResult,
+    viewRegister,
+    userCreate,
+    viewLogin,
+    userLogin,
+    viewUserDetail,
+    viewPasswordUpdate,
+    closeSession
+};
