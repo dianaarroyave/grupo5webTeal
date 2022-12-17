@@ -1,27 +1,19 @@
 const { check, validationResult } = require('express-validator');
 const Product = require('../../models/Product');
 
-const viewNewProduct = (req, res) => {
-    res.render('products/newProduct')
-};
-
-const viewAdminProduct = async (req, res) => {
-    const [productDatabase] = await Promise.all([
-        Product.findAll()
-    ]);
-    res.render('products/adminProducts', { productDatabase });
-};
-
 const brandOriginal = (req, res) => {
     res.render('products/brands')
-  };
-  
-  const brandBasics = (req, res) => {
+};
+
+const brandBasics = (req, res) => {
     res.render('products/brands')
-  };
-  
+};
+
 const bag = (req, res) => {
     res.render('products/bag')
+};
+const viewNewProduct = (req, res) => {
+    res.render('products/newProduct')
 };
 
 const newProduct = async (req, res) => {
@@ -55,5 +47,23 @@ const newProduct = async (req, res) => {
     res.redirect('/');
 };
 
+const viewAdminProduct = async (req, res) => {
+    const [productDatabase] = await Promise.all([
+        Product.findAll()
+    ]);
+    res.render('products/adminProducts', { productDatabase });
+};
 
-module.exports = { viewNewProduct, viewAdminProduct, brandOriginal, brandBasics, bag, newProduct }
+const viewProductEdition = async (req, res) => {
+    res.render('products/productEdition');
+};
+
+module.exports = {
+    brandOriginal,
+    brandBasics,
+    bag,
+    viewNewProduct,
+    newProduct,
+    viewAdminProduct,
+    viewProductEdition
+}
