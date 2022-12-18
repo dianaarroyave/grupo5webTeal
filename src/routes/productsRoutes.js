@@ -7,6 +7,7 @@ const {
     brandOriginal, 
     brandBasics, 
     bag,
+    viewProductDetail,
     newProduct,
     viewProductEdition 
 } = require('../controllers/productsController.js');
@@ -20,6 +21,7 @@ router.get('/productEdition', viewProductEdition);
 
 router.get('/brandOriginal', brandOriginal);
 router.get('/brandBasics', brandBasics);
+router.get('/productDetail', viewProductDetail);
 
 router.get('/bag', bag)
 module.exports = router;

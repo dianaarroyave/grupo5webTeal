@@ -7,7 +7,7 @@
           <button class="btn-man">Hombre</button>
           <button class="btn-women">Mujer</button>
         </div>
-
+        
         <p class="filter-products">Ordenar por</p>
         <div class="filter-price">
           <button class="name">Nombre</button>
@@ -15,17 +15,19 @@
           <button class="filter-price-more">Precio mayor a menor</button>
         </div>
         <div class="cards">
+          <%brand.forEach(product =>{%>
             <a class="plink" href="">
               <div class="card">
                 <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
-                <img class="img-card" src="" alt="Prenda Vestir">
+                <img class="img-card" src="/public/productImages/<%=product.productImage%>" alt="Prenda Vestir">
                 <div class="description">
-                  <p class="price">$</p>
-                  <p class="product"></p>
+                  <p class="price">$<%=product.price%></p>
+                  <p class="product"><%=product.name%></p>
                 </div>
               </div>
             </a>
         </div>
+        <%})%>
       </main>
       <%- include('../partials/footer') %>
   </body>

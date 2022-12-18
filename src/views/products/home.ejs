@@ -52,19 +52,19 @@
                 </h2>
             </div>
             <div class="cards">
-
-                    <a class="plink" href="">
+                <%featuredProducts.forEach(product =>{%>
+                    <a class="plink" href="/products/productDetail/<%=featuredProducts[i].id%>">
                         <div class="card">
                             <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
-                            <img class="img-card" src=""
-                                alt="Prenda Vestir">
+                            <img class="img-card" src="/public/productImages/<%=product.productImage%>" alt="Prenda Vestir">
                             <div class="description">
-                                <p class="price">Precio</p>
-                                <p class="product">Nombre</p>
+                                <p class="price">$<%=product.price%></p>
+                                <p class="product"><%=product.name%></p>
                             </div>
                         </div>
                     </a>
             </div>
+            <%})%>
         </section>
         <%- include('../partials/footerHome') %>
     </body>
