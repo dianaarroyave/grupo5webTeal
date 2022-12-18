@@ -84,7 +84,7 @@ const userLogin = async (req, res) => {
         return res.render('users/login')
     }
     // Autenticar al usuario
-    const token = generarJWT({id: userExist.id, fullName: userExist.fullName, phoneNumber: userExist.phoneNumber, email: userExist.email});
+    const token = generarJWT({ id: userExist.id, fullName: userExist.fullName, phoneNumber: userExist.phoneNumber, email: userExist.email });
 
     // Almacenar en un cookie
     return res.cookie('_token', token, {
@@ -92,30 +92,10 @@ const userLogin = async (req, res) => {
         // secure: true,
         // sameSite: true
     }).redirect('/')
+
 };
 
 const editRender = async (req, res) => {
-
-    // Comprobar el token
-    const { _token } = req.cookies
-    if (!_token) {
-        return res.redirect('/login')
-    }
-
-    try {
-        const decoded = Jwt.verify(_token, process.env.JWT_SECRET)
-        const usuarioId = await User.scope('eliminarPassword').findByPk(decoded.id)
-
-        // Validar que el usuario y buscarlo en la base de datos
-        const user = await User.findByPk(usuarioId.id);
-        return res.render('users/userDetail', { user })
-    } catch (error) {
-        return res.clearCookie('_token').redirect('/login')
-    }
-}
-
-const userEdit = async (req, res) => {
-
     // Comprobar el token
     const { _token } = req.cookies
     if(!_token) {
@@ -128,10 +108,30 @@ const userEdit = async (req, res) => {
 
         // Validar que el usuario y buscarlo en la base de datos
         const user = await User.findByPk(usuarioId.id);
+        res.render('users/userDetail', {user})
+    } catch (error) {
+        return res.clearCookie('_token').redirect('/login')
+    }
+
+}
+
+const userEdit = async (req, res) => {
+    // Comprobar el token
+    const { _token } = req.cookies
+    if (!_token) {
+        return res.redirect('/login')
+    }
+
+    try {
+        const decoded = Jwt.verify(_token, process.env.JWT_SECRET)
+        const usuarioId = await User.scope('eliminarPassword').findByPk(decoded.id)
+
+        // Validar que el usuario y buscarlo en la base de datos
+        const user = await User.findByPk(usuarioId.id);
         User.update({
             ...req.body
-        }, {where: {id: user.id}})
-        res.render('users/userDetail', { user})
+        }, { where: { id: user.id } })
+        res.render('users/userDetail', { user })
     } catch (error) {
         return res.clearCookie('_token').redirect('/login')
     }
@@ -140,4 +140,4 @@ const logout = (req, res) => {
     return res.clearCookie('_token').status(200).redirect('/');
 }
 
-module.exports = {  viewRegister, viewLogin, userCreate, userLogin, editRender, userEdit, logout };
+module.exports = { viewRegister, viewLogin, userCreate, userLogin, editRender, userEdit, logout };

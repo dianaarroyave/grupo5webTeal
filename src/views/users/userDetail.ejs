@@ -4,7 +4,7 @@
     <%- include('../partials/header') %>
       <main class="register-main">
         <div class="formProfile">
-          <form class="formUser" method="POST" action="/userDetail?_method=PUT">
+          <form class="formUser" method="POST" action="/userDetail">
             <h2 class="titleProfile">Perfil de usuario</h2>
             <div class="profileUser">
               <!-- imagen de usuario -->
@@ -26,7 +26,7 @@
                   <label class="register-label">Nombre y apellido</label>
                 </div>
                 <div class="campo">
-                  <select name="documentType" class="register_document-select" value="">
+                  <select name="documentType" class="register_document-select">
                     <option>Tipo de documento</option>
                     <option value="cedulaCiudadania" selected>Cédula de ciudadanía</option>
                     <option value="cedulaExtrajeria">Cédula de extranjería</option>
@@ -35,7 +35,7 @@
                   </select>
                 </div>
                 <div class="campo">
-                  <input type="text" id="document" name="document" value="" required
+                  <input type="text" id="document" name="document" value="<%= user.documentNumber%>" required
                     class="register_input" /><span class="barra"></span>
                   <label class="register-label">Documento</label>
                 </div>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="campo">
                   <input class="register_input" type="date" id="fecha" name="birthDate"
-                    value="" required />
+                    value="<%= user.dateBirth%>" required />
                 </div>
                 <button class="save-btn" type="submit" id="enter">Guardar cambios</button>
               </div>

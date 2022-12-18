@@ -13,8 +13,9 @@ router.post('/login', userLogin);
 // router.post('/', closeSession);
 
 router.get('/userDetail', editRender);
+router.post('/userDetail', userEdit);
 
-
+router.post('/closeSession', logout);
 
 
 module.exports = router;
