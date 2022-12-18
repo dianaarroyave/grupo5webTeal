@@ -27,14 +27,14 @@
 
                 <section class="edicionProducts">
                     <%productDatabase.forEach(product =>{%>
-                        <% console.log(productDatabase) %> 
+                        <% console.log(productDatabase) %>
                         <article class="edicionProduct">
                             <div class="edicionImageCard">
                                 <img class="img-card" src="/public/productImages/<%=product.productImage%>" alt="Prenda Vestir">
                             </div>
                             <div class="edicionDescrition">
                                 <p class="product"><%=product.name%></p>
-                                <a class="edicionBContainer" href="/products/productEdition">
+                                <a class="edicionBContainer" href="/products/productEdition/<%= product.id %> ">
                                     <button class="edicionB"><i class="fa-solid fa-pencil"></i>Editar</button>
                                 </a>
                             </div>

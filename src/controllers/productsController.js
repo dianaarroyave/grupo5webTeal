@@ -73,7 +73,14 @@ const viewAdminProduct = async (req, res) => {
 };
 
 const viewProductEdition = async (req, res) => {
-    res.render('products/productEdition');
+  let idProducto = req.params.id;
+  console.info('este es el req.params________________________________________________________________', idProducto);
+  const [product] = await Promise.all([
+  Product.findByPk(idProducto)
+]);
+console.info('este es producct ______________________________________________',product);
+    res.render('products/productEdition',{product});
+
 };
 
 module.exports = {
@@ -86,3 +93,4 @@ module.exports = {
     viewAdminProduct,
     viewProductEdition
 }
+
