@@ -21,6 +21,8 @@ const viewProductDetail = async (req, res) => {
     const [productDatabase] = await Promise.all([
         Product.findAll()
     ]);
+    let idProducto = req.params.id;
+    let productDetail =  productDatabase.filter((product) => product.id == idProducto);
     res.render('products/productDetail', { productDetail })
 };
 
