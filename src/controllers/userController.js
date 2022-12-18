@@ -1,5 +1,10 @@
 const { check, validationResult } = require('express-validator');
+const bcrypt = require('bcryptjs');
+const db = require('../../config/db');
 const User = require('../../models/User.js');
+const { generarId, generarJWT } = require('../../helpers/tokens.js');
+const Jwt = require('jsonwebtoken');
+
 
 const viewRegister = (req, res) => {
     res.render('users/register');
@@ -27,7 +32,7 @@ const userCreate = async (req, res) => {
     await check('documentType').notEmpty().withMessage('Ingrese su tipo de documento').run(req);
     await check('documentNumber').isNumeric().withMessage('Ingrese su número de documento').run(req);
     await check('email').isEmail().withMessage('Ingrese su correo electrónico').run(req);
-    await check('phoneNumber').isNumeric().withMessage('Ingrese su número de celular').run(req);
+    await check('phoneNumber').notEmpty().withMessage('Ingrese su número de celular').run(req);
     await check('dateBirth').notEmpty().withMessage('Ingrese su fecha de nacimiento').run(req);
     await check('password').isLength({ min: 5 }).withMessage('Ingrese una clave de más de 5 caracteres').run(req);
     //Hacer validaciones
@@ -75,15 +80,64 @@ const userLogin = async (req, res) => {
         return res.render('users/login')
     }
     //Verificación de la contraseña
-    if(!userExist.verificarPassword(password)){
+    if (!userExist.verificarPassword(password)) {
         return res.render('users/login')
     }
-    res.render('products/home');
+    // Autenticar al usuario
+    const token = generarJWT({id: userExist.id, fullName: userExist.fullName, phoneNumber: userExist.phoneNumber, email: userExist.email});
 
+    // Almacenar en un cookie
+    return res.cookie('_token', token, {
+        httpOnly: true
+        // secure: true,
+        // sameSite: true
+    }).redirect('/')
+};
+
+const editRender = async (req, res) => {
+
+    // Comprobar el token
+    const { _token } = req.cookies
+    if (!_token) {
+        return res.redirect('/login')
+    }
+
+    try {
+        const decoded = Jwt.verify(_token, process.env.JWT_SECRET)
+        const usuarioId = await User.scope('eliminarPassword').findByPk(decoded.id)
+
+        // Validar que el usuario y buscarlo en la base de datos
+        const user = await User.findByPk(usuarioId.id);
+        res.render('users/userDetail', { user })
+    } catch (error) {
+        return res.clearCookie('_token').redirect('/login')
+    }
 }
 
+const userEdit = async (req, res) => {
 
+    // Comprobar el token
+    const { _token } = req.cookies
+    if(!_token) {
+        return res.redirect('/login')
+    }
 
+    try {
+        const decoded = Jwt.verify(_token, process.env.JWT_SECRET)
+        const usuarioId = await User.scope('eliminarPassword').findByPk(decoded.id)
 
+        // Validar que el usuario y buscarlo en la base de datos
+        const user = await User.findByPk(usuarioId.id);
+        User.update({
+            ...req.body
+        }, {where: {id: user.id}})
+        res.render('users/userDetail', { user})
+    } catch (error) {
+        return res.clearCookie('_token').redirect('/login')
+    }
+}
+const logout = (req, res) => {
+    return res.clearCookie('_token').status(200).redirect('/');
+}
 
-module.exports = { validationResult, viewRegister, viewLogin, userCreate, userLogin };
+module.exports = {  viewRegister, viewLogin, userCreate, userLogin, editRender, userEdit, logout };
