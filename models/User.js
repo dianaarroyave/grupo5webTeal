@@ -24,7 +24,7 @@ const User = db.define('users', {
         allowNull: false
     },
     phoneNumber: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false
     },
     dateBirth: {
@@ -41,6 +41,13 @@ const User = db.define('users', {
         beforeCreate: async function (User) {
             const salt = await bcrypt.genSalt(10);
             User.password = await bcrypt.hash(User.password, salt);
+        }
+    },
+    scopes: {
+        eliminarPassword:{
+            attributes: {
+        exclude: ['userImage','documentType','documentNumber','dateBirth','password', 'createdAt', 'updatedAt']
+            }
         }
     }
 });

@@ -2,17 +2,13 @@ const express = require("express");
 const app = express();
 const path = require('path');
 const main = require('./src/routes/main');
+const cookies = require('cookie-parser');
 const productsRoutes = require('./src/routes/productsRoutes');
-const userRoutes = require('./src/routes/userRoutes.js');
-const db = require('./config/db.js')
+const userRoutes = require('./src/routes/userRoutes');
+const db = require('./config/db')
 
 //procedimiento para login----------------------------------------
-const session = require('express-session');
-app.use(session({
-  secret: 'secret word!',
-  resave: false,
-  saveUninitialized: true,
-}))
+app.use(cookies())
 
 //metodo override-------------------------------------------------
 const methodOverride = require('method-override');
