@@ -8,12 +8,10 @@ router.post('/register', userCreate);
 
 router.get('/login', viewLogin);
 router.post('/login', userLogin);
-// router.get('/userDetail', viewUserDetail);
-// router.get('/passwordUpdate', viewPasswordUpdate);
-// router.post('/', closeSession);
 
 router.get('/userDetail', editRender);
 router.post('/userDetail', userEdit);
+// router.get('/passwordUpdate', viewPasswordUpdate);
 
 router.post('/closeSession', logout);
 

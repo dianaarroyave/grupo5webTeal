@@ -61,7 +61,6 @@ const newProduct = async (req, res) => {
         quantity,
         featured
     })
-
     res.redirect('/');
 };
 
