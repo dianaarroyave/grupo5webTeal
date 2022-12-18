@@ -9,37 +9,37 @@
             <input class="create_input" accept="image/png.image/jpeg" type="file" id="create_img" name="productImage"
               multiple /><span class="barra"></span>
             <div class="container-img">
-              <img class="create_img-form" src="/productImages/<%=productDetail[0].image%>" alt="icono destacado" />
+              <img class="create_img-form" src="" alt="icono destacado" />
             </div>
           </div>
 
           <div class="campo">
-            <input type="text" name="name" required class="create_input" value="<%=productDetail[0].name%>" /><span
+            <input type="text" name="name" required class="create_input" value="" /><span
               class="barra"></span>
             <label class="register-label">Nombre del producto</label>
           </div>
           <div class="campo">
-            <input type="text" name="price" required class="create_input" value="<%=productDetail[0].price%>" /><span
+            <input type="text" name="price" required class="create_input" value="" /><span
               class="barra"></span>
             <label class="register-label">Precio</label>
           </div>
           <div class="campo">
             <input type="text" name="description" required class="create_input"
-              value="<%=productDetail[0].description%>" /><span class="barra"></span>
+              value="" /><span class="barra"></span>
             <label class="register-label">Descripción del producto</label>
           </div>
           <div class="campo">
             <input type="text" name="collection" required class="create_input"
-              value="<%=productDetail[0].collection%>" /><span class="barra"></span>
+              value="" /><span class="barra"></span>
             <label class="register-label">Colección</label>
           </div>
           <div class="campo">
             <input type="text" name="collectionDescription" required class="create_input"
-              value="<%=productDetail[0].collectionDescription%>" /><span class="barra"></span>
+              value="" /><span class="barra"></span>
             <label class="register-label">Descripción de la colección</label>
           </div>
           <div class="campo">
-            <input type="text" name="marca" required class="create_input" value="<%=productDetail[0].marca%>" /><span
+            <input type="text" name="marca" required class="create_input" value="" /><span
               class="barra"></span>
             <label class="register-label">Marca</label>
           </div>
@@ -76,7 +76,7 @@
             </div>
           </section>
           <div class="checkbox_create">
-            <input type="checkbox" name="featured" value="on" <%if(productDetail[0].featured==true){%>checked <%}%>>
+            <input type="checkbox" name="featured" value="on">
               <label for="productoDestacado">Producto destacado</label>
           </div>
           <button class="enter-btn" type="submit" id="enter">Agregar producto</button>

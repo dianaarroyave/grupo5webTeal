@@ -10,10 +10,6 @@ const viewRegister = (req, res) => {
     res.render('users/register');
 }
 
-const viewLogin = (req, res) => {
-    res.render('users/login');
-}
-
 const userCreate = async (req, res) => {
     //Destructuring del registro
     const { userImage, fullName, documentType, documentNumber, email, phoneNumber, dateBirth, password } = req.body;
@@ -65,6 +61,10 @@ const userCreate = async (req, res) => {
     res.redirect('/login')
 };
 
+const viewLogin = (req, res) => {
+    res.render('users/login');
+}
+
 const userLogin = async (req, res) => {
     await check('email').isEmail().withMessage('Ingrese su correo electrónico').run(req);
     await check('password').notEmpty().withMessage('La contraseña es obligatoria').run(req);
@@ -108,7 +108,7 @@ const editRender = async (req, res) => {
 
         // Validar que el usuario y buscarlo en la base de datos
         const user = await User.findByPk(usuarioId.id);
-        res.render('users/userDetail', { user })
+        return res.render('users/userDetail', { user })
     } catch (error) {
         return res.clearCookie('_token').redirect('/login')
     }

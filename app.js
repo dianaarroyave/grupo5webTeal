@@ -38,6 +38,7 @@ app.set("view engine", "ejs");
 app.use(express.static('public'));
 
 app.use('/', main);
+app.use('/products', main);
 app.use('/', userRoutes);
 app.use('/products', productsRoutes);
 
