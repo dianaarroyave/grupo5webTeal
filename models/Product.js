@@ -27,10 +27,6 @@ const Product = db.define('products', {
     type: DataTypes.STRING,
     allowNull: true,
   },
-  brand: {
-    type: DataTypes.STRING,
-    allowNull: true,
-  },
   categories: {
     type: DataTypes.STRING,
     allowNull: true,
@@ -48,7 +44,7 @@ const Product = db.define('products', {
     allowNull: true,
   },
   featured: {
-    type: DataTypes.STRING,
+    type: DataTypes.BOOLEAN,
     allowNull: true,
   }
 });
