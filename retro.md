@@ -1,3 +1,41 @@
+# Retrospectiva sprint 6
+
+## ¿Qué se hizo bien?
+
+Se hizo un reconocimiento a Sthefanía porque se puso la camiseta del equipo cuando las cosas se pusieron difíciles, tomó el liderazgo y buscó soluciones para sacar el proyecto adelante a pesar de que nos demás miembros del equipo, por temas personales, no pudimos estar participando al 100%.
+
+Se buscó ayuda cuando lo necesitamos, no cuando ya estábamos en el final, y se trató de encontrar las personas adecuadas que nos puedieran aportar valor, al no encontrar respuestas y apoyo de los profesores.
+
+## ¿Qué se hizo mal?
+
+En este sprint tuvimos varios inconvenientes, y factores que hicieron que no fuera tan efectivo, disciplinado y organizado como los anteriores.  Es el primer sprint que no pudimos cumplir debido a lo siguiente:
+
+- Mala organización de tiempos, falta cumplimiento con horarios de las reuniones y entregas, y no tener un cronograma de trabajo definido y claro desde el inicio del sprint.
+- Fallamos en la asignación de las microtareas parta poder comprometernos más con el proyecto.
+- Faltó compromiso de todos los miembros del eqquipo al inicio del sprint, nos relajamos mucho, y comenzamos tarde.  
+- Faltó iniciativa de la mayor parte de los miembros del equipo para sacar el sprint adelante.
+- No logramos entregar a tiempo, y lo hiciemos incompleto
+- Dejamos de hacer las daily, lo que no nos daba control del proyecto.
+
+## ¿Qué hay que dejar de hacer?
+
+Dejar de esperar una organización previa para ir a la acción.  Cada uno debe tomar iniciativa y no esperar a que todos estemos alineados.
+
+Super valiosa la ayuda externa, pero poner límites, que nosotros seamos los que lideremos el proyecto, no el externo al que le solicitemos ayuda.
+
+## ¿Qué hay que hacer más?
+
+Que cada uno de los miembros del equipo esté más comprometido con el proyecto desde el inicio de cada sprint y que tenga más iniciativa si ve que los demás no avanzan o están muy tranquilos.
+
+Distribuir tareas desde el inicio.
+
+Realizar las daily más frecuentemente, porque no sabemos en qué estamos.
+
+## ¿Qué hay que hacer menos?
+
+Permitir una ayuda externa muy grande, que una persona externa se apodere del proyecto.
+
+
 # Retrospectiva sprint 5
 
 ## ¿Qué se hizo bien?
