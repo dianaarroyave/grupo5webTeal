@@ -1,3 +1,24 @@
+# weekly sprint 6
+
+## Semana 1
+
+Esta semana realizamos la retro y quedamos en que cada uno de los integrantes del equipo iba a repasar los temas relacionados con el módulo de bases de datos para poder tener todos los conocimientos claros para desarrollar el sprint.
+
+Adicionalmente, se definió desarrollar el sprint en conjunto y no por microtareas, ya que el sprint permitía este modelo de trabajo.
+
+## Semana 2
+
+Tuvimos varios retrasos en comenzar el proyecto debido a las dificultades que tuvimos para podernos reunir, esta semana creamos la base de datos en el MySQL.
+
+## Semana 3
+
+Se crearon los modelos y se configuró el sequelize, y se comenzaron a realizar las relaciones
+
+## Semana 4
+
+Se intentó comenzar con el CRUD, pero habían demasiadas cosas por terminar primero, se solicitó varias veces ayuda a los profesores, pero no se pudieron reunir con nosotros, por tal motivo se solicitó ayuda a un compañero que sabe mucho del tema, quien nos estuvo ayudando, pero no alcanzamos a terminar.
+
+
 # weekly sprint 5
 
 ## Semana 1
