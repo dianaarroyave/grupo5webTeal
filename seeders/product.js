@@ -10,8 +10,8 @@ const products = [
         size: 'S',
         color: 'Negro',
         quantity: '2',
-        featured: '1'
-        // brand_id: '1'
+        featured: '1',
+        brand_id: '1'
     },
     {
         productImage: '',
@@ -24,8 +24,8 @@ const products = [
         size: 'M',
         color: 'Blanco',
         quantity: '4',
-        featured: null
-        // brand_id: '2'
+        featured: null,
+        brand_id: '2'
     }
 ];
 

@@ -33,6 +33,8 @@ const deletData = async () => {
     }
 };
 
+//con lo que se trabaja en el package
+//argv siempre toma un arreglo
 if (process.argv[2] === "-i") {
     importData();
 }

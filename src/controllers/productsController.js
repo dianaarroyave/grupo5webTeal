@@ -1,11 +1,11 @@
 const { check, validationResult } = require('express-validator');
-const Product = require('../../models/Product');
+const { Product, Brand} = require('../../models/index');
 
 const brandOriginal = async (req, res) => {
     const [productDatabase] = await Promise.all([
         Product.findAll()
     ]);
-    let brand = productDatabase.filter((product) => product.brand == 'Original');
+    let brand = productDatabase.filter((product) => product.brand_id == '2');
     res.render('products/brands', { brand })
 };
 
@@ -13,7 +13,7 @@ const brandBasics = async (req, res) => {
     const [productDatabase] = await Promise.all([
         Product.findAll()
     ]);
-    let brand = productDatabase.filter((product) => product.brand == 'Basics');
+    let brand = productDatabase.filter((product) => product.brand_id == '1');
     res.render('products/brands', { brand })
 };
 
@@ -30,13 +30,16 @@ const bag = (req, res) => {
     res.render('products/bag')
 };
 
-const viewNewProduct = (req, res) => {
-    res.render('products/newProduct')
+const viewNewProduct = async (req, res) => {
+    const [brands] = await Promise.all([
+        Brand.findAll()
+    ])
+    res.render('products/newProduct', {brands})
 };
 
 const newProduct = async (req, res) => {
     //Destructuring del registro
-    const { productImage, name, price, productDescription, collection, collectionDescription, brand, categories, size, color, quantity, featured } = req.body;
+    const { productImage, name, price, productDescription, collection, collectionDescription, brand:brand_id, categories, size, color, quantity, featured } = req.body;
     // const productImage = req.file.newFileName;
     //Validaciones
     await check('name').isLength({ min: 3 }).withMessage('Asigne el nombre del producto').run(req);
@@ -54,7 +57,7 @@ const newProduct = async (req, res) => {
         productDescription,
         collection,
         collectionDescription,
-        brand,
+        brand_id,
         categories,
         size,
         color,

@@ -52,8 +52,14 @@
             <label class="register-label">Descripción de la colección</label>
           </div>
           <div class="campo">
-            <input type="text" id="brand" name="brand" required class="create_input" /><span class="barra"></span>
-            <label class="register-label">Marca</label>
+            <select id="brand" name="brand" required class="register_document-select">
+              <option>Submarca</option>
+              <% brands.forEach(brand=>{ %>
+                <option value="<%= brand.dataValues.id %>">
+                  <%= brand.dataValues.name %>
+                </option>
+                <% }) %>
+            </select>
           </div>
 
           <div class="campo">
