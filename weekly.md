@@ -1,3 +1,14 @@
+# weekly sprint 7
+
+## Semana 1
+
+Se comenzó el sprint 7 con las tareas pendientes del sprint 6 que no pudimos finalizar, nos dividimos por parejas para asignar las tareas correspondeintes a los miembros del equipo, con el fin de poder terminar los pendientes del sprint 6 antes de comenzar a desarrollar el 7.
+
+## Semana 2
+
+Nos reunimos para evaluar los avances, pero asistimos únicamente dos miembros del equipo, revisamos pendientes y nos dimos cuenta que no se ha podido avanzar lo suficiente debido al nievel de dificultad de los puntos faltantes.  Quedamos de seguir avanzando y revisar los resultados del trabajo de cada uno en la próxima reunión.
+
+
 # weekly sprint 6
 
 ## Semana 1
