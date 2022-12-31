@@ -39,7 +39,10 @@ const viewNewProduct = async (req, res) => {
 
 const newProduct = async (req, res) => {
     //Destructuring del registro
-    const { productImage, name, price, productDescription, collection, collectionDescription, brand:brand_id, categories, size, color, quantity, featured } = req.body;
+    const { name, price, productDescription, collection, collectionDescription, brand:brand_id, categories, size, color, quantity, featured } = req.body;
+    const productImage = req.file.filename;
+    console.info(productImage,'este esssssssssssssssssssssssssssssssssssssssssssssssssss');
+
     // const productImage = req.file.newFileName;
     //Validaciones
     await check('name').isLength({ min: 3 }).withMessage('Asigne el nombre del producto').run(req);

@@ -11,7 +11,27 @@ const {
     newProduct,
     viewProductEdition
 } = require('../controllers/productsController.js');
-const upload = require('../middlewares/imagesUploading');
+// const upload = require('../middlewares/imagesUploading');
+
+//Multer------------------------------------------------------------------
+const multer = require('multer');
+let path = require('path');
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+      cb(null, path.join(__dirname, '../../public/productImages'));
+  },
+  // filename: function(req, file, cb) {
+  //     cb(null, path.extname(file.originalname) );
+  // },
+  filename: (req,file,cb)=> {
+      const newFileName= "product_" + Date.now() + path.extname(file.originalname);
+      cb(null,newFileName);
+    }
+});
+
+const upload = multer({ storage });
+//------------------------------------------------------------------------
+
 
 router.get('/newProduct', viewNewProduct);
 router.post('/newProduct', upload.single("productImage"), newProduct);
