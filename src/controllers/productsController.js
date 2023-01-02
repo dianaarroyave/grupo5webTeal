@@ -13,6 +13,7 @@ const brandBasics = async (req, res) => {
     const [productDatabase] = await Promise.all([
         Product.findAll()
     ]);
+
     let brand = productDatabase.filter((product) => product.brand_id == '1');
     res.render('products/brands', { brand })
 };
@@ -39,7 +40,9 @@ const viewNewProduct = async (req, res) => {
 
 const newProduct = async (req, res) => {
     //Destructuring del registro
-    const { productImage, name, price, productDescription, collection, collectionDescription, brand:brand_id, categories, size, color, quantity, featured } = req.body;
+    const { name, price, productDescription, collection, collectionDescription, brand:brand_id, categories, size, color, quantity, featured } = req.body;
+    const productImage = req.file.filename;
+
     // const productImage = req.file.newFileName;
     //Validaciones
     await check('name').isLength({ min: 3 }).withMessage('Asigne el nombre del producto').run(req);

@@ -3,7 +3,7 @@
   <body>
     <%- include('../partials/header') %>
       <main class="template-create-main">
-        <form class="form" action="/products/newProduct" method="POST">
+        <form class="form" action="/products/newProduct" method="POST" enctype="multipart/form-data">
           <h2 class="title">Producto</h2>
           <div class="campo">
             <input class="create_input" accept="image/png.image/jpeg" type="file" id="create_img" name="productImage"
@@ -94,7 +94,7 @@
             </div>
           </section>
           <div class="checkbox_create">
-            <input type="checkbox" name="featured" name="featured">
+            <input type="checkbox" name="featured" id="featured" >
             <label for="productoDestacado">Producto destacado</label>
           </div>
           <button class="enter-btn" type="submit" id="enter">Agregar producto</button>
