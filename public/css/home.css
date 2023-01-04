@@ -4,17 +4,26 @@
     background-color: rgba(255, 255, 255, 0.4) !important;
 }
 
-footer{
-    position: relative;
-    z-index: 100;
+.ImageContainer{
+  position: relative;
+  background-color: white;
+  background-image:url(../images/fondomobile.JPG);
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center top;
 }
 
-.homeContainerProfile {
+.homeContainerProfile{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 1.8rem;
+  right: 0.4rem;
 }
 
-.nav {
+* .nav {
   list-style: none;
   background-color: black;
   opacity: 0.7;
@@ -23,11 +32,15 @@ footer{
 .nav li {
   padding: 10px 15px;
   font-size: var(--smMobile);
-  display: none;
+  /* display: none; */
 }
 
 .nav li:hover >  ul {
   display: block;
+} 
+
+.image{
+  height: 100vh;
 }
 
 /* Clases */
@@ -58,30 +71,6 @@ footer{
     padding: 5px;
 }
 
-.homeContainerProfile{
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 1.8rem;
-    right: 0.4rem;
-
-}
-
-.ImageContainer{
-    position: relative;
-    background-color: white;
-    background-image:url(../images/fondomobile.JPG);
-    background-size: 100vw;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center top;
-
-}
-
-.image{
-    height: 100vh;
-
-}
 
 .FeaturedProducts{
     width: 100vw;
@@ -124,6 +113,10 @@ footer{
     box-shadow: var(--teal);
 }
 
+footer{
+  position: relative;
+  z-index: 100;
+}
 
 /* @medias */
 /* @medias especial */
