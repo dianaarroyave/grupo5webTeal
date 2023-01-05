@@ -17,31 +17,31 @@ const Product = db.define('products', {
   },
   productDescription: {
     type: DataTypes.STRING,
-    allowNull: true,
+    allowNull: false,
   },
   collection: {
     type: DataTypes.STRING,
-    allowNull: true,
+    allowNull: false,
   },
   collectionDescription: {
     type: DataTypes.STRING,
-    allowNull: true,
+    allowNull: false,
   },
   categories: {
     type: DataTypes.STRING,
-    allowNull: true,
+    allowNull: false,
   },
   size: {
     type: DataTypes.STRING,
-    allowNull: true,
+    allowNull: false,
   },
   color: {
     type: DataTypes.STRING,
-    allowNull: true,
+    allowNull: false,
   },
   quantity: {
     type: DataTypes.STRING,
-    allowNull: true,
+    allowNull: false,
   },
   featured: {
     type: DataTypes.STRING,
