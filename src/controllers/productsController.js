@@ -75,14 +75,27 @@ const viewAdminProduct = async (req, res) => {
 };
 
 const viewProductEdition = async (req, res) => {
-  let idProducto = req.params.id;
-  console.info('este es el req.params________________________________________________________________', idProducto);
-  const [product] = await Promise.all([
-  Product.findByPk(idProducto)
-]);
-console.info('este es producct ______________________________________________',product);
-    res.render('products/productEdition',{product});
+  const { id } = req.params;
 
+  // Validacion de que el producto si existe
+
+  const product = await Product.findByPk(id);
+  console.log(product);
+  if(!product){
+      return res.redirect('/productEdition');
+  }
+
+  // Hacer la consulta del producto en la base de datos
+
+  const [brand] = await Promise.all([
+      Brand.findAll()
+
+  ])
+
+  return res.render('/productEdition', {
+    brand,
+    datos: product
+});
 };
 
 module.exports = {
