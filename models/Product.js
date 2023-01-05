@@ -12,7 +12,7 @@ const Product = db.define('products', {
     allowNull: false
   },
   price: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
     allowNull: false
   },
   productDescription: {
@@ -44,7 +44,7 @@ const Product = db.define('products', {
     allowNull: true,
   },
   featured: {
-    type: DataTypes.BOOLEAN,
+    type: DataTypes.STRING,
     allowNull: true,
   }
 });

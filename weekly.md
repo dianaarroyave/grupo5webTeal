@@ -8,6 +8,9 @@ Se comenzó el sprint 7 con las tareas pendientes del sprint 6 que no pudimos fi
 
 Nos reunimos para evaluar los avances, pero asistimos únicamente dos miembros del equipo, revisamos pendientes y nos dimos cuenta que no se ha podido avanzar lo suficiente debido al nievel de dificultad de los puntos faltantes.  Quedamos de seguir avanzando y revisar los resultados del trabajo de cada uno en la próxima reunión.
 
+## Semana 3
+
+Cada miembro del equipo planteó los avances realizados durante ese semana, planteando que todavía algunos miembros tienen inconvenientes con la conexión a la base de datos para poder avanzar con las tareas pendientes, por tal motivo, no se han podido asignar tareas para el nuevo sprint, y se continuan resolviendo inconvenientes que se tuvieron del sprint pasado.  Se definió solicitar ayuda para poder solucionar el tema. 
 
 # weekly sprint 6
 

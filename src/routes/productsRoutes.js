@@ -11,13 +11,13 @@ const {
     newProduct,
     viewProductEdition
 } = require('../controllers/productsController.js');
-const upload = require('../middlewares/imagesUploading');
+const upload = require('../middlewares/productImageMiddleware');
 
 router.get('/newProduct', viewNewProduct);
 router.post('/newProduct', upload.single("productImage"), newProduct);
 
 router.get('/adminProducts', viewAdminProduct);
-router.get('/productEdition/:id', viewProductEdition);
+router.get('/productEdition/:id',upload.single("productImage"), viewProductEdition);
 
 router.get('/brandOriginal', brandOriginal);
 router.get('/brandBasics', brandBasics);
