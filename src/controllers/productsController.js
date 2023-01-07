@@ -159,6 +159,10 @@ const productEdition = async (req, res) => {
     console.log(error);
   }
 }
+const deletProduct = async (req, res) => {
+  console.log('eliminando..')
+
+}
 
 module.exports = {
   brandOriginal,
@@ -169,6 +173,7 @@ module.exports = {
   newProduct,
   viewAdminProduct,
   viewProductEdition,
-  productEdition
+  productEdition,
+  deletProduct
 }
 

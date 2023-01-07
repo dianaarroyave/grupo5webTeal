@@ -40,7 +40,7 @@
                             </div>
                             <div class="edicionPrice">
                                 <p class="price">$<%=product.price%></p>
-                                <form action="" method="POST">
+                                <form action="/product/delete/<%= productDatabase.id %> " method="POST">
                                     <button class="edicionB" type="submit"><i class="fa-solid fa-trash-can"></i>
                                         Eliminar</button>
                                 </form>

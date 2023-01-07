@@ -10,7 +10,8 @@ const {
     viewProductDetail,
     newProduct,
     viewProductEdition,
-    productEdition
+    productEdition,
+    deletProduct
 } = require('../controllers/productsController.js');
 const upload = require('../middlewares/productImageMiddleware');
 
@@ -20,6 +21,8 @@ router.post('/newProduct', upload.single("productImage"), newProduct);
 router.get('/adminProducts', viewAdminProduct);
 router.get('/productEdition/:id',upload.single("productImage"), viewProductEdition);
 router.post('/productEdition/:id', upload.single("productImage"), productEdition)
+
+router.post('/product/delete/:id', deletProduct)
 
 router.get('/brandOriginal', brandOriginal);
 router.get('/brandBasics', brandBasics);
