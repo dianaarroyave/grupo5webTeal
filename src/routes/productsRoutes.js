@@ -22,7 +22,7 @@ router.get('/adminProducts', viewAdminProduct);
 router.get('/productEdition/:id',upload.single("productImage"), viewProductEdition);
 router.post('/productEdition/:id', upload.single("productImage"), productEdition)
 
-router.post('/product/delete/:id', deletProduct)
+router.post('/productDelete/:id', deletProduct)
 
 router.get('/brandOriginal', brandOriginal);
 router.get('/brandBasics', brandBasics);

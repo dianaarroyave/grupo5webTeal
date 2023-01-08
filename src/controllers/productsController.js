@@ -160,8 +160,19 @@ const productEdition = async (req, res) => {
   }
 }
 const deletProduct = async (req, res) => {
-  console.log('eliminando..')
+  const { id } = req.params
+    // Validar que el producto exista
 
+    const producto = await Product.findByPk(id)
+
+    if(!producto){
+        return res.redirect('/')
+    }
+
+
+    // Eliminar el producto
+    await producto.destroy()
+    res.redirect('/')
 }
 
 module.exports = {
