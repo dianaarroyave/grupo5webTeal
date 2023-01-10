@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { viewRegister, viewLogin, userCreate, userLogin, editRender, userEdit, logout } = require('../controllers/userController.js');
+
 const userUpload = require('../middlewares/userImageMiddleware');
 const { viewRegister, viewLogin, userCreate, userLogin, editRender, userEdit, logout, editPasswordRender, changePassword } = require('../controllers/userController.js');
 
