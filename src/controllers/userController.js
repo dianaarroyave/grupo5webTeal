@@ -92,7 +92,6 @@ const userLogin = async (req, res) => {
         // secure: true,
         // sameSite: true
     }).redirect('/')
-
 };
 
 const editRender = async (req, res) => {
@@ -112,7 +111,6 @@ const editRender = async (req, res) => {
     } catch (error) {
         return res.clearCookie('_token').redirect('/login')
     }
-
 }
 
 const userEdit = async (req, res) => {
@@ -140,4 +138,45 @@ const logout = (req, res) => {
     return res.clearCookie('_token').status(200).redirect('/');
 }
 
-module.exports = { viewRegister, viewLogin, userCreate, userLogin, editRender, userEdit, logout };
+const editPasswordRender = async (req, res) => {
+
+  const { _token } = req.cookies
+    if(!_token) {
+        return res.redirect('/login')
+    }
+
+    try {
+        const decoded = Jwt.verify(_token, process.env.JWT_SECRET)
+        const usuarioId = await User.scope('eliminarPassword').findByPk(decoded.id)
+
+        // Validar que el usuario y buscarlo en la base de datos
+        const user = await User.findByPk(usuarioId.id);
+        res.render('users/passwordUpdate', {user})
+    } catch (error) {
+        return res.clearCookie('_token').redirect('/login')
+  }
+}
+
+const changePassword = async (req, res) => {
+  // Validaciones
+  await check('password').notEmpty().withMessage('La contraseña es obligatoria').run(req);
+  await check('repassword').equals(req.body.password).withMessage('La contraseña no coincide').run(req);
+  let resultado = validationResult(req)
+    if (!resultado.isEmpty()) {
+      return res.render('users/passwordUpdat')
+    }
+
+    const { _token } = req.cookies
+    const decoded = Jwt.verify(_token, process.env.JWT_SECRET)
+    const userId = await User.scope('eliminarPassword').findByPk(_token.id)
+    const { password } = req.body
+    const user = await User.findByPk(_token.id);
+    const salt = await bcrypt.genSalt(10);
+    User.password = await bcrypt.hash( password, salt);
+
+    await user.save();
+    res.redirect('/');
+
+}
+
+module.exports = { viewRegister, viewLogin, userCreate, userLogin, editRender, userEdit, logout, editPasswordRender, changePassword };
