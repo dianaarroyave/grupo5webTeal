@@ -5,10 +5,12 @@ const User = require('../../models/User.js');
 const { generarId, generarJWT } = require('../../helpers/tokens.js');
 const Jwt = require('jsonwebtoken');
 
-
 const viewRegister = (req, res) => {
-    res.render('users/register');
-}
+    res.render('users/register', {
+        errors: [],
+        user: []
+    });
+};
 
 const userCreate = async (req, res) => {
     //Destructuring del registro
@@ -24,6 +26,7 @@ const userCreate = async (req, res) => {
         })
     }
     //Validaciones
+    await check('userImage').notEmpty().withMessage('Ingrese una imagen pofavo').run(req);
     await check('fullName').isLength({ min: 5 }).withMessage('Ingrese su nombre completo').run(req);
     await check('documentType').notEmpty().withMessage('Ingrese su tipo de documento').run(req);
     await check('documentNumber').isNumeric().withMessage('Ingrese su número de documento').run(req);
@@ -36,7 +39,9 @@ const userCreate = async (req, res) => {
     //Verificar que el resultado no este vacio
     if (!resultado.isEmpty()) {
         return res.render('users/register', {
+            errors: resultado.mapped(),
             user: {
+                userImage: req.body.userImage,
                 fullName: req.body.fullName,
                 documentType: req.body.documentType,
                 documentNumber: req.body.documentNumber,
@@ -62,26 +67,35 @@ const userCreate = async (req, res) => {
 };
 
 const viewLogin = (req, res) => {
-    res.render('users/login');
+    res.render('users/login', {
+        errors: []
+    });
 }
 
 const userLogin = async (req, res) => {
     await check('email').isEmail().withMessage('Ingrese su correo electrónico').run(req);
     await check('password').notEmpty().withMessage('La contraseña es obligatoria').run(req);
+
     let resultado = validationResult(req);
     //Verificar que el resultado no este vacio
     if (!resultado.isEmpty()) {
-        return res.render('users/login')
+        return res.render('users/login', {
+            errors: resultado.mapped()
+        })
     }
     const { email, password } = req.body;
     //Verificación de la existencia del usuario
     const userExist = await User.findOne({ where: { email } });
     if (!userExist) {
-        return res.render('users/login')
+        return res.render('users/login', {
+            errors: { email: { msg: 'El usuario no existe' } }
+        })
     }
     //Verificación de la contraseña
     if (!userExist.verificarPassword(password)) {
-        return res.render('users/login')
+        return res.render('users/login', {
+            errors: { password: { msg: 'La contraseña es incorrecta' } }
+        })
     }
     // Autenticar al usuario
     const token = generarJWT({ id: userExist.id, fullName: userExist.fullName, phoneNumber: userExist.phoneNumber, email: userExist.email });
@@ -97,7 +111,7 @@ const userLogin = async (req, res) => {
 const editRender = async (req, res) => {
     // Comprobar el token
     const { _token } = req.cookies
-    if(!_token) {
+    if (!_token) {
         return res.redirect('/login')
     }
 
@@ -107,7 +121,7 @@ const editRender = async (req, res) => {
 
         // Validar que el usuario y buscarlo en la base de datos
         const user = await User.findByPk(usuarioId.id);
-        res.render('users/userDetail', {user})
+        res.render('users/userDetail', { user })
     } catch (error) {
         return res.clearCookie('_token').redirect('/login')
     }
@@ -140,8 +154,8 @@ const logout = (req, res) => {
 
 const editPasswordRender = async (req, res) => {
 
-  const { _token } = req.cookies
-    if(!_token) {
+    const { _token } = req.cookies
+    if (!_token) {
         return res.redirect('/login')
     }
 
@@ -151,19 +165,19 @@ const editPasswordRender = async (req, res) => {
 
         // Validar que el usuario y buscarlo en la base de datos
         const user = await User.findByPk(usuarioId.id);
-        res.render('users/passwordUpdate', {user})
+        res.render('users/passwordUpdate', { user })
     } catch (error) {
         return res.clearCookie('_token').redirect('/login')
-  }
+    }
 }
 
 const changePassword = async (req, res) => {
-  // Validaciones
-  await check('password').notEmpty().withMessage('La contraseña es obligatoria').run(req);
-  await check('repassword').equals(req.body.password).withMessage('La contraseña no coincide').run(req);
-  let resultado = validationResult(req)
+    // Validaciones
+    await check('password').notEmpty().withMessage('La contraseña es obligatoria').run(req);
+    await check('repassword').equals(req.body.password).withMessage('La contraseña no coincide').run(req);
+    let resultado = validationResult(req)
     if (!resultado.isEmpty()) {
-      return res.render('users/passwordUpdat')
+        return res.render('users/passwordUpdat')
     }
 
     const { _token } = req.cookies
@@ -172,7 +186,7 @@ const changePassword = async (req, res) => {
     const { password } = req.body
     const user = await User.findByPk(_token.id);
     const salt = await bcrypt.genSalt(10);
-    User.password = await bcrypt.hash( password, salt);
+    User.password = await bcrypt.hash(password, salt);
 
     await user.save();
     res.redirect('/');

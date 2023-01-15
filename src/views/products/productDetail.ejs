@@ -18,39 +18,41 @@
                 <!-- ------------Información de producto-------------- -->
 
                 <div class="productDescription">
-            
-                        <div class="productsImages">
-                            <img class="productImage1" src="" alt="producto detalle">
-                            <!-- <img class="productImage2" src="/images/front.png" alt="Thermal front">
+                    <div class="productsImages">
+                        <img class="productImage1" src="/productImages/<%=productDetail.productImage%>"
+                            alt="producto detalle">
+                        <!-- <img class="productImage2" src="/images/front.png" alt="Thermal front">
                         <img class="productImage3" src="/images/back.png" alt="Thermal back">
                         <img class="productImage4" src="/images/side.png" alt="Thermal side"> -->
-                        </div>
+                    </div>
 
-                        <div class="descriptionSection">
-                            <h2 class="productTittle"></h2>
-                            <h3 class="price">$</h3>
-                            <h3 class="description">Descripción del producto</h3>
-                            <p class="textDescription"></p>
-                            <div class="color">
-                                <p class="color1">PP</p>
-                                <p class="color2">PP</p>
-                            </div>
-                            <h3 class="size">Talla</h3>
-                            <ul class="productSize">
-                                <li>XS</li>
-                                <li>S</li>
-                                <li>M</li>
-                                <li>L</li>
-                                <li>XL</li>
-                            </ul>
-                            <h3 class="amount">Cantidad</h3>
-                            <button class="buttonCar">Agregar al carrito</button>
-                            <br>
-                            <hr class="line">
-                            <h3 class="collectionInformation">Acerca de esta colección</h3>
-                            <p class="textCollection"></p>
+                    <div class="descriptionSection">
+                        <h2 class="productTittle">
+                            <%=productDetail.name %>
+                        </h2>
+                        <h3 class="price">$<%=productDetail.price %></h3>
+                        <h3 class="description">Descripción del producto</h3>
+                        <p class="textDescription"><%=productDetail.productDescription %></p>
+                        <div class="color">
+                            <p class="color1">PP</p>
+                            <p class="color2">PP</p>
                         </div>
-                 
+                        <h3 class="size">Talla</h3>
+                        <ul class="productSize">
+                            <li>XS</li>
+                            <li>S</li>
+                            <li>M</li>
+                            <li>L</li>
+                            <li>XL</li>
+                        </ul>
+                        <h3 class="amount">Cantidad</h3>
+                        <button class="buttonCar">Agregar al carrito</button>
+                        <br>
+                        <hr class="line">
+                        <h3 class="collectionInformation">Acerca de esta colección</h3>
+                        <p class="textCollection"></p>
+                    </div>
+
                 </div>
 
                 <!-- ------------Productos relacionados-------------- -->

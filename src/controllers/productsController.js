@@ -19,11 +19,13 @@ const brandBasics = async (req, res) => {
 };
 
 const viewProductDetail = async (req, res) => {
-  const [productDatabase] = await Promise.all([
-    Product.findAll()
-  ]);
-  let idProducto = req.params.id;
-  let productDetail = productDatabase.filter((product) => product.id == idProducto);
+  const {id} = req.params;
+  const productDetail = await Product.findByPk(id);
+
+  if (!productDetail){
+    return res.redirect('/')
+  }
+
   res.render('products/productDetail', { productDetail })
 };
 
@@ -45,8 +47,9 @@ const newProduct = async (req, res) => {
 
   // const productImage = req.file.newFileName;
   //Validaciones
-  await check('name').isLength({ min: 3 }).withMessage('Asigne el nombre del producto').run(req);
+  await check('name').isLength({ min: 2 }).withMessage('Asigne el nombre del producto').run(req);
   await check('price').isNumeric().withMessage('Asigne el precio del producto').run(req);
+  await check('productDescription').isLength({ min: 20 }).withMessage('La descripción debe tener mínimo 20 carcteres').run(req);
   await check('brand').notEmpty().withMessage('Asigne la submarca del producto').run(req);
   await check('categories').notEmpty().withMessage('Seleccione la categoría del producto').run(req);
   await check('size').notEmpty().withMessage('Seleccione la categoría del producto').run(req);

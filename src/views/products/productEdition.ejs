@@ -14,7 +14,7 @@
           </div>
 
           <div class="campo">
-            <input type="text" name="name" id="name" required class="create_input" value="<%= product.name %>"/><span
+            <input type="text" name="name" id="name" class="create_input" value="<%= product.name %>" required minlength="2"/><span
               class="barra"></span>
             <label class="register-label">Nombre del producto</label>
           </div>
@@ -24,8 +24,8 @@
             <label class="register-label">Precio</label>
           </div>
           <div class="campo">
-            <input type="text" id="productDescription" name="productDescription" required class="create_input"
-              value="<%= product.productDescription %>" /><span class="barra"></span>
+            <input type="text" id="productDescription" name="productDescription" class="create_input"
+              value="<%= product.productDescription %>" minlength="20"/><span class="barra"></span>
             <label class="register-label">Descripción del producto</label>
           </div>
           <div class="campo">

@@ -57,7 +57,7 @@
             </div>
             <div class="cards">
                 <%featuredProducts.forEach(product =>{%>
-                    <a class="plink" href="/products/productDetail">
+                    <a class="plink" href="/products/productDetail/<%=product.id %>">
                         <div class="card">
                             <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
                             <img class="img-card" src="/productImages/<%=product.productImage%>" alt="Prenda Vestir">
