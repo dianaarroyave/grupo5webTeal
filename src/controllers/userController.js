@@ -172,25 +172,30 @@ const editPasswordRender = async (req, res) => {
 }
 
 const changePassword = async (req, res) => {
-    // Validaciones
-    await check('password').notEmpty().withMessage('La contraseña es obligatoria').run(req);
-    await check('repassword').equals(req.body.password).withMessage('La contraseña no coincide').run(req);
-    let resultado = validationResult(req)
-    if (!resultado.isEmpty()) {
-        return res.render('users/passwordUpdat')
-    }
+  // Validaciones
+  await check('password').notEmpty().withMessage('La contraseña es obligatoria').run(req);
+  await check('repassword').equals(req.body.password).withMessage('La contraseña no coincide').run(req);
+  let resultado = validationResult(req)
+  if (!resultado.isEmpty()) {
+      return res.render('users/passwordUpdat')
+  }
 
-    const { _token } = req.cookies
-    const decoded = Jwt.verify(_token, process.env.JWT_SECRET)
-    const userId = await User.scope('eliminarPassword').findByPk(_token.id)
-    const { password } = req.body
-    const user = await User.findByPk(_token.id);
-    const salt = await bcrypt.genSalt(10);
-    User.password = await bcrypt.hash(password, salt);
+  const { _token } = req.cookies
+  const decoded = Jwt.verify(_token, process.env.JWT_SECRET)
+  //const userId = await User.scope('eliminarPassword').findByPk(decoded.id)
+  const user = await User.findByPk(decoded.id);
+  const { password } = req.body
+  const salt = await bcrypt.genSalt(10);
+  user.password = await bcrypt.hash(password, salt);
 
-    await user.save();
-    res.redirect('/');
-
+  try {
+      await user.save();
+      res.redirect('/');
+  } catch (error) {
+      console.log(error);
+      res.status(500).send("Error al actualizar la contraseña");
+  }
 }
+
 
 module.exports = { viewRegister, viewLogin, userCreate, userLogin, editRender, userEdit, logout, editPasswordRender, changePassword };
