@@ -39,10 +39,10 @@
             <label class="register-label">Descripción de la colección</label>
           </div>
           <div class="campo">
-            <select id="brand" name="brand" required class="register_document-select">
+            <select id="brand" name="brand" required class="register_document-select" >
               <option>Submarca</option>
               <% brand.forEach(brands=>{ %>
-                <option value="<%= brands.dataValues.id %>">
+                <option value="<%= brands.dataValues.id %>" <% if(product.brand_id==brands.dataValues.id){ %> selected <% } %>  >
                   <%= brands.dataValues.name %>
                 </option>
                 <% }) %>
@@ -52,27 +52,27 @@
           <div class="campo">
             <select name="categories" id="categories" class="register_document-select">
               <option>Categoría</option>
-              <option value="men">Unisex</option>
-              <option value="men">Hombre</option>
-              <option value="women">Mujer</option>
+              <option value="unisex" <% if(product.categories=="unisex"){ %> selected <% } %> >Unisex</option>
+              <option value="men" <% if(product.categories=="men"){ %> selected <% } %>>Hombre</option>
+              <option value="women" <% if(product.categories=="women"){ %> selected <% } %>>Mujer</option>
             </select>
           </div>
           <section class="size_color_quantity">
             <div class="campo_size">
               <select name="size" id="size" class="register_document-select">
                 <option>Talla</option>
-                <option value="s">S</option>
-                <option value="m">M</option>
-                <option value="l">L</option>
-                <option value="xl">XL</option>
+                <option value="s" <% if(product.size=="s"){ %> selected <% } %> >S</option>
+                <option value="m" <% if(product.size=="m"){ %> selected <% } %>>M</option>
+                <option value="l" <% if(product.size=="l"){ %> selected <% } %>>L</option>
+                <option value="xl" <% if(product.size=="xl"){ %> selected <% } %>>XL</option>
               </select>
             </div>
             <div class="campo_color">
               <select name="color" id="color" class="register_document-select">
                 <option>Color</option>
-                <option value="black">Negro</option>
-                <option value="white">Blanco</option>
-                <option value="other">Otro</option>
+                <option value="black" <% if(product.color=="black"){ %> selected <% } %> >Negro</option>
+                <option value="white" <% if(product.color=="white"){ %> selected <% } %>>Blanco</option>
+                <option value="other" <% if(product.color=="other"){ %> selected <% } %>>Otro</option>
               </select>
             </div>
             <div class="campo_quantity">
@@ -81,7 +81,7 @@
             </div>
           </section>
           <div class="checkbox_create">
-            <input type="checkbox" name="featured" value="on">
+            <input type="checkbox" name="featured"  <% if(product.featured=="on"){ %> checked <% } %>  >
               <label for="productoDestacado">Producto destacado</label>
           </div>
           <button class="enter-btn" type="submit" id="enter">Agregar producto</button>

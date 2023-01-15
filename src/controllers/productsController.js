@@ -118,9 +118,10 @@ const productEdition = async (req, res) => {
       const [brand] = await Promise.all([
         Brand.findAll()
       ])
+      const product = await Product.findByPk(req.params.id);
 
-        return res.render('products/productEdit', {
-            brand,
+        return res.render('products/productEdition', {
+            brand,product
         });
     };
 
@@ -138,7 +139,8 @@ const productEdition = async (req, res) => {
   ])
 
   try {
-    const { productImage, name, price, productDescription, collection, collectionDescription, brand: brand_id, categories, size, color, quantity, featured} = req.body;
+    const { name, price, productDescription, collection, collectionDescription, brand: brand_id, categories, size, color, quantity, featured} = req.body;
+    const productImage = req.file.filename;
 
     product.set({
       productImage,
