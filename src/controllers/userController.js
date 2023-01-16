@@ -5,6 +5,9 @@ const User = require('../../models/User.js');
 const { generarId, generarJWT } = require('../../helpers/tokens.js');
 const Jwt = require('jsonwebtoken');
 
+//imagen de usuario loggeado:
+const userImage = "empty.png";
+
 const viewRegister = (req, res) => {
     res.render('users/register', {
         errors: [],
@@ -41,7 +44,7 @@ const userCreate = async (req, res) => {
         return res.render('users/register', {
             errors: resultado.mapped(),
             user: {
-                userImage: req.body.userImage,
+                userImage: req.file.newFileName,
                 fullName: req.body.fullName,
                 documentType: req.body.documentType,
                 documentNumber: req.body.documentNumber,
@@ -91,6 +94,8 @@ const userLogin = async (req, res) => {
             errors: { email: { msg: 'El usuario no existe' } }
         })
     }
+    //session para la imagen del usuario
+    req.session.userImage = userExist;
     //Verificación de la contraseña
     if (!userExist.verificarPassword(password)) {
         return res.render('users/login', {
@@ -142,7 +147,16 @@ const userEdit = async (req, res) => {
         const user = await User.findByPk(usuarioId.id);
         User.update({
             ...req.body
+
         }, { where: { id: user.id } })
+
+        const userImage = req.file.newFileName;
+
+        User.update({
+          userImage:userImage
+
+      }, { where: { id: user.id } })
+
         res.render('users/userDetail', { user })
     } catch (error) {
         return res.clearCookie('_token').redirect('/login')
@@ -204,5 +218,9 @@ const changePassword = async (req, res) => {
 }
 
 
+<<<<<<< HEAD
 
 module.exports = { viewRegister, viewLogin, userCreate, userLogin, editRender, userEdit, logout, editPasswordRender, changePassword };
+=======
+module.exports = { viewRegister, viewLogin, userCreate, userLogin, editRender, userEdit, logout, editPasswordRender, changePassword, userImage };
+>>>>>>> 1f6165b3a1bba756930600d0fdc4feac02b7651e

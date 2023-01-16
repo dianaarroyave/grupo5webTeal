@@ -6,6 +6,10 @@ const cookies = require('cookie-parser');
 const productsRoutes = require('./src/routes/productsRoutes');
 const userRoutes = require('./src/routes/userRoutes');
 const db = require('./config/db')
+const session = require('express-session');
+
+//----session-----------------------------------------------------
+app.use(session({secret:"shhh"}));
 
 //procedimiento para login----------------------------------------
 app.use(cookies())
