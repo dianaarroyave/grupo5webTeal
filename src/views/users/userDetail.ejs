@@ -4,7 +4,7 @@
     <%- include('../partials/header') %>
       <main class="register-main">
         <div class="formProfile">
-          <form class="formUser" method="POST" action="/userDetail">
+          <form class="formUser" method="POST" action="/userDetail" enctype="multipart/form-data">
             <h2 class="titleProfile">Perfil de usuario</h2>
             <div class="profileUser">
               <!-- imagen de usuario -->
@@ -35,7 +35,7 @@
                   </select>
                 </div>
                 <div class="campo">
-                  <input type="text" id="document" name="document" value="<%= user.documentNumber%>" 
+                  <input type="text" id="document" name="document" value="<%= user.documentNumber%>"
                     class="register_input" /><span class="barra"></span>
                   <label class="register-label">Documento</label>
                 </div>

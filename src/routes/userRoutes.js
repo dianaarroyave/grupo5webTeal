@@ -12,7 +12,7 @@ router.get('/login', viewLogin);
 router.post('/login', userLogin);
 
 router.get('/userDetail', editRender);
-router.post('/userDetail', userEdit);
+router.post('/userDetail',userUpload.single("userImage"), userEdit);
 // router.get('/passwordUpdate', viewPasswordUpdate);
 
 router.post('/closeSession', logout);
