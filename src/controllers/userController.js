@@ -180,15 +180,21 @@ const changePassword = async (req, res) => {
       return res.render('users/passwordUpdat')
   }
 
+  // Se obtiene el token del usuario y se verifica su validez
   const { _token } = req.cookies
   const decoded = Jwt.verify(_token, process.env.JWT_SECRET)
+
+  // Se busca al usuario en la base de datos
   //const userId = await User.scope('eliminarPassword').findByPk(decoded.id)
   const user = await User.findByPk(decoded.id);
+
+  // Se actualiza la contraseña del usuario
   const { password } = req.body
   const salt = await bcrypt.genSalt(10);
   user.password = await bcrypt.hash(password, salt);
 
   try {
+      // Se guardan los cambios en la base de datos
       await user.save();
       res.redirect('/');
   } catch (error) {
@@ -196,6 +202,7 @@ const changePassword = async (req, res) => {
       res.status(500).send("Error al actualizar la contraseña");
   }
 }
+
 
 
 module.exports = { viewRegister, viewLogin, userCreate, userLogin, editRender, userEdit, logout, editPasswordRender, changePassword };
