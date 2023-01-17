@@ -1,5 +1,5 @@
 const Product = require('../../models/Product');
-let userImage = "empty.png";
+let userImage = {userImage:"empty.png",fullName:"Iniciar sesión"};
 const home = async (req, res) => {
   const [productDatabase] = await Promise.all([
     Product.findAll()
@@ -10,6 +10,7 @@ const home = async (req, res) => {
   //session user image
   if(req.session.userImage){
     userImage = req.session.userImage
+    console.info('___________________________________________________',userImage);
   }
   res.render('products/home', {featuredProducts,userImage})
 };

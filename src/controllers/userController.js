@@ -30,7 +30,6 @@ const userCreate = async (req, res) => {
         })
     }
     //Validaciones
-    await check('userImage').notEmpty().withMessage('Ingrese una imagen pofavo').run(req);
     await check('fullName').isLength({ min: 5 }).withMessage('Ingrese su nombre completo').run(req);
     await check('documentType').notEmpty().withMessage('Ingrese su tipo de documento').run(req);
     await check('documentNumber').isNumeric().withMessage('Ingrese su número de documento').run(req);
@@ -45,7 +44,6 @@ const userCreate = async (req, res) => {
         return res.render('users/register', {
             errors: resultado.mapped(),
             user: {
-                userImage: req.file.newFileName,
                 fullName: req.body.fullName,
                 documentType: req.body.documentType,
                 documentNumber: req.body.documentNumber,
@@ -147,7 +145,13 @@ const userEdit = async (req, res) => {
         // Validar que el usuario y buscarlo en la base de datos
         var user = await User.findByPk(usuarioId.id);
         User.update({
-            ...req.body
+          userImage:req.file.filename,
+          fullName:req.body.fullName,
+          documentType:req.body.documentType,
+          documentNumber:req.body.documentNumber,
+          email:req.body.email,
+          phoneNumber:req.body.phoneNumber,
+          dateBirth:req.body.dateBirth
         }, { where: { id: user.id }})
         // user = await User.findByPk(usuarioId.id);
         res.redirect('/userDetail')
@@ -157,7 +161,9 @@ const userEdit = async (req, res) => {
 
 }
 const logout = (req, res) => {
+    req.session.userImage={userImage:"empty.png",fullName:"Iniciar sesión"};
     return res.clearCookie('_token').status(200).redirect('/');
+
 }
 
 const editPasswordRender = async (req, res) => {

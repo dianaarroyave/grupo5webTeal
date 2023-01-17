@@ -14,11 +14,11 @@
                     <label for="menu-profile">
                         <div>
                             <!-- imagen de usuario -->
-                            <img class="profile" src="/userImages/<%= userImage %> " alt="userImage">
+                            <img class="profile" src="/userImages/<%= userImage.userImage %> " alt="userImage">
                         </div>
                     </label>
                     <div>
-                        <a href="/login" class="star">INICIAR SESIÓN</a>
+                        <a href="/login" class="star"><%= userImage.fullName %> </a>
                     </div>
                     <ul class="nav">
                         <li>
