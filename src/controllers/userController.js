@@ -139,14 +139,16 @@ const userEdit = async (req, res) => {
         const usuarioId = await User.scope('eliminarPassword').findByPk(decoded.id)
 
         // Validar que el usuario y buscarlo en la base de datos
-        const user = await User.findByPk(usuarioId.id);
+        var user = await User.findByPk(usuarioId.id);
         User.update({
             ...req.body
-        }, { where: { id: user.id } })
-        res.render('users/userDetail', { user })
+        }, { where: { id: user.id }})
+        // user = await User.findByPk(usuarioId.id);
+        res.redirect('/userDetail')
     } catch (error) {
         return res.clearCookie('_token').redirect('/login')
     }
+
 }
 const logout = (req, res) => {
     return res.clearCookie('_token').status(200).redirect('/');
