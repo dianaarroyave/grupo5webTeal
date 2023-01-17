@@ -5,6 +5,9 @@ const User = require('../../models/User.js');
 const { generarId, generarJWT } = require('../../helpers/tokens.js');
 const Jwt = require('jsonwebtoken');
 
+//imagen de usuario loggeado:
+const userImage = "empty.png";
+
 const viewRegister = (req, res) => {
     res.render('users/register', {
         errors: [],
@@ -41,7 +44,7 @@ const userCreate = async (req, res) => {
         return res.render('users/register', {
             errors: resultado.mapped(),
             user: {
-                userImage: req.body.userImage,
+                userImage: req.file.newFileName,
                 fullName: req.body.fullName,
                 documentType: req.body.documentType,
                 documentNumber: req.body.documentNumber,
@@ -91,6 +94,8 @@ const userLogin = async (req, res) => {
             errors: { email: { msg: 'El usuario no existe' } }
         })
     }
+    //session para la imagen del usuario
+    req.session.userImage = userExist;
     //Verificación de la contraseña
     if (!userExist.verificarPassword(password)) {
         return res.render('users/login', {
@@ -182,15 +187,21 @@ const changePassword = async (req, res) => {
       return res.render('users/passwordUpdat')
   }
 
+  // Se obtiene el token del usuario y se verifica su validez
   const { _token } = req.cookies
   const decoded = Jwt.verify(_token, process.env.JWT_SECRET)
+
+  // Se busca al usuario en la base de datos
   //const userId = await User.scope('eliminarPassword').findByPk(decoded.id)
   const user = await User.findByPk(decoded.id);
+
+  // Se actualiza la contraseña del usuario
   const { password } = req.body
   const salt = await bcrypt.genSalt(10);
   user.password = await bcrypt.hash(password, salt);
 
   try {
+      // Se guardan los cambios en la base de datos
       await user.save();
       res.redirect('/');
   } catch (error) {
@@ -200,4 +211,4 @@ const changePassword = async (req, res) => {
 }
 
 
-module.exports = { viewRegister, viewLogin, userCreate, userLogin, editRender, userEdit, logout, editPasswordRender, changePassword };
+module.exports = { viewRegister, viewLogin, userCreate, userLogin, editRender, userEdit, logout, editPasswordRender, changePassword, userImage };
