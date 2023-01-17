@@ -53,8 +53,8 @@
     font-weight: 700;
 }
 
-.menu-isotipo:checked~.menu-isotipo__dropdown,
-.menu-profile:checked~label .menu-profile__dropdown {
+.menu-isotipo:checked ~ .menu-isotipo__dropdown,
+.menu-profile:checked ~ .nav {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
