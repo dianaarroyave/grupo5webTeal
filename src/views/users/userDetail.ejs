@@ -4,7 +4,7 @@
     <%- include('../partials/header') %>
       <main class="register-main">
         <div class="formProfile">
-          <form class="formUser" method="POST" action="/userDetail">
+          <form class="formUser" method="POST" action="/userDetail" enctype="multipart/form-data">
             <h2 class="titleProfile">Perfil de usuario</h2>
             <div class="profileUser">
               <!-- imagen de usuario -->
@@ -20,7 +20,7 @@
               <!-- Imformación usuario -->
               <div class="informationProfile">
                 <div class="campo">
-                  <input class="register_input" type="text" minlength="8" id="name" name="fullName"
+                  <input class="register_input" type="text"<%= user.fullName %> minlength="8" id="name" name="fullName"
                     value="<%= user.fullName%>" required />
                   <span class="barra"></span>
                   <label class="register-label">Nombre y apellido</label>
@@ -28,14 +28,14 @@
                 <div class="campo">
                   <select name="documentType" class="register_document-select">
                     <option>Tipo de documento</option>
-                    <option value="cedulaCiudadania" selected>Cédula de ciudadanía</option>
-                    <option value="cedulaExtrajeria">Cédula de extranjería</option>
-                    <option value="pasaporte">Pasaporte</option>
-                    <option value="tarjetaIdentidad">Tarjeta de identidad</option>
+                    <option value="cedulaCiudadania" <% if(user.documentType=="cedulaCiudadania" ){ %> selected <% } %> >Cedula de ciudadnia</option>
+                    <option value="cedulaExtrajeria"<% if(user.documentType=="cedulaExtrajeria" ){ %> selected <% } %>>Cédula de extranjería</option>
+                    <option value="pasaporte"<% if(user.documentType=="pasaporte" ){ %> selected <% } %>>Pasaporte</option>
+                    <option value="tarjetaIdentidad"<% if(user.documentType=="tarjetaIdentidad" ){ %> selected <% } %>>Tarjeta de identidad</option>
                   </select>
                 </div>
                 <div class="campo">
-                  <input type="text" id="document" name="document" value="<%= user.documentNumber%>" 
+                  <input type="text" id="document" name="documentNumber" value="<%= user.documentNumber%>"
                     class="register_input" /><span class="barra"></span>
                   <label class="register-label">Documento</label>
                 </div>
@@ -49,9 +49,9 @@
                     class="register_input" /><span class="barra"></span>
                   <label class="register-label">Teléfono</label>
                 </div>
+
                 <div class="campo">
-                  <input class="register_input" type="date" id="fecha" name="birthDate"
-                    value="<%= user.dateBirth%>" required />
+                  <input class="register_input" type="date" value="<%= user.dataValues.dateBirth %>" <% if(user.dateBirth==user.dataValues.dateBirth){ %>hola <% } %> <%= user.dataValues.dateBirth %> id="fecha" name="birthDate"/>
                 </div>
                 <button class="save-btn" type="submit" id="enter">Guardar cambios</button>
               </div>
