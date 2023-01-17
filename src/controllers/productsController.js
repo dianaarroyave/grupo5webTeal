@@ -139,8 +139,8 @@ const productEdition = async (req, res) => {
   ])
 
   try {
-    const { productImage, name, price, productDescription, collection, collectionDescription, brand: brand_id, categories, size, color, quantity, featured} = req.body;
-    // const productImage = req.file.newFileName;
+    const { name, price, productDescription, collection, collectionDescription, brand: brand_id, categories, size, color, quantity, featured} = req.body;
+    const productImage = req.file.filename;
 
     product.set({
       productImage,

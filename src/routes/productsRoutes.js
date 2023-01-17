@@ -19,7 +19,7 @@ router.get('/newProduct', viewNewProduct);
 router.post('/newProduct', upload.single("productImage"), newProduct);
 
 router.get('/adminProducts', viewAdminProduct);
-router.get('/productEdition/:id', upload.single("productImage"), viewProductEdition);
+router.get('/productEdition/:id', viewProductEdition);
 router.post('/productEdition/:id', upload.single("productImage"), productEdition);
 
 router.get('/productDetail/:id', viewProductDetail);

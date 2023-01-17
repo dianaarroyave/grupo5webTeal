@@ -17,7 +17,8 @@ const viewRegister = (req, res) => {
 
 const userCreate = async (req, res) => {
     //Destructuring del registro
-    const { userImage, fullName, documentType, documentNumber, email, phoneNumber, dateBirth, password } = req.body;
+    const { fullName, documentType, documentNumber, email, phoneNumber, dateBirth, password } = req.body;
+    const userImage = req.file.filename;
     //Validación para ver si el usuario está registrado
     const userExist = await User.findOne({ where: { email } });
     if (userExist) {

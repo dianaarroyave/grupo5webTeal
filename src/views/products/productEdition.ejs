@@ -3,7 +3,7 @@
   <body>
     <%- include('../partials/header') %>
       <main class="template-create-main">
-        <form class="form" method="POST" action="/products/productEdition/<%= product.id %> ">
+        <form class="form" method="POST" action="/products/productEdition/<%= product.id %> " enctype="multipart/form-data">
           <h2 class="title"><%= product.name %> </h2>
           <div class="campo">
             <input class="create_input" accept="image/png.image/jpeg" type="file" id="productImage" name="productImage"
