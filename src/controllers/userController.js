@@ -145,13 +145,7 @@ const userEdit = async (req, res) => {
         // Validar que el usuario y buscarlo en la base de datos
         var user = await User.findByPk(usuarioId.id);
         User.update({
-          userImage:req.file.filename,
-          fullName:req.body.fullName,
-          documentType:req.body.documentType,
-          documentNumber:req.body.documentNumber,
-          email:req.body.email,
-          phoneNumber:req.body.phoneNumber,
-          dateBirth:req.body.dateBirth
+          ...req.body
         }, { where: { id: user.id }})
         // user = await User.findByPk(usuarioId.id);
         res.redirect('/userDetail')
