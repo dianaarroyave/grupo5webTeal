@@ -11,7 +11,7 @@
               <div class="imageProfile">
                 <div class="campo">
                   <input class="create_input" accept="image/png.image/jpeg" type="file" id="create_img"
-                    name="productImage" multiple /><span class="barra"></span>
+                    name="userImage" multiple /><span class="barra"></span>
                   <div class="container-img">
                     <img class="create_img-user" src="/userImages/<%= user.userImage %> " alt="icono destacado" />
                   </div>
@@ -28,7 +28,7 @@
                 <div class="campo">
                   <select name="documentType" class="register_document-select">
                     <option>Tipo de documento</option>
-                    <option value="cedulaCiudadania" <% if(user.documentType=="cedulaCiudadania" ){ %> selected <% } %> >Cedula de ciudadnia</option>
+                    <option value="cedulaCiudadania" <% if(user.documentType=="cedulaCiudadania" ){ %> selected <% } %> >Cedula de ciudadania</option>
                     <option value="cedulaExtrajeria"<% if(user.documentType=="cedulaExtrajeria" ){ %> selected <% } %>>Cédula de extranjería</option>
                     <option value="pasaporte"<% if(user.documentType=="pasaporte" ){ %> selected <% } %>>Pasaporte</option>
                     <option value="tarjetaIdentidad"<% if(user.documentType=="tarjetaIdentidad" ){ %> selected <% } %>>Tarjeta de identidad</option>
@@ -50,9 +50,6 @@
                   <label class="register-label">Teléfono</label>
                 </div>
 
-                <div class="campo">
-                  <input class="register_input" type="date" value="<%= user.dataValues.dateBirth %>" <% if(user.dateBirth==user.dataValues.dateBirth){ %>hola <% } %> <%= user.dataValues.dateBirth %> id="fecha" name="birthDate"/>
-                </div>
                 <button class="save-btn" type="submit" id="enter">Guardar cambios</button>
               </div>
             </div>
