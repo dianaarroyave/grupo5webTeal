@@ -17,7 +17,7 @@ const viewRegister = (req, res) => {
 
 const userCreate = async (req, res) => {
     //Destructuring del registro
-    const { fullName, documentType, documentNumber, email, phoneNumber, dateBirth, password } = req.body;
+    const { fullName, documentType, documentNumber, email, phoneNumber,  password } = req.body;
     const userImage = req.file.filename;
     //Validación para ver si el usuario está registrado
     const userExist = await User.findOne({ where: { email } });
@@ -35,7 +35,6 @@ const userCreate = async (req, res) => {
     await check('documentNumber').isNumeric().withMessage('Ingrese su número de documento').run(req);
     await check('email').isEmail().withMessage('Ingrese su correo electrónico').run(req);
     await check('phoneNumber').notEmpty().withMessage('Ingrese su número de celular').run(req);
-    await check('dateBirth').notEmpty().withMessage('Ingrese su fecha de nacimiento').run(req);
     await check('password').isLength({ min: 5 }).withMessage('Ingrese una clave de más de 5 caracteres').run(req);
     //Hacer validaciones
     let resultado = validationResult(req);
@@ -49,7 +48,6 @@ const userCreate = async (req, res) => {
                 documentNumber: req.body.documentNumber,
                 email: req.body.email,
                 phoneNumber: req.body.phoneNumber,
-                dateBirth: req.body.dateBirth,
                 password: req.body.password
             }
         })
@@ -62,7 +60,6 @@ const userCreate = async (req, res) => {
         documentNumber,
         email,
         phoneNumber,
-        dateBirth,
         password
     })
     res.redirect('/login')

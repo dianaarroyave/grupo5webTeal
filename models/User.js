@@ -27,11 +27,7 @@ const User = db.define('users', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    dateBirth: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    password: {
+   password: {
         type: DataTypes.STRING,
         allowNull: false
     }
@@ -46,7 +42,7 @@ const User = db.define('users', {
     scopes: {
         eliminarPassword:{
             attributes: {
-        exclude: ['userImage','documentType','documentNumber','dateBirth','password', 'createdAt', 'updatedAt']
+        exclude: ['userImage','documentType','documentNumber','password', 'createdAt', 'updatedAt']
             }
         }
     }

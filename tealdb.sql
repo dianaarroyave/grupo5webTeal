@@ -102,7 +102,6 @@ CREATE TABLE `users` (
   `documentNumber` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `phoneNumber` int DEFAULT NULL,
-  `dateBirth` date DEFAULT NULL,
   `password` varchar(20) NOT NULL,
   `admin` tinyint unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_users`)
