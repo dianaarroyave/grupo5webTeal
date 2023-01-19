@@ -1,8 +1,8 @@
 const { exit } = require('node:process');
 const { User, Product, Brand } = require('../models/index');
 const user = require('./user');
-const product = require('./product');
-const brand = require('./brand');
+const products = require('./product');
+const brands = require('./brand');
 const db = require('../config/db');
 
 const importData = async () => {
@@ -14,8 +14,8 @@ const importData = async () => {
         //Insertara los datos
         await Promise.all([
             User.bulkCreate(user),
-            Product.bulkCreate(product),
-            Brand.bulkCreate(brand)
+            Brand.bulkCreate(brands),
+            Product.bulkCreate(products),
         ])
     } catch (error) {
         console.log(error);
