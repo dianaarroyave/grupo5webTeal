@@ -53,18 +53,10 @@
     font-weight: 700;
 }
 
-.menu-isotipo:checked ~ .menu-isotipo__dropdown,
-.menu-profile:checked ~ .nav {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    position: absolute;
-    padding: 0.8rem;
-    top: 3.5rem;
-    left: 0;
-    font-size: var(--smMobile);
-    background-color: var(--negro);
-    transition: all 400s;
+
+
+.button-close_session {
+    background-color: black;
 }
 
 .starSesion {
@@ -97,8 +89,7 @@
 }
 
 .profile {
-    margin-left: 0.9rem;
-    margin-right: 0.3rem;
+    width: 1.3rem;
     border-radius: 50%;
 }
 
