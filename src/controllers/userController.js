@@ -17,7 +17,7 @@ const viewRegister = (req, res) => {
 
 const userCreate = async (req, res) => {
     //Destructuring del registro
-    const { fullName, documentType, documentNumber, email, phoneNumber, dateBirth, password } = req.body;
+    const { fullName, documentType, documentNumber, email, phoneNumber, password } = req.body;
     const userImage = req.file.filename;
     //Validación para ver si el usuario está registrado
     const userExist = await User.findOne({ where: { email } });
@@ -35,7 +35,6 @@ const userCreate = async (req, res) => {
     await check('documentNumber').isNumeric().withMessage('Ingrese su número de documento').run(req);
     await check('email').isEmail().withMessage('Ingrese su correo electrónico').run(req);
     await check('phoneNumber').notEmpty().withMessage('Ingrese su número de celular').run(req);
-    await check('dateBirth').notEmpty().withMessage('Ingrese su fecha de nacimiento').run(req);
     await check('password').isLength({ min: 5 }).withMessage('Ingrese una clave de más de 5 caracteres').run(req);
     //Hacer validaciones
     let resultado = validationResult(req);
@@ -49,7 +48,6 @@ const userCreate = async (req, res) => {
                 documentNumber: req.body.documentNumber,
                 email: req.body.email,
                 phoneNumber: req.body.phoneNumber,
-                dateBirth: req.body.dateBirth,
                 password: req.body.password
             }
         })
@@ -62,7 +60,6 @@ const userCreate = async (req, res) => {
         documentNumber,
         email,
         phoneNumber,
-        dateBirth,
         password
     })
     res.redirect('/login')
@@ -144,19 +141,10 @@ const userEdit = async (req, res) => {
 
         // Validar que el usuario y buscarlo en la base de datos
         var user = await User.findByPk(usuarioId.id);
-
-
-          User.update({
+        User.update({
             ...req.body,
             userImage: req.file.filename
-          }, { where: { id: user.id }})
-
-
-        // User.update({
-        //   ...req.body,
-
-        //   // userImage:req.file.filename
-        // }, { where: { id: user.id }})
+        }, { where: { id: user.id } })
         // user = await User.findByPk(usuarioId.id);
         res.redirect('/userDetail')
     } catch (error) {
@@ -166,7 +154,7 @@ const userEdit = async (req, res) => {
 
 }
 const logout = (req, res) => {
-    req.session.userImage={userImage:"empty.png",fullName:"Iniciar sesión"};
+    req.session.userImage = { userImage: "empty.png", fullName: "Iniciar sesión" };
     return res.clearCookie('_token').status(200).redirect('/');
 
 }
@@ -191,36 +179,47 @@ const editPasswordRender = async (req, res) => {
 }
 
 const changePassword = async (req, res) => {
-  // Validaciones
-  await check('password').notEmpty().withMessage('La contraseña es obligatoria').run(req);
-  await check('repassword').equals(req.body.password).withMessage('La contraseña no coincide').run(req);
-  let resultado = validationResult(req)
-  if (!resultado.isEmpty()) {
-      return res.render('users/passwordUpdat')
-  }
+    // Validaciones
+    await check('password').notEmpty().withMessage('La contraseña es obligatoria').run(req);
+    await check('repassword').equals(req.body.password).withMessage('La contraseña no coincide').run(req);
+    let resultado = validationResult(req)
+    if (!resultado.isEmpty()) {
+        return res.render('users/passwordUpdat')
+    }
 
-  // Se obtiene el token del usuario y se verifica su validez
-  const { _token } = req.cookies
-  const decoded = Jwt.verify(_token, process.env.JWT_SECRET)
+    // Se obtiene el token del usuario y se verifica su validez
+    const { _token } = req.cookies
+    const decoded = Jwt.verify(_token, process.env.JWT_SECRET)
 
-  // Se busca al usuario en la base de datos
-  //const userId = await User.scope('eliminarPassword').findByPk(decoded.id)
-  const user = await User.findByPk(decoded.id);
+    // Se busca al usuario en la base de datos
+    //const userId = await User.scope('eliminarPassword').findByPk(decoded.id)
+    const user = await User.findByPk(decoded.id);
 
-  // Se actualiza la contraseña del usuario
-  const { password } = req.body
-  const salt = await bcrypt.genSalt(10);
-  user.password = await bcrypt.hash(password, salt);
+    // Se actualiza la contraseña del usuario
+    const { password } = req.body
+    const salt = await bcrypt.genSalt(10);
+    user.password = await bcrypt.hash(password, salt);
 
-  try {
-      // Se guardan los cambios en la base de datos
-      await user.save();
-      res.redirect('/');
-  } catch (error) {
-      console.log(error);
-      res.status(500).send("Error al actualizar la contraseña");
-  }
+    try {
+        // Se guardan los cambios en la base de datos
+        await user.save();
+        res.redirect('/');
+    } catch (error) {
+        console.log(error);
+        res.status(500).send("Error al actualizar la contraseña");
+    }
 }
 
 
-module.exports = { viewRegister, viewLogin, userCreate, userLogin, editRender, userEdit, logout, editPasswordRender, changePassword, userImage };
+module.exports = {
+    viewRegister,
+    viewLogin,
+    userCreate,
+    userLogin,
+    editRender,
+    userEdit,
+    logout,
+    editPasswordRender,
+    changePassword,
+    userImage
+};

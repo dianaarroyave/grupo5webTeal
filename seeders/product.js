@@ -1,6 +1,6 @@
 const products = [
     {
-      productImage: '/public/productImages/1.png',
+      productImage: '1.png',
       name: 'Camisa',
       price: '84000',
       productDescription: 'Original',
@@ -11,10 +11,10 @@ const products = [
       color: 'Negro',
       quantity: '2',
       featured: '1',
-      brand_id: '1'
+      brand_id: 2
     },
     {
-      productImage: '',
+      productImage: '15.png',
       name: 'Buso',
       price: '75000',
       productDescription: 'Basics',

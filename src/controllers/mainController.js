@@ -1,5 +1,5 @@
 const Product = require('../../models/Product');
-let userImage = {userImage:"empty.png",fullName:"Iniciar sesión"};
+let userImage = {userImage:"empty.png",fullName:"INICIAR SESIÓN"};
 const home = async (req, res) => {
   const [productDatabase] = await Promise.all([
     Product.findAll()
