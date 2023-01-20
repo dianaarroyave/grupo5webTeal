@@ -5,7 +5,8 @@ const db = require('../config/db.js');
 const User = db.define('users', {
     userImage: {
         type: DataTypes.STRING,
-        allowNull: true
+        allowNull: true,
+        // default:"user.png"
     },
     fullName: {
         type: DataTypes.STRING,

@@ -144,14 +144,24 @@ const userEdit = async (req, res) => {
 
         // Validar que el usuario y buscarlo en la base de datos
         var user = await User.findByPk(usuarioId.id);
-        User.update({
-          ...req.body,
-          userImage:req.file.filename
-        }, { where: { id: user.id }})
+
+
+          User.update({
+            ...req.body,
+            userImage: req.file.filename
+          }, { where: { id: user.id }})
+
+
+        // User.update({
+        //   ...req.body,
+
+        //   // userImage:req.file.filename
+        // }, { where: { id: user.id }})
         // user = await User.findByPk(usuarioId.id);
         res.redirect('/userDetail')
     } catch (error) {
         return res.clearCookie('_token').redirect('/login')
+
     }
 
 }
