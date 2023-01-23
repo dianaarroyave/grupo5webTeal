@@ -44,7 +44,7 @@ const Product = db.define('products', {
     allowNull: false,
   },
   featured: {
-    type: DataTypes.STRING,
+    type: DataTypes.INTEGER,
     allowNull: true,
   }
 });

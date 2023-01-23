@@ -42,9 +42,14 @@ const viewNewProduct = async (req, res) => {
 
 const newProduct = async (req, res) => {
   //Destructuring del registro
-  const { name, price, productDescription, collection, collectionDescription, brand: brand_id, categories, size, color, quantity, featured } = req.body;
+  const { name, price, productDescription, collection, collectionDescription, brand: brand_id, categories, size, color, quantity } = req.body;
   const productImage = req.file.filename;
-
+  //featured de string a integer
+  const featuredString = req.body.featured;
+  const featured = 0;
+  if (featuredString=='on'){
+    featured = 1;
+  }
   // const productImage = req.file.newFileName;
   //Validaciones
   await check('name').isLength({ min: 2 }).withMessage('Asigne el nombre del producto').run(req);
@@ -139,11 +144,21 @@ const productEdition = async (req, res) => {
   ])
 
   try {
-    const { name, price, productDescription, collection, collectionDescription, brand: brand_id, categories, size, color, quantity, featured} = req.body;
+    const { name, price, productDescription, collection, collectionDescription, brand: brand_id, categories, size, color, quantity} = req.body;
     const productImage = req.file.filename;
-
+    if(req.file.filename){
+      product.set({
+      productImage,});
+    }
+    //featured de string a integer
+    let featured = 0;
+  const featuredString = req.body.featured;
+  if (featuredString=='on'){
+    featured = 1;
+  }else{
+    featured = 0;
+  }
     product.set({
-      productImage,
       name,
       price,
       productDescription,
