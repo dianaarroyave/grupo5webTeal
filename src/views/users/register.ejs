@@ -3,7 +3,7 @@
   <body>
     <%- include('../partials/header') %>
       <main class="register-main">
-        <form class="form" action="/register" method="POST" enctype="multipart/form-data">
+        <form class="form" id="form" action="/register" method="POST" enctype="multipart/form-data">
 
           <h2 class="title">Crear cuenta</h2>
           <div class="campo">
@@ -107,6 +107,7 @@
         </form>
       </main>
       <%- include('../partials/footer') %>
+      <script src="/js/userValidations.js"></script>
   </body>
 
   </html>
