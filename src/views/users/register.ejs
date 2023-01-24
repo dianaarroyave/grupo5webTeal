@@ -3,12 +3,11 @@
   <body>
     <%- include('../partials/header') %>
       <main class="register-main">
-        <form class="form" action="/register" method="POST" enctype="multipart/form-data">
+        <form class="form" id="form" action="/register" method="POST" enctype="multipart/form-data">
 
           <h2 class="title">Crear cuenta</h2>
           <div class="campo">
-            <input class="create_input" accept="image/png.image/jpeg" type="file" id="userImage" name="userImage"
-              multiple /><span class="barra"></span>
+            <input class="create_input" accept="image/png.image/jpeg" type="file" id="userImage" name="userImage"/><span class="barra"></span>
             <div class="container-img">
               <img class="create_img-form" src="/images/user.png" alt="icono destacado" />
             </div>
@@ -107,6 +106,7 @@
         </form>
       </main>
       <%- include('../partials/footer') %>
+      <script src="/js/userValidations.js"></script>
   </body>
 
   </html>

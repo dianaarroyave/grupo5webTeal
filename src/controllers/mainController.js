@@ -5,7 +5,7 @@ const home = async (req, res) => {
     Product.findAll()
   ]);
   let featuredProducts = productDatabase.filter(
-    (product) => product.featured == 'on'
+    (product) => product.featured == 1
   );
   //session user image
   if(req.session.userImage){

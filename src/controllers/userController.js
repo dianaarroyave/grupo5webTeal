@@ -149,6 +149,7 @@ const userEdit = async (req, res) => {
         res.redirect('/userDetail')
     } catch (error) {
         return res.clearCookie('_token').redirect('/login')
+
     }
 
 }

@@ -24,8 +24,8 @@ const products = [
       size: 'M',
       color: 'Blanco',
       quantity: '4',
-      featured: null,
-      brand_id: 1
+      featured: 0,
+      brand_id: '2'
     }
 ];
 
