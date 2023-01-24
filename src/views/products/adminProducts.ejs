@@ -2,17 +2,45 @@
 
     <body>
         <%- include('../partials/header') %>
-            <!--Barra desplegable de marcas -->
-            <label class="edicionChooseBrands" for="brands">
-                <select class="rrr" name="brands" id="brands">
-                    <!-- <option value="ORIGINALS">ORIGINALS</option>
-                    <option value="BASICS">BASICS</option> -->
-                    <option value="TODAS">TODAS LAS MARCAS</option>
-                </select>
-            </label>
 
-            <!--sección para mostrar ptoductos-->
+            <div class="homeContainerProfile">
+                <input class="menu-profile" type="checkbox" id="menu-profile">
+                <label for="menu-profile">
+                    <div>
+                        <!-- imagen de usuario -->
+                        <img class="profile" src="/userImages/<%= userImage.userImage %> " alt="userImage">
+                    </div>
+                </label>
+                <div>
+                    <a href="/login" class="star">
+                        <%= userImage.fullName %>
+                    </a>
+                </div>
+                <ul class="nav">
+                    <li>
+                        <a href="/userDetail" class="menu-profile__option">PERFIL</a>
+                    </li>
+                    <li>
+                        <a href="/passwordUpdate" class="menu-profile__option">EDITAR CONTRASEÑA</a>
+                    </li>
+                    <li>
+                        <form action="/closeSession" method="POST">
+                            <input type="submit" value="CERRAR SESIÓN"
+                                class="menu-profile__option button-close_session">
+                        </form>
+                    </li>
+                </ul>
+            </div>
             <main classs="edicionGroupProducts">
+                <!--Barra desplegable de marcas -->
+                <label class="edicionChooseBrands" for="brands">
+                    <select class="rrr" name="brands" id="brands">
+                        <!-- <option value="ORIGINALS">ORIGINALS</option>
+                    <option value="BASICS">BASICS</option> -->
+                        <option value="TODAS">TODAS LAS MARCAS</option>
+                    </select>
+                </label>
+
                 <!--encabezado zona de productos-->
                 <div class="edicionContainer1">
                     <h2 class="edicionMediaTitle">
@@ -26,27 +54,31 @@
                 </div>
 
                 <section class="edicionProducts">
-                    <%productDatabase.forEach(product =>{%>
+                    <%productDatabase.forEach(product=>{%>
                         <% console.log(productDatabase) %>
-                        <article class="edicionProduct">
-                            <div class="edicionImageCard">
-                                <img class="img-card" src="/productImages/<%=product.productImage%>" alt="Prenda Vestir">
-                            </div>
-                            <div class="edicionDescrition">
-                                <p class="product"><%=product.name%></p>
-                                <a class="edicionBContainer" href="/products/productEdition/<%= product.id %> ">
-                                    <button class="edicionB"><i class="fa-solid fa-pencil"></i>Editar</button>
-                                </a>
-                            </div>
-                            <div class="edicionPrice">
-                                <p class="price">$<%=product.price%></p>
-                                <form action="/products/productDelete/<%= product.id %> " method="POST">
-                                    <button class="edicionB" type="submit"><i class="fa-solid fa-trash-can"></i>
-                                        Eliminar</button>
-                                </form>
-                            </div>
-                        </article>
-                        <%})%>
+                            <article class="edicionProduct">
+                                <div class="edicionImageCard">
+                                    <img class="img-card" src="/productImages/<%=product.productImage%>"
+                                        alt="Prenda Vestir">
+                                </div>
+                                <div class="edicionDescrition">
+                                    <p class="product">
+                                        <%=product.name%>
+                                    </p>
+                                    <a class="edicionBContainer" href="/products/productEdition/<%= product.id %> ">
+                                        <button class="edicionB"><i class="fa-solid fa-pencil"></i>Editar</button>
+                                    </a>
+                                </div>
+                                <div class="edicionPrice">
+                                    <p class="price">$<%=product.price%>
+                                    </p>
+                                    <form action="/products/productDelete/<%= product.id %> " method="POST">
+                                        <button class="edicionB" type="submit"><i class="fa-solid fa-trash-can"></i>
+                                            Eliminar</button>
+                                    </form>
+                                </div>
+                            </article>
+                            <%})%>
                 </section>
                 <!--botón para agregar productos-->
                 <div class="addZone">

@@ -1,21 +1,33 @@
 const { check, validationResult } = require('express-validator');
 const { Product, Brand } = require('../../models/index');
 
+//imagen de usuario
+let userImage = {userImage:"empty.png",fullName:"INICIAR SESIÓN"};
+
 const brandOriginal = async (req, res) => {
+  //session user image
+  if(req.session.userImage){
+    userImage = req.session.userImage
+  }
   const [productDatabase] = await Promise.all([
     Product.findAll()
   ]);
   let brand = productDatabase.filter((product) => product.brand_id == '2');
-  res.render('products/brands', { brand })
+  res.render('products/brands', { brand, userImage })
 };
 
 const brandBasics = async (req, res) => {
+  //session user image
+  if(req.session.userImage){
+    userImage = req.session.userImage
+  };
+
   const [productDatabase] = await Promise.all([
     Product.findAll()
   ]);
 
   let brand = productDatabase.filter((product) => product.brand_id == '1');
-  res.render('products/brands', { brand })
+  res.render('products/brands', { brand, userImage })
 };
 
 const viewProductDetail = async (req, res) => {
@@ -24,9 +36,14 @@ const viewProductDetail = async (req, res) => {
 
   if (!productDetail){
     return res.redirect('/')
-  }
+  };
 
-  res.render('products/productDetail', { productDetail })
+  //session user image
+  if(req.session.userImage){
+    userImage = req.session.userImage
+  };
+
+  res.render('products/productDetail', { productDetail, userImage })
 };
 
 const bag = (req, res) => {
@@ -36,8 +53,12 @@ const bag = (req, res) => {
 const viewNewProduct = async (req, res) => {
   const [brands] = await Promise.all([
     Brand.findAll()
-  ])
-  res.render('products/newProduct', { brands })
+  ]);
+   //session user image
+   if(req.session.userImage){
+    userImage = req.session.userImage
+  };
+  res.render('products/newProduct', { brands, userImage })
 };
 
 const newProduct = async (req, res) => {
@@ -46,10 +67,11 @@ const newProduct = async (req, res) => {
   const productImage = req.file.filename;
   //featured de string a integer
   const featuredString = req.body.featured;
-  const featured = 0;
+  let featured = 0;
   if (featuredString=='on'){
     featured = 1;
-  }
+  };
+
   // const productImage = req.file.newFileName;
   //Validaciones
   await check('name').isLength({ min: 2 }).withMessage('Asigne el nombre del producto').run(req);
@@ -82,7 +104,13 @@ const viewAdminProduct = async (req, res) => {
   const [productDatabase] = await Promise.all([
     Product.findAll()
   ]);
-  res.render('products/adminProducts', { productDatabase });
+
+  //session user image
+  if(req.session.userImage){
+    userImage = req.session.userImage
+  };
+
+  res.render('products/adminProducts', { productDatabase, userImage });
 };
 
 const viewProductEdition = async (req, res) => {
@@ -93,7 +121,12 @@ const viewProductEdition = async (req, res) => {
 
   if (!product) {
     return res.redirect('/');
-  }
+  };
+
+  //session user image
+  if(req.session.userImage){
+    userImage = req.session.userImage
+  };
 
   // Hacer la consulta del producto en la base de datos
   const [brand] = await Promise.all([
@@ -102,7 +135,8 @@ const viewProductEdition = async (req, res) => {
 
   return res.render('products/productEdition', {
     brand,
-    product
+    product,
+    userImage
   });
 };
 

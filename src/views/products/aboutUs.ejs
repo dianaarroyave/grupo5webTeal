@@ -2,6 +2,38 @@
 
     <body>
         <%- include('../partials/header') %>
+
+            <div class="homeContainerProfile">
+                <input class="menu-profile" type="checkbox" id="menu-profile">
+                <label for="menu-profile">
+                    <div>
+                        <!-- imagen de usuario -->
+                        <img class="profile" src="/userImages/<%= userImage.userImage %> " alt="userImage">
+                    </div>
+                </label>
+                <div>
+                    <a href="/login" class="star">
+                        <%= userImage.fullName %>
+                    </a>
+                </div>
+                <ul class="nav">
+                    <!-- <li>
+                            <a href="/products/adminProducts" class="menu-profile__option">EDITAR PRODUCTOS</a>
+                        </li> -->
+                    <li>
+                        <a href="/userDetail" class="menu-profile__option">PERFIL</a>
+                    </li>
+                    <li>
+                        <a href="/passwordUpdate" class="menu-profile__option">EDITAR CONTRASEÑA</a>
+                    </li>
+                    <li>
+                        <form action="/closeSession" method="POST">
+                            <input type="submit" value="CERRAR SESIÓN"
+                                class="menu-profile__option button-close_session">
+                        </form>
+                    </li>
+                </ul>
+            </div>
             <main class="main">
                 <img class="banner-video" src="/images/banner.JPG" alt="">
                 <div class="description-teal">
