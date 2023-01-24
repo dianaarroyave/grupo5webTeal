@@ -2,6 +2,34 @@
 
   <body>
     <%- include('../partials/header') %>
+
+      <div class="homeContainerProfile">
+        <input class="menu-profile" type="checkbox" id="menu-profile">
+        <label for="menu-profile">
+          <div>
+            <!-- imagen de usuario -->
+            <img class="profile" src="/userImages/<%= userImage.userImage %> " alt="userImage">
+          </div>
+        </label>
+        <div>
+          <a href="/login" class="star">
+            <%= userImage.fullName %>
+          </a>
+        </div>
+        <ul class="nav">
+          <li>
+            <a href="/userDetail" class="menu-profile__option">PERFIL</a>
+          </li>
+          <li>
+            <a href="/passwordUpdate" class="menu-profile__option">EDITAR CONTRASEÑA</a>
+          </li>
+          <li>
+            <form action="/closeSession" method="POST">
+              <input type="submit" value="CERRAR SESIÓN" class="menu-profile__option button-close_session">
+            </form>
+          </li>
+        </ul>
+      </div>
       <main class="mainSubmarcas">
         <div class="gender">
           <button class="btn-man">Hombre</button>
@@ -15,14 +43,17 @@
           <button class="filter-price-more">Precio mayor a menor</button>
         </div>
         <div class="cards">
-          <%brand.forEach(product =>{%>
-            <a class="plink" href="">
+          <%brand.forEach(product=>{%>
+            <a class="plink" href="/products/productDetail/<%=product.id %>">
               <div class="card">
                 <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
                 <img class="img-card" src="/productImages/<%=product.productImage%>" alt="Prenda Vestir">
                 <div class="description">
-                  <p class="price">$<%=product.price%></p>
-                  <p class="product"><%=product.name%></p>
+                  <p class="price">$<%=product.price%>
+                  </p>
+                  <p class="product">
+                    <%=product.name%>
+                  </p>
                 </div>
               </div>
             </a>

@@ -2,13 +2,11 @@
     <link rel="stylesheet" href="/public/css/home.css">
 
     <body>
+        <%- include('../partials/header') %>
 
-        <!-- ------------aquí está contenida la imagen principal-------------- -->
-        <section class="ImageContainer">
-
-            <%- include('../partials/header') %>
+            <!-- ------------aquí está contenida la imagen principal-------------- -->
+            <section class="ImageContainer">
                 <!--imagen de usuario dinámica------------------------------------------------>
-
                 <div class="homeContainerProfile">
                     <input class="menu-profile" type="checkbox" id="menu-profile">
                     <label for="menu-profile">
@@ -18,12 +16,11 @@
                         </div>
                     </label>
                     <div>
-                        <a href="/login" class="star"><%= userImage.fullName %> </a>
+                        <a href="/login" class="star">
+                            <%= userImage.fullName %>
+                        </a>
                     </div>
                     <ul class="nav">
-                        <!-- <li>
-                            <a href="/products/adminProducts" class="menu-profile__option">EDITAR PRODUCTOS</a>
-                        </li> -->
                         <li>
                             <a href="/userDetail" class="menu-profile__option">PERFIL</a>
                         </li>
@@ -32,49 +29,52 @@
                         </li>
                         <li>
                             <form action="/closeSession" method="POST">
-                                <input type="submit" value="CERRAR SESIÓN" class="menu-profile__option button-close_session">
+                                <input type="submit" value="CERRAR SESIÓN"
+                                    class="menu-profile__option button-close_session">
                             </form>
-
                         </li>
                     </ul>
-
                 </div>
-                <div class="image">
-                    <nav classs="principal">
-                        <ul class="ChooseCollection">
-                            <li><a class="collections" href="/products/brandOriginal">TEAL <br> ORIGINAL</a></li>
-                            <li><a class="collections" href="/products/aboutUs">TEAL <br> GROUP</a></li>
-                            <li><a class="collections" href="/products/brandBasics">TEAL <br> BASICS</a></li>
-                        </ul>
-                    </nav>
-                </div>
-        </section>
 
-        <section class="FeaturedProducts">
-            <div class="TitleContainer">
-                <h2 class="SectionTitle">
-                    PRODUCTOS DESTACADOS
-                </h2>
-            </div>
-            <div class="cards">
-                <%featuredProducts.forEach(product=>{%>
-                    <a class="plink" href="/products/productDetail/<%=product.id %>">
-                        <div class="card">
-                            <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
-                            <img class="img-card" src="/productImages/<%=product.productImage%>" alt="Prenda Vestir">
-                            <div class="description">
-                                <p class="price">$<%=product.price%>
-                                </p>
-                                <p class="product">
-                                    <%=product.name%>
-                                </p>
+                <main class="main">
+                    <div class="image">
+                        <nav classs="principal">
+                            <ul class="ChooseCollection">
+                                <li><a class="collections" href="/products/brandOriginal">TEAL <br> ORIGINAL</a></li>
+                                <li><a class="collections" href="/products/aboutUs">TEAL <br> GROUP</a></li>
+                                <li><a class="collections" href="/products/brandBasics">TEAL <br> BASICS</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+            </section>
+
+            <section class="FeaturedProducts">
+                <div class="TitleContainer">
+                    <h2 class="SectionTitle">
+                        PRODUCTOS DESTACADOS
+                    </h2>
+                </div>
+                <div class="cards">
+                    <%featuredProducts.forEach(product=>{%>
+                        <a class="plink" href="/products/productDetail/<%=product.id %>">
+                            <div class="card">
+                                <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
+                                <img class="img-card" src="/productImages/<%=product.productImage%>"
+                                    alt="Prenda Vestir">
+                                <div class="description">
+                                    <p class="price">$<%=product.price%>
+                                    </p>
+                                    <p class="product">
+                                        <%=product.name%>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-            </div>
-            <%})%>
-        </section>
-        <%- include('../partials/footerHome') %>
+                        </a>
+                </div>
+                <%})%>
+            </section>
+            </main>
+            <%- include('../partials/footerHome') %>
     </body>
 
 

@@ -5,13 +5,18 @@ const User = require('../../models/User.js');
 const { generarId, generarJWT } = require('../../helpers/tokens.js');
 const Jwt = require('jsonwebtoken');
 
-//imagen de usuario loggeado:
-const userImage = "empty.png";
+//imagen de usuario
+let userImage = {userImage:"empty.png",fullName:"INICIAR SESIÓN"};
 
 const viewRegister = (req, res) => {
+    //session user image
+    if (req.session.userImage) {
+        userImage = req.session.userImage
+    }
     res.render('users/register', {
         errors: [],
-        user: []
+        user: [],
+        userImage
     });
 };
 
@@ -30,8 +35,8 @@ const userCreate = async (req, res) => {
         })
     }
     //Validaciones
-    await check('fullName').isLength({ min: 5 }).withMessage('Ingrese su nombre completo').run(req);
-    await check('documentType').notEmpty().withMessage('Ingrese su tipo de documento').run(req);
+    await check('fullName').isLength({ min: 5 }).run(req);
+    await check('documentType').notEmpty().run(req);
     await check('documentNumber').isNumeric().withMessage('Ingrese su número de documento').run(req);
     await check('email').isEmail().withMessage('Ingrese su correo electrónico').run(req);
     await check('phoneNumber').notEmpty().withMessage('Ingrese su número de celular').run(req);
@@ -66,8 +71,13 @@ const userCreate = async (req, res) => {
 };
 
 const viewLogin = (req, res) => {
+    //session user image
+  if(req.session.userImage){
+    userImage = req.session.userImage
+  }
     res.render('users/login', {
-        errors: []
+        errors: [],
+        userImage
     });
 }
 
@@ -119,10 +129,15 @@ const editRender = async (req, res) => {
     try {
         const decoded = Jwt.verify(_token, process.env.JWT_SECRET)
         const usuarioId = await User.scope('eliminarPassword').findByPk(decoded.id)
-
+        
+        //session user image
+        if(req.session.userImage){
+            userImage = req.session.userImage
+          };
+       
         // Validar que el usuario y buscarlo en la base de datos
         const user = await User.findByPk(usuarioId.id);
-        res.render('users/userDetail', { user })
+        res.render('users/userDetail', { user, userImage })
     } catch (error) {
         return res.clearCookie('_token').redirect('/login')
     }
@@ -160,19 +175,22 @@ const logout = (req, res) => {
 }
 
 const editPasswordRender = async (req, res) => {
-
     const { _token } = req.cookies
     if (!_token) {
         return res.redirect('/login')
     }
 
     try {
+          //session user image
+    if(req.session.userImage){
+        userImage = req.session.userImage
+      }; 
+
         const decoded = Jwt.verify(_token, process.env.JWT_SECRET)
         const usuarioId = await User.scope('eliminarPassword').findByPk(decoded.id)
-
         // Validar que el usuario y buscarlo en la base de datos
         const user = await User.findByPk(usuarioId.id);
-        res.render('users/passwordUpdate', { user })
+        res.render('users/passwordUpdate', { user, userImage })
     } catch (error) {
         return res.clearCookie('_token').redirect('/login')
     }

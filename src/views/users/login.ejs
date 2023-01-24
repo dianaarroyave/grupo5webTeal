@@ -2,50 +2,79 @@
 
   <body>
     <%- include('../partials/header') %>
-    <main class="login-main">
-      <div class="loginForm">
-        <form class="form-start" action="/login" method="POST">
-          <h2 class="title">Iniciar sesión</h2>
-          <div class="campo">
-            <input class="login_input" type="email" minlength="8" id="nombre" name="email"/><span
-              class="barra"></span>
-            <label class="login-label">Correo electrónico</label>
+      <div class="homeContainerProfile">
+        <input class="menu-profile" type="checkbox" id="menu-profile">
+        <label for="menu-profile">
+          <div>
+            <!-- imagen de usuario -->
+            <img class="profile" src="/userImages/<%= userImage.userImage %> " alt="userImage">
           </div>
-          <% if(locals.errors && errors.email) { %>
-            <div class="errors">
-              <p><%= errors.email.msg %></p>
-            </div>
-          <% } %> 
-          <div class="campo">
-            <input class="login_input" type="password" minlength="8" id="nombre" name="password"/><span
-              class="barra"></span>
-            <label class="login-label">Contraseña</label>
-          </div>
-          <% if(locals.errors && errors.password) { %>
-            <div class="errors">
-              <p><%= errors.password.msg %></p>
-            </div>
-          <% } %> 
-          <div class="newUser">
-            <a class="newUser-btn" href="/passwordUpdate">¿Olvidaste tu contraseña?*</a>
-          </div>
-          <form action="">
-            <button class="enter-btn" type="submit" id="enter">Ingresar</button>
-          </form>
-          <form class="createUser-btn" action="/register">
-            <p class="question">¿Eres un cliente nuevo?</p>
-            <button class="enter-btn" type="submit" id="enter" href="/register">Registrate</button>
-          </form>
-          <!-- <button class="enter-facebook" type="submit" id="enter">
-                    Ingresar con Facebook
-                </button>
-                <button class="enter-google" type="submit" id="enter">
-                    Ingresar con Google
-                </button> -->
-        </form>
+        </label>
+        <div>
+          <a href="/login" class="star">
+            <%= userImage.fullName %>
+          </a>
+        </div>
+        <ul class="nav">
+          <li>
+            <a href="/userDetail" class="menu-profile__option">PERFIL</a>
+          </li>
+          <li>
+            <a href="/passwordUpdate" class="menu-profile__option">EDITAR CONTRASEÑA</a>
+          </li>
+          <li>
+            <form action="/closeSession" method="POST">
+              <input type="submit" value="CERRAR SESIÓN" class="menu-profile__option button-close_session">
+            </form>
+          </li>
+        </ul>
       </div>
-    </main>
+
+      <main class="login-main">
+        <div class="loginForm">
+          <form class="form-start" id="form" action="/login" method="POST">
+            <h2 class="title">Iniciar sesión</h2>
+            <div class="campo">
+              <input class="login_input" type="text" minlength="8" id="login-email" name="email" /><span
+                class="barra"></span>
+              <label class="login-label">Correo electrónico</label>
+            </div>
+            <% if(locals.errors && errors.email) { %>
+              <div class="errors">
+                <p>
+                  <%= errors.email.msg %>
+                </p>
+              </div>
+              <% } %>
+                <div class="campo">
+                  <input class="login_input" type="password" minlength="8" id="nombre" name="password" /><span
+                    class="barra"></span>
+                  <label class="login-label">Contraseña</label>
+                </div>
+                <% if(locals.errors && errors.password) { %>
+                  <div class="errors">
+                    <p>
+                      <%= errors.password.msg %>
+                    </p>
+                  </div>
+                  <% } %>
+                    <div class="newUser">
+                      <a class="newUser-btn" href="/passwordUpdate">¿Olvidaste tu contraseña?*</a>
+                    </div>
+
+                    <form action="">
+                      <button class="enter-btn" type="submit" id="enter">Ingresar</button>
+                    </form>
+
+                    <form class="createUser-btn" action="/register">
+                      <p class="question">¿Eres un cliente nuevo?</p>
+                      <button class="enter-btn" type="submit" id="enter" href="/register">Registrate</button>
+                    </form>
+          </form>
+        </div>
+      </main>
       <%- include('../partials/footer') %>
+        <!-- <script src="/js/userValidations.js"></script> -->
   </body>
 
   </html>

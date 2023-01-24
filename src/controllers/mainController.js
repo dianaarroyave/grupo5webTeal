@@ -10,13 +10,16 @@ const home = async (req, res) => {
   //session user image
   if(req.session.userImage){
     userImage = req.session.userImage
-    console.info('___________________________________________________',userImage);
   }
   res.render('products/home', {featuredProducts,userImage})
 };
 
 const aboutUs = (req, res) => {
-  res.render('products/aboutUs')
+   //session user image
+   if(req.session.userImage){
+    userImage = req.session.userImage
+  };
+  res.render('products/aboutUs', {userImage})
 };
 
 
