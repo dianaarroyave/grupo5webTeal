@@ -2,6 +2,34 @@
 
   <body>
     <%- include('../partials/header') %>
+
+      <div class="homeContainerProfile">
+        <input class="menu-profile" type="checkbox" id="menu-profile">
+        <label for="menu-profile">
+          <div>
+            <!-- imagen de usuario -->
+            <img class="profile" src="/userImages/<%= userImage.userImage %> " alt="userImage">
+          </div>
+        </label>
+        <div>
+          <a href="/login" class="star">
+            <%= userImage.fullName %>
+          </a>
+        </div>
+        <ul class="nav">
+          <li>
+            <a href="/userDetail" class="menu-profile__option">PERFIL</a>
+          </li>
+          <li>
+            <a href="/passwordUpdate" class="menu-profile__option">EDITAR CONTRASEÑA</a>
+          </li>
+          <li>
+            <form action="/closeSession" method="POST">
+              <input type="submit" value="CERRAR SESIÓN" class="menu-profile__option button-close_session">
+            </form>
+          </li>
+        </ul>
+      </div>
       <main class="template-create-main">
         <form class="form" action="/products/newProduct" method="POST" enctype="multipart/form-data">
           <h2 class="title">Producto</h2>
@@ -29,7 +57,8 @@
           </div>
 
           <div class="campo">
-            <input type="text" id="name" name="name" class="create_input" required minlength="2"/><span class="barra"></span>
+            <input type="text" id="name" name="name" class="create_input" required minlength="2" /><span
+              class="barra"></span>
             <label class="register-label">Nombre del producto</label>
           </div>
           <div class="campo">
@@ -37,8 +66,8 @@
             <label class="register-label">Precio</label>
           </div>
           <div class="campo">
-            <input type="text" id="productDescription" name="productDescription" class="create_input" minlength="20"/><span
-              class="barra"></span>
+            <input type="text" id="productDescription" name="productDescription" class="create_input"
+              minlength="20" /><span class="barra"></span>
             <label class="register-label">Descripción del producto</label>
           </div>
           <div class="campo">
@@ -94,7 +123,7 @@
             </div>
           </section>
           <div class="checkbox_create">
-            <input type="checkbox" name="featured" id="featured" >
+            <input type="checkbox" name="featured" id="featured">
             <label for="productoDestacado">Producto destacado</label>
           </div>
           <button class="enter-btn" type="submit" id="enter">Agregar producto</button>
