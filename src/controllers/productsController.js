@@ -179,8 +179,8 @@ const productEdition = async (req, res) => {
 
   try {
     const { name, price, productDescription, collection, collectionDescription, brand: brand_id, categories, size, color, quantity} = req.body;
-    const productImage = req.file.filename;
-    if(req.file.filename){
+    const productImage = req?.file?.filename;
+    if(!!productImage){
       product.set({
       productImage,});
     }

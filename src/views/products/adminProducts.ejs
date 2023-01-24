@@ -12,9 +12,8 @@
                     </div>
                 </label>
                 <div>
-                    <a href="/login" class="star">
-                        <%= userImage.fullName %>
-                    </a>
+                  <a <% if(userImage.userImage=='empty.png'){ %> href="/login" <% }else{ %> href="/userDetail" <% } %> class="star"><%= userImage.fullName %> </a>
+              </div>
                 </div>
                 <ul class="nav">
                     <li>
