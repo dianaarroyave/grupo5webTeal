@@ -139,22 +139,24 @@ const productEdition = async (req, res) => {
   ])
 
   try {
-    const { name, price, productDescription, collection, collectionDescription, brand: brand_id, categories, size, color, quantity, featured} = req.body;
-    const productImage = req.file.filename;
+    // const { name, price, productDescription, collection, collectionDescription, brand: brand_id, categories, size, color, quantity, featured} = req.body;
+    // const productImage = req.file.filename;
 
-    product.set({
-      productImage,
-      name,
-      price,
-      productDescription,
-      collection,
-      collectionDescription,
-      brand_id,
-      categories,
-      size,
-      color,
-      quantity,
-      featured
+    product.update({
+      ...req.body,
+      productImage: req?.file?.filename
+      // productImage,
+      // name,
+      // price,
+      // productDescription,
+      // collection,
+      // collectionDescription,
+      // brand_id,
+      // categories,
+      // size,
+      // color,
+      // quantity,
+      // featured
     })
 
     await product.save();

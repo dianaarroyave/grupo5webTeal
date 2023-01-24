@@ -143,7 +143,7 @@ const userEdit = async (req, res) => {
         var user = await User.findByPk(usuarioId.id);
         User.update({
             ...req.body,
-            userImage: req.file.filename
+            userImage: req?.file?.filename
         }, { where: { id: user.id } })
         // user = await User.findByPk(usuarioId.id);
         res.redirect('/userDetail')
