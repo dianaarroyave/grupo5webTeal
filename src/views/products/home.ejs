@@ -19,15 +19,12 @@
                         <a <% if(userImage.userImage=='empty.png'){ %> href="/login" <% }else{ %> href="/userDetail" <% } %> class="star"><%= userImage.fullName %> </a>
                     </div>
 
-                    <ul class="nav"  <% if(userImage.userImage=='empty.png'){ %> style= display:none <% } %> >
+
                         <!-- <li>
                             <a href="/products/adminProducts" class="menu-profile__option">EDITAR PRODUCTOS</a>
                         </li> -->
-                        <a href="/login" class="star">
-                            <%= userImage.fullName %>
-                        </a>
                     </div>
-                    <ul class="nav">
+                    <ul class="nav"  <% if(userImage.userImage=='empty.png'){ %> style= display:none <% } %> >
                         <li>
                             <a href="/userDetail" class="menu-profile__option">PERFIL</a>
                         </li>
