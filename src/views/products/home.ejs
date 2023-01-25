@@ -10,34 +10,41 @@
                     <input class="menu-profile" type="checkbox" id="menu-profile">
                     <label for="menu-profile">
                         <div>
-                            <!-- imagen de usuario -->
-                            <img class="profile" src="/userImages/<%= userImage.userImage %> " alt="userImage">
+                          <!-- imagen de usuario -->
+                          <img class="profile" src="/userImages/<%= userImage.userImage %> " alt="userImage">
                         </div>
-                    </label>
-                    <div>
+                      </label>
+                      <div>
                         <a <% if(userImage.userImage=='empty.png'){ %> href="/login" <% }else{ %> href="/userDetail" <% } %> class="star"><%= userImage.fullName %> </a>
                     </div>
-
-
-                        <!-- <li>
-                            <a href="/products/adminProducts" class="menu-profile__option">EDITAR PRODUCTOS</a>
-                        </li> -->
+                      <ul class="nav" <% if(userImage.userImage=='empty.png'){ %> style=display:none <% } %> )>
+                        <li>
+                          <a href="/userDetail" class="menu-profile__option">PERFIL</a>
+                        </li>
+                        <li>
+                          <a href="/passwordUpdate" class="menu-profile__option">EDITAR CONTRASEÑA</a>
+                        </li>
+                        <li>
+                          <form action="/closeSession" method="POST">
+                            <input type="submit" value="CERRAR SESIÓN" class="menu-profile__option button-close_session">
+                          </form>
+                        </li>
+                      </ul>
                     </div>
-                    <ul class="nav"  <% if(userImage.userImage=='empty.png'){ %> style= display:none <% } %> >
+                      <ul class="nav">
                         <li>
-                            <a href="/userDetail" class="menu-profile__option">PERFIL</a>
+                          <a href="/userDetail" class="menu-profile__option">PERFIL</a>
                         </li>
                         <li>
-                            <a href="/passwordUpdate" class="menu-profile__option">EDITAR CONTRASEÑA</a>
+                          <a href="/passwordUpdate" class="menu-profile__option">EDITAR CONTRASEÑA</a>
                         </li>
                         <li>
-                            <form action="/closeSession" method="POST">
-                                <input type="submit" value="CERRAR SESIÓN"
-                                    class="menu-profile__option button-close_session">
-                            </form>
+                          <form action="/closeSession" method="POST">
+                            <input type="submit" value="CERRAR SESIÓN" class="menu-profile__option button-close_session">
+                          </form>
                         </li>
-                    </ul>
-                </div>
+                      </ul>
+                    </div>
 
                 <main class="main">
                     <div class="image">

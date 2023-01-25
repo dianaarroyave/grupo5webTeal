@@ -47,7 +47,7 @@ const viewProductDetail = async (req, res) => {
 };
 
 const bag = (req, res) => {
-  res.render('products/bag')
+  res.render('products/bag',{userImage})
 };
 
 const viewNewProduct = async (req, res) => {

@@ -13,7 +13,7 @@
                 <div>
                   <a <% if(userImage.userImage=='empty.png'){ %> href="/login" <% }else{ %> href="/userDetail" <% } %> class="star"><%= userImage.fullName %> </a>
               </div>
-                <ul class="nav">
+                <ul class="nav" <% if(userImage.userImage=='empty.png'){ %> style=display:none <% } %>>
                     <li>
                         <a href="/userDetail" class="menu-profile__option">PERFIL</a>
                     </li>
