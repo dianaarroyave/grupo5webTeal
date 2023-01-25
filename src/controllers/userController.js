@@ -23,11 +23,11 @@ const viewRegister = (req, res) => {
 const userCreate = async (req, res) => {
     //Destructuring del registro
     const { fullName, documentType, documentNumber, email, phoneNumber, password } = req.body;
-    const userImage = req.file.filename;
+    const userImage = req?.file?.filename;
     //Validación para ver si el usuario está registrado
     const userExist = await User.findOne({ where: { email } });
     if (userExist) {
-        return res.render('users/login', {
+        return res.render('users/login', {userImage,
             user: {
                 fullName: req.body.fullName,
                 email: req.body.email
@@ -45,7 +45,7 @@ const userCreate = async (req, res) => {
     let resultado = validationResult(req);
     //Verificar que el resultado no este vacio
     if (!resultado.isEmpty()) {
-        return res.render('users/register', {
+        return res.render('users/register', {userImage,
             errors: resultado.mapped(),
             user: {
                 fullName: req.body.fullName,
@@ -96,21 +96,21 @@ const userLogin = async (req, res) => {
     //Verificación de la existencia del usuario
     const userExist = await User.findOne({ where: { email } });
     if (!userExist) {
-        return res.render('users/login', {
+        return res.render('users/login', {userImage,
             errors: { email: { msg: 'El usuario no existe' } }
         })
     }
-    //session para la imagen del usuario
-    req.session.userImage = userExist;
+
     //Verificación de la contraseña
     if (!userExist.verificarPassword(password)) {
-        return res.render('users/login', {
-            errors: { password: { msg: 'La contraseña es incorrecta' } }
-        })
+
+        return res.redirect('users/login')
     }
+
     // Autenticar al usuario
     const token = generarJWT({ id: userExist.id, fullName: userExist.fullName, phoneNumber: userExist.phoneNumber, email: userExist.email });
-
+    //session para la imagen del usuario
+    req.session.userImage = userExist;
     // Almacenar en un cookie
     return res.cookie('_token', token, {
         httpOnly: true
@@ -129,12 +129,12 @@ const editRender = async (req, res) => {
     try {
         const decoded = Jwt.verify(_token, process.env.JWT_SECRET)
         const usuarioId = await User.scope('eliminarPassword').findByPk(decoded.id)
-        
+
         //session user image
         if(req.session.userImage){
             userImage = req.session.userImage
           };
-       
+
         // Validar que el usuario y buscarlo en la base de datos
         const user = await User.findByPk(usuarioId.id);
         res.render('users/userDetail', { user, userImage })
@@ -184,7 +184,7 @@ const editPasswordRender = async (req, res) => {
           //session user image
     if(req.session.userImage){
         userImage = req.session.userImage
-      }; 
+      };
 
         const decoded = Jwt.verify(_token, process.env.JWT_SECRET)
         const usuarioId = await User.scope('eliminarPassword').findByPk(decoded.id)
@@ -228,6 +228,24 @@ const changePassword = async (req, res) => {
     }
 }
 
+const deleteUser = async (req,res) => {
+  const { id } = req.params
+    // Validar que el producto exista
+
+    const user = await User.findByPk(id)
+
+    if(!user){
+        return res.redirect('/')
+    }
+
+
+    // Eliminar el producto
+    await user.destroy()
+    userImage = {userImage:"empty.png",fullName:"INICIAR SESIÓN"};
+
+    res.redirect('/')
+
+}
 
 module.exports = {
     viewRegister,
@@ -239,5 +257,6 @@ module.exports = {
     logout,
     editPasswordRender,
     changePassword,
-    userImage
+    userImage,
+    deleteUser
 };

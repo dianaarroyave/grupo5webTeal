@@ -87,7 +87,7 @@
           <div class="buttons">
 
             <form class="delete-btn-form" action="/products/adminProducts">
-              <button class="save-btn" type="submit">Editar productos</button>
+              <button class="save-btn" type="submit">Administrar productos</button>
             </form>
 
             <form class="delete-btn-form" action="/passwordUpdate" method="GET">
@@ -102,7 +102,7 @@
               </button>
             </form>
 
-            <form class="delete-btn-form" action="/delete/?_method=DELETE" method="POST">
+            <form class="delete-btn-form" action="/delete/<%= user.id %>" method="POST">
               <button class="save-btn" type="submit">Eliminar Usuario</button>
             </form>
 
