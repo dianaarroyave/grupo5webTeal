@@ -247,6 +247,7 @@ const deleteUser = async (req,res) => {
 
 }
 
+
 module.exports = {
     viewRegister,
     viewLogin,
