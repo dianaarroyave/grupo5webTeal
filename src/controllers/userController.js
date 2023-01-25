@@ -129,12 +129,12 @@ const editRender = async (req, res) => {
     try {
         const decoded = Jwt.verify(_token, process.env.JWT_SECRET)
         const usuarioId = await User.scope('eliminarPassword').findByPk(decoded.id)
-        
+
         //session user image
         if(req.session.userImage){
             userImage = req.session.userImage
           };
-       
+
         // Validar que el usuario y buscarlo en la base de datos
         const user = await User.findByPk(usuarioId.id);
         res.render('users/userDetail', { user, userImage })
@@ -184,7 +184,7 @@ const editPasswordRender = async (req, res) => {
           //session user image
     if(req.session.userImage){
         userImage = req.session.userImage
-      }; 
+      };
 
         const decoded = Jwt.verify(_token, process.env.JWT_SECRET)
         const usuarioId = await User.scope('eliminarPassword').findByPk(decoded.id)
@@ -227,6 +227,7 @@ const changePassword = async (req, res) => {
         res.status(500).send("Error al actualizar la contraseña");
     }
 }
+
 
 
 module.exports = {
