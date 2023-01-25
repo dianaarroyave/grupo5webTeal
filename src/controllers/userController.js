@@ -23,11 +23,11 @@ const viewRegister = (req, res) => {
 const userCreate = async (req, res) => {
     //Destructuring del registro
     const { fullName, documentType, documentNumber, email, phoneNumber, password } = req.body;
-    const userImage = req.file.filename;
+    const userImage = req?.file?.filename;
     //Validación para ver si el usuario está registrado
     const userExist = await User.findOne({ where: { email } });
     if (userExist) {
-        return res.render('users/login', {
+        return res.render('users/login', {userImage,
             user: {
                 fullName: req.body.fullName,
                 email: req.body.email
@@ -37,15 +37,15 @@ const userCreate = async (req, res) => {
     //Validaciones
     await check('fullName').isLength({ min: 5 }).run(req);
     await check('documentType').notEmpty().run(req);
-    await check('documentNumber').isNumeric().withMessage('Ingrese su número de documento').run(req);
-    await check('email').isEmail().withMessage('Ingrese su correo electrónico').run(req);
-    await check('phoneNumber').notEmpty().withMessage('Ingrese su número de celular').run(req);
-    await check('password').isLength({ min: 5 }).withMessage('Ingrese una clave de más de 5 caracteres').run(req);
+    await check('documentNumber').isNumeric().run(req);
+    await check('email').isEmail().run(req);
+    await check('phoneNumber').notEmpty().run(req);
+    await check('password').isLength({ min: 5 }).run(req);
     //Hacer validaciones
     let resultado = validationResult(req);
     //Verificar que el resultado no este vacio
     if (!resultado.isEmpty()) {
-        return res.render('users/register', {
+        return res.render('users/register', {userImage,
             errors: resultado.mapped(),
             user: {
                 fullName: req.body.fullName,
@@ -82,8 +82,8 @@ const viewLogin = (req, res) => {
 }
 
 const userLogin = async (req, res) => {
-    await check('email').isEmail().withMessage('Ingrese su correo electrónico').run(req);
-    await check('password').notEmpty().withMessage('La contraseña es obligatoria').run(req);
+    await check('email').isEmail().run(req);
+    await check('password').notEmpty().run(req);
 
     let resultado = validationResult(req);
     //Verificar que el resultado no este vacio
@@ -96,21 +96,21 @@ const userLogin = async (req, res) => {
     //Verificación de la existencia del usuario
     const userExist = await User.findOne({ where: { email } });
     if (!userExist) {
-        return res.render('users/login', {
+        return res.render('users/login', {userImage,
             errors: { email: { msg: 'El usuario no existe' } }
         })
     }
-    //session para la imagen del usuario
-    req.session.userImage = userExist;
+
     //Verificación de la contraseña
     if (!userExist.verificarPassword(password)) {
-        return res.render('users/login', {
-            errors: { password: { msg: 'La contraseña es incorrecta' } }
-        })
+
+        return res.redirect('users/login')
     }
+
     // Autenticar al usuario
     const token = generarJWT({ id: userExist.id, fullName: userExist.fullName, phoneNumber: userExist.phoneNumber, email: userExist.email });
-
+    //session para la imagen del usuario
+    req.session.userImage = userExist;
     // Almacenar en un cookie
     return res.cookie('_token', token, {
         httpOnly: true
@@ -228,6 +228,24 @@ const changePassword = async (req, res) => {
     }
 }
 
+const deleteUser = async (req,res) => {
+  const { id } = req.params
+    // Validar que el producto exista
+
+    const user = await User.findByPk(id)
+
+    if(!user){
+        return res.redirect('/')
+    }
+
+
+    // Eliminar el producto
+    await user.destroy()
+    userImage = {userImage:"empty.png",fullName:"INICIAR SESIÓN"};
+
+    res.redirect('/')
+
+}
 
 
 module.exports = {
@@ -240,5 +258,6 @@ module.exports = {
     logout,
     editPasswordRender,
     changePassword,
-    userImage
+    userImage,
+    deleteUser
 };

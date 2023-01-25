@@ -11,68 +11,60 @@
           </div>
         </label>
         <div>
-          <a <% if(userImage.userImage=='empty.png'){ %> href="/login" <% }else{ %> href="/userDetail" <% } %> class="star"><%= userImage.fullName %> </a>
-      </div>
-        <ul class="nav">
-          <li>
-            <a href="/userDetail" class="menu-profile__option">PERFIL</a>
-          </li>
-          <li>
-            <a href="/passwordUpdate" class="menu-profile__option">EDITAR CONTRASEÑA</a>
-          </li>
-          <li>
-            <form action="/closeSession" method="POST">
-              <input type="submit" value="CERRAR SESIÓN" class="menu-profile__option button-close_session">
-            </form>
-          </li>
+          <a <% if(userImage.userImage=='empty.png' ){ %> href="/login" <% }else{ %> href="/userDetail" <% } %>
+                class="star"><%= userImage.fullName %> </a>
+        </div>
+        <ul class="nav" <% if(userImage.userImage=='empty.png' ){ %> style=display:none <% } %>>
+            <li>
+              <a href="/userDetail" class="menu-profile__option">PERFIL</a>
+            </li>
+            <li>
+              <a href="/passwordUpdate" class="menu-profile__option">EDITAR CONTRASEÑA</a>
+            </li>
+            <li>
+              <form action="/closeSession" method="POST">
+                <input type="submit" value="CERRAR SESIÓN" class="menu-profile__option button-close_session">
+              </form>
+            </li>
         </ul>
       </div>
 
       <main class="login-main">
         <div class="loginForm">
-          <form class="form-start" id="form" action="/login" method="POST">
+          <form class="form-start" id="form-login" action="/login" method="POST">
             <h2 class="title">Iniciar sesión</h2>
             <div class="campo">
-              <input class="login_input" type="text" minlength="8" id="login-email" name="email" /><span
-                class="barra"></span>
+              <input class="login_input" type="text" id="login-email" name="email" /><span class="barra"></span>
               <label class="login-label">Correo electrónico</label>
-            </div>
-            <% if(locals.errors && errors.email) { %>
-              <div class="errors">
-                <p>
-                  <%= errors.email.msg %>
-                </p>
+              <div id="error_msg-email">
+
               </div>
-              <% } %>
-                <div class="campo">
-                  <input class="login_input" type="password" minlength="8" id="nombre" name="password" /><span
-                    class="barra"></span>
-                  <label class="login-label">Contraseña</label>
-                </div>
-                <% if(locals.errors && errors.password) { %>
-                  <div class="errors">
-                    <p>
-                      <%= errors.password.msg %>
-                    </p>
-                  </div>
-                  <% } %>
-                    <div class="newUser">
-                      <a class="newUser-btn" href="/passwordUpdate">¿Olvidaste tu contraseña?*</a>
-                    </div>
+            </div>
 
-                    <form action="">
-                      <button class="enter-btn" type="submit" id="enter">Ingresar</button>
-                    </form>
+            <div class="campo">
+              <input class="login_input" type="password" id="login-password" name="password" /><span
+                class="barra"></span>
+              <label class="login-label">Contraseña</label>
+              <div id="error_msg-password">
 
-                    <form class="createUser-btn" action="/register">
-                      <p class="question">¿Eres un cliente nuevo?</p>
-                      <button class="enter-btn" type="submit" id="enter" href="/register">Registrate</button>
-                    </form>
+              </div>
+            </div>
+
+            <div class="newUser">
+              <a class="newUser-btn" href="/passwordUpdate">¿Olvidaste tu contraseña?*</a>
+            </div>
+
+            <button class="enter-btn" type="submit" id="enter-login">Ingresar</button>
+
+            <form class="createUser-btn" action="/register">
+              <p class="question">¿Eres un cliente nuevo?</p>
+              <button class="enter-btn" type="submit" id="enter" href="/register">Registrate</button>
+            </form>
           </form>
         </div>
       </main>
       <%- include('../partials/footer') %>
-        <!-- <script src="/js/userValidations.js"></script> -->
+        <script src="/js/loginValidations.js"></script>
   </body>
 
   </html>
