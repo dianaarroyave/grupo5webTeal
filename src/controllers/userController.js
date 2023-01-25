@@ -23,7 +23,7 @@ const viewRegister = (req, res) => {
 const userCreate = async (req, res) => {
     //Destructuring del registro
     const { fullName, documentType, documentNumber, email, phoneNumber, password } = req.body;
-    const userImage = req.file.filename;
+    const userImage = req.file.filename; 
     //Validación para ver si el usuario está registrado
     const userExist = await User.findOne({ where: { email } });
     if (userExist) {
@@ -37,10 +37,10 @@ const userCreate = async (req, res) => {
     //Validaciones
     await check('fullName').isLength({ min: 5 }).run(req);
     await check('documentType').notEmpty().run(req);
-    await check('documentNumber').isNumeric().withMessage('Ingrese su número de documento').run(req);
-    await check('email').isEmail().withMessage('Ingrese su correo electrónico').run(req);
-    await check('phoneNumber').notEmpty().withMessage('Ingrese su número de celular').run(req);
-    await check('password').isLength({ min: 5 }).withMessage('Ingrese una clave de más de 5 caracteres').run(req);
+    await check('documentNumber').isNumeric().run(req);
+    await check('email').isEmail().run(req);
+    await check('phoneNumber').notEmpty().run(req);
+    await check('password').isLength({ min: 5 }).run(req);
     //Hacer validaciones
     let resultado = validationResult(req);
     //Verificar que el resultado no este vacio
@@ -82,8 +82,8 @@ const viewLogin = (req, res) => {
 }
 
 const userLogin = async (req, res) => {
-    await check('email').isEmail().withMessage('Ingrese su correo electrónico').run(req);
-    await check('password').notEmpty().withMessage('La contraseña es obligatoria').run(req);
+    await check('email').isEmail().run(req);
+    await check('password').notEmpty().run(req);
 
     let resultado = validationResult(req);
     //Verificar que el resultado no este vacio
