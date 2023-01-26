@@ -60,7 +60,7 @@
 }
 
 .description {
-    display: block !important; 
+    display: block !important;
     padding-bottom: 15px;
 }
 
@@ -126,17 +126,19 @@
 
 /* Necesario para conservar concepto de prendas */
 .img-card{
-    width: 90%;
+    width: 100%;
 }
 .plink{
     width: 50%;
     position: relative;
     text-decoration: none !important;
 }
+
 .card{
     width: 100% !important;
     height: 100% !important;
 }
+
 .cards{
     display: flex;
     flex-wrap: wrap;

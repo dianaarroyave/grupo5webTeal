@@ -65,23 +65,23 @@
                     </h2>
                 </div>
                 <div class="cards">
-                    <%featuredProducts.forEach(product=>{%>
-                        <a class="plink" href="/products/productDetail/<%=product.id %>">
-                            <div class="card">
-                                <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
-                                <img class="img-card" src="/productImages/<%=product.productImage%>"
-                                    alt="Prenda Vestir">
-                                <div class="description">
-                                    <p class="price">$<%=product.price%>
-                                    </p>
-                                    <p class="product">
-                                        <%=product.name%>
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                </div>
-                <%})%>
+                  <%featuredProducts.forEach(product=>{%>
+                      <a class="plink" href="/products/productDetail/<%=product.id %>">
+                          <div class="card">
+                              <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
+                              <img class="img-card" src="/productImages/<%=product.productImage%>"
+                                  alt="Prenda Vestir">
+                              <div class="description">
+                                  <p class="price">$<%=product.price%>
+                                  </p>
+                                  <p class="product">
+                                      <%=product.name%>
+                                  </p>
+                              </div>
+                          </div>
+                      </a>
+                  <%})%>
+              </div>
             </section>
 
             <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
