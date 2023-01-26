@@ -160,6 +160,11 @@ const userEdit = async (req, res) => {
             ...req.body,
             userImage: req?.file?.filename
         }, { where: { id: user.id } })
+        imagechange=user;
+        imagechange.userImage = req?.file?.filename;
+          req.session.userImage = imagechange;
+          userImage = req.session.userImage
+
         // user = await User.findByPk(usuarioId.id);
         res.redirect('/userDetail')
     } catch (error) {
