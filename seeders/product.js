@@ -250,7 +250,7 @@ const products = [
     size: 'S',
     color: 'Negro',
     quantity: '2',
-    featured: '',
+    featured: 1,
     brand_id: 1,
   }
 ]

@@ -241,7 +241,7 @@ const deleteUser = async (req,res) => {
 
     // Eliminar el producto
     await user.destroy()
-    userImage = {userImage:"empty.png",fullName:"INICIAR SESIÓN"};
+    req.session.userImage = { userImage: "empty.png", fullName: "Iniciar sesión" };
 
     res.redirect('/')
 
