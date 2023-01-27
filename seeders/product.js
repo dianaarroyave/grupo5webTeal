@@ -25,7 +25,7 @@ const products = [
     size: 'S',
     color: 'Negro',
     quantity: '2',
-    featured: '1',
+    featured: '0',
     brand_id: 2,
   },
 
@@ -175,7 +175,7 @@ const products = [
     size: 'S',
     color: 'Blanco',
     quantity: '2',
-    featured: '1',
+    featured: '0',
     brand_id: 1,
   },
 

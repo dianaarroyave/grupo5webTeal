@@ -1,21 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --primaryFont: 'helvetica';
-    --sizeTitle: 1.5rem;
-    --sizeBody: 1rem;
-    --negro: #000000;
-    --blanco: #fff;
-    --gris: #d9d9d6;
-    --teal: #008080;
-    --tealOriginal: #d8fffc;
-    --tealBasics: #f9f9f9;
-}
-
 .mainSubmarcas{
     padding-bottom: 50px;
 }
@@ -23,7 +5,6 @@
     display: flex;
     flex-wrap: wrap;
     height: 5vh;
-
 }
 
 .btn-man {
@@ -35,7 +16,6 @@
 .btn-man:hover {
     background-color: var(--teal);
     color: white;
-
 }
 
 .btn-women {
@@ -57,6 +37,7 @@
 .card {
     width: 50%;
     position: relative;
+    border-color: white;
 }
 
 .description {
@@ -135,8 +116,8 @@
 }
 
 .card{
-    width: 100% !important;
-    height: 100% !important;
+    width: 100%;
+    height: 100%;
 }
 
 .cards{

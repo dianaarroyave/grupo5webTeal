@@ -19,8 +19,7 @@
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 1.8rem;
-    right: 0rem;
+    top: 11px; right: 40px;
 }
 
 .nav {
@@ -42,7 +41,6 @@
 .nav li {
     padding: 10px 15px;
     font-size: var(--smMobile);
-    /* display: none; */
 }
 
 .nav li:hover>ul {
@@ -64,8 +62,8 @@
     display: block;
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(255, 255, 255, 0.6);
-    padding: 10px 0px;
+    background-color: rgba(214, 209, 209, 0.6);
+    padding: 10px 5px 5px 5px;
     justify-content: space-between;
     align-items: center;
     list-style: none;
@@ -88,9 +86,8 @@
     padding: 5px;
 }
 
-
 .FeaturedProducts {
-    width: 100vw;
+    width: 100%;
     padding-bottom: 50px;
 }
 
@@ -144,10 +141,16 @@ footer {
 
 /* @medias */
 /* @medias especial */
+
+
 @media (max-width: 410px) {
     .image {
         height: 70vh;
     }
+
+    /* .homeContainerProfile {
+      top: 1%; left: 60%;
+    } */
 
     .ChooseCollection {
         position: fixed;
@@ -162,6 +165,14 @@ footer {
         background-size: cover;
         height: 100vh;
     }
+
+    /* .container-icons {
+      margin-left: 5px;
+    } */
+
+    /* .homeContainerProfile {
+      top: 1%; left: 60%;
+    } */
 
     .collections {
         font-size: 40px;
@@ -190,6 +201,7 @@ footer {
     .SectionTitle {
         font-size: 2rem;
     }
+
 
     .ChooseCollection {
         position: fixed;
