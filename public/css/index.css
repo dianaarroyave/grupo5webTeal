@@ -22,14 +22,12 @@ html{
 }
 
 .errors {
-    margin-bottom: 10px;
-    background-color: red;
+    background-color: var(--teal);
 }
 
 .errors p {
-    padding: 10px 10px;
+    padding: 3px 3px;
     color: #fff;
     text-align: center;
-    text-transform: uppercase;
     font-size: 15px;
 }
