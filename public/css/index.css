@@ -20,3 +20,14 @@
 html{
     font-family: var(--primaryFont);
 }
+
+.errors {
+    background-color: var(--teal);
+}
+
+.errors p {
+    padding: 3px 3px;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+}

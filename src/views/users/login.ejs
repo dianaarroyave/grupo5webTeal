@@ -1,30 +1,72 @@
 <%- include('../partials/head') %>
 
-    <body>
-        <%- include('../partials/header') %>
-            <main class="login-main">
-                <form class="form" action="/" method="post">
-                    <h2 class="title">Inisiar sesión</h2>
-                    <div class="campo">
-                        <input class="login_input" type="email" minlength="8" id="nombre" name="name" required /><span
-                            class="barra"></span>
-                        <label class="login-label">Correo electrónico</label>
-                    </div>
-                    <div class="campo">
-                        <input class="login_input" type="password" minlength="8" id="nombre" name="name"
-                            required /><span class="barra"></span>
-                        <label class="login-label">Contraseña</label>
-                    </div>
-                    <button class="enter-btn" type="submit" id="enter">Ingresar</button>
-                    <button class="enter-facebook" type="submit" id="enter">
-                        Ingresar con Facebook
-                    </button>
-                    <button class="enter-google" type="submit" id="enter">
-                        Ingresar con Google
-                    </button>
-                </form>
-            </main>
-            <%- include('../partials/footer') %>
-    </body>
+  <body>
+    <%- include('../partials/header') %>
+      <div class="homeContainerProfile">
+        <input class="menu-profile" type="checkbox" id="menu-profile">
+        <label for="menu-profile">
+          <div>
+            <!-- imagen de usuario -->
+            <img class="profile" src="/userImages/<%= userImage.userImage%> " alt="userImage">
+          </div>
+        </label>
+        <div>
+          <a <% if(userImage.userImage=='empty.png' ){ %> href="/login" <% }else{ %> href="/userDetail" <% } %>
+                class="star"><%= userImage.fullName %> </a>
+        </div>
+        <ul class="nav" <% if(userImage.userImage=='empty.png' ){ %> style=display:none <% } %>>
+            <li>
+              <a href="/userDetail" class="menu-profile__option">PERFIL</a>
+            </li>
+            <li>
+              <a href="/passwordUpdate" class="menu-profile__option">EDITAR CONTRASEÑA</a>
+            </li>
+            <li>
+              <form action="/closeSession" method="POST">
+                <input type="submit" value="CERRAR SESIÓN" class="menu-profile__option button-close_session">
+              </form>
+            </li>
+        </ul>
+      </div>
 
-    </html>
+      <main class="login-main">
+        <div class="loginForm">
+          <form class="form-start" id="form-login" action="/login" method="POST">
+            <h2 class="title">Iniciar sesión</h2>
+            <div class="campo">
+              <input class="login_input" type="text" id="login-email" name="email" /><span class="barra"></span>
+              <label class="login-label">Correo electrónico</label>
+              <div id="error_msg-email">
+
+              </div>
+            </div>
+
+            <div class="campo">
+              <input class="login_input" type="password" id="login-password" name="password" /><span
+                class="barra"></span>
+              <label class="login-label">Contraseña</label>
+              <div id="error_msg-password">
+
+              </div>
+            </div>
+
+            <div class="newUser">
+              <a class="newUser-btn" href="/passwordUpdate">¿Olvidaste tu contraseña?*</a>
+            </div>
+            
+            <form action="">
+              <button class="enter-btn" type="submit" id="enter-login">Ingresar</button>
+            </form>
+
+            <form class="createUser-btn" action="/register">
+              <p class="question">¿Eres un cliente nuevo?</p>
+              <button class="enter-btn" type="submit" id="enter-register" href="/register">Registrate</button>
+            </form>
+          </form>
+        </div>
+      </main>
+      <%- include('../partials/footer') %>
+        <script src="/js/loginValidations.js"></script>
+  </body>
+
+  </html>

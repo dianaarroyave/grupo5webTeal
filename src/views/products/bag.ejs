@@ -1,0 +1,104 @@
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include('../partials/header') %>
+
+            <div class="homeContainerProfile">
+                <input class="menu-profile" type="checkbox" id="menu-profile">
+                <label for="menu-profile">
+                    <div>
+                        <!-- imagen de usuario -->
+                        <img class="profile" src="/userImages/<%= userImage.userImage %> " alt="userImage">
+                    </div>
+                </label>
+                <div>
+                  <a <% if(userImage.userImage=='empty.png'){ %> href="/login" <% }else{ %> href="/userDetail" <% } %> class="star"><%= userImage.fullName %> </a>
+              </div>
+                <ul class="nav" <% if(userImage.userImage=='empty.png'){ %> style=display:none <% } %>>
+                    <li>
+                        <a href="/userDetail" class="menu-profile__option">PERFIL</a>
+                    </li>
+                    <li>
+                        <a href="/passwordUpdate" class="menu-profile__option">EDITAR CONTRASEÑA</a>
+                    </li>
+                    <li>
+                        <form action="/closeSession" method="POST">
+                            <input type="submit" value="CERRAR SESIÓN"
+                                class="menu-profile__option button-close_session">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <main>
+                <section class="section">
+                    <div class="titles">
+                        <h2>Producto</h2>
+                        <h2>Precio</h2>
+                    </div>
+                    <div class="container-card">
+                        <div class="container-card_img-description">
+                            <img class="container-card__img" src="/productImages/1.png" alt="Producto">
+                            <div class="container-card__caracteristics">
+                                <p>Tipo de producto</p>
+                                <p>Talla M</p>
+                                <div>
+                                    <i class="fa-solid fa-trash-can trash-can"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-card__price-amount">
+                            <p>CO$100.000</p>
+                            <div class="container-card__amount">
+                                <i class="fa-solid fa-chevron-left"></i>
+                                <p>1</p>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-card">
+                        <div class="container-card_img-description">
+                            <img class="container-card__img" src="/productImages/2.png" alt="Producto">
+                            <div class="container-card__caracteristics">
+                                <p>Tipo de producto</p>
+                                <p>Talla M</p>
+                                <div>
+                                    <i class="fa-solid fa-trash-can trash-can"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-card__price-amount">
+                            <p>CO$100.000</p>
+                            <div class="container-card__amount">
+                                <i class="fa-solid fa-chevron-left"></i>
+                                <p>1</p>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-shipping">
+                        <h4>Envío</h4>
+                        <h4>$0</h4>
+                    </div>
+                    <div class="container-subtotal">
+                        <h4>Subtotal</h4>
+                        <h4>$200.000</h4>
+                    </div>
+                    <hr class="line">
+                    <div class="container-btn">
+                        <a href="#">
+                            <button class="btn-pay">PAGAR</button>
+                        </a>
+                        <a href="/">
+                            <button class="btn-buy">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                Seguir comprando
+                            </button>
+                        </a>
+                    </div>
+                    <hr class="line">
+                </section>
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+    </html>

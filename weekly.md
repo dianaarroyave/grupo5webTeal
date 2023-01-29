@@ -1,3 +1,71 @@
+# weekly sprint 7
+
+## Semana 1
+
+Se comenzó el sprint 7 con las tareas pendientes del sprint 6 que no pudimos finalizar, nos dividimos por parejas para asignar las tareas correspondeintes a los miembros del equipo, con el fin de poder terminar los pendientes del sprint 6 antes de comenzar a desarrollar el 7.
+
+## Semana 2
+
+Nos reunimos para evaluar los avances, pero asistimos únicamente dos miembros del equipo, revisamos pendientes y nos dimos cuenta que no se ha podido avanzar lo suficiente debido al nievel de dificultad de los puntos faltantes.  Quedamos de seguir avanzando y revisar los resultados del trabajo de cada uno en la próxima reunión.
+
+## Semana 3
+
+Cada miembro del equipo planteó los avances realizados durante ese semana, planteando que todavía algunos miembros tienen inconvenientes con la conexión a la base de datos para poder avanzar con las tareas pendientes, por tal motivo, no se han podido asignar tareas para el nuevo sprint, y se continuan resolviendo inconvenientes que se tuvieron del sprint pasado.  Se definió solicitar ayuda para poder solucionar el tema. 
+
+# weekly sprint 6
+
+## Semana 1
+
+Esta semana realizamos la retro y quedamos en que cada uno de los integrantes del equipo iba a repasar los temas relacionados con el módulo de bases de datos para poder tener todos los conocimientos claros para desarrollar el sprint.
+
+Adicionalmente, se definió desarrollar el sprint en conjunto y no por microtareas, ya que el sprint permitía este modelo de trabajo.
+
+## Semana 2
+
+Tuvimos varios retrasos en comenzar el proyecto debido a las dificultades que tuvimos para podernos reunir, esta semana creamos la base de datos en el MySQL.
+
+## Semana 3
+
+Se crearon los modelos y se configuró el sequelize, y se comenzaron a realizar las relaciones
+
+## Semana 4
+
+Se intentó comenzar con el CRUD, pero habían demasiadas cosas por terminar primero, se solicitó varias veces ayuda a los profesores, pero no se pudieron reunir con nosotros, por tal motivo se solicitó ayuda a un compañero que sabe mucho del tema, quien nos estuvo ayudando, pero no alcanzamos a terminar.
+
+
+# weekly sprint 5
+
+## Semana 1
+
+Se definió mejorar la planificación del sprint desde el inicio, asignando tareas claras por duplas y fechas de entrega definidas, con el fin de que cada uno de los participantes tengan claros los tiempos de entrega y las actividades que debe realizar.
+
+Se divió el sprint en varias etapas y al equipo en dos duplas, cada una con actividades definidas
+
+Sergio y Sthefania van a trabajar en la funcionalidad del registro donde van a:
+ - Implementar MULTER
+ - Implementar rutas y controlador
+ - Agregar campo para la imagen
+ - Guardar información (modifica el JSON)
+
+William y Diana van a trabajar en la vista del perfil donde van a:
+ - Implementar rutas y controlador
+ - Agregar opción de perfil en el menú
+ - Crear EJS y CSS para el perfil de usuario
+ - Implementar MULTER
+
+Cada dupla debe entregar estas actividades el 4 de noviembre 
+
+## Semana 2
+
+Se realizaron los avances de las tareas asignadas, Diana y William solucitaron unos días adicionales para terminar con los pendientes debido a que les ha dado dificultad.
+
+Sergio y Sthefania comenzaron a trabajar en todo el tema de la contraseña del sitio.
+
+## Semana 3
+
+Se terminaron todas las tareas asignadas, se deben ajustar algunos detalles para que la funcionalidad y el CSS sea mejor, pero actualmente está funcional.
+
+
 # weekly sprint 4
 
 ## Semana 1

@@ -1,33 +1,61 @@
 <%- include('../partials/head') %>
-<body>
-  <%- include('../partials/header') %>
-  <main class="mainSubmarcas">
-    <div class="gender">
-        <button class="btn-man">Hombre</button>
-        <button class="btn-women">Mujer</button>
-    </div>
 
-    <p class="filter-products">Ordenar por</p>
-    <div class="filter-price">
-        <button class="name">Nombre</button>
-        <button class="filter-price-less">Precio menor a mayor</button>
-        <button class="filter-price-more">Precio mayor a menor</button>
-    </div>
-    <div class="cards">
-        <%for(let i=0;i<brand.length;i++){%>
-        <a class="plink" href="/products/producto/<%=brand[i].id%>">
-            <div class="card">
+  <body>
+    <%- include('../partials/header') %>
+
+      <div class="homeContainerProfile">
+        <input class="menu-profile" type="checkbox" id="menu-profile">
+        <label for="menu-profile">
+          <div>
+            <!-- imagen de usuario -->
+            <img class="profile" src="/userImages/<%= userImage.userImage %> " alt="userImage">
+          </div>
+        </label>
+        <div>
+          <a <% if(userImage.userImage=='empty.png'){ %> href="/login" <% }else{ %> href="/userDetail" <% } %> class="star"><%= userImage.fullName %> </a>
+      </div>
+        <ul class="nav" <% if(userImage.userImage=='empty.png'){ %> style=display:none <% } %>>
+          <li>
+            <a href="/userDetail" class="menu-profile__option">PERFIL</a>
+          </li>
+          <li>
+            <a href="/passwordUpdate" class="menu-profile__option">EDITAR CONTRASEÑA</a>
+          </li>
+          <li>
+            <form action="/closeSession" method="POST">
+              <input type="submit" value="CERRAR SESIÓN" class="menu-profile__option button-close_session">
+            </form>
+          </li>
+        </ul>
+      </div>
+      <main class="mainSubmarcas">
+        <div class="gender">
+          <button class="btn-man">Hombre</button>
+          <button class="btn-women">Mujer</button>
+        </div>
+
+        <p class="filter-products">Ordenar por</p>
+        <div class="filter-price">
+          <button class="name">Nombre</button>
+          <button class="filter-price-less">Precio menor a mayor</button>
+          <button class="filter-price-more">Precio mayor a menor</button>
+        </div>
+        <div class="cards">
+          <%brand.forEach(product=>{%>
+            <a class="plink" href="/products/productDetail/<%=product.id %>">
+              <div class="card">
                 <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
-                <img class="img-card" src="/images/<%=brand[i].image%>" alt="Prenda Vestir">
+                <img class="img-card" src="/productImages/<%=product.productImage%>" alt="Prenda Vestir">
                 <div class="description">
-                  <p class="price">$<%= brand[i].price %></p>
-                    <p class="product"><%=brand[i].name%></p>
+                  <p class="price">$<%=product.price%></p>
+                  <p class="product"><%=product.name%></p>
                 </div>
-            </div>
-        </a>
-        <%}%>
-    </div>
-</main>
-  <%- include('../partials/footer') %>
-</body>
-</html>
+              </div>
+            </a>
+          <%})%>
+        </div>
+      </main>
+      <%- include('../partials/footer') %>
+  </body>
+
+  </html>

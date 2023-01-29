@@ -1,0 +1,115 @@
+<%- include('../partials/head') %>
+
+    <body>
+        <%- include('../partials/header') %>
+            <div class="homeContainerProfile">
+                <input class="menu-profile" type="checkbox" id="menu-profile">
+                <label for="menu-profile">
+                    <div>
+                        <!-- imagen de usuario -->
+                        <img class="profile" src="/userImages/<%= userImage.userImage %> " alt="userImage">
+                    </div>
+                </label>
+                <div>
+                  <a <% if(userImage.userImage=='empty.png'){ %> href="/login" <% }else{ %> href="/userDetail" <% } %> class="star"><%= userImage.fullName %> </a>
+              </div>
+                <ul class="nav" <% if(userImage.userImage=='empty.png'){ %> style=display:none <% } %>>
+                    <li>
+                        <a href="/userDetail" class="menu-profile__option">PERFIL</a>
+                    </li>
+                    <li>
+                        <a href="/passwordUpdate" class="menu-profile__option">EDITAR CONTRASEÑA</a>
+                    </li>
+                    <li>
+                        <form action="/closeSession" method="POST">
+                            <input type="submit" value="CERRAR SESIÓN"
+                                class="menu-profile__option button-close_session">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <main>
+                <div class="route">
+                    <ul class="productRoute">
+                        <li><a href="/">Home</a></li>
+                        <li>/</li>
+                        <li><a href="/subamarcas">Marca</a></li>
+                        <li>/</li>
+                        <li><a href="#">Mujer</a></li>
+                        <li>/</li>
+                        <li><a href="#">Camiseta Thermal</a></li>
+                    </ul>
+                </div>
+
+                <!-- ------------Información de producto-------------- -->
+
+                <div class="productDescription">
+                    <div class="productsImages">
+                        <img class="productImage1" src="/productImages/<%=productDetail.productImage%>"
+                            alt="producto detalle">
+                        <!-- <img class="productImage2" src="/images/front.png" alt="Thermal front">
+                        <img class="productImage3" src="/images/back.png" alt="Thermal back">
+                        <img class="productImage4" src="/images/side.png" alt="Thermal side"> -->
+                    </div>
+
+                    <div class="descriptionSection">
+                        <h2 class="productTittle">
+                            <%=productDetail.name %>
+                        </h2>
+                        <h3 class="price">$<%=productDetail.price %>
+                        </h3>
+                        <h3 class="description">Descripción del producto</h3>
+                        <p class="textDescription">
+                            <%=productDetail.productDescription %>
+                        </p>
+                        <div class="color">
+                            <p class="color1">PP</p>
+                            <p class="color2">PP</p>
+                        </div>
+                        <h3 class="size">Talla</h3>
+                        <ul class="productSize">
+                            <li>XS</li>
+                            <li>S</li>
+                            <li>M</li>
+                            <li>L</li>
+                            <li>XL</li>
+                        </ul>
+                        <h3 class="amount">Cantidad</h3>
+                        <button class="buttonCar">Agregar al carrito</button>
+                        <br>
+                        <hr class="line">
+                        <h3 class="collectionInformation">Acerca de esta colección</h3>
+                        <p class="textCollection"></p>
+                    </div>
+
+                </div>
+
+                <!-- ------------Productos relacionados-------------- -->
+
+                <!-- <section>
+                    <h3 class="perfectLook">Arma tu look perfecto</h3>
+                    <div class="cards">
+                        <div class="card">
+                            <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
+                            <img class="img-card" src="/productImages/2.png" alt="Prenda Vestir">
+                        </div>
+                        <div class="card">
+                            <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
+                            <img class="img-card" src="/productImages/3.png" alt="Prenda Vestir">
+                        </div>
+                        <div class="card">
+                            <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
+                            <img class="img-card" src="/productImages/4.png" alt="Prenda Vestir">
+                        </div>
+                        <div class="card">
+                            <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
+                            <img class="img-card" src="/productImages/5.png" alt="Prenda Vestir">
+                        </div>
+                    </div>
+                    <img class="EndImage" src="images/lookCompletoMujer.JPG" alt="Look Mujer">
+                </section> -->
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+    </html>

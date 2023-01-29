@@ -1,0 +1,89 @@
+.titleProfile {
+  text-align: center;
+  font-weight: 700;
+  margin-top: 5%;
+}
+
+.register-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.formProfile
+{
+  width: 70%;
+  background: white;
+  padding: 10px 10px 10px 10px;
+  box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  margin: 32px 0;
+  transition: none;
+  transform: none;
+}
+
+.formUser {
+  width: 100%;
+}
+
+.create_img-user {
+  width: 100%;
+}
+
+.informationProfile {
+  width: 60%;
+  align-items: center;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+}
+
+.save-btn-form {
+  width: 100%;
+}
+
+.delete-btn-form {
+  width: 100%;
+}
+
+.save-btn {
+  font-family: var(--primaryFont);
+  background: -webkit-linear-gradient(
+    to right,
+    black,
+    var(--teal)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, black, var(--teal));
+  border: none;
+  border-radius: 5px;
+  display: block;
+  width: 25%;
+  margin: 10px auto;
+  color: white;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 400ms;
+}
+
+
+/* Media 768 */
+
+@media (min-width: 768px){
+  .profileUser {
+    display: flex;
+  }
+
+  .buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .save-btn {
+    width: 80%;
+  }
+}

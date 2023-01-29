@@ -1,3 +1,103 @@
+# Retrospectiva sprint 6
+
+## ¿Qué se hizo bien?
+
+Se hizo un reconocimiento a Sthefanía porque se puso la camiseta del equipo cuando las cosas se pusieron difíciles, tomó el liderazgo y buscó soluciones para sacar el proyecto adelante a pesar de que nos demás miembros del equipo, por temas personales, no pudimos estar participando al 100%.
+
+Se buscó ayuda cuando lo necesitamos, no cuando ya estábamos en el final, y se trató de encontrar las personas adecuadas que nos puedieran aportar valor, al no encontrar respuestas y apoyo de los profesores.
+
+## ¿Qué se hizo mal?
+
+En este sprint tuvimos varios inconvenientes, y factores que hicieron que no fuera tan efectivo, disciplinado y organizado como los anteriores.  Es el primer sprint que no pudimos cumplir debido a lo siguiente:
+
+- Mala organización de tiempos, falta cumplimiento con horarios de las reuniones y entregas, y no tener un cronograma de trabajo definido y claro desde el inicio del sprint.
+- Fallamos en la asignación de las microtareas parta poder comprometernos más con el proyecto.
+- Faltó compromiso de todos los miembros del eqquipo al inicio del sprint, nos relajamos mucho, y comenzamos tarde.  
+- Faltó iniciativa de la mayor parte de los miembros del equipo para sacar el sprint adelante.
+- No logramos entregar a tiempo, y lo hiciemos incompleto
+- Dejamos de hacer las daily, lo que no nos daba control del proyecto.
+
+## ¿Qué hay que dejar de hacer?
+
+Dejar de esperar una organización previa para ir a la acción.  Cada uno debe tomar iniciativa y no esperar a que todos estemos alineados.
+
+Super valiosa la ayuda externa, pero poner límites, que nosotros seamos los que lideremos el proyecto, no el externo al que le solicitemos ayuda.
+
+## ¿Qué hay que hacer más?
+
+Que cada uno de los miembros del equipo esté más comprometido con el proyecto desde el inicio de cada sprint y que tenga más iniciativa si ve que los demás no avanzan o están muy tranquilos.
+
+Distribuir tareas desde el inicio.
+
+Realizar las daily más frecuentemente, porque no sabemos en qué estamos.
+
+## ¿Qué hay que hacer menos?
+
+Permitir una ayuda externa muy grande, que una persona externa se apodere del proyecto.
+
+
+# Retrospectiva sprint 5
+
+## ¿Qué se hizo bien?
+
+En este sprint se decidió dividir las actividades a realizar en etapas y microtareas, las cuales se asignaron por duplas, donde cada grupo era responsable de una parte del proyecto.  Este cambio nos permitió aprender más, ya que cada miembro del equipo se esforzó por entregar correctamente lo que le correspondía, y eso implicaba estudiar, preguntar, y pedir ayuda.  Teniendo cada uno una participación más activa del proceso, propositiva y proactiva.
+
+Se mejoró la comunicación, ya que al estar más activos y propoitivos, cada miembro expresaba aviertamente cómo iba en el proceso. 
+
+Se buscabaron alternativas para resolver los inconvenientes, ya sea con los miembros del equipo, con miembros de otros equipos, con los profes o externos.
+
+## ¿Qué se hizo mal?
+
+todavía se debe trabajar más en la puntualidad y compromiso con las reuniones.
+
+## ¿Qué hay que dejar de hacer?
+
+Por el momento vamos bien.
+
+## ¿Qué hay que hacer más?
+
+Profudizar más los temas a aplicar en cada uno de los sprints, para llegar mejor preparados.
+
+Seguir con las microtareas, y dividirnos en tareas más pequeñas y personalizadas.  Dividiendo el sprint en etapas claras, con un cronograma de trabajo.
+
+Seguir entregando con tiempo.
+
+## ¿Qué hay que hacer menos?
+
+Por el momento vamos bien.
+
+
+# Retrospectiva sprint 4
+
+## ¿Qué se hizo bien?
+
+Se mantuvo la sinergia, el trabajo en equipo y la buena comunicación, que han sido características importantes y consistentes durante todos los sprints. Es un equipo que está presente y dispuesto en todo momento.
+
+A pesar de tener dificultades en el entendimiento de las diferentes temáticas del sprint, para solucionarlo, se buscó ayuda y orientación de personas externos cuando se necesitó.
+
+## ¿Qué se hizo mal?
+
+Se sobrecargó a uno de los compañeros que era el que más entendía del tema, debido a que los demás miembros del equipo no entendían mucho, y eso hizo que esta persona se sintiera cansada y sin tiempo para él mismo.
+
+Se debieron dejar algunas responsabilidades, microtareas, por cada uno de los compañeros, ya que se esperaba resolver en las reuniones grupales y ese fue un error.
+
+Se deben priorizar las actividades, para poder alcanzar los tiempos
+
+## ¿Qué hay que dejar de hacer?
+
+Cargar a un solo compañero con las actividades, realizar únicamente el sprint en reuniones sin microtareas a cada miembro del equipo.
+
+## ¿Qué hay que hacer más?
+
+Se debieron dejar algunas responsabilidades, microtareas, por cada uno de los compañeros.
+
+Planificar mejor el sprint desde el inicio con actividades y fechas claras.
+
+## ¿Qué hay que hacer menos?
+
+Ser menos pasivos y más proactivos, cuando no entendemos un tema.
+
+
 # Retrospectiva sprint 3
 
 ## ¿Qué se hizo bien?

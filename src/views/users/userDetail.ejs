@@ -1,0 +1,115 @@
+<%- include('../partials/head') %>
+
+  <body>
+    <%- include('../partials/header') %>
+      <div class="homeContainerProfile">
+        <input class="menu-profile" type="checkbox" id="menu-profile">
+        <label for="menu-profile">
+          <div>
+            <!-- imagen de usuario -->
+            <img class="profile" src="/userImages/<%= userImage.userImage %> " alt="userImage">
+          </div>
+        </label>
+        <div>
+          <a <% if(userImage.userImage=='empty.png'){ %> href="/login" <% }else{ %> href="/userDetail" <% } %> class="star"><%= userImage.fullName %> </a>
+      </div>
+        <ul class="nav" <% if(userImage.userImage=='empty.png'){ %> style=display:none <% } %>>
+          <li>
+            <a href="/userDetail" class="menu-profile__option">PERFIL</a>
+          </li>
+          <li>
+            <a href="/passwordUpdate" class="menu-profile__option">EDITAR CONTRASEÑA</a>
+          </li>
+          <li>
+            <form action="/closeSession" method="POST">
+              <input type="submit" value="CERRAR SESIÓN" class="menu-profile__option button-close_session">
+            </form>
+          </li>
+        </ul>
+      </div>
+
+      <main class="register-main">
+        <div class="formProfile">
+          <form class="formUser" method="POST" action="/userDetail" enctype="multipart/form-data">
+            <h2 class="titleProfile">Perfil de usuario</h2>
+            <div class="profileUser">
+              <!-- imagen de usuario -->
+              <div class="imageProfile">
+                <div class="campo">
+                  <input class="create_input" accept="image/png.image/jpeg" type="file" id="create_img" name="userImage"
+                    multiple /><span class="barra"></span>
+                  <div class="container-img">
+                    <img class="create_img-user" src="/userImages/<%= user.userImage %> " alt="icono destacado" />
+                  </div>
+                </div>
+              </div>
+              <!-- Imformación usuario -->
+              <div class="informationProfile">
+                <div class="campo">
+                  <input class="register_input" type="text" <%=user.fullName %> minlength="8" id="name" name="fullName"
+                  value="<%= user.fullName%>" required />
+                    <span class="barra"></span>
+                    <label class="register-label">Nombre y apellido</label>
+                </div>
+                <div class="campo">
+                  <select name="documentType" class="register_document-select">
+                    <option>Tipo de documento</option>
+                    <option value="cedulaCiudadania" <% if(user.documentType=="cedulaCiudadania" ){ %> selected <% } %>
+                        >Cedula de ciudadania</option>
+                    <option value="cedulaExtrajeria" <% if(user.documentType=="cedulaExtrajeria" ){ %> selected <% } %>
+                        >Cédula de extranjería</option>
+                    <option value="pasaporte" <% if(user.documentType=="pasaporte" ){ %> selected <% } %>>Pasaporte
+                    </option>
+                    <option value="tarjetaIdentidad" <% if(user.documentType=="tarjetaIdentidad" ){ %> selected <% } %>
+                        >Tarjeta de identidad</option>
+                  </select>
+                </div>
+                <div class="campo">
+                  <input type="text" id="document" name="documentNumber" value="<%= user.documentNumber%>"
+                    class="register_input" /><span class="barra"></span>
+                  <label class="register-label">Documento</label>
+                </div>
+                <div class="campo">
+                  <input type="email" id="email" name="email" value="<%= user.email%>" class="register_input" /><span
+                    class="barra"></span>
+                  <label class="register-label">Correo electrónico</label>
+                </div>
+                <div class="campo">
+                  <input type="text" id="phone" name="phoneNumber" value="<%= user.phoneNumber%>"
+                    class="register_input" /><span class="barra"></span>
+                  <label class="register-label">Teléfono</label>
+                </div>
+                <button class="save-btn" type="submit" id="enter">Guardar cambios</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="buttons">
+
+            <form class="delete-btn-form" action="/products/adminProducts">
+              <button class="save-btn" type="submit">Administrar productos</button>
+            </form>
+
+            <form class="delete-btn-form" action="/passwordUpdate" method="GET">
+              <button type="submit" class="save-btn">
+                Editar contraseña
+              </button>
+            </form>
+
+            <form class="delete-btn-form" action="/closeSession" method="POST">
+              <button type="submit" class="save-btn">
+                Cerrar sesión
+              </button>
+            </form>
+
+            <form class="delete-btn-form" action="/delete/<%= user.id %>" method="POST">
+              <button class="save-btn" type="submit">Eliminar Usuario</button>
+            </form>
+
+          </div>
+        </div>
+      </main>
+      <%- include('../partials/footer') %>
+  </body>
+
+  </html>

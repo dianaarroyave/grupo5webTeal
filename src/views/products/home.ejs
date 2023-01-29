@@ -1,21 +1,62 @@
 <%- include('../partials/head') %>
-<link rel="stylesheet" href="/public/css/home.css">
+    <link rel="stylesheet" href="/public/css/home.css">
+
     <body>
+        <!-- ------------aquí está contenida la imagen principal-------------- -->
+        <section class="ImageContainer">
+        <%- include('../partials/header') %>
+                <!--imagen de usuario dinámica------------------------------------------------>
+                <div class="homeContainerProfile">
+                    <input class="menu-profile" type="checkbox" id="menu-profile">
+                    <label for="menu-profile">
+                        <div>
+                          <!-- imagen de usuario -->
+                          <img class="profile" src="/userImages/<%= userImage.userImage %> " alt="userImage">
+                        </div>
+                      </label>
+                      <div>
+                        <a <% if(userImage.userImage=='empty.png'){ %> href="/login" <% }else{ %> href="/userDetail" <% } %> class="star"><%= userImage.fullName %> </a>
+                    </div>
+                      <ul class="nav" <% if(userImage.userImage=='empty.png'){ %> style=display:none <% } %> )>
+                        <li>
+                          <a href="/userDetail" class="menu-profile__option">PERFIL</a>
+                        </li>
+                        <li>
+                          <a href="/passwordUpdate" class="menu-profile__option">EDITAR CONTRASEÑA</a>
+                        </li>
+                        <li>
+                          <form action="/closeSession" method="POST">
+                            <input type="submit" value="CERRAR SESIÓN" class="menu-profile__option button-close_session">
+                          </form>
+                        </li>
+                      </ul>
+                    </div>
+                      <ul class="nav">
+                        <li>
+                          <a href="/userDetail" class="menu-profile__option">PERFIL</a>
+                        </li>
+                        <li>
+                          <a href="/passwordUpdate" class="menu-profile__option">EDITAR CONTRASEÑA</a>
+                        </li>
+                        <li>
+                          <form action="/closeSession" method="POST">
+                            <input type="submit" value="CERRAR SESIÓN" class="menu-profile__option button-close_session">
+                          </form>
+                        </li>
+                      </ul>
+                    </div>
 
-            <!-- ------------aquí está contenida la imagen principal-------------- -->
-            <section class="ImageContainer">
-                <%- include('../partials/header') %>
-                <div class="image">
-                    <nav classs="principal">
-                        <ul class="ChooseCollection">
-                            <li><a class="collections" href="/products/brandOriginal">TEAL <br> ORIGINAL</a></li>
-                            <li><a class="collections" href="/corporativo">TEAL <br> GROUP</a></li>
-                            <li><a class="collections" href="/products/brandBasics">TEAL <br> BASICS</a></li>
-                        </ul>
-                    </nav>
-                </div>
+                <main class="main">
+                    <div class="image">
+                        <nav classs="principal">
+                            <ul class="ChooseCollection">
+                                <li><a class="collections" href="/products/brandOriginal">TEAL <br> ORIGINAL</a></li>
+                                <li><a class="collections" href="/products/aboutUs">TEAL <br> GROUP</a></li>
+                                <li><a class="collections" href="/products/brandBasics">TEAL <br> BASICS</a></li>
+                            </ul>
+                        </nav>
+                    </div>
             </section>
-
 
             <section class="FeaturedProducts">
                 <div class="TitleContainer">
@@ -24,20 +65,45 @@
                     </h2>
                 </div>
                 <div class="cards">
-                  <%for(let i=0;i<featuredProducts.length;i++){%>
-                    <a class="plink" href="/products/producto/<%=featuredProducts[i].id%>">
-                        <div class="card">
-                            <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
-                            <img class="img-card" src="/images/<%=featuredProducts[i].image%>" alt="Prenda Vestir">
-                            <div class="description">
-                              <p class="price">$<%= featuredProducts[i].price %></p>
-                                <p class="product"><%=featuredProducts[i].name%></p>
-                            </div>
-                        </div>
-                    </a>
-                    <%}%>
-                </div>
+                  <%featuredProducts.forEach(product=>{%>
+                      <a class="plink" href="/products/productDetail/<%=product.id %>">
+                          <div class="card">
+                              <img class="img-icon" src="/images/corazon negro-02.png" alt="icono destacado">
+                              <img class="img-card" src="/productImages/<%=product.productImage%>"
+                                  alt="Prenda Vestir">
+                              <div class="description">
+                                  <p class="price">$<%=product.price%>
+                                  </p>
+                                  <p class="product">
+                                      <%=product.name%>
+                                  </p>
+                              </div>
+                          </div>
+                      </a>
+                  <%})%>
+              </div>
             </section>
+            <section>
+            <a href="https://react-sprint8-reto-protecci-n-production.up.railway.app/">
+              <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active"  data-bs-interval="2000">
+                    <img src="/images/bannerPromo1.png"
+                      class="d-block w-100" alt="..."  height="200px">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="/images/bannerPromo2.png"
+                      class="d-block w-100" alt="..."  height="200px">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="/images/bannerPromo3.png"
+                      class="d-block w-100" alt="..." height="200px">
+                  </div>
+                </div>
+              </div>
+            </a>
+          </section>
+            </main>
             <%- include('../partials/footerHome') %>
     </body>
 

@@ -1,107 +1,244 @@
-//requerir fs y path
-let fs = require('fs');
-let path = require('path');
+const { check, validationResult } = require('express-validator');
+const { Product, Brand } = require('../../models/index');
 
-//requerir archivo JSON de productos
-const productsFilePath = path.join(__dirname,'../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
+//imagen de usuario
+let userImage = {userImage:"empty.png",fullName:"INICIAR SESIÓN"};
 
+const brandOriginal = async (req, res) => {
+  //session user image
+  if(req.session.userImage){
+    userImage = req.session.userImage
+  }
+  const [productDatabase] = await Promise.all([
+    Product.findAll()
+  ]);
+  let brand = productDatabase.filter((product) => product.brand_id == '2');
+  res.render('products/brands', { brand, userImage })
+};
 
-//inicializar variable indice para la edicion de produtos--------
-let idIndex = 0;
-//---------------------------------------------------------------
+const brandBasics = async (req, res) => {
+  //session user image
+  if(req.session.userImage){
+    userImage = req.session.userImage
+  };
 
-let productsController = {
-    // ESTATIC
-    carrito: (req, res) => {
-        res.render('products/carrito');
-    },
-    // DINAMICS
-    brandOriginal: (req, res) => {
-      //aqui traer products
-      let brand =  products.filter(product =>(product.marca=="original"));
-      res.render('products/brands',{brand});
-    },
-    brandBasics: (req, res) => {
-      //aqui traer products
-      let brand =  products.filter(product =>(product.marca=="basics"));
-      res.render('products/brands',{brand});
-    },
-    //3 metodos para editar (1)todas las marcas (2)original (3)basicas-----
-    edicionTodos: (req,res) => {
-      //linea para refrescar y ver los productos que están en el json y no en la memoria temporal---
-      const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
-      //--------------------------------------------------------------------------------------------
-      res.render('products/edicion',{products});
-    },
-    //---------------------------------------------------------------------
-    producto: (req, res) => {
-      let idProducto = req.params.id;
-      let productDetail =  products.filter(product =>(product.id==idProducto));
-        res.render('products/producto',{productDetail});
-    },
-    crear: (req, res) => { //vista crear - para crear producto nuevo.
-      let productDetail = [{"image": "empty.png"}];
-        res.render('products/crear',{productDetail});
-    },
-    crearProducto: (req, res) => {
-       let newProduct = {
-        "id": req.body.id || products.length+2 ,
-        "image": req.file.filename,
-        "name": req.body.name,
-        "price": req.body.price,
-        "description": req.body.description,
-        "collection": req.body.collection,
-        "collectionDescription": req.body.collectionDescription,
-        "featured": req.body.featured,
-        "marca": req.body.marca,
-        "categories": req.body.categories
-       };
-      products.push(newProduct);//Se agrega la información
-      //sobreescritura del JSON
-      let productsJSON = JSON.stringify(products);
-      fs.writeFileSync(productsFilePath,productsJSON);
-      res.redirect('/products/edicion');
-    },
-    editar: (req, res) => { //vista crear - para editar producto existente.
-      let idProducto = req.params.id;
-      idIndex = idProducto; //para compartir el ID del producto que se va a editar  Y CONSEGUIR EL INDICE DEL ARRAY en (editarProducto)
-      let productDetail =  products.filter(product =>(product.id == idProducto));
-        res.render('products/editar',{productDetail});
-    },
-    editarProducto: (req, res) => {
-      let idProducto = idIndex;
-      let productDetail =  products.find(product =>(product.id == idProducto));
-      let indexProduct = products.indexOf(productDetail);
-      //edicion de producto-----------------------------
-      if(req.file!==undefined){
-        products[indexProduct].image = req.file.filename;
-      };
-      products[indexProduct].name = req.body.name;
-      products[indexProduct].price = req.body.price;
-      products[indexProduct].description = req.body.description;
-      products[indexProduct].collection = req.body.collection;
-      products[indexProduct].collectionDescription = req.body.collectionDescription;
-      products[indexProduct].featured = req.body.featured;
-      products[indexProduct].marca = req.body.marca;
-      products[indexProduct].categories = req.body.categories;
-      //------------------------------------------------
-      //sobreescritura del JSON
-      let productsJSON = JSON.stringify(products);
-      fs.writeFileSync(productsFilePath,productsJSON);
-      res.redirect('/products/edicion');
-    },
-    delete:(req, res) =>{
-      let idProducto = req.params.id;
-      let product =  products.find(product =>product.id==idProducto);
-      let indexProduct = products.indexOf(product);
-      products.splice(indexProduct, 1)
+  const [productDatabase] = await Promise.all([
+    Product.findAll()
+  ]);
 
-      //sobreescritura del JSON
-      let productsJSON = JSON.stringify(products);
-      fs.writeFileSync(productsFilePath,productsJSON);
-      res.redirect('/products/edicion');
+  let brand = productDatabase.filter((product) => product.brand_id == '1');
+  res.render('products/brands', { brand, userImage })
+};
+
+const viewProductDetail = async (req, res) => {
+  const {id} = req.params;
+  const productDetail = await Product.findByPk(id);
+
+  if (!productDetail){
+    return res.redirect('/')
+  };
+
+  //session user image
+  if(req.session.userImage){
+    userImage = req.session.userImage
+  };
+
+  res.render('products/productDetail', { productDetail, userImage })
+};
+
+const bag = (req, res) => {
+  res.render('products/bag',{userImage})
+};
+
+const viewNewProduct = async (req, res) => {
+  const [brands] = await Promise.all([
+    Brand.findAll()
+  ]);
+   //session user image
+   if(req.session.userImage){
+    userImage = req.session.userImage
+  };
+  res.render('products/newProduct', { brands, userImage })
+};
+
+const newProduct = async (req, res) => {
+  //Destructuring del registro
+  const { name, price, productDescription, collection, collectionDescription, brand: brand_id, categories, size, color, quantity } = req.body;
+  const productImage = req.file.filename;
+  //featured de string a integer
+  const featuredString = req.body.featured;
+  let featured = 0;
+  if (featuredString=='on'){
+    featured = 1;
+  };
+
+  // const productImage = req.file.newFileName;
+  //Validaciones
+  await check('name').isLength({ min: 2 }).withMessage('Asigne el nombre del producto').run(req);
+  await check('price').isNumeric().withMessage('Asigne el precio del producto').run(req);
+  await check('productDescription').isLength({ min: 20 }).withMessage('La descripción debe tener mínimo 20 carcteres').run(req);
+  await check('brand').notEmpty().withMessage('Asigne la submarca del producto').run(req);
+  await check('categories').notEmpty().withMessage('Seleccione la categoría del producto').run(req);
+  await check('size').notEmpty().withMessage('Seleccione la categoría del producto').run(req);
+  await check('color').notEmpty().withMessage('Seleccione el color del producto').run(req);
+  await check('quantity').notEmpty().withMessage('Seleccione la cantidad del producto').run(req);
+
+  await Product.create({
+    productImage,
+    name,
+    price,
+    productDescription,
+    collection,
+    collectionDescription,
+    brand_id,
+    categories,
+    size,
+    color,
+    quantity,
+    featured
+  })
+  res.redirect('/');
+};
+
+const viewAdminProduct = async (req, res) => {
+  const [productDatabase] = await Promise.all([
+    Product.findAll()
+  ]);
+
+  //session user image
+  if(req.session.userImage){
+    userImage = req.session.userImage
+  };
+
+  res.render('products/adminProducts', { productDatabase, userImage });
+};
+
+const viewProductEdition = async (req, res) => {
+  const { id } = req.params;
+
+  // Validacion de que el producto si existe
+  const product = await Product.findByPk(id);
+
+  if (!product) {
+    return res.redirect('/');
+  };
+
+  //session user image
+  if(req.session.userImage){
+    userImage = req.session.userImage
+  };
+
+  // Hacer la consulta del producto en la base de datos
+  const [brand] = await Promise.all([
+    Brand.findAll()
+  ])
+
+  return res.render('products/productEdition', {
+    brand,
+    product,
+    userImage
+  });
+};
+
+const productEdition = async (req, res) => {
+
+  await check('name').isLength({ min: 3 }).withMessage('Asigne el nombre del producto').run(req);
+  await check('price').isNumeric().withMessage('Asigne el precio del producto').run(req);
+  await check('brand').notEmpty().withMessage('Asigne la submarca del producto').run(req);
+  await check('categories').notEmpty().withMessage('Seleccione la categoría del producto').run(req);
+  await check('size').notEmpty().withMessage('Seleccione la categoría del producto').run(req);
+  await check('color').notEmpty().withMessage('Seleccione el color del producto').run(req);
+  await check('quantity').notEmpty().withMessage('Seleccione la cantidad del producto').run(req);
+
+  let resultado = validationResult(req);
+
+    if(!resultado.isEmpty()){
+
+      const [brand] = await Promise.all([
+        Brand.findAll()
+      ])
+      const product = await Product.findByPk(req.params.id);
+
+        return res.render('products/productEdition', {
+            brand,product
+        });
+    };
+
+  const { id } = req.params;
+
+  // Validacion de que el producto si existe
+  const product = await Product.findByPk(id);
+
+  if (!product) {
+    return res.redirect('/');
+  }
+
+  const [brand] = await Promise.all([
+    Brand.findAll()
+  ])
+
+  try {
+    const { name, price, productDescription, collection, collectionDescription, brand: brand_id, categories, size, color, quantity} = req.body;
+    const productImage = req?.file?.filename;
+    if(!!productImage){
+      product.set({
+      productImage,});
     }
+    //featured de string a integer
+    let featured = 0;
+  const featuredString = req.body.featured;
+  if (featuredString=='on'){
+    featured = 1;
+  }else{
+    featured = 0;
+  }
+    product.set({
+      name,
+      price,
+      productDescription,
+      collection,
+      collectionDescription,
+      brand_id,
+      categories,
+      size,
+      color,
+      quantity,
+      featured
+    })
+
+    await product.save();
+
+    res.redirect('/')
+  } catch (error) {
+    console.log(error);
+  }
+}
+const deletProduct = async (req, res) => {
+  const { id } = req.params
+    // Validar que el producto exista
+
+    const producto = await Product.findByPk(id)
+
+    if(!producto){
+        return res.redirect('/')
+    }
+
+
+    // Eliminar el producto
+    await producto.destroy()
+    res.redirect('/')
 }
 
-module.exports = productsController;
+module.exports = {
+  brandOriginal,
+  brandBasics,
+  viewProductDetail,
+  bag,
+  viewNewProduct,
+  newProduct,
+  viewAdminProduct,
+  viewProductEdition,
+  productEdition,
+  deletProduct
+}
+
