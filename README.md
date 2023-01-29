@@ -169,13 +169,13 @@ Razón del por qué es un referente:
 https://trello.com/invite/b/jWKrG5Bd/71c8ad5a325cd8f62a361ec678338ed5/proyecto-teal-sprint-2
 
 ## Proyecto de React
-Repo https://github.com/sergioescobarh/REACT-Sprint8-reto-protecci-n-.git
-Deploy https://react-sprint8-reto-protecci-n-production.up.railway.app/ 
+- Repo https://github.com/sergioescobarh/REACT-Sprint8-reto-protecci-n-.git
+- Deploy https://react-sprint8-reto-protecci-n-production.up.railway.app/ 
 
 ## APIs
 ### API Produtos
-Repo https://github.com/sergioescobarh/productsapi.git
-Deploy https://productsapi-production-d23f.up.railway.app/
+- Repo https://github.com/sergioescobarh/productsapi.git
+- Deploy https://productsapi-production-d23f.up.railway.app/
 ### API Usuarios
-Repo 
-Deploy 
+- Repo https://github.com/WILLIAMSERNA0629/teal-api
+- Deploy https://teal-api.up.railway.app/users
